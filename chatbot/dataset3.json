@@ -1,0 +1,36 @@
+{
+  "intents": [
+      {
+        "tag": "kehamilan",
+        "patterns": [
+            "Apakah mungkin menstruasi terjadi selama kehamilan?",
+            "Bagaimana cara membedakan tanda haid dan tanda hamil?",
+            "Apakah ada efek samping dari menstruasi selama kehamilan?",
+            "Bagaimana cara menjaga kesehatan selama menstruasi pada masa kehamilan?"
+        ],
+        "responses": [
+            "Menstruasi selama kehamilan tidak mungkin terjadi. Namun, beberapa wanita mengalami perdarahan ringan selama awal kehamilan, yang disebut perdarahan implantasi. Perdarahan ini terjadi ketika embrio menempel pada dinding rahim. Perdarahan implantasi biasanya terjadi sekitar seminggu setelah ovulasi dan sebelum waktu haid yang diharapkan .",
+            "Tanda-tanda haid dan tanda-tanda kehamilan memiliki kemiripan, seperti perubahan mood, sakit punggung, sering buang air kecil, dan nyeri payudara. Namun, tanda-tanda kehamilan lainnya termasuk mual, muntah, dan peningkatan sensitivitas pada bau .",
+            "Perdarahan selama kehamilan dapat menandakan adanya masalah kesehatan yang serius. Jika Anda mengalami perdarahan selama kehamilan, segera hubungi dokter Anda .",
+            "Untuk menjaga kesehatan selama menstruasi pada masa kehamilan, pastikan untuk mengonsumsi makanan yang sehat dan bergizi, minum banyak air, dan hindari makanan pedas atau berlemak. Jika Anda mengalami perdarahan atau gejala lainnya selama menstruasi pada masa kehamilan, segera hubungi dokter Anda ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "kehamilan",
+        "patterns": [
+            "Apakah mungkin menstruasi terjadi selama kehamilan?",
+            "Bagaimana cara membedakan tanda haid dan tanda hamil?",
+            "Apakah ada efek samping dari menstruasi selama kehamilan?",
+            "Bagaimana cara menjaga kesehatan selama menstruasi pada masa kehamilan?"
+        ],
+        "responses": [
+            "Menstruasi selama kehamilan tidak mungkin terjadi. Namun, beberapa wanita mengalami perdarahan ringan selama awal kehamilan, yang disebut perdarahan implantasi. Perdarahan ini terjadi ketika embrio menempel pada dinding rahim. Perdarahan implantasi biasanya terjadi sekitar seminggu setelah ovulasi dan sebelum waktu haid yang diharapkan .",
+            "Tanda-tanda haid dan tanda-tanda kehamilan memiliki kemiripan, seperti perubahan mood, sakit punggung, sering buang air kecil, dan nyeri payudara. Namun, tanda-tanda kehamilan lainnya termasuk mual, muntah, dan peningkatan sensitivitas pada bau .",
+            "Perdarahan selama kehamilan dapat menandakan adanya masalah kesehatan yang serius. Jika Anda mengalami perdarahan selama kehamilan, segera hubungi dokter Anda .",
+            "Untuk menjaga kesehatan selama menstruasi pada masa kehamilan, pastikan untuk mengonsumsi makanan yang sehat dan bergizi, minum banyak air, dan hindari makanan pedas atau berlemak. Jika Anda mengalami perdarahan atau gejala lainnya selama menstruasi pada masa kehamilan, segera hubungi dokter Anda ."
+        ],
+        "context_set": ""
+      },
+  ]
+}

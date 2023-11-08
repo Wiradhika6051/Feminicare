@@ -1,0 +1,1378 @@
+{
+  "intents": [
+      {
+          "tag": "salam",
+          "patterns": ["Halo", "Apa kabar", "Ada yang di sana?", "Hai", "Selamat siang"],
+          "responses": ["Halo, terima kasih telah berkunjung", "Senang melihatmu lagi", "Hai, ada yang bisa saya bantu?"],
+          "context_set": ""
+      },
+      {
+          "tag": "selamat tinggal",
+          "patterns": ["Selamat tinggal", "Sampai jumpa", "Sampai berjumpa","bye", "goodbye", "sampai nanti"],
+          "responses": ["Sampai jumpa, terima kasih telah berkunjung", "Semoga harimu menyenangkan", "Selamat tinggal! Datang kembali ya."]
+      },
+      {
+          "tag": "terima kasih",
+          "patterns": ["Terima kasih", "Makasih", "Bantuannya sangat membantu"],
+          "responses": ["Senang bisa membantu!", "Senang bisa membantu", "sama-sama"]
+      },
+      {
+          "tag": "Menstruasi",
+          "patterns": [
+              "Menstruasi",
+              "Apa itu menstruasi?",
+              "apasih menstruasi itu?",
+              "apa itu haid?",
+              "haid"
+          ],
+          "responses": [
+              "Menstruasi adalah proses alami yang terjadi pada wanita setiap bulan. Selama menstruasi, tubuh melepaskan lapisan rahim yang tidak diperlukan melalui vagina.",
+              "Menstruasi adalah proses peluruhan lapisan dalam pada dinding rahim wanita (endometrium) yang mengandung banyak pembuluh darah dan umumnya berlangsung selama 5-7 hari setiap bulannya. Biasanya siklus menstruasi berlangsung hingga usia 50 tahun. Adapun masa pasca berhenti menstruasi dinamakan sebagai menopause ."
+          ],
+          "context_set": ""
+      },
+  
+      {
+          "tag": "siklus",
+          "patterns": [
+              "Siklus menstruasi",
+              "Berapa lama siklus menstruasi normal?"
+          ],
+          "responses": [
+              "Siklus menstruasi normal berlangsung sekitar 28 hingga 35 hari. Haid biasanya datang setiap bulan."
+              
+          ],
+          "context_set": ""
+      },
+      {
+        "tag": "menghitung siklus",
+        "patterns": [
+            "Cara menghitung siklus menstruasi?",
+            "bagaimana menghitung siklus menstruasi",
+            "Bagaimana cara menghitung siklus haid?",
+            "Cara mengukur siklus haid",
+            "Siklus menstruasi, bagaimana cara menghitungnya?",
+            "Cara menghitung siklus menstruasi yang benar"
+        ],
+        "responses": [
+            "Cara menghitung siklus haid yang benar adalah dengan memulai hitungan dari hari pertama menstruasi pada bulan sebelumnya hingga hari pertama menstruasi pada bulan berikutnya. Rentang waktu ini disebut sebagai siklus menstruasi. Siklus menstruasi normal berlangsung selama 28-35 hari, namun bisa berbeda-beda pada setiap wanita. Untuk menghitung siklus menstruasi, Anda bisa menggunakan kalender dan mencatat hari pertama menstruasi setiap bulannya selama minimal 3 bulan berturut-turut. Setelah itu, hitunglah rentang waktu dari hari pertama menstruasi pada bulan tersebut hingga hari pertama menstruasi pada bulan selanjutnya. Total hari tersebut adalah periode siklus haid Anda   .",
+            "Siklus menstruasi adalah periode waktu antara dua periode haid. Untuk menghitungnya, Anda dapat mulai dari hari pertama haid Anda sebagai hari pertama siklus."
+        ],
+        "context_set": ""
+    },
+      {
+          "tag": "fase-fase",
+          "patterns": [
+              "Fase-fase siklus menstruasi",
+              "Apa saja fase-fase haid?",
+              "Fase-fase siklus haid",
+              "Fase-fase menstruasi",
+              "fase-fase haid"
+          ],
+          "responses": [
+              "Siklus menstruasi umumnya terbagi menjadi empat fase: \n1. Menstruasi: Fase ini adalah saat Anda mengalami perdarahan haid. \n2. Ovulasi: Ini adalah fase tengah siklus ketika ovarium melepaskan sel telur. \n3. Pra-menstruasi: Ini adalah fase sebelum menstruasi, di mana Anda mungkin merasa gejala PMS. \n4. Post-menstruasi: Fase ini setelah menstruasi berakhir."
+          ],
+          "context_set": ""
+      },
+      {
+          "tag": "kesehatan",
+          "patterns": [
+              "Tips kesehatan selama menstruasi",
+              "Bagaimana menjaga kesehatan saat haid?",
+              "tips menjaga kesehatan saat haid"
+          ],
+          "responses": [
+              "Selama menstruasi, penting untuk menjaga kesehatan Anda. Beberapa tips yang bisa Anda ikuti termasuk: \n1. Makan makanan sehat dan seimbang. \n2. Minum cukup air untuk menghindari dehidrasi. \n3. Lakukan olahraga ringan seperti yoga atau berenang. \n4. Hindari makanan berlemak dan berat. \n5. Istirahat yang cukup. \n6. Jangan ragu untuk berbicara dengan dokter jika Anda mengalami gejala yang parah."
+          ],
+          "context_set": ""
+      },
+      {
+        "tag": "gejala menstruasi",
+        "patterns": [
+            "Apa saja gejala menstruasi?",
+            "gejala menstruasi ditandai dengan?",
+            "Apa saja gejala yang muncul selama menstruasi?"
+
+        ],
+        "responses": [
+            "Beberapa gejala yang muncul selama menstruasi antara lain: sakit perut, sakit kepala, mual, diare, sembelit, mudah marah atau mudah menangis, serta perubahan suasana hati .",
+            "Beberapa gejala umum menstruasi meliputi sakit perut, mual, sakit kepala, dan perubahan suasana hati. Ini adalah hal yang normal selama menstruasi."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "produk menstruasi",
+        "patterns": [
+            "Apa produk menstruasi yang tersedia?",
+            "apa saja produk menstruasi?",
+            "produk-produk menstruasi",
+            "produk wanita untuk menstruasi"
+        ],
+        "responses": [
+            "Ada berbagai produk menstruasi seperti pembalut, tampon, dan cangkir menstruasi. Anda dapat memilih produk yang sesuai dengan kenyamanan Anda."
+        ],
+        "context_set": ""
+      },
+      {
+          "tag": "lacak menstruasi",
+          "patterns": [
+              "Bagaimana cara melacak siklus menstruasi?",
+              "pelacakan menstruasi",
+              "Mengapa melacak menstruasi penting?",
+              "melacak menstruasi"
+          ],
+          "responses": [
+              "Anda dapat menggunakan aplikasi khusus untuk melacak siklus menstruasi Anda. Melacak menstruasi penting untuk memahami tubuh Anda dan mengatur rencana kehamilan jika Anda menginginkannya."
+              
+          ],
+          "context_set": ""
+      },
+      {
+        "tag": "ovulasi",
+        "patterns": [
+            "apa itu ovulasi",
+            "ovulasi",
+            "pengertian ovulasi"
+        ],
+        "responses": [
+            "Ovulasi adalah proses pelepasan sel telur oleh ovarium. Anda dapat mengidentifikasi ovulasi dengan memantau suhu basal tubuh atau tanda-tanda fisik lainnya."
+        ],
+        "context_set": ""
+    },
+      {
+          "tag": "emosional",
+          "patterns": [
+              "Ketidaknyamanan emosional saat haid",
+              "emosional selama menstruasi",
+              "bagaimana mengatur emosional saat menstruasi?"
+          ],
+          "responses": [
+              "Selama menstruasi, penting untuk merawat diri Anda dengan baik. Cobalah beristirahat, berolahraga, dan makan makanan sehat. Jika Anda merasa sangat stres, pertimbangkan untuk berbicara dengan seorang profesional kesehatan mental."
+          ],
+          "context_set": ""
+      },
+      {
+        "tag": "olahraga",
+        "patterns": [
+            "Olahraga saat haid",
+            "Jenis olahraga yang aman saat haid",
+            "Bolehkah berolahraga saat haid?"
+        ],
+        "responses": [
+            "Berolahraga saat haid sebenarnya diperbolehkan, asalkan dilakukan dengan cara yang benar dan tidak berlebihan. Beberapa jenis olahraga yang diperbolehkan adalah berjalan kaki, tenis meja, yoga, pilates, dan senam. Kamu juga tidak perlu mengurungkan niat untuk berenang saat haid .",
+            "Olahraga yang boleh dilakukan saat haid adalah yang memiliki intensitas ringan, seperti berjalan kaki, yoga, atau zumba. Berolahraga saat menstruasi bisa membantu dalam meningkatkan efektivitas dari sirkulasi darah sehingga mengurangi nyeri saat haid.",
+            "Sebaiknya hindari olahraga yang membutuhkan tekanan dan kerja otot terlalu berat seperti lompat tali, Muay Thai, basket, atau sepak bola. Pelepasan hormon selama menstruasi akan membuat ligamen otot dan persendian menjadi lebih kendur dan melunak. Hal ini dapat menyebabkan otot dan sendi lebih rentan mengalami cedera, khususnya cedera robekan ACL saat haid ."
+            
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "olahraga larangan",
+        "patterns": [
+            "apa saja olahraga yang dilarang saat haid atau menstruasi",
+            "Olahraga apa yang tidak boleh dilakukan saat haid?",
+            "olahraga yang dilarang saat menstruasi"
+        ],
+        "responses": [
+            "Olahraga yang dilarang saat haid adalah olahraga yang membutuhkan tekanan dan kerja otot terlalu berat seperti lompat tali, Muay Thai, basket, atau sepak bola."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "olahraga ringan",
+        "patterns": [
+            "olahraga ringan yang dibolehkan saat haid?",
+            "Olahraga ringan saat haid",
+            "olahraga apa saja yang boleh dilakukan saat haid apa saja?"
+        ],
+        "responses": [
+            "Beberapa jenis latihan yang dapat Anda lakukan di rumah selama menstruasi adalah bridge, chair squat, knee push up, lunge, plank, forearm plank. Jenis olahraga tersebut sangat cocok dilakukan selama haid. Olahraga melancarkan haid, lakukan latihan tersebut selama 15-30 menit ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "nyeri",
+        "patterns": [
+            "Cara meredakan nyeri menstruasi",
+            "Obat apa yang bisa meredakan nyeri haid?",
+            "Makanan apa yang bisa meredakan nyeri haid?",
+            "Cara alami meredakan nyeri haid",
+            "Cara meredakan nyeri haid dengan cepat"
+        ],
+        "responses": [
+            "Anda bisa mencoba minum obat pereda nyeri atau menggunakan bantalan hangat untuk meredakan sakit perut.",
+            "Berikut adalah beberapa cara alami yang dapat membantu meredakan nyeri menstruasi: \n\n1. Mengompres perut dengan bantal pemanas atau botol air hangat. \n2. Melakukan teknik relaksasi seperti yoga, meditasi, atau pernapasan dalam-dalam. \n3. Mengonsumsi makanan yang kaya akan serat seperti buah-buahan, sayuran, dan biji-bijian. \n4. Mengonsumsi minuman hangat seperti teh jahe atau teh chamomile. \n5. Menghindari makanan yang mengandung kafein dan gula berlebihan. \n6. Berolahraga secara teratur untuk meningkatkan sirkulasi darah dan mengurangi stres   .",
+            "Beberapa obat yang dapat membantu meredakan nyeri menstruasi adalah: \n\n1. Obat anti-inflamasi non-steroid (OAINS) seperti ibuprofen atau naproxen. \n2. Obat penghilang rasa sakit seperti parasetamol atau aspirin. \n3. Pil KB (pil kontrasepsi) dapat membantu mengurangi rasa sakit pada beberapa wanita .",
+            "Beberapa makanan yang dapat membantu meredakan nyeri menstruasi adalah: \n\n1. Makanan yang kaya akan serat seperti buah-buahan, sayuran, dan biji-bijian. \n2. Makanan yang mengandung magnesium seperti bayam, kacang-kacangan, dan biji-bijian. \n3. Makanan yang mengandung vitamin E seperti alpukat, kacang-kacangan, dan minyak zaitun."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "pembalut dan tampon",
+        "patterns": [
+            "Jenis-jenis pembalut dan tampon"
+        ],
+        "responses": [
+            "Pembalut wanita dan tampon adalah dua jenis produk yang digunakan untuk menyerap darah menstruasi. Berikut adalah beberapa jenis pembalut wanita yang umum digunakan: \n\n1. Pembalut sekali pakai: Pembalut ini terbuat dari bahan-bahan seperti kapas, serat bambu, atau bahan sintetis. Pembalut sekali pakai memiliki daya serap yang berbeda-beda, tergantung pada ketebalan dan mereknya. \n2. Pembalut cuci ulang: Pembalut ini terbuat dari bahan-bahan seperti katun, sutra, atau kain terry. Pembalut cuci ulang dapat dicuci dan digunakan kembali selama beberapa tahun . \n\nBerikut adalah beberapa jenis tampon yang umum digunakan: \n\n1. Tampon sekali pakai: Tampon ini terbuat dari kapas atau bahan sintetis lainnya. Tampon sekali pakai memiliki daya serap yang berbeda-beda, tergantung pada mereknya. \n2. Tampon cuci ulang: Tampon ini terbuat dari bahan seperti lateks atau silikon. Tampon cuci ulang dapat dicuci dan digunakan kembali selama beberapa tahun."
+            
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "pembalut dan tampon",
+        "patterns": [
+            "perbedaan pembalut dan tampon",
+            "mana yang lebih bagus, pembalut atau tampon?",
+            "pembalut vs tampon",
+            "kelebihan dan kekurangan tampon dan pembalut"
+        ],
+        "responses": [ 
+            "Pembalut wanita dan tampon memiliki kelebihan dan kekurangan masing-masing. Berikut adalah beberapa kelebihan dan kekurangan pembalut wanita: \n\nKelebihan pembalut wanita: \n- Mudah digunakan \n- Tidak memerlukan pengenalan ke dalam tubuh \n- Tersedia dalam berbagai ukuran dan ketebalan \n- Tidak ada risiko toksik syok sindrom (TSS) \n\nKekurangan pembalut wanita: \n- Tidak ramah lingkungan karena menghasilkan banyak sampah \n- Memerlukan penggantian lebih sering daripada tampon.\n\nBerikut adalah beberapa kelebihan dan kekurangan tampon: \n\nKelebihan tampon: \n- Tidak menghasilkan banyak sampah \n- Dapat digunakan saat berenang atau mandi \n- Memerlukan penggantian lebih jarang daripada pembalut wanita \n\nKekurangan tampon: \n- Memerlukan pengenalan ke dalam tubuh \n- Risiko toksik syok sindrom (TSS)."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menstrual cup dan tampon",
+        "patterns": [
+            "Tampon vs menstrual cup",
+            "Mana yang lebih baik, tampon atau menstrual cup?",
+            "Kelebihan dan kekurangan tampon dan menstrual cup"
+        ],
+        "responses": [
+            "Menstrual cup dan tampon adalah dua jenis produk sanitasi yang digunakan selama menstruasi. Berikut adalah perbedaan antara keduanya:\n\n- **Fungsi**: Tampon dan pembalut berfungsi untuk menyerap darah menstruasi, sedangkan menstrual cup menampung darah menstruasi saja .\n\n- **Bahan**: Tampon terbuat dari kapas atau bahan sintetis lainnya, sedangkan menstrual cup terbuat dari karet, silikon, atau plastik lunak .\n\n- **Penggunaan**: Tampon dan pembalut umumnya sekali pakai, sedangkan menstrual cup bisa dicuci dan digunakan kembali .\n\n- **Kenyamanan**: Menstrual cup lebih nyaman digunakan karena tidak menimbulkan rasa kering atau iritasi pada vagina. Selain itu, menstrual cup juga tidak menimbulkan bau tidak sedap seperti pembalut.\n\n- **Biaya**: Meskipun menstrual cup lebih mahal dibandingkan tampon atau pembalut, namun karena bisa digunakan berkali-kali, maka dalam jangka panjang menstrual cup lebih hemat biaya.\n\nSekian informasi mengenai perbedaan antara tampon dan menstrual cup. Semoga membantu!"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menstrual cup",
+        "patterns": [
+            "Menstrual cup",
+            "apa itu menstrual cup?",
+            "pengertian menstrual cup",
+            "apa yang dimaksud dengan menstrual cup?",
+            "Cara memakai menstrual cup",
+            "Cara melepas menstrual cup"
+            
+        ],
+        "responses": [
+            "Menstrual cup adalah alat penampung darah menstruasi yang dapat digunakan berulang kali. Berikut adalah panduan penggunaan menstrual cup: \n\n1. Cuci tangan dengan sabun dan air mengalir. \n2. Oleskan air atau pelumas berbahan dasar air ke tepi gelas. \n3. Lipat dengan kuat cangkir menstruasi menjadi dua, pegang di satu tangan dengan tepi menghadap ke atas. \n4. Masukkan cangkir, pelek ke atas, ke dalam vagina seperti Anda akan memasukkan tampon tanpa aplikator. \n5. Setelah cangkir berada di dalam vagina, lepaskan jari Anda dari cangkir dan biarkan cangkir membuka sendiri. \n6. Untuk melepas cangkir, tarik perlahan pada peleknya dan tekan bagian bawah cangkir untuk melepaskan vakum   ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "keamanan menstrual cup",
+        "patterns": [
+            "Menstrual cup aman digunakan?",
+            "apakah menstrual cup aman?"
+
+        ],
+        "responses": [
+            "Menstrual cup aman digunakan jika digunakan dengan benar dan steril. Menstrual cup juga dapat membantu mengurangi jumlah sampah yang dihasilkan selama menstruasi ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menstrual cup dan pembalut",
+        "patterns": [
+            "Menstrual cup vs pembalut",
+            "kelebihan dan kekurangan menstrual cup dan pembalut",
+            "perbedaan menstrual cup dan pembalut",
+            "pembalut dan mentrual cup"
+        ],
+        "responses": [
+            "Menstrual cup memiliki beberapa kelebihan dibandingkan pembalut, antara lain: \n\n1. Lebih ramah lingkungan karena dapat digunakan berulang kali \n2. Tidak mengandung bahan kimia seperti pembalut \n3. Tidak menimbulkan bau tidak sedap seperti pembalut \n4. Lebih hemat karena dapat digunakan selama bertahun-tahun ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "makanan sehat",
+        "patterns": [
+            "Makanan sehat selama menstruasi",
+            "Makanan yang baik untuk dikonsumsi saat haid",
+            "Makanan yang dianjurkan saat menstruasi",
+            "Makanan yang membantu meredakan nyeri haid"
+        ],
+        "responses": [
+            "Berikut adalah beberapa makanan sehat yang dapat membantu menjaga kesehatan selama menstruasi:\n\n1. **Makanan yang mengandung zat besi**: Darah yang keluar saat menstruasi bisa meningkatkan risiko anemia. Untuk mengatasi risiko terkena anemia saat haid, ada baiknya makan makanan yang dipenuhi dengan kandungan zat besi di dalamnya. Beberapa contohnya adalah daging, susu, ikan, ayam, sayuran hijau, atau bahkan sereal gandum .\n\n2. **Makanan yang mengandung omega 3**: Omega 3 yang terkandung di dalam ikan diketahui juga bisa membantu meredakan depresi. Oleh karena itu, makan ikan juga baik untuk mengatasi perubahan suasana hati (mood swing) dan depresi saat haid. Selain ikan, kacang-kacangan juga diketahui kaya akan omega 3 dan asam lemak lainnya .\n\n3. **Makanan yang mengandung magnesium**: Wanita yang mengalami kekurangan magnesium cenderung lebih rentan mengalami gejala PMS yang bertambah parah. Gejala PMS sering kali bisa mengganggu aktivitas sehari-hari akibat rasa tidak nyaman yang mungkin ditimbulkan. Salah satu makanan yang bisa meningkatkan magnesium yaitu cokelat murni atau dark chocolate. Dalam 100 gram coklat yang mengandung 70—85% dark chocolate bisa membantu memenuhi 58% kebutuhan harian magnesium di dalam tubuh .\n\n4. **Makanan yang mengandung antioksidan**: Antioksidan sangat penting bagi tubuh untuk bisa melawan radikal bebas yang dapat menyebabkan penyakit di dalam tubuh, seperti diabetes dan kanker. Beberapa sumber antioksidan makanan sehat antara lain sayuran hijau, kacang-kacangan, biji-bijian, ubi jalar, kubis merah, beri, dan teh hijau.\n\nSekian informasi mengenai makanan sehat selama menstruasi. Semoga membantu!"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "kapan mengganti pembalut atau tampon",
+        "patterns": [
+            "Kapan sebaiknya mengganti pembalut atau tampon?",
+            "Berapa kali sebaiknya mengganti pembalut atau tampon?",
+            "Kapan waktu yang tepat untuk mengganti pembalut atau tampon?"
+        ],
+        "responses": [
+            "Sebaiknya Anda mengganti pembalut atau tampon setiap 4-6 jam sekali . Jika Anda terlalu lama menggunakan pembalut atau tampon, maka akan meningkatkan risiko terkena toxic shock syndrome (TSS) yang merupakan jenis infeksi bakteri Staphylococcus. Namun, jika darah menstruasi Anda tidak terlalu banyak, Anda tetap disarankan untuk rutin mengganti pembalut atau tampon meski tidak sampai 4-6 jam sekali. Hal ini dilakukan untuk menghindari perkembangan bakteri dan bau vagina dari darah menstruasi yang dikeluarkan ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "nyeri berlebihan",
+        "patterns": [
+            "Alasan nyeri menstruasi yang berlebihan",
+            "Penyebab nyeri menstruasi yang berlebihan",
+            "Mengapa menstruasi bisa menyebabkan rasa sakit yang berlebihan?",
+            "Apa saja penyebab nyeri haid yang berlebihan?"
+        ],
+        "responses": [
+            "Nyeri haid atau dismenore adalah kondisi umum yang dialami oleh sebagian besar wanita saat menstruasi. Namun, ada beberapa kondisi medis tertentu yang dapat menyebabkan rasa sakit haid menjadi lebih parah. Berikut adalah beberapa penyebab nyeri haid yang berlebihan:\n\n1. **Endometriosis**: Kondisi medis di mana jaringan yang biasanya tumbuh di dalam rahim tumbuh di luar rahim, seperti di ovarium, saluran tuba, atau organ panggul lainnya .\n\n2. **Fibroid**: Tumor jinak pada rahim yang dapat menyebabkan rasa sakit haid berlebihan .\n\n3. **Adenomyosis**: Kondisi medis di mana jaringan yang biasanya tumbuh di dalam rahim tumbuh ke dalam dinding otot rahim .\n\n4. **Penyakit radang panggul**: Infeksi pada organ reproduksi wanita seperti rahim, saluran tuba, atau indung telur .\n\n5. **Stenosis serviks**: Kondisi langka di mana serviks sangat kecil atau sempit sehingga menyebabkan aliran darah saat menstruasi lebih lambat dan menyebabkan peningkatan tekanan di dalam rahim .\n\n6. **Premenstrual syndrome (PMS)**: Kondisi umum yang disebabkan oleh perubahan hormon dalam tubuh yang terjadi 1-2 minggu sebelum menstruasi dimulai .\n\n7. **Menorrhagia**: Perdarahan haid yang sangat banyak dan berlangsung lebih dari 7 hari .\n\n8. **Peradangan panggul kronis**: Infeksi pada organ reproduksi wanita seperti rahim, saluran tuba, atau indung telur yang berlangsung lama dan tidak kunjung sembuh .\n\nSekian informasi mengenai alasan nyeri menstruasi yang berlebihan. Semoga membantu!"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "keseimbangan hormon",
+        "patterns": [
+            "Keseimbangan hormon dan menstruasi",
+            "Bagaimana menjaga keseimbangan hormon selama menstruasi?",
+            "Makanan apa yang baik untuk menjaga keseimbangan hormon selama menstruasi?",
+            "Cara menjaga keseimbangan hormon selama menstruasi"
+        ],
+        "responses": [
+            "Keseimbangan hormon sangat penting dalam menjaga kesehatan tubuh, termasuk kesehatan reproduksi wanita. Hormon-hormon tertentu, seperti estrogen dan progesteron, memengaruhi siklus menstruasi. Kadar hormon yang tidak seimbang dapat menyebabkan gangguan pada siklus menstruasi, seperti siklus menstruasi yang tidak teratur, nyeri haid yang berlebihan, dan gejala PMS yang parah  .\n\nBeberapa faktor yang dapat memengaruhi keseimbangan hormon meliputi pola makan yang tidak sehat, kurangnya aktivitas fisik, stres, dan kurangnya tidur. Oleh karena itu, menjaga pola makan yang sehat, berolahraga secara teratur, mengelola stres dengan baik, dan tidur yang cukup dapat membantu menjaga keseimbangan hormon dalam tubuh  .\n\nSekian informasi mengenai keseimbangan hormon dan menstruasi. Semoga membantu!"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "tanda-tanda menstruasi",
+        "patterns": [
+            "Tanda-tanda awal menstruasi",
+            "Apa saja tanda-tanda awal menstruasi?",
+            "Bagaimana cara mengenali tanda-tanda awal menstruasi?",
+            "Tanda-tanda menstruasi akan datang"
+        ],
+        "responses": [
+            "Beberapa wanita merasakan tanda-tanda menstruasi beberapa hari sebelumnya. Meskipun tanda-tanda haid yang dirasakan berbeda-beda, tapi secara umum biasanya wanita mengalami gejala berikut:\n\n1. Kram perut: Kram perut adalah tanda-tanda akan haid yang paling khas. Kondisi ini biasanya muncul 1 sampai 2 hari menjelang jadwal menstruasi.\n\n2. Muncul jerawat: Selain kram, munculnya jerawat adalah tanda-tanda menstruasi yang paling mudah dikenali. Jerawat muncul karena kadar hormon tubuh yang meningkat menjelang menstruasi.\n\n3. Payudara terasa padat dan nyeri saat disentuh: Jika payudara terasa bengkak, lebih berat, dan terasa nyeri terutama di sisi terluarnya, ini adalah ciri-ciri haid Anda akan datang sebentar lagi.\n\n4. Kecapekan tapi susah tidur: Ketika tamu bulanan sebentar lagi datang, Anda akan jadi lebih susah tidur malam meski badan sudah kecapekan berat.\n\n5. Sembelit atau diare: Beberapa wanita bisa mengeluhkan gangguan pencernaan seperti sembelit atau diare selama beberapa hari sebagai ciri-ciri datang bulan.\n\n6. Perut kembung: Sudah makan teratur, tapi perut tetap saja terasa kembung dan bergas? Bisa jadi itu adalah ciri-ciri haid akan datang.\n\n7. Sakit kepala: Beberapa wanita mengalami tanda-tanda seperti sakit kepala berat menjelang menstruasi    ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "kontrasepsi yang aman",
+        "patterns": [
+            "Kontrasepsi yang aman selama menstruasi",
+            "Jenis kontrasepsi yang aman selama menstruasi",
+            "Kontrasepsi yang cocok untuk wanita saat menstruasi"
+        ],
+        "responses": [
+            "Berikut adalah beberapa jenis kontrasepsi yang aman dan efektif selama menstruasi:\n\n1. **Pil KB**: Pil KB adalah salah satu jenis kontrasepsi hormonal yang paling umum digunakan oleh wanita. Pil KB mengandung hormon estrogen dan progesteron yang mencegah pelepasan sel telur dari ovarium. Pil KB sangat efektif dalam mencegah kehamilan jika diminum dengan benar. Namun, pil KB tidak melindungi dari penyakit menular seksual (PMS) .\n\n2. **Suntik KB**: Suntik KB adalah jenis kontrasepsi hormonal yang diberikan melalui suntikan. Suntik KB mengandung hormon progesteron yang mencegah pelepasan sel telur dari ovarium. Suntik KB sangat efektif dalam mencegah kehamilan jika digunakan dengan benar. Suntik KB juga aman digunakan selama menstruasi.\n\n3. **Implan**: Implan adalah jenis kontrasepsi hormonal yang ditanamkan di bawah kulit lengan atas. Implan mengandung hormon progesteron yang mencegah pelepasan sel telur dari ovarium. Implan sangat efektif dalam mencegah kehamilan dan dapat bertahan hingga 3-5 tahun.\n\n4. **IUD**: IUD atau alat kontrasepsi dalam rahim adalah alat kecil berbentuk T yang ditanamkan di dalam rahim oleh dokter kandungan. IUD terbuat dari bahan plastik atau tembaga dan dapat bertahan hingga 3-10 tahun tergantung jenisnya. IUD sangat efektif dalam mencegah kehamilan dan dapat digunakan selama menstruasi .\n\nSekian informasi mengenai kontrasepsi yang aman selama menstruasi. Semoga membantu!"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "suplemen",
+        "patterns": [
+            "Suplemen apa yang baik untuk kesehatan menstruasi?",
+            "suplemen yang baik untuk menstruasi",
+            "suplemen untuk meredakan sakit menstruasi",
+            "Apakah ada suplemen yang dapat membantu mengurangi rasa tidak nyaman saat menstruasi?"
+        ],
+        "responses": [
+            "Beberapa suplemen yang dapat membantu mengurangi rasa tidak nyaman saat menstruasi antara lain: Vitamin D, Omega-3, dan Magnesium. Namun, sebaiknya Anda berkonsultasi dengan dokter sebelum mengonsumsi suplemen tersebut."
+            
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "memilih suplemen",
+        "patterns": [
+            "Bagaimana cara memilih suplemen yang tepat untuk kesehatan menstruasi?",
+            "memimlih suplemen yang tepat untuk haid"
+        ],
+        "responses": [
+            "Pemilihan suplemen yang tepat tergantung pada kondisi kesehatan Anda. Sebaiknya Anda berkonsultasi dengan dokter sebelum memilih dan mengonsumsi suplemen."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "efek samping suplemen",
+        "patterns": [
+            "Apakah ada efek samping dari penggunaan suplemen untuk kesehatan menstruasi?",
+            "apa efek samping suplemen untuk mentruasi?",
+            "efek samping meminum suplemen mentruasi"
+        ],
+        "responses": [
+            "Efek samping dari penggunaan suplemen untuk kesehatan menstruasi tergantung pada jenis dan dosisnya. Beberapa efek samping yang mungkin terjadi antara lain: sakit kepala, mual, diare, dan gangguan pencernaan. Sebaiknya Anda berkonsultasi dengan dokter sebelum mengonsumsi suplemen tersebut."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menstruasi remaja",
+        "patterns": [
+            "Menstruasi pada masa remaja",
+            "Kapan menstruasi pertama biasanya terjadi?"
+        ],
+        "responses": [
+            "Menstruasi pertama biasanya terjadi saat usia remaja, dengan rata-rata usia 12—13 tahun. Menstruasi biasanya mulai terjadi 1,5—3 tahun setelah payudara tumbuh dan berkembang. Pada usia remaja, siklus haid cenderung terjadi secara tidak menentu dengan rentang selama 21—45 hari. Siklus haid bisa datang lebih cepat atau lebih lambat. Bahkan, menstruasi bisa berjarak hingga paling lama 6 bulan. Haid juga biasanya disertai dengan beberapa gejala yang terjadi sejak beberapa hari sebelum terjadinya haid, yang dikenal dengan istilah premenstrual syndrome (PMS). Gejala tersebut dapat berupa kram perut akibat kontraksi otot rahim, payudara terasa sakit dan membesar, serta nyeri pada kaki dan pinggul. Jika anak perempuan Anda belum mengalami menstruasi pertama pada usia 15 tahun atau dalam 3 tahun setelah mengalami pertumbuhan payudara, disarankan untuk melakukan pemeriksaan ke dokter kandungan."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "siklus menstruasi remaja",
+        "patterns": [
+            "Berapa lama siklus menstruasi pada masa remaja?",
+            "Bagaimana cara menghitung siklus menstruasi pada masa remaja?"
+        ],
+        "responses": [
+            "Siklus menstruasi pada masa remaja cenderung tidak menentu dengan rentang selama 21—45 hari. Siklus haid bisa datang lebih cepat atau lebih lambat. Bahkan, menstruasi bisa berjarak hingga paling lama 6 bulan. Untuk menghitung siklus menstruasi, Anda dapat mulai dari hari pertama haid Anda sebagai hari pertama siklus."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "ketidakteraturan menstruasi remaja",
+        "patterns": [
+            "Apa yang terjadi selama menstruasi pada masa remaja?",
+            "Siklus menstruasi saya tidak teratur pada masa remaja"
+        ],
+        "responses": [
+            "Selama menstruasi pada masa remaja, tubuh Anda melepaskan lapisan rahim yang tidak diperlukan. Ini adalah proses alami yang terjadi setiap bulan."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menstruasi dan kehamilan",
+        "patterns": [
+            "Bagaimana cara membedakan tanda haid dan tanda hamil?",
+            "perbedaan hamil dan mentruasi"
+        ],
+        "responses": [
+            "Tanda-tanda haid dan tanda-tanda kehamilan memiliki kemiripan, seperti perubahan mood, sakit punggung, sering buang air kecil, dan nyeri payudara. Namun, tanda-tanda kehamilan lainnya termasuk mual, muntah, dan peningkatan sensitivitas pada bau ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "kehamilan",
+        "patterns": [
+            "Apakah mungkin menstruasi terjadi selama kehamilan?",
+            "menstruasi saat kehamilan"
+        ],
+        "responses": [
+            "Menstruasi selama kehamilan tidak mungkin terjadi. Namun, beberapa wanita mengalami perdarahan ringan selama awal kehamilan, yang disebut perdarahan implantasi. Perdarahan ini terjadi ketika embrio menempel pada dinding rahim. Perdarahan implantasi biasanya terjadi sekitar seminggu setelah ovulasi dan sebelum waktu haid yang diharapkan ."
+        ],
+        "context_set": ""
+      },
+      
+      {
+        "tag": "perubahan emosi",
+        "patterns": [
+            "Bagaimana cara mengatasi perubahan emosi selama menstruasi?",
+            "perubahan emosi saat haid",
+            "Apakah ada cara untuk mengurangi mood swing saat menstruasi?"
+        ],
+        "responses": [
+            "Perubahan emosi selama menstruasi adalah hal yang normal dan dapat diatasi dengan beberapa cara, seperti: \n\n1. Berolahraga secara teratur. Olahraga dapat membantu mengurangi stres dan meningkatkan suasana hati.\n2. Mengonsumsi makanan yang sehat dan bergizi. Makanan yang sehat dan bergizi dapat membantu menjaga kesehatan mental dan fisik Anda.\n3. Menghindari makanan yang dapat memperburuk gejala PMS, seperti makanan pedas, berlemak, dan berkafein.\n4. Menggunakan teknik relaksasi, seperti meditasi atau yoga.\n5. Tidur yang cukup. Kekurangan tidur dapat memperburuk gejala PMS.\n6. Berbicara dengan teman atau keluarga tentang perasaan Anda. Berbicara dengan orang lain dapat membantu mengurangi stres dan meningkatkan suasana hati Anda."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "olahraga untuk perubahan emosi",
+        "patterns": [
+            "Bagaimana cara mengatasi perubahan emosi selama menstruasi dengan berolahraga?",
+            "olahraga untuk mengurangi mood swing saat menstruasi?",
+            "Apakah olahraga dapat membantu mengurangi perubahan emosi selama menstruasi?"
+        ],
+        "responses": [
+            "Olahraga secara teratur dapat membantu mengurangi perubahan emosi selama menstruasi. Olahraga dapat meningkatkan kadar endorfin dalam tubuh, yang dapat membantu meningkatkan suasana hati Anda . Selain itu, teknik relaksasi seperti meditasi atau yoga juga dapat membantu mengurangi stres dan meningkatkan kesehatan mental Anda ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menjaga kesehatan mental",
+        "patterns": [
+            "Bagaimana cara menjaga kesehatan mental selama menstruasi?"
+        ],
+        "responses": [
+            "Untuk menjaga kesehatan mental selama menstruasi, pastikan untuk mengonsumsi makanan yang sehat dan bergizi, tidur yang cukup, dan berbicara dengan teman atau keluarga tentang perasaan Anda .",
+            "Beberapa cara alami yang dapat membantu menjaga kesehatan mental selama menstruasi antara lain:\n- Berolahraga secara teratur\n- Melakukan relaksasi seperti meditasi atau yoga\n- Menghindari makanan yang mengandung garam dan gula berlebih, serta minuman soda dan alkohol\n- Mengonsumsi makanan sehat dan seimbang seperti sayuran hijau, buah-buahan, kacang-kacangan, dan biji-bijian\n- Mengonsumsi teh chamomile yang mengandung senyawa anti-inflamasi, antispasmodik, sedatif, dan antikecemasan yang secara signifikan berdampak pada nyeri haid\n- Mengonsumsi suplemen seperti kalsium dan magnesium untuk membantu meredakan gejala PMS \n- Tidur yang cukup\nJika Anda mengalami gejala yang tidak biasa selama menstruasi atau memiliki masalah kesehatan yang berkaitan dengan menstruasi, sebaiknya berkonsultasi dengan dokter Anda untuk mendapatkan saran lebih lanjut."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "kesehatan mental",
+        "patterns": [
+          "Bagaimana menstruasi memengaruhi kesehatan mental?",
+          "Apa saja masalah kesehatan mental yang berkaitan dengan menstruasi?"
+        ],
+        "responses": [
+          "Menstruasi dapat memengaruhi kesehatan mental pada beberapa wanita. Selama siklus menstruasi, perubahan hormon dapat memengaruhi suasana hati dan emosi. Beberapa wanita melaporkan bahwa mereka merasa lebih sensitif, mudah marah, atau mudah menangis selama menstruasi ."
+          
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "perubahan fisik",
+        "patterns": [
+            "Perubahan fisik saat menstruasi",
+            "Apa saja perubahan fisik yang terjadi selama menstruasi?",
+            "Bagaimana cara mengatasi perubahan fisik selama menstruasi?",
+            "Apakah ada cara untuk mengurangi gejala fisik saat menstruasi?"
+        ],
+        "responses": [
+            "Saat menstruasi, tubuh Anda mengalami sejumlah perubahan fisik. Beberapa perubahan fisik yang umum terjadi selama menstruasi antara lain: \n\n1. Kulit lebih berminyak, sehingga mudah jerawatan.\n2. Payudara terasa kencang.\n3. Sakit kepala atau migrain.\n4. Mudah marah.\n5. Mengalami perubahan mood.\n6. Sakit punggung.\n7. Perut kembung.\n\nUntuk mengatasi perubahan fisik selama menstruasi, Anda dapat melakukan beberapa hal berikut: \n\n1. Berolahraga secara teratur. Olahraga dapat membantu mengurangi stres dan meningkatkan suasana hati.\n2. Mengonsumsi makanan yang sehat dan bergizi. Makanan yang sehat dan bergizi dapat membantu menjaga kesehatan mental dan fisik Anda.\n3. Menghindari makanan yang dapat memperburuk gejala PMS, seperti makanan pedas, berlemak, dan berkafein.\n4. Menggunakan teknik relaksasi, seperti meditasi atau yoga.\n5. Tidur yang cukup. Kekurangan tidur dapat memperburuk gejala PMS.\n6. Berbicara dengan teman atau keluarga tentang perasaan Anda. Berbicara dengan orang lain dapat membantu mengurangi stres dan meningkatkan suasana hati Anda."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "pola makan PMS",
+        "patterns": [
+            "Makanan apa yang baik untuk mengatasi PMS?",
+            "Bagaimana cara menjaga pola makan sehat selama menstruasi?",
+            "Apakah ada makanan yang dapat membantu mengurangi gejala PMS?",
+            "Bagaimana cara memilih makanan yang tepat untuk kesehatan menstruasi?"
+        ],
+        "responses": [
+            "Beberapa makanan yang dapat membantu mengatasi gejala PMS antara lain: \n\n1. Sayuran berdaun hijau seperti bayam, kangkung, dan lobak kaya akan magnesium yang dapat membantu mengatur keseimbangan hormon perempuan .\n2. Kacang-kacangan seperti kacang almond, kacang mete, dan kacang hijau mengandung magnesium dan vitamin B6 yang dapat membantu meredakan gejala PMS  .\n3. Buah-buahan seperti pisang, apel, dan stroberi mengandung vitamin C yang dapat membantu mengurangi stres .\n4. Ikan salmon mengandung lemak omega-3 dan vitamin D yang dapat membantu meredakan kram dan nyeri saat menstruasi .\n5. Yogurt mengandung kalsium yang dapat membantu menurunkan risiko PMS sebanyak 40% .\n6. Makanan tinggi serat seperti gandum utuh dan biji-bijian dapat membantu menjaga kadar gula darah tetap seimbang dan meningkatkan hormon serotonin .\n\nPastikan untuk selalu menjaga pola makan sehat dan bergizi lengkap setiap hari. Perhatikan komposisi asupan di setiap sesi makan dan hindari makanan berlemak, gula, serta garam  ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Endometriosis",
+        "patterns": [
+            "Apa itu endometriosis?",
+            "Apa saja gejala endometriosis?",
+            "Bagaimana cara mendiagnosis endometriosis?",
+            "Apakah ada pengobatan untuk endometriosis?",
+            "Apakah endometriosis dapat menyebabkan ketidaksuburan?"
+        ],
+        "responses": [
+            "Endometriosis adalah kondisi di mana jaringan yang seharusnya melapisi dinding rahim (endometrium) tumbuh dan menumpuk di luar rahim. Dalam keadaan normal, jaringan dinding rahim akan menebal ketika Anda akan mengalami masa subur. Hal ini terjadi sebagai persiapan agar calon janin dapat menempel pada rahim jika terjadi pembuahan. Bila tak ada pembuahan, endometrium yang telah menebal akan luruh dan keluar dari tubuh dalam bentuk darah. Namun, pada endometriosis, jaringan endometrium yang tumbuh di luar rahim juga ikut menebal, tetapi tidak bisa luruh dan keluar dari tubuh. Kondisi ini menyebabkan iritasi atau peradangan pada jaringan di sekitar endometrium  .\n\nGejala endometriosis meliputi nyeri panggul, nyeri saat berhubungan seksual, nyeri saat buang air besar atau buang air kecil, perdarahan menstruasi yang berat, dan ketidaksuburan .\n\nDiagnosis endometriosis dapat dilakukan melalui pemeriksaan fisik, pemeriksaan USG, atau laparoskopi .\n\nPengobatan endometriosis dapat dilakukan melalui obat-obatan atau operasi .\n\nEndometriosis dapat menyebabkan ketidaksuburan pada wanita ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "ketidakreguleran siklus",
+        "patterns": [
+            "Apa itu ketidakreguleran siklus menstruasi?",
+            "Apa saja penyebab ketidakreguleran siklus menstruasi?",
+            "Bagaimana cara mendiagnosis ketidakreguleran siklus menstruasi?",
+            "Apakah ada pengobatan untuk ketidakreguleran siklus menstruasi?"
+        ],
+        "responses": [
+            "Menstruasi adalah proses keluarnya darah dari rahim yang terjadi secara periodik dan berkala. Siklus menstruasi normal berlangsung selama 21-35 hari, dengan durasi menstruasi selama 3-7 hari  . Ketidakreguleran siklus menstruasi dapat terjadi akibat banyak hal, termasuk kehamilan atau menyusui, gangguan makan, penurunan berat badan yang ekstrem, atau olahraga berlebihan, polycystic ovary syndrome (PCOS), kegagalan ovarium prematur, penyakit radang panggul, fibroid rahim, dan lain-lain . Diagnosis ketidakreguleran siklus menstruasi dapat dilakukan melalui pemeriksaan fisik dan pemeriksaan USG . Pengobatan ketidakreguleran siklus menstruasi tergantung pada penyebabnya. Beberapa pengobatan yang dapat dilakukan antara lain obat-obatan dan operasi ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "berat badan",
+        "patterns": [
+            "Apakah berat badan memengaruhi siklus menstruasi?",
+            "Bagaimana berat badan memengaruhi siklus menstruasi?",
+            "Apakah penambahan atau penurunan berat badan dapat memengaruhi siklus haid?"
+        ],
+        "responses": [
+            "Berat badan dapat memengaruhi siklus menstruasi. Saat berat badan normal lalu berubah menjadi kurang ataupun berlebih, maka siklus menstruasi bisa terganggu . Penambahan maupun penurunan berat badan dapat memengaruhi siklus haid. Berat badannyatanya dapat memengaruhi siklus haid. Contohnya, Anda bisa mengalami siklus menstruasi teratur saat berat badan yang sebelumnya berlebih berubah menjadi ideal. Sebaliknya, saat berat badan kurang, maka menstruasi bisa berhenti untuk sementara waktu . Kenaikan berat badan saat menstruasi sangat berkaitan dengan hormon estrogen dan progesteron yang naik dan turun sepanjang siklus haid. Estrogen dan progesteron mengontrol cara tubuh mengatur cairan. Ketika kedua jenis hormon ini mengalami fluktuasi, jaringan tubuh akan menumpuk lebih banyak air . \n\nUntuk menjaga kesehatan selama menstruasi, pastikan untuk menjaga pola makan sehat dan bergizi lengkap setiap hari. Perhatikan komposisi asupan di setiap sesi makan dan hindari makanan berlemak, gula, serta garam . Selain itu, olahraga secara teratur juga dapat membantu menjaga kesehatan tubuh dan meningkatkan suasana hati."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "perubahan hormon",
+        "patterns": [
+            "Perubahan hormon selama siklus menstruasi",
+            "bagaimana perubahan hormon saat menstruasi?",
+            "mungkinkan perubahan hormon terjadi saat mentruasi?"
+          
+        ],
+        "responses": [
+            "Siklus menstruasi terjadi berbeda-beda pada setiap wanita. Bisa terjadi antara 22-35 hari, tetapi rata-rata terjadi selama 28 hari. Selama proses itu, ada hormon-hormon tertentu yang memengaruhi siklus menstruasi. Jenis-jenis hormon yang berperan dalam siklus menstruasi Hormon-hormon di bawah ini juga dimiliki oleh pria, namun pada wanita, hormon berikut memiliki peran penting dalam sistem reproduksi. 1. Hormon perangsang folikel atau follicle stimulating hormone (FSH) Hormon perangsang folikel merupakan salah satu bagian penting dari sistem reproduksi. Pada wanita, hormon ini berperan penting menyiapkan folikel, yang berisikan sel telur, dan menjadi tempat sel telur hingga matang dan melepaskannya untuk menuju tuba falopi. 2. Hormon estrogen Hormon ini juga terdapat dalam tubuh pria dan wanita. Tapi pada tubuh wanita terdapat lebih banyak hormon estrogen. Estrogen dihasilkan oleh ovarium, kelenjar adrenal dan jaringan lemak. Di dalam tubuh wanita, estrogen memiliki banyak peran. Di antaranya, estrogen di ovarium berfungsi merangsang pertumbuhan folikel telur. Sedangkan di dalam vagina menjaga ketebalan dinding vagina dan meningkatkan pelumasan. Di rahim, estrogen meningkatkan dan memelihara selaput lendir yang melapisi rahim. Terakhir, di payudara, hormon ini berperan dalam pembentukan jaringan payudara. Hormon ini juga membantu menghentikan aliran ASI setelah disapih. 3. Hormon luteinizing atau luteinizing hormone (LH) Hormon LH terdapat pada tubuh pria dan wanita. Pada wanita hormon ini memiliki peran dalam perkembangan dan fungsi seksual. LH juga membantu mengontrol siklus menstruasi dan memicu pelepasan sel telur atau yang terjadi dalam fase ovulasi. 4. Hormon progesteron Hormon ini dikenal sebagai salah satu dari dua hormon seks wanita, selain hormon estrogen. Progesteron memiliki fungsi mengatur menstruasi dan mendukung kehamilan pada wanita. Di luar itu, progesteron juga memiliki peran lain sebagai pembawa pesan kimiawi dalam tubuh yang memengaruhi siklus tidur hingga pencernaan."
+        ],
+        "context_set": "" 
+      },
+      {
+        "tag": "perubahan kulit",
+        "patterns": [
+            "Bagaimana cara mengatasi perubahan kulit saat menstruasi?",
+            "Apa yang harus dilakukan untuk menjaga kesehatan kulit selama menstruasi?",
+            "Bagaimana cara merawat kulit selama menstruasi?"
+        ],
+        "responses": [
+            "Perubahan hormon selama menstruasi dapat mempengaruhi kondisi kulit. Beberapa cara untuk menjaga kesehatan kulit selama menstruasi antara lain: \n\n1. Menjaga kebersihan kulit dengan mencuci wajah secara teratur.\n2. Menggunakan produk perawatan kulit yang lembut dan tidak mengiritasi.\n3. Menghindari makanan pedas dan berlemak.\n4. Mengonsumsi makanan yang sehat dan bergizi.\n5. Minum banyak air putih untuk menjaga kelembapan kulit.\n6. Tidur yang cukup untuk mengurangi stres dan meningkatkan kesehatan kulit."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "dokter",
+        "patterns": [
+            "Kapan harus menghubungi dokter tentang masalah menstruasi?",
+            "Apa saja tanda-tanda yang menunjukkan bahwa saya harus menghubungi dokter tentang masalah menstruasi?",
+            "Bagaimana cara mengetahui apakah saya perlu berkonsultasi dengan dokter tentang masalah menstruasi?"
+        ],
+        "responses": [
+            "Anda harus menghubungi dokter jika mengalami gejala-gejala berikut selama menstruasi: \n\n1. Darah haid keluar sangat banyak .\n2. Tiba-tiba keluar flek sebelum waktunya haid .\n3. Anda tidak pernah haid atau tiba-tiba tidak haid lagi .\n4. Haid terasa sangat menyakitkan .\n5. Periode haid Anda tidak teratur .\n\nJika Anda mengalami gejala-gejala tersebut, segera hubungi dokter Anda untuk mendapatkan penanganan yang tepat."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "tidur",
+        "patterns": [
+            "Bagaimana cara tidur yang baik selama menstruasi?",
+            "Apa yang harus dilakukan untuk tidur nyenyak selama menstruasi?",
+            "Bagaimana cara menjaga kesehatan tidur selama menstruasi?",
+            "Apakah ada posisi tidur yang dapat membantu mengatasi masalah tidur selama menstruasi?"
+        ],
+        "responses": [
+            "Tidur yang cukup dan berkualitas sangat penting untuk menjaga kesehatan tubuh dan pikiran. Berikut adalah beberapa tips untuk tidur nyenyak selama menstruasi: \n\n1. Tidur dengan posisi yang nyaman. Cobalah beberapa posisi tidur yang berbeda untuk menemukan posisi yang paling nyaman bagi Anda.\n2. Gunakan bantal ekstra. Bantal ekstra dapat membantu mengurangi tekanan pada perut dan punggung bagian bawah.\n3. Hindari makanan dan minuman yang dapat memperburuk gejala PMS, seperti kafein dan makanan pedas.\n4. Hindari merokok dan minum alkohol.\n5. Tidur dalam lingkungan yang tenang dan gelap.\n6. Hindari menggunakan ponsel atau gadget lainnya sebelum tidur.\n7. Lakukan relaksasi sebelum tidur, seperti meditasi atau yoga."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "merokok",
+        "patterns": [
+          "Apakah merokok mempengaruhi siklus haid?",
+          "Bagaimana merokok mempengaruhi siklus haid?"
+        ],
+        "responses": [
+          "Merokok dapat memengaruhi kesehatan reproduksi wanita dan menyebabkan ketidakseimbangan hormon. Hal ini dapat menyebabkan perubahan pada siklus menstruasi, termasuk menstruasi yang tidak teratur, lebih sedikit darah menstruasi, atau bahkan tidak ada menstruasi sama sekali. Merokok juga dapat meningkatkan risiko infertilitas dan menopause dini."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "alkohol",
+        "patterns": [
+          "Apakah alkohol mempengaruhi siklus haid?",
+          "Bagaimana alkohol mempengaruhi siklus haid?"
+        ],
+        "responses": [
+          "Alkohol dapat memengaruhi kesehatan reproduksi wanita dan menyebabkan ketidakseimbangan hormon. Hal ini dapat menyebabkan perubahan pada siklus menstruasi, termasuk menstruasi yang tidak teratur, lebih sedikit darah menstruasi, atau bahkan tidak ada menstruasi sama sekali. Alkohol juga dapat meningkatkan risiko infertilitas dan menopause dini."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "merokok dan alkohol",
+        "patterns": [
+          "Apakah merokok dan alkohol mempengaruhi siklus haid?",
+          "Bagaimana merokok dan alkohol mempengaruhi siklus haid?"
+        ],
+        "responses": [
+          "Merokok dan alkohol dapat memengaruhi kesehatan reproduksi wanita, disarankan untuk menghindari atau membatasi konsumsi kedua zat tersebut."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menopause",
+        "patterns": [
+          "Apa itu menopause?",
+          "apa yang dimaksud dengan monopouse?",
+          "monopouse adalah?",
+          "pengertian monopouse",
+          "Apa saja gejala menopause?"
+        ],
+        "responses": [
+          "Menopause adalah kondisi di mana ovarium berhenti memproduksi hormon reproduksi dan menstruasi tidak terjadi selama 12 bulan berturut-turut. Gejala umum dari menopause meliputi haid yang tidak teratur, hot flashes, insomnia, dan perubahan suasana hati."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "pengaruh menopause",
+        "patterns": [
+          "Bagaimana menopause mempengaruhi siklus menstruasi?",
+          "apa pengaruh monopouse terhadap mentruasi?"
+        ],
+        "responses": [
+          "Menopause dapat memengaruhi siklus menstruasi dengan menyebabkan haid yang tidak teratur atau berhenti sama sekali. Selama masa perimenopause, yaitu masa menjelang menopause, siklus menstruasi dapat menjadi lebih pendek atau lebih panjang."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menstruasi dan menopause",
+        "patterns": [
+          "Apakah menstruasi terjadi selama menopause?"
+        ],
+        "responses": [   
+          "Menstruasi biasanya berhenti selama menopause karena ovarium berhenti memproduksi hormon reproduksi.",
+          "Menstruasi biasanya tidak terjadi selama menopause karena ovarium berhenti memproduksi hormon reproduksi."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "tips menopause",
+        "patterns": 
+        [
+          "Bagaimana cara mengatasi gejala menopause?",
+          "cara mengatasi gejala monoupouse"
+        ],
+        "responses": [
+          "Beberapa cara untuk mengatasi gejala menopause meliputi olahraga teratur, makan makanan sehat, dan menghindari rokok dan alkohol. Jika gejala menopause mengganggu aktivitas sehari-hari Anda, sebaiknya berkonsultasi dengan dokter Anda untuk mendapatkan saran lebih lanjut."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "hormon",
+        "patterns": [
+          "Apa itu hormon menstruasi?",
+          "Bagaimana hormon memengaruhi siklus menstruasi?",
+          "Apa saja jenis hormon yang terlibat dalam siklus menstruasi?",
+          "Bagaimana cara mengatur hormon selama menstruasi?"
+        ],
+        "responses": [
+          "Siklus menstruasi dipengaruhi oleh empat jenis hormon, yaitu estrogen, progesteron, hormon perangsang folikel (FSH), dan hormon luteinizing (LH) Hormon-hormon tersebut bekerja bersama-sama untuk mengatur siklus menstruasi. FSH dan LH membantu mengatur produksi estrogen dan progesteron, yang pada gilirannya memengaruhi pertumbuhan dan pelepasan sel telur serta perubahan pada dinding rahim   . Estrogen dan progesteron diproduksi oleh ovarium, sedangkan FSH dan LH diproduksi oleh kelenjar pituitari di otak ",
+          "Beberapa cara untuk mengatur hormon selama menstruasi meliputi menjaga pola makan yang sehat, berolahraga secara teratur, dan menghindari stres. Jika Anda memiliki masalah dengan siklus menstruasi atau kesuburan, sebaiknya berkonsultasi dengan dokter Anda untuk mendapatkan saran lebih lanjut."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "mengatur hormon",
+        "patterns": [
+          "Bagaimana cara mengatur hormon selama menstruasi?"
+        ],
+        "responses": [
+          "Beberapa cara untuk mengatur hormon selama menstruasi meliputi menjaga pola makan yang sehat, berolahraga secara teratur, dan menghindari stres. Jika Anda memiliki masalah dengan siklus menstruasi atau kesuburan, sebaiknya berkonsultasi dengan dokter Anda untuk mendapatkan saran lebih lanjut."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menstruasi yang berlebihan",
+        "patterns": [
+          "Bagaimana cara mengatasi perdarahan yang berlebihan selama menstruasi?",
+          "Apa saja cara mengatasi menstruasi berlebihan?",
+          "Bagaimana cara menghentikan darah haid yang keluar terlalu banyak?",
+          "Cara mengatasi menstruasi berlebihan agar tidak mengganggu aktivitas?"
+        ],
+        "responses": [
+          "Menorrhagia atau menstruasi berlebihan dapat diatasi dengan beberapa cara, antara lain:\n\n- Mengonsumsi obat anti-inflamasi nonsteroid (OAINS) seperti ibuprofen untuk mengurangi rasa sakit dan jumlah pendarahan\n- Mengonsumsi pil KB untuk menyeimbangkan hormon dan mengendalikan darah haid berlebihan\n- Mengonsumsi obat penambah hormon progesteron (progestin) untuk menyeimbangkan hormon dan mengurangi perdarahan haid\n- Menempatkan bantal pemanas atau botol berisi air panas di perut untuk meredakan kram\n- Mengonsumsi makanan yang kaya zat besi untuk mencegah anemia\n- Menghindari makanan dan minuman yang dapat memperburuk gejala, seperti alkohol, kafein, dan makanan pedas\n- Berolahraga secara teratur untuk meningkatkan sirkulasi darah dan meredakan stres\n- Jika menstruasi berlebihan disebabkan oleh kondisi medis tertentu, seperti fibroid atau polip rahim, dokter mungkin akan merekomendasikan prosedur medis seperti kuretase atau histerektomi"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menyusui",
+        "patterns": [
+          "Apakah menstruasi terjadi saat menyusui?",
+          "mungkinkah bisa mentruasi saat menyusui?",
+          "menstruasi saat menyusui?"
+        ],
+        "responses": [
+          "Menstruasi dapat terjadi saat menyusui, meskipun tidak selalu terjadi. Saat menyusui, tubuh menghasilkan hormon prolaktin yang dapat menekan ovulasi dan menstruasi. Namun, tingkat prolaktin dapat menurun seiring berjalannya waktu, sehingga menstruasi dapat kembali."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "pengaruh menyusui",
+        "patterns": [
+          "Bagaimana menstruasi memengaruhi produksi ASI?",
+          "pengaruh menstruasi terhadapa menyusui",
+          "bagaimana menstruasi mempengaruhi ibu menyusui?"
+        ],
+        "responses": [
+          "Menstruasi tidak memengaruhi produksi ASI secara signifikan. Namun, beberapa wanita melaporkan bahwa produksi ASI mereka menurun selama beberapa hari sebelum menstruasi dimulai."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "kembali mentruasi setelah melahirkan",
+        "patterns": [
+          "Kapan menstruasi biasanya kembali setelah melahirkan?"
+        ],
+        "responses": [
+          "Menstruasi biasanya kembali sekitar 6-8 minggu setelah melahirkan, tetapi ini dapat bervariasi tergantung pada faktor-faktor seperti apakah Anda menyusui atau tidak."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "mencegah menstruasi saat menyusui",
+        "patterns": [
+          "Apakah ada cara untuk mencegah menstruasi saat menyusui?"
+        ],
+        "responses": [
+          "Tidak ada cara pasti untuk mencegah menstruasi saat menyusui. Namun, menyusui secara eksklusif dan sering dapat membantu menekan ovulasi dan menstruasi."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "tips atasi gangguan makan",
+        "patterns": [
+          "Bagaimana cara mengatasi gangguan makan yang memengaruhi siklus menstruasi?"
+        ],
+        "responses": [
+          "Cara mengatasi gangguan makan yang memengaruhi siklus menstruasi meliputi pengobatan untuk gangguan makan dan penanganan kondisi medis yang mendasarinya. Selain itu, menjaga pola makan yang sehat dan seimbang serta menghindari stres juga dapat membantu mengembalikan keseimbangan hormon dan memperbaiki siklus menstruasi."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "gangguan makan",
+        "patterns": [
+          "Bagaimana gangguan makan memengaruhi siklus menstruasi?",
+          "Apakah menstruasi terjadi pada wanita dengan gangguan makan?"
+        ],
+        "responses": [
+          "Gangguan makan seperti anoreksia nervosa dan bulimia nervosa dapat memengaruhi siklus menstruasi. Kondisi ini disebabkan oleh ketidakseimbangan nutrisi dalam tubuh, yang dapat mengganggu produksi hormon reproduksi dan menyebabkan ketidakseimbangan hormon. Akibatnya, siklus menstruasi dapat menjadi tidak teratur atau bahkan berhenti sama sekali .",
+          "Menstruasi dapat terjadi pada wanita dengan gangguan makan, meskipun tidak selalu terjadi. Pada kasus yang ekstrem, menstruasi bisa berhenti sama sekali (amenorea)."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "tekanan darah",
+        "patterns": [
+          "Apakah menstruasi memengaruhi tekanan darah?",
+          "Bagaimana menstruasi memengaruhi tekanan darah?",
+          "Apakah tekanan darah tinggi dapat mempengaruhi menstruasi?"
+        ],
+        "responses": [
+          "Menstruasi dapat memengaruhi tekanan darah pada beberapa wanita. Selama siklus menstruasi, kadar hormon estrogen dan progesteron dalam tubuh berubah-ubah, yang dapat memengaruhi pembuluh darah dan menyebabkan fluktuasi tekanan darah. Beberapa wanita melaporkan bahwa tekanan darah mereka meningkat selama menstruasi, sementara yang lain melaporkan penurunan tekanan darah.",
+          "Tekanan darah tinggi dapat memengaruhi menstruasi. Tekanan darah tinggi dapat menyebabkan perdarahan yang lebih berat selama menstruasi, yang dapat mengganggu aktivitas sehari-hari.",
+          "Tekanan darah tinggi dapat memengaruhi siklus menstruasi. Tekanan darah tinggi dapat menyebabkan perdarahan yang lebih berat selama menstruasi, yang dapat mengganggu aktivitas sehari-hari."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "gangguan tidur",
+        "patterns": [
+          "Apakah menstruasi memengaruhi tidur?",
+          "Bagaimana menstruasi memengaruhi tidur?"
+        ],
+        "responses": [
+          "Menstruasi dapat memengaruhi tidur pada beberapa wanita. Selama siklus menstruasi, kadar hormon estrogen dan progesteron dalam tubuh berubah-ubah, yang dapat memengaruhi pembuluh darah dan menyebabkan fluktuasi tekanan darah. Beberapa wanita melaporkan bahwa sulit tidur atau insomnia saat menstruasi merupakan salah satu gejala dari premenstruation syndrome (PMS).",
+          "Insomnia saat menstruasi terjadi karena adanya perubahan kadar hormon, khususnya hormon estrogen dan progesteron di dalam tubuh. Selain itu, kenaikan suhu tubuh selama siklus menstruasi juga dapat mengacaukan pola tidur."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "tips atasi gangguan tidur",
+        "patterns": [
+          "Apa saja cara mengatasi gangguan tidur saat menstruasi?"
+        ],
+        "responses": [
+          "Cara mengatasi gangguan tidur saat menstruasi meliputi menjaga pola makan yang sehat, berolahraga secara teratur, dan menghindari stres. Terapkan kebiasaan sehat sebelum tidur seperti menjaga jadwal tidur yang konsisten setiap hari, matikan gadget 30 menit sebelum tidur, hindari makan besar sebelum tidur, serta buat suasana tidur yang nyaman. Relaksasi sebelum tidur juga bermanfaat untuk memperbaiki suasana hati menjadi lebih baik dan meringankan stres. Pilih posisi tidur yang nyaman seperti posisi menyamping atau telentang. Gunakan alas tidur waterproof atau lapisi spreimu dengan kain untuk menghindari kebocoran darah haid. Terapkan pola hidup sehat dengan mengonsumsi berbagai makanan sehat yang bisa membuat tidur lebih lelap dan meredakan rasa tidak nyaman akibat haid seperti ikan, telur, serta susu dan produk olahannya. Selain itu, jangan melewatkan sarapan, rutin berolahraga, hindari konsumsi minuman beralkohol, dan kurangi asupan kafein."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "perubahan berat badan",
+        "patterns": [
+          "Bagaimana cara mengatasi perubahan berat badan saat menstruasi?",
+          "Apa saja tips untuk menjaga berat badan tetap stabil selama menstruasi?",
+          "Bagaimana cara mengurangi rasa lapar saat menstruasi?",
+          "Apa saja makanan yang sebaiknya dihindari selama menstruasi?",
+          "Bagaimana cara menjaga kesehatan tubuh selama menstruasi?"
+        ],
+        "responses": [
+          "Beberapa cara untuk mengatasi perubahan berat badan saat menstruasi meliputi:\n- Mengonsumsi makanan sehat dan seimbang\n- Berolahraga secara teratur\n- Menghindari makanan yang mengandung garam dan gula berlebih\n- Mengonsumsi makanan yang kaya serat\n- Mengonsumsi air putih yang cukup\n- Menghindari stres dan kecemasan yang berlebihan\n- Tidur yang cukup"
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "autoimun",
+        "patterns": [
+          "Apakah menstruasi memengaruhi penyakit autoimun?",
+          "Bagaimana menstruasi memengaruhi penyakit autoimun?",
+          "Apa saja penyakit autoimun yang berkaitan dengan menstruasi?"
+        ],
+        "responses": [
+          "Penyakit autoimun adalah kondisi di mana sistem kekebalan tubuh menyerang sel dan jaringan tubuh yang sehat. Beberapa jenis penyakit autoimun dapat memengaruhi siklus menstruasi dan kesehatan reproduksi wanita. Beberapa contoh penyakit autoimun yang berkaitan dengan menstruasi antara lain:\n- Lupus: Penyakit ini dapat menyebabkan peradangan pada berbagai bagian tubuh, termasuk kulit, sendi, ginjal, dan paru-paru. Lupus juga dapat memengaruhi kesehatan reproduksi wanita dengan menyebabkan menstruasi yang tidak teratur atau berhenti sama sekali.\n- Penyakit Hashimoto: Penyakit ini terjadi ketika sistem kekebalan tubuh menyerang kelenjar tiroid. Hal ini dapat menyebabkan hipotiroidisme, yaitu kondisi di mana kelenjar tiroid tidak dapat memproduksi hormon tiroid dengan baik. Wanita dengan hipotiroidisme dapat mengalami menstruasi yang tidak teratur atau berhenti sama sekali.\n- Scleroderma: Penyakit ini dapat menyebabkan pengerasan pada kulit dan jaringan tubuh lainnya. Scleroderma juga dapat memengaruhi kesehatan reproduksi wanita dengan menyebabkan menstruasi yang tidak teratur atau berhenti sama sekali.\n- Rheumatoid arthritis: Penyakit ini terjadi ketika sistem kekebalan tubuh menyerang persendian. Rheumatoid arthritis juga dapat memengaruhi kesehatan reproduksi wanita dengan menyebabkan menstruasi yang tidak teratur atau berhenti sama sekali.\n- Multiple sclerosis: Penyakit ini terjadi ketika sistem kekebalan tubuh menyerang sel saraf di otak dan sumsum tulang belakang. Multiple sclerosis juga dapat memengaruhi kesehatan reproduksi wanita dengan menyebabkan menstruasi yang tidak teratur atau berhenti sama sekali."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "pengobatan PMS",
+        "patterns": [
+          "Apa saja pilihan pengobatan alami untuk PMS?",
+          "Bagaimana cara mengatasi gejala PMS secara alami?",
+          "Apa saja makanan yang sebaiknya dihindari selama PMS?",
+          "Bagaimana cara menjaga kesehatan tubuh selama PMS?"
+        ],
+        "responses": [
+          "Beberapa cara alami yang dapat membantu meredakan gejala PMS antara lain:\n- Mengonsumsi makanan sehat dan seimbang seperti sayuran hijau, buah-buahan, kacang-kacangan, dan biji-bijian .\n- Berolahraga secara teratur untuk mengurangi gejala PMS seperti kelelahan, sakit kepala, dan depresi .\n- Menghindari makanan yang mengandung garam dan gula berlebih, serta minuman soda dan alkohol.\n- Mengompres perut dengan botol berisi air hangat untuk melemaskan otot rahim yang tegang sehingga mengurangi rasa sakit.\n- Mengonsumsi teh chamomile yang mengandung senyawa anti-inflamasi, antispasmodik, sedatif, dan antikecemasan yang secara signifikan berdampak pada nyeri haid\n- Mengonsumsi suplemen seperti kalsium dan magnesium untuk membantu meredakan gejala PMS.\n- Melakukan relaksasi seperti meditasi atau yoga untuk meredakan stres dan kecemasan yang seringkali menyertai gejala PMS."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "stres",
+        "patterns": [
+          "Bagaimana stres memengaruhi menstruasi?",
+          "Apakah stres dapat memengaruhi siklus menstruasi?",
+          "Apa saja gejala stres yang berkaitan dengan menstruasi?"
+        ],
+        "responses": [
+          "Stres dapat memengaruhi siklus menstruasi pada beberapa wanita. Selama siklus menstruasi, kadar hormon estrogen dan progesteron dalam tubuh berubah-ubah, yang dapat memengaruhi pembuluh darah dan menyebabkan fluktuasi tekanan darah . Beberapa wanita melaporkan bahwa sulit tidur atau insomnia saat menstruasi merupakan salah satu gejala dari premenstruation syndrome (PMS) . Stres juga dapat memengaruhi kesehatan mental dan fisik secara keseluruhan, sehingga penting untuk mengelola stres dengan baik."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "mengurangi stres",
+        "patterns": [
+          "bagaimana cara mengurangi stres saat menstruasi?",
+          "tips mengurangi stress",
+          "cara alami mengurangi stres saat menstruasi"
+        ],
+        "responses": [
+          "Beberapa cara alami yang dapat membantu mengurangi stres antara lain:\n- Berolahraga secara teratur\n- Melakukan relaksasi seperti meditasi atau yoga\n- Menghindari makanan yang mengandung garam dan gula berlebih, serta minuman soda dan alkohol\n- Mengonsumsi makanan sehat dan seimbang seperti sayuran hijau, buah-buahan, kacang-kacangan, dan biji-bijian\n- Mengonsumsi teh chamomile yang mengandung senyawa anti-inflamasi, antispasmodik, sedatif, dan antikecemasan yang secara signifikan berdampak pada nyeri haid\n- Mengonsumsi suplemen seperti kalsium dan magnesium untuk membantu meredakan gejala PMS\n- Tidur yang cukup\nPastikan untuk selalu berkonsultasi dengan dokter jika Anda memiliki masalah dengan PMS atau gejala yang tidak kunjung membaik."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "suhu tubuh",
+        "patterns": [
+          "apakah suhu tubuh mempengaruhi menstruasi?",
+          "Apakah suhu tubuh wanita mengalami perubahan selama menstruasi?",
+          "Apa yang terjadi pada suhu tubuh selama menstruasi?"
+        ],
+        "responses": [
+          "Selama siklus menstruasi, tubuh wanita mengalami perubahan hormon yang dapat memengaruhi suhu tubuh. Menurut [Hello Sehat](https://hellosehat.com/wanita/menstruasi/perubahan-pada-tubuh-saat-menstruasi/), peningkatan kadar prostaglandin selama menstruasi dapat menyebabkan naik turunnya suhu tubuh. Selain itu, penurunan kadar estrogen di dalam tubuh juga dapat menyebabkan kemampuan tubuh untuk mentoleransi perubahan suhu menjadi berkurang. Hal ini dapat menyebabkan tubuh merasa tidak nyaman saat suhu tubuh sedikit meningkat.\nMendekati waktu ovulasi, suhu tubuh basal wanita sedikit meningkat dan lendir yang terdapat pada mulut rahim akan terlihat lebih kental, elastis, licin, dan transparan menyerupai putih telur. Hal ini menandakan bahwa wanita sedang berada pada masa subur dalam siklus menstruasinya\nJika Anda mengalami gejala yang tidak biasa selama menstruasi atau memiliki masalah kesehatan yang berkaitan dengan menstruasi, sebaiknya berkonsultasi dengan dokter Anda untuk mendapatkan saran lebih lanjut."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "kesehatan tulang",
+        "patterns": [
+          "Bagaimana menstruasi memengaruhi kesehatan tulang?",
+          "Apa saja masalah kesehatan tulang yang berkaitan dengan menstruasi?",
+          "Bagaimana cara menjaga kesehatan tulang selama menstruasi?"
+        ],
+        "responses": [
+          "Menstruasi dapat memengaruhi kesehatan tulang pada beberapa wanita. Selama siklus menstruasi, kadar hormon estrogen dan progesteron dalam tubuh berubah-ubah, yang dapat memengaruhi kesehatan tulang. Kondisi ini disebabkan oleh ketidakseimbangan nutrisi dalam tubuh, yang dapat mengganggu produksi hormon reproduksi dan menyebabkan ketidakseimbangan hormon. Akibatnya, siklus menstruasi dapat menjadi tidak teratur atau bahkan berhenti sama sekali."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "kesehatan jantung",
+        "patterns": [
+          "Bagaimana menstruasi memengaruhi kesehatan jantung?",
+          "Apa saja masalah kesehatan jantung yang berkaitan dengan menstruasi?"
+        ],
+        "responses": [
+          "Menstruasi dapat memengaruhi kesehatan jantung pada beberapa wanita. Menurut [Gaya Tempo](https://gaya.tempo.co/read/1730811/peneliti-ungkap-kaitan-siklus-menstruasi-dan-kesehatan-jantung), wanita dengan siklus menstruasi yang lebih pendek dari lama rata-rata 21 hari dan lebih panjang dari rata-rata 35 hari lebih rentan terhadap fibrilasi atrium atau detak jantung tidak teratur. Fluktuasi hormon selama siklus haid dianggap berperan dalam meningkatkan risiko pengembangan aritmia atau detak jantung tidak teratur sehingga meningkatkan risiko penyakit jantung seperti resistensi insulin, kolesterol tinggi, tekanan darah tinggi, peradangan kronis, dan sindrom ovarium polikistik. Perkiraan total persentase global wanita yang memiliki siklus menstruasi tidak teratur adalah sekitar 14-25 persen menurut Institut Kesehatan Nasional Amerika Serikat. Oleh karena itu, menjaga pola hidup sehat seperti mengonsumsi makanan sehat, berolahraga secara teratur, dan menghindari stres dapat membantu menjaga kesehatan jantung selama menstruasi\nJika Anda mengalami gejala yang tidak biasa selama menstruasi atau memiliki masalah kesehatan yang berkaitan dengan menstruasi, sebaiknya berkonsultasi dengan dokter Anda untuk mendapatkan saran lebih lanjut."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "kesehatan ginjal",
+        "patterns": [
+          "Bagaimana menstruasi memengaruhi kesehatan ginjal?",
+          "Apa saja masalah kesehatan ginjal yang berkaitan dengan menstruasi?"
+        ],
+        "responses": [
+          "Menstruasi dapat memengaruhi kesehatan ginjal pada beberapa wanita. Selama siklus menstruasi, peningkatan kadar prostaglandin dapat menyebabkan naik turunnya suhu tubuh. Selain itu, penurunan kadar estrogen di dalam tubuh juga dapat menyebabkan kemampuan tubuh untuk mentoleransi perubahan suhu menjadi berkurang. Hal ini dapat menyebabkan tubuh merasa tidak nyaman saat suhu tubuh sedikit meningkat."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "kesehatan hati",
+        "patterns": [
+          "Bagaimana menstruasi memengaruhi kesehatan hati?",
+          "Apa saja masalah kesehatan hati yang berkaitan dengan menstruasi?"
+        ],
+        "responses": [
+          "Menstruasi dapat memengaruhi kesehatan hati pada beberapa wanita. Selama siklus menstruasi, peningkatan kadar hormon estrogen dapat menyebabkan peningkatan kadar enzim hati. Hal ini dapat menyebabkan kerusakan hati pada beberapa wanita, terutama pada mereka yang memiliki riwayat penyakit hati atau mengonsumsi obat-obatan tertentu ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menjaga kesehatan hati",
+        "patterns": [
+          "Bagaimana cara menjaga kesehatan hati selama menstruasi?"
+        ],
+        "responses": [
+          "Beberapa cara alami yang dapat membantu menjaga kesehatan hati selama menstruasi antara lain:\n- Mengonsumsi makanan sehat dan seimbang seperti sayuran hijau, buah-buahan, kacang-kacangan, dan biji-bijian\n- Menghindari makanan yang mengandung garam dan gula berlebih, serta minuman soda dan alkohol\n- Berolahraga secara teratur\n- Tidur yang cukup\n- Mengonsumsi suplemen seperti vitamin D dan omega-3 untuk membantu menjaga kesehatan hati\nJika Anda mengalami gejala yang tidak biasa selama menstruasi atau memiliki masalah kesehatan yang berkaitan dengan menstruasi, sebaiknya berkonsultasi dengan dokter Anda untuk mendapatkan saran lebih lanjut."
+        ],
+        "context_set": ""
+      },
+
+
+
+      {
+        "tag": "pernapasan",
+        "patterns": [
+            "Gangguan pernapasan pada menstruasi",
+            "Apa saja gangguan pernapasan yang terkait dengan menstruasi?",
+            "Apakah menstruasi dapat mempengaruhi sistem pernapasan?"
+        ],
+        "responses": [
+            "Menstruasi dapat mempengaruhi sistem pernapasan karena hormon yang terlibat dalam siklus menstruasi juga mempengaruhi saluran napas. Beberapa gangguan pernapasan yang terkait dengan menstruasi meliputi asma, bronkitis, dan pneumonia.\nAsma adalah kondisi kronis yang mempengaruhi saluran napas dan menyebabkan sesak napas, batuk, dan kesulitan bernapas. Gejala asma meliputi napas tersengal-sengal, dada terasa sesak, dan batuk-batuk. Menstruasi dapat memperburuk gejala asma pada beberapa wanita.\nBronkitis adalah kondisi inflamasi pada saluran napas utama (bronkus) yang menyebabkan batuk-batuk dan produksi dahak. Gejala bronkitis meliputi batuk-batuk, dahak berwarna kuning atau hijau, dan demam ringan. Menstruasi dapat memperburuk gejala bronkitis pada beberapa wanita.\nPneumonia adalah infeksi paru-paru yang disebabkan oleh bakteri atau virus. Gejala pneumonia meliputi demam tinggi, batuk-batuk, dan sesak napas. Menstruasi dapat memperburuk gejala pneumonia pada beberapa wanita."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "mengatasi gangguan pernapasan",
+        "patterns": [
+            "Bagaimana cara mengatasi gangguan pernapasan saat menstruasi?"
+        ],
+        "responses": [
+            "Untuk mengatasi gangguan pernapasan pada menstruasi, Anda dapat melakukan beberapa hal seperti menghindari pemicu asma seperti debu atau bulu binatang, menjaga kebersihan lingkungan sekitar, dan mengonsumsi makanan sehat yang kaya nutrisi."
+        ],
+        "context_set": ""
+      },
+
+
+      {
+        "tag": "hormon suasana hati",
+        "patterns": [
+            "Bagaimana hormon mempengaruhi suasana hati selama menstruasi?",
+            "hubungan antara hormon dan suasana hati selama menstruasi?"
+        ],
+        "responses": [
+            "Hormon yang terlibat dalam siklus menstruasi, seperti estrogen dan progesteron, dapat mempengaruhi suasana hati wanita. Selama fase folikuler, kadar estrogen meningkat dan dapat meningkatkan mood dan energi. Namun, selama fase luteal, kadar progesteron meningkat dan dapat menyebabkan perubahan suasana hati seperti mudah tersinggung, cemas, atau sedih. Hal ini disebabkan oleh pengaruh hormon pada neurotransmiter di otak seperti serotonin dan dopamin.",
+            "Hormon yang terlibat dalam siklus menstruasi, seperti estrogen dan progesteron, dapat mempengaruhi neurotransmiter di otak seperti serotonin dan dopamin yang berperan dalam regulasi mood."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "penyebab hormon suasana hati",
+        "patterns": [
+            "Apa yang menyebabkan perubahan suasana hati selama menstruasi?",
+            "penyebab perubahan suasana hati saat menstruasi",
+            "Mengapa saya merasa mudah tersinggung selama menstruasi?"
+            
+        ],
+        "responses": [
+            "Perubahan suasana hati selama menstruasi disebabkan oleh fluktuasi hormon yang terjadi selama siklus menstruasi. Selain itu, faktor lain seperti stres, kurang tidur, dan pola makan yang tidak sehat juga dapat mempengaruhi suasana hati.",
+            "Perubahan suasana hati selama menstruasi adalah hal yang normal dan umum terjadi pada banyak wanita. Hal ini disebabkan oleh fluktuasi hormon yang terjadi selama siklus menstruasi."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menjaga kandungan",
+        "patterns": [
+            "Bagaimana cara menjaga kesehatan kandungan selama menstruasi?"
+            
+        ],
+        "responses": [
+            
+            "Untuk menjaga kesehatan kandungan selama menstruasi, Anda dapat melakukan beberapa hal seperti: menjaga kebersihan organ intim, mengganti pembalut secara teratur, menghindari penggunaan produk pembersih vagina, dan mengonsumsi makanan sehat seperti sayuran dan buah-buahan ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "mentruasi tidak teratur",
+        "patterns": [
+            
+            "Apakah menstruasi yang tidak teratur berbahaya?",
+            "menstruasi saya tidak teratur"
+        ],
+        "responses": [
+            
+            "Menstruasi yang tidak teratur dapat menjadi tanda adanya masalah kesehatan seperti PCOS (Polycystic Ovary Syndrome), gangguan tiroid, atau masalah pada rahim. Oleh karena itu, sebaiknya Anda berkonsultasi dengan dokter jika mengalami menstruasi yang tidak teratur ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "mengatasi menstruasi tidak teratur",
+        "patterns": [
+            "Bagaimana cara mengatasi menstruasi yang tidak teratur?"
+        ],
+        "responses": [
+            "Cara mengatasi menstruasi yang tidak teratur tergantung pada penyebabnya. Beberapa cara yang dapat dilakukan antara lain: menjaga berat badan ideal, mengonsumsi makanan sehat, berolahraga secara teratur, dan menghindari stres ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "kesehatan payudara",
+        "patterns": [
+            "Apa hubungan antara menstruasi dan kesehatan payudara?",
+            "Bagaimana menstruasi mempengaruhi kesehatan payudara?",
+            "Apakah ada hubungan antara siklus menstruasi dan kesehatan payudara?"
+        ],
+        "responses": [
+            "Menstruasi dapat mempengaruhi kesehatan payudara karena perubahan hormon yang terjadi selama siklus menstruasi. Selama fase luteal, kadar hormon progesteron meningkat dan dapat menyebabkan pembengkakan atau rasa sakit pada payudara. Hal ini disebabkan oleh pengaruh hormon pada jaringan payudara dan saluran susu. Namun, gejala ini biasanya akan mereda setelah menstruasi berakhir .",
+            "Ada hubungan antara siklus menstruasi dan kesehatan payudara. Selama fase luteal, kadar hormon progesteron meningkat dan dapat menyebabkan pembengkakan atau rasa sakit pada payudara. Hal ini disebabkan oleh pengaruh hormon pada jaringan payudara dan saluran susu. Namun, gejala ini biasanya akan mereda setelah menstruasi berakhir ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "menjaga kesehatan payudara",
+        "patterns": [
+            "Bagaimana cara menjaga kesehatan payudara selama menstruasi?"
+        ],
+        "responses": [
+            "Untuk menjaga kesehatan payudara selama menstruasi, Anda dapat melakukan beberapa hal seperti: mengenakan bra yang nyaman, menghindari konsumsi makanan atau minuman yang mengandung kafein, menghindari merokok, dan melakukan pemeriksaan payudara secara teratur ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "polusi",
+        "patterns": [
+            "Bagaimana polusi lingkungan mempengaruhi kesehatan menstruasi?",
+            "Apakah polusi lingkungan dapat mempengaruhi siklus menstruasi?"
+        ],
+        "responses": [
+            "Polusi lingkungan dapat mempengaruhi kesehatan menstruasi karena zat-zat berbahaya yang terkandung dalam udara, air, dan makanan dapat masuk ke dalam tubuh dan mengganggu keseimbangan hormon. Hal ini dapat menyebabkan gangguan pada siklus menstruasi seperti haid yang tidak teratur atau tidak lancar .",
+            "Polusi lingkungan dapat mempengaruhi siklus menstruasi karena zat-zat berbahaya yang terkandung dalam udara, air, dan makanan dapat masuk ke dalam tubuh dan mengganggu keseimbangan hormon. Hal ini dapat menyebabkan gangguan pada siklus menstruasi seperti haid yang tidak teratur atau tidak lancar ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "dampak polusi",
+        "patterns": [
+            "Apa saja dampak polusi lingkungan pada kesehatan menstruasi?"
+            
+        ],
+        "responses": [
+            "Dampak polusi lingkungan pada kesehatan menstruasi antara lain: haid yang tidak teratur atau tidak lancar, nyeri haid yang lebih parah, dan risiko infertilitas yang lebih tinggi ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "melindungi dari polusi",
+        "patterns": [
+            "Bagaimana cara melindungi diri dari dampak polusi lingkungan pada kesehatan menstruasi?"
+        ],
+        "responses": [
+            "Untuk melindungi diri dari dampak polusi lingkungan pada kesehatan menstruasi, Anda dapat melakukan beberapa hal seperti: menghindari paparan zat-zat berbahaya seperti asap rokok, bahan kimia rumah tangga, dan pestisida; mengonsumsi makanan sehat dan bergizi; dan menjaga kebersihan organ intim ."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "darah pendarahan",
+        "patterns": 
+        [
+            "Berapa banyak darah yang keluar selama menstruasi?"
+        ],
+        "responses": [
+            "Jumlah darah yang keluar selama menstruasi bervariasi pada setiap wanita. Rata-rata, seorang wanita kehilangan sekitar 30-40 ml darah selama satu periode menstruasi."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "penyebab pendarahan",
+        "patterns": [
+            "Apa yang menyebabkan pendarahan saat menstruasi?"
+        ],
+        "responses": [
+            "Pendarahan saat menstruasi dapat disebabkan oleh berbagai faktor, seperti ketidakseimbangan hormon, infeksi, atau kondisi medis tertentu. Jika Anda mengalami pendarahan yang tidak normal, sebaiknya berkonsultasi dengan dokter."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "pendarahan",
+        "patterns": [
+            "Pendarahan saat menstruasi",
+            "Apakah pendarahan saat menstruasi normal?"
+        ],
+        "responses": [
+            "Pendarahan saat menstruasi normal terjadi selama 3-7 hari dan jumlah darah yang keluar bervariasi pada setiap wanita. Jika Anda mengalami pendarahan yang tidak normal, sebaiknya berkonsultasi dengan dokter."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "mengatasi pendarahan",
+        "patterns": [
+            "Bagaimana cara mengatasi pendarahan saat menstruasi?"
+        ],
+        "responses": [
+            "Cara mengatasi pendarahan saat menstruasi tergantung pada penyebabnya. Jika pendarahan disebabkan oleh ketidakseimbangan hormon, dokter mungkin meresepkan obat untuk membantu mengatur siklus menstruasi Anda. Jika pendarahan disebabkan oleh kondisi medis tertentu, dokter mungkin meresepkan pengobatan yang sesuai."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "PMS (Sindrom Pra-Menstruasi)",
+        "patterns": [
+            "PMS",
+            "Apa itu PMS?"
+        ],
+        "responses": [
+            "PMS (Sindrom Pra-Menstruasi) adalah kondisi yang mempengaruhi sebagian besar wanita selama beberapa hari atau minggu sebelum menstruasi. Gejala PMS meliputi perubahan suasana hati, sakit kepala, nyeri payudara, dan kelelahan."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "gejala PMS (Sindrom Pra-Menstruasi)",
+        "patterns": [
+            "Apa saja gejala PMS?"
+        ],
+        "responses": [
+            "Gejala PMS dapat bervariasi pada setiap wanita. Beberapa gejala umum meliputi perubahan suasana hati, sakit kepala, nyeri payudara, dan kelelahan. Gejala PMS biasanya muncul beberapa hari atau minggu sebelum menstruasi dan hilang setelah menstruasi dimulai."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "mengatasi PMS (Sindrom Pra-Menstruasi)",
+        "patterns": [
+            
+            "Bagaimana cara mengatasi PMS?"
+        ],
+        "responses": [
+            "Cara mengatasi PMS tergantung pada gejala yang dialami. Beberapa cara yang dapat membantu mengurangi gejala PMS meliputi olahraga teratur, mengonsumsi makanan sehat, dan menghindari makanan yang mengandung garam dan gula berlebihan. Jika gejala PMS Anda parah, dokter mungkin meresepkan obat untuk membantu mengatasi gejala tersebut."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "pengaruh PMS (Sindrom Pra-Menstruasi) kesehatan mental",
+        "patterns": [
+            "Apakah PMS mempengaruhi kesehatan mental?"
+        ],
+        "responses": [
+            "PMS dapat mempengaruhi kesehatan mental. Beberapa gejala PMS yang dapat mempengaruhi kesehatan mental meliputi perubahan suasana hati, kecemasan, dan depresi. Jika gejala PMS Anda parah dan mengganggu aktivitas sehari-hari Anda, sebaiknya berkonsultasi dengan dokter. Dokter dapat membantu menentukan penyebab gejala PMS Anda dan meresepkan pengobatan yang sesuai."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Kram Perut",
+        "patterns": [
+            "Kram perut saat menstruasi"
+        ],
+        "responses": [
+            "Kram perut saat menstruasi adalah gejala yang umum dialami oleh banyak wanita. Kram perut terjadi karena kontraksi otot rahim saat melepaskan lapisan rahim yang tidak diperlukan.",
+            "Kram perut saat menstruasi normal terjadi pada sebagian besar wanita. Namun, jika kram perut Anda sangat parah dan tidak merespon terhadap pengobatan rumahan, sebaiknya berkonsultasi dengan dokter. Dokter dapat membantu menentukan penyebab kram perut Anda dan meresepkan pengobatan yang sesuai."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "penyebab Kram Perut",
+        "patterns": [
+            
+            "Apa yang menyebabkan kram perut saat menstruasi?"
+        ],
+        "responses": [
+            "Kram perut saat menstruasi dapat disebabkan oleh berbagai faktor, seperti ketidakseimbangan hormon, infeksi, atau kondisi medis tertentu. Jika Anda mengalami kram perut yang tidak normal, sebaiknya berkonsultasi dengan dokter."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "mengatasi Kram Perut",
+        "patterns": [
+            "Bagaimana cara mengatasi kram perut saat menstruasi?"
+        ],
+        "responses": [
+            "Cara mengatasi kram perut saat menstruasi tergantung pada tingkat keparahan gejala. Beberapa cara yang dapat membantu mengurangi kram perut meliputi mengonsumsi makanan sehat, menghindari makanan yang mengandung garam dan gula berlebihan, dan menggunakan bantal pemanas atau botol air hangat pada perut. Jika kram perut Anda parah, dokter mungkin meresepkan obat untuk membantu mengatasi gejala tersebut."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Pusing",
+        "patterns": [
+            "Kepala pusing saat menstruasi",
+            "Apa yang menyebabkan kepala pusing saat menstruasi?",
+            "Bagaimana cara mengatasi kepala pusing saat menstruasi?",
+            "Apakah kepala pusing saat menstruasi normal?"
+        ],
+        "responses": [
+            "Kepala pusing saat menstruasi adalah gejala yang umum dialami oleh banyak wanita. Kepala pusing dapat disebabkan oleh perubahan hormon yang terjadi selama siklus menstruasi.",
+            "Kepala pusing saat menstruasi dapat disebabkan oleh perubahan hormon yang terjadi selama siklus menstruasi. Kondisi medis tertentu, seperti migrain, juga dapat menyebabkan kepala pusing saat menstruasi. Jika Anda mengalami kepala pusing yang tidak normal, sebaiknya berkonsultasi dengan dokter.",
+            "Cara mengatasi kepala pusing saat menstruasi tergantung pada tingkat keparahan gejala. Beberapa cara yang dapat membantu mengurangi kepala pusing meliputi mengonsumsi makanan sehat, menghindari makanan yang mengandung garam dan gula berlebihan, dan menggunakan bantal dingin atau kompres dingin pada kepala. Jika kepala pusing Anda parah, dokter mungkin meresepkan obat untuk membantu mengatasi gejala tersebut.",
+            "Kepala pusing saat menstruasi normal terjadi pada sebagian besar wanita. Namun, jika kepala pusing Anda sangat parah dan mengganggu aktivitas sehari-hari Anda, sebaiknya berkonsultasi dengan dokter.",
+            "Jika kepala pusing Anda sangat parah dan tidak merespon terhadap pengobatan rumahan, sebaiknya berkonsultasi dengan dokter. Dokter dapat membantu menentukan penyebab kepala pusing Anda dan meresepkan pengobatan yang sesuai."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Pusing",
+        "patterns": [
+            "Kepala pusing saat menstruasi",
+            "Apa yang menyebabkan kepala pusing saat menstruasi?",
+            "Apakah kepala pusing saat menstruasi normal?"
+        ],
+        "responses": [
+            "Kepala pusing saat menstruasi adalah gejala yang umum dialami oleh banyak wanita. Kepala pusing dapat disebabkan oleh perubahan hormon yang terjadi selama siklus menstruasi.",
+            "Kepala pusing saat menstruasi dapat disebabkan oleh perubahan hormon yang terjadi selama siklus menstruasi. Kondisi medis tertentu, seperti migrain, juga dapat menyebabkan kepala pusing saat menstruasi. Jika Anda mengalami kepala pusing yang tidak normal, sebaiknya berkonsultasi dengan dokter.",
+            "Kepala pusing saat menstruasi normal terjadi pada sebagian besar wanita. Kepala pusing dapat disebabkan oleh perubahan hormon yang terjadi selama siklus menstruasi. Namun, jika kepala pusing Anda sangat parah dan tidak merespon terhadap pengobatan rumahan, sebaiknya berkonsultasi dengan dokter. Dokter dapat membantu menentukan penyebab kepala pusing Anda dan meresepkan pengobatan yang sesuai."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "mengatasi Pusing",
+        "patterns": [
+            "Bagaimana cara mengatasi kepala pusing saat menstruasi?"
+        ],
+        "responses": [
+            "Cara mengatasi kepala pusing saat menstruasi tergantung pada tingkat keparahan gejala. Beberapa cara yang dapat membantu mengurangi kepala pusing meliputi mengonsumsi makanan sehat, menghindari makanan yang mengandung garam dan gula berlebihan, dan menggunakan bantal dingin atau kompres dingin pada kepala. Jika kepala pusing Anda parah, dokter mungkin meresepkan obat untuk membantu mengatasi gejala tersebut."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "penyebab mood",
+        "patterns": [
+            "Perubahan mood saat menstruasi",
+            "Apa yang menyebabkan perubahan mood saat menstruasi?",
+            "Apakah perubahan mood saat menstruasi normal?"
+        ],
+        "responses": [
+            "Perubahan mood saat menstruasi adalah gejala yang umum dialami oleh banyak wanita. Perubahan mood dapat disebabkan oleh perubahan hormon yang terjadi selama siklus menstruasi.",
+            "Perubahan mood saat menstruasi dapat disebabkan oleh perubahan hormon yang terjadi selama siklus menstruasi. Beberapa gejala umum meliputi perubahan suasana hati, kecemasan, dan depresi. Jika Anda mengalami perubahan mood yang tidak normal, sebaiknya berkonsultasi dengan dokter.",
+            "Perubahan mood saat menstruasi normal terjadi pada sebagian besar wanita. Perubahan mood dapat disebabkan oleh perubahan hormon yang terjadi selama siklus menstruasi. Namun, jika perubahan mood Anda sangat parah dan tidak merespon terhadap pengobatan rumahan, sebaiknya berkonsultasi dengan dokter. Dokter dapat membantu menentukan penyebab perubahan mood Anda dan meresepkan pengobatan yang sesuai."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "mengatasi perubahan mood",
+        "patterns": [
+         
+            "Bagaimana cara mengatasi perubahan mood saat menstruasi?"
+        ],
+        "responses": [           
+            "Cara mengatasi perubahan mood saat menstruasi tergantung pada tingkat keparahan gejala. Beberapa cara yang dapat membantu mengurangi perubahan mood meliputi mengonsumsi makanan sehat, menghindari makanan yang mengandung garam dan gula berlebihan, dan melakukan olahraga teratur. Jika perubahan mood Anda parah, dokter mungkin meresepkan obat untuk membantu mengatasi gejala tersebut."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Kesehatan Reproduksi",
+        "patterns": [
+            "Kesehatan reproduksi saat menstruasi",
+            "Apa yang harus saya ketahui tentang kesehatan reproduksi saat menstruasi?",
+            "Bagaimana cara menjaga kesehatan reproduksi saat menstruasi?",
+            "Apakah ada makanan yang dapat membantu menjaga kesehatan reproduksi saat menstruasi?"
+        ],
+        "responses": [
+            "Kesehatan reproduksi saat menstruasi sangat penting untuk diperhatikan. Beberapa hal yang perlu Anda ketahui meliputi cara menjaga kebersihan area kewanitaan, menghindari penggunaan produk yang dapat mengiritasi kulit, dan menggunakan kondom untuk mencegah penularan penyakit menular seksual.",
+            "Untuk menjaga kesehatan reproduksi saat menstruasi, Anda dapat melakukan beberapa hal, seperti menjaga kebersihan area kewanitaan, menghindari penggunaan produk yang dapat mengiritasi kulit, dan menggunakan kondom untuk mencegah penularan penyakit menular seksual. Selain itu, mengonsumsi makanan yang sehat dan bergizi juga dapat membantu menjaga kesehatan reproduksi Anda.",
+            "Beberapa makanan yang dapat membantu menjaga kesehatan reproduksi saat menstruasi meliputi sayuran hijau, buah-buahan, biji-bijian, dan ikan. Selain itu, mengonsumsi air putih yang cukup juga sangat penting untuk menjaga kesehatan reproduksi Anda. Jika Anda mengalami gejala yang tidak normal, seperti nyeri yang parah atau pendarahan yang tidak normal, sebaiknya berkonsultasi dengan dokter. Dokter dapat membantu menentukan penyebab gejala Anda dan meresepkan pengobatan yang sesuai."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "Polycystic Ovary Syndrome (PCOS)",
+        "patterns": [
+            "Polycystic Ovary Syndrome (PCOS)",
+            "Apa itu Polycystic Ovary Syndrome (PCOS)?"
+        ],
+        "responses": [
+            "Polycystic Ovary Syndrome (PCOS) adalah kondisi medis yang mempengaruhi keseimbangan hormon pada wanita. Kondisi ini dapat menyebabkan masalah pada ovarium, seperti pembentukan kista dan ketidakseimbangan hormon."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "gejala Polycystic Ovary Syndrome (PCOS)",
+        "patterns": [
+            "Apa saja gejala Polycystic Ovary Syndrome (PCOS)?"
+        ],
+        "responses": [
+            "Gejala Polycystic Ovary Syndrome (PCOS) dapat bervariasi pada setiap wanita. Beberapa gejala umum meliputi ketidakseimbangan hormon, menstruasi tidak teratur, jerawat, dan pertumbuhan rambut yang berlebihan."
+        ],
+        "context_set": ""
+      },
+      {
+        "tag": "mengatasi Polycystic Ovary Syndrome (PCOS)",
+        "patterns": [
+            "Bagaimana cara mengatasi Polycystic Ovary Syndrome (PCOS)?",
+            "Apakah Polycystic Ovary Syndrome (PCOS) dapat disembuhkan?"
+        ],
+        "responses": [
+            "Cara mengatasi Polycystic Ovary Syndrome (PCOS) tergantung pada gejala yang dialami. Beberapa cara yang dapat membantu mengatasi gejala PCOS meliputi mengonsumsi makanan sehat, melakukan olahraga teratur, dan menghindari makanan yang mengandung gula dan karbohidrat berlebihan. Jika gejala PCOS Anda parah, dokter mungkin meresepkan obat untuk membantu mengatasi gejala tersebut.",
+            "Polycystic Ovary Syndrome (PCOS) tidak dapat disembuhkan, namun gejalanya dapat dikendalikan dengan pengobatan yang tepat. Jika Anda mengalami gejala PCOS yang parah dan tidak merespon terhadap pengobatan rumahan, sebaiknya berkonsultasi dengan dokter. Dokter dapat membantu menentukan penyebab gejala Anda dan meresepkan pengobatan yang sesuai."
+        ],
+        "context_set": ""
+      },
+      
+      {
+        "tag": "penyebab mentruasi Tidak Teratur",
+        "patterns": [
+            "Menstruasi tidak teratur",
+            "Apa yang menyebabkan menstruasi tidak teratur?"
+        ],
+        "responses": [
+            "Menstruasi tidak teratur dapat disebabkan oleh berbagai faktor, seperti ketidakseimbangan hormon, stres, atau kondisi medis tertentu. Jika Anda mengalami menstruasi yang tidak normal, sebaiknya berkonsultasi dengan dokter."
+        ],
+        "context_set": ""
+      }
+      ,
+      {
+        "tag": "mengatasi mentruasi Tidak Teratur",
+        "patterns": [
+            "Bagaimana cara mengatasi menstruasi tidak teratur?"
+        ],
+        "responses": [
+            "Cara mengatasi menstruasi tidak teratur tergantung pada penyebabnya. Jika menstruasi tidak teratur disebabkan oleh ketidakseimbangan hormon, dokter mungkin meresepkan obat untuk membantu mengatur siklus menstruasi Anda. Jika Anda mengalami menstruasi yang tidak normal, sebaiknya berkonsultasi dengan dokter. Dokter dapat membantu menentukan penyebab menstruasi tidak teratur Anda dan meresepkan pengobatan yang sesuai."
+        ],
+        "context_set": ""
+    }
+    
+
+    
+
+    
+    
+
+    
+    
+
+
+         
+  ]
+}

@@ -1,0 +1,1485 @@
+{
+  "intents": [
+    {
+      "tag": "Salam",
+      "input": ["Halo", "Hai", "Halo!", "Selamat pagi", "Selamat siang"],
+      "responses": ["Halo! Ada yang bisa saya bantu?", "Hai! Bagaimana saya bisa membantu Anda hari ini?"]
+    },
+    {
+      "tag": "Siklus Menstruasi",
+      "input": ["Apa itu siklus menstruasi?", "Berapa lama siklus menstruasi normal?", "Siklus menstruasi saya berapa hari?"],
+      "responses": ["Siklus menstruasi adalah periode waktu dari hari pertama haid hingga hari pertama haid berikutnya. Siklus normal berkisar antara 21-35 hari. Siklus Anda mungkin berbeda dari orang lain."]
+    },
+    {
+      "tag": "Hari Pertama Haid",
+      "input": ["Kapan hari pertama haid saya?", "Saya ingin tahu kapan menstruasi saya dimulai."],
+      "responses": ["Hari pertama haid Anda dapat bervariasi setiap bulan. Biasanya, ini terjadi sekitar 14 hari setelah ovulasi. Jika Anda mencatat tanggal haid Anda selama beberapa bulan, Anda dapat memperkirakan kapan akan datang bulan berikutnya."]
+    },
+    {
+      "tag": "Gejala Menstruasi",
+      "input": ["Apa gejala umum menstruasi?", "Saya merasa tidak enak badan saat menstruasi."],
+      "responses": ["Beberapa gejala umum menstruasi termasuk nyeri perut, nyeri punggung, perubahan suasana hati, dan ketidaknyamanan umum. Jika gejala Anda parah atau mengganggu aktivitas sehari-hari, sebaiknya berkonsultasi dengan dokter."]
+    },
+    {
+      "tag": "Kontrasepsi",
+      "input": ["Apa pilihan kontrasepsi yang aman selama menstruasi?", "Saya ingin mencegah kehamilan selama menstruasi."],
+      "responses": ["Pilihan kontrasepsi selama menstruasi termasuk kondom dan pil kontrasepsi. Namun, selalu konsultasikan dengan profesional kesehatan Anda untuk memilih yang paling sesuai dengan kondisi kesehatan Anda."]
+    },
+    {
+      "tag": "Siklus Haid dan Fase-fasenya",
+      "input": ["Apa yang dimaksud dengan siklus haid?", "Bagaimana siklus haid bekerja?", "Jelaskan tentang fase-fase siklus haid."],
+      "responses": ["Siklus haid adalah proses alami dalam tubuh wanita yang melibatkan perubahan berkala dalam sistem reproduksi. Ini biasanya terdiri dari beberapa fase yang berbeda."]
+    },
+    {
+      "tag": "Fase Menstruasi",
+      "input": ["Apa itu fase menstruasi?", "Berapa lama fase menstruasi biasanya berlangsung?"],
+      "responses": ["Fase menstruasi adalah awal dari siklus haid. Biasanya berlangsung sekitar 3-7 hari dan ditandai dengan perdarahan vagina. Ini adalah saat ketika lapisan dinding rahim mengelupas."]
+    },
+    {
+      "tag": "Fase Proliferasi",
+      "input": ["Jelaskan fase proliferasi.", "Kapan fase proliferasi terjadi dalam siklus haid?"],
+      "responses": ["Fase proliferasi adalah fase kedua dalam siklus haid. Ini terjadi setelah menstruasi dan ditandai dengan pertumbuhan kembali lapisan dinding rahim. Fase ini biasanya berlangsung sekitar 6-14 hari."]
+    },
+    {
+      "tag": "Ovulasi",
+      "input": ["Apa itu ovulasi?", "Kapan ovulasi terjadi dalam siklus haid?"],
+      "responses": ["Ovulasi adalah saat sel telur matang dilepaskan dari ovarium ke dalam tuba falopi dan siap untuk pembuahan. Ini biasanya terjadi sekitar pertengahan siklus haid, sekitar hari ke-14 jika siklus Anda 28 hari."]
+    },
+    {
+      "tag": "Fase Sekresi",
+      "input": ["Apa yang dimaksud dengan fase sekresi?", "Kapan fase sekresi terjadi dalam siklus haid?"],
+      "responses": ["Fase sekresi adalah fase ketiga dalam siklus haid. Ini terjadi setelah ovulasi dan ditandai dengan peningkatan produksi lendir serviks yang membantu sperma bergerak lebih mudah menuju sel telur yang telah dilepaskan. Fase ini biasanya berlangsung sekitar 12-16 hari."]
+    },
+    {
+      "tag": "Fase Luteal",
+      "input": ["Jelaskan fase luteal.", "Kapan fase luteal terjadi dalam siklus haid?"],
+      "responses": ["Fase luteal adalah fase terakhir dalam siklus haid. Ini dimulai setelah ovulasi dan berlangsung hingga hari sebelum menstruasi berikutnya. Selama fase ini, tubuh mempersiapkan rahim untuk kehamilan dan jika pembuahan tidak terjadi, lapisan dinding rahim akan mengelupas kembali."]
+    },
+    {
+      "tag": "Perubahan Hormon",
+      "input": ["Bagaimana hormon berperan dalam siklus haid?", "Apa hormon utama yang terlibat dalam siklus haid?"],
+      "responses": ["Hormon seperti estrogen, progesteron, dan LH (hormon luteinizing) berperan penting dalam mengatur siklus haid. Perubahan dalam kadar hormon ini mengendalikan perubahan fisik dan emosional yang terjadi selama siklus."]
+    },
+    {
+      "tag": "Siklus Tidak Teratur",
+      "input": ["Apa yang harus saya lakukan jika siklus haid saya tidak teratur?", "Mengapa siklus haid bisa tidak teratur?"],
+      "responses": ["Siklus haid tidak teratur bisa disebabkan oleh berbagai faktor seperti stres, perubahan berat badan, atau masalah kesehatan tertentu. Jika Anda memiliki siklus yang tidak teratur, konsultasikan dengan dokter untuk menentukan penyebabnya dan mendapatkan saran medis."]
+    },
+    {
+      "tag": "Menstruasi Abnormal",
+      "input": ["Apa yang dianggap sebagai menstruasi abnormal?", "Kapan saya harus khawatir tentang menstruasi saya?"],
+      "responses": ["Menstruasi dianggap abnormal jika Anda mengalami perdarahan berat, nyeri yang sangat parah, atau jika siklus Anda sangat tidak teratur. Jika Anda mengalami gejala ini, segera konsultasikan dengan dokter Anda."]
+    },
+    {
+      "tag": "Perubahan Fisik",
+      "input": ["Apa perubahan fisik yang umum terjadi selama siklus haid?", "Saya merasa berbeda fisik saat menstruasi."],
+      "responses": ["Selama siklus haid, banyak wanita mengalami perubahan fisik seperti bengkak payudara, perubahan berat badan, dan perubahan kulit. Ini adalah reaksi normal terhadap perubahan hormonal yang terjadi dalam tubuh."]
+    },
+    {
+      "tag": "Tips Kesehatan Menstruasi",
+      "input": ["Apa tips menjaga kesehatan selama menstruasi?", "Bagaimana saya bisa merasa lebih baik selama menstruasi?"],
+      "responses": ["Selama menstruasi, penting untuk menjaga kesehatan Anda. Berikut beberapa tips: 1. Konsumsi makanan sehat dan kaya zat besi. 2. Minum air yang cukup untuk menghindari dehidrasi. 3. Lakukan olahraga ringan untuk mengurangi nyeri. 4. Gunakan pembalut atau tampon yang sesuai. 5. Istirahat yang cukup."]
+    },
+    {
+      "tag": "Nutrisi",
+      "input": ["Apa makanan yang baik untuk dikonsumsi selama menstruasi?", "Bagaimana diet yang sehat selama menstruasi?"],
+      "responses": ["Selama menstruasi, konsumsi makanan kaya zat besi seperti daging, sayuran berdaun hijau, dan kacang-kacangan. Juga perbanyak asupan makanan tinggi serat, buah-buahan, dan hindari makanan berlemak berlebihan serta gula berlebih."]
+    },
+    {
+      "tag": "Hydrasi",
+      "input": ["Mengapa penting minum banyak air selama menstruasi?", "Berapa banyak air yang harus saya minum?"],
+      "responses": ["Minum banyak air selama menstruasi penting untuk menghindari dehidrasi. Usahakan minum setidaknya 8 gelas (sekitar 2 liter) air sehari. Air membantu meredakan kram dan menjaga keseimbangan cairan tubuh."]
+    },
+    {
+      "tag": "Olahraga",
+      "input": ["Apakah saya boleh berolahraga selama menstruasi?", "Apa jenis olahraga yang direkomendasikan?"],
+      "responses": ["Iya, Anda boleh berolahraga selama menstruasi. Olahraga ringan seperti jalan kaki, berenang, atau yoga dapat membantu meredakan nyeri dan meningkatkan perasaan Anda. Hindari olahraga yang terlalu keras jika merasa tidak nyaman."]
+    },
+    {
+      "tag": "Istirahat",
+      "input": ["Mengapa istirahat penting selama menstruasi?", "Bagaimana cara merasa lebih nyaman selama menstruasi? "],
+      "responses": ["Istirahat yang cukup sangat penting selama menstruasi. Cobalah untuk tidur yang cukup dan hindari stres berlebihan. Manfaatkan waktu istirahat untuk meredakan ketidaknyamanan dan mengisi ulang energi Anda."]
+    },
+    {
+      "tag": "Penggunaan Pembalut dan Tampon",
+      "input": ["Bagaimana saya bisa memilih pembalut atau tampon yang sesuai?", "Apa yang harus saya perhatikan saat memilih produk menstruasi?"],
+      "responses": ["Pilih pembalut atau tampon yang sesuai dengan tingkat aliran Anda. Baca petunjuk pemakaian dan ganti secara teratur. Pastikan untuk mencuci tangan sebelum dan sesudah mengganti pembalut atau tampon."]
+    },
+    {
+      "tag": "Manajemen Nyeri",
+      "input": ["Bagaimana mengatasi nyeri menstruasi?", "Apakah ada cara alami untuk mengurangi nyeri?"],
+      "responses": ["Untuk mengatasi nyeri menstruasi, Anda dapat menggunakan bantal pemanas pada perut, minum teh herbal seperti peppermint atau chamomile, atau mencoba teknik pernapasan dalam. Jika nyeri sangat parah, konsultasikan dengan dokter Anda."]
+    },
+    {
+      "tag": "Stres Emosional",
+      "input": ["Bagaimana mengatasi stres emosional selama menstruasi?", "Apa yang harus saya lakukan jika saya merasa emosional selama menstruasi?"],
+      "responses": ["Selama menstruasi, hormon dapat mempengaruhi suasana hati Anda. Cobalah teknik relaksasi seperti meditasi atau yoga, bicara dengan teman atau keluarga, atau cari dukungan emosional jika perlu. Jangan ragu untuk merawat diri sendiri."]
+    },
+    {
+      "tag": "Konsultasi Dokter",
+      "input": ["Kapan sebaiknya saya berkonsultasi dengan dokter tentang masalah menstruasi?", "Apa tanda-tanda bahwa saya perlu mencari bantuan medis?"],
+      "responses": ["Jika Anda mengalami perdarahan berat, nyeri yang sangat parah, atau masalah menstruasi lain yang mengganggu kehidupan sehari-hari Anda, segera konsultasikan dengan dokter. Dokter dapat membantu menentukan apakah ada masalah medis yang perlu diatasi."]
+    },
+    {
+      "tag": "Pentingnya Diri Sendiri",
+      "input": ["Apa pesan terpenting selama menstruasi?", "Bagaimana saya bisa merawat diri saya sendiri selama menstruasi?"],
+      "responses": ["Pesan terpenting adalah untuk merawat diri sendiri dengan penuh kasih sayang selama menstruasi. Dengarkan tubuh Anda, berikan istirahat yang cukup, dan jangan terlalu keras pada diri sendiri. Setiap wanita mengalami menstruasi dengan cara yang berbeda, jadi ingatlah untuk menjaga kesehatan dan kesejahteraan Anda."]
+    },
+    {
+      "tag": "Olahraga Selama Menstruasi",
+      "input": ["Apakah aman berolahraga selama menstruasi?", "Bagaimana saya bisa berolahraga dengan nyaman saat haid?"],
+      "responses": ["Iya, aman berolahraga selama menstruasi. Bahkan, olahraga ringan dapat membantu meredakan nyeri dan meningkatkan perasaan Anda. Penting untuk mendengarkan tubuh Anda dan memilih aktivitas yang sesuai dengan tingkat kenyamanan Anda."]
+    },
+    {
+      "tag": "Jenis Olahraga",
+      "input": ["Apa jenis olahraga yang direkomendasikan saat menstruasi?", "Olahraga apa yang paling baik dilakukan selama haid?"],
+      "responses": ["Olahraga ringan seperti jalan kaki, berenang, yoga, atau pilates adalah pilihan yang baik selama menstruasi. Ini membantu menjaga kebugaran fisik dan meredakan kram."]
+    },
+    {
+      "tag": "Olahraga Intensitas Tinggi",
+      "input": ["Apakah aman melakukan olahraga intensitas tinggi saat menstruasi?", "Bagaimana dengan olahraga yang lebih intens? "],
+      "responses": ["Olahraga intensitas tinggi seperti angkat berat atau lari bisa menjadi pilihan jika Anda biasanya berolahraga dengan intensitas tersebut. Namun, dianjurkan untuk memperhatikan tubuh Anda dan mengurangi intensitas jika Anda merasa tidak nyaman."]
+    },
+    {
+      "tag": "Ketidaknyamanan",
+      "input": ["Apa yang harus saya lakukan jika merasa tidak nyaman saat berolahraga?", "Bagaimana cara mengatasi ketidaknyamanan saat berolahraga selama haid?"],
+      "responses": ["Jika Anda merasa tidak nyaman saat berolahraga selama menstruasi, berhenti sejenak, beristirahat, dan minum air. Cobalah teknik pernapasan dalam untuk meredakan ketegangan. Jika ketidaknyamanan berlanjut, hentikan aktivitas tersebut."]
+    },
+    {
+      "tag": "Pemanasan dan Pendinginan",
+      "input": ["Apakah pemanasan dan pendinginan penting saat berolahraga selama menstruasi?", "Apa manfaat pemanasan dan pendinginan?"],
+      "responses": ["Ya, pemanasan dan pendinginan sangat penting saat berolahraga. Pemanasan membantu mengurangi risiko cedera dan meningkatkan aliran darah ke otot. Pendinginan membantu tubuh pulih setelah olahraga dan menghindari kejang otot."]
+    },
+    {
+      "tag": "Olahraga Yoga",
+      "input": ["Apakah yoga baik selama menstruasi?", "Apa manfaat yoga selama haid?"],
+      "responses": ["Yoga adalah olahraga yang baik selama menstruasi. Banyak pose yoga dapat membantu meredakan kram dan ketegangan. Pilih pose yang nyaman dan hindari yang terlalu ekstrem."]
+    },
+    {
+      "tag": "Perubahan Intensitas",
+      "input": ["Apakah saya harus mengubah intensitas latihan saya selama menstruasi?", "Kapan saya harus menyesuaikan latihan saya?"],
+      "responses": ["Anda harus menyesuaikan intensitas latihan sesuai dengan tingkat kenyamanan Anda. Jika Anda merasa lelah atau nyeri yang hebat, tidak apa-apa untuk mengurangi intensitas atau beristirahat sejenak."]
+    },
+    {
+      "tag": "Olahraga Rutin",
+      "input": ["Bolehkah saya tetap menjalani rutinitas latihan saya selama menstruasi?", "Apakah saya harus menghentikan olahraga rutin saya?"],
+      "responses": ["Anda dapat tetap menjalani rutinitas latihan Anda selama menstruasi, tetapi dengan penyesuaian jika diperlukan. Dengarkan tubuh Anda dan jangan paksa diri jika merasa tidak nyaman. Berolahraga dengan nyaman adalah yang terpenting."]
+    },
+    {
+      "tag": "Olahraga Air",
+      "input": ["Apakah berenang aman selama menstruasi?", "Bolehkah saya berenang saat haid?"],
+      "responses": ["Berenang aman selama menstruasi dan bisa sangat nyaman karena air dapat membantu meredakan nyeri. Pastikan untuk menggunakan pembalut atau tampon yang sesuai."]
+    },
+    {
+      "tag": "Konsultasi Profesional",
+      "input": ["Kapan sebaiknya saya berkonsultasi dengan pelatih atau dokter tentang olahraga selama menstruasi?", "Kapan saya perlu mendapatkan panduan khusus?"],
+      "responses": ["Jika Anda memiliki kekhawatiran khusus tentang olahraga selama menstruasi, sebaiknya berkonsultasi dengan pelatih atau profesional medis. Mereka dapat memberikan panduan yang sesuai dengan situasi Anda."]
+    },
+    {
+      "tag": "Nyeri Menstruasi",
+      "input": ["Bagaimana cara meredakan nyeri menstruasi?", "Apa yang bisa saya lakukan untuk mengatasi nyeri saat haid?"],
+      "responses": ["Ada beberapa cara untuk meredakan nyeri menstruasi: 1. Gunakan bantal pemanas pada perut. 2. Konsumsi obat antiinflamasi nonsteroid (NSAID) seperti ibuprofen. 3. Cobalah teknik pernapasan dalam. 4. Lakukan latihan relaksasi. 5. Minum teh herbal seperti chamomile atau peppermint."]
+    },
+    {
+      "tag": "Pemanasan",
+      "input": ["Mengapa pemanasan membantu meredakan nyeri menstruasi?", "Apa yang perlu saya lakukan untuk pemanasan saat haid?"],
+      "responses": ["Pemanasan membantu meningkatkan aliran darah ke area perut dan dapat mengurangi kontraksi otot rahim yang menyebabkan nyeri. Cobalah menggunakan bantal pemanas hangat di area perut Anda atau mandi air hangat untuk meredakan ketegangan."]
+    },
+    {
+      "tag": "Obat Penghilang Nyeri",
+      "input": ["Apakah obat penghilang nyeri aman untuk digunakan selama menstruasi?", "Bagaimana cara menggunakan obat penghilang nyeri dengan aman?"],
+      "responses": ["Obat penghilang nyeri seperti ibuprofen atau naproxen (NSAID) aman digunakan selama menstruasi jika sesuai dengan petunjuk dokter atau panduan kemasan. Pastikan untuk mengikuti dosis yang dianjurkan dan jangan menggunakan obat ini jika Anda memiliki kondisi medis tertentu. Konsultasikan dengan dokter jika ragu."]
+    },
+    {
+      "tag": "Teknik Pernapasan",
+      "input": ["Bagaimana teknik pernapasan dapat membantu meredakan nyeri menstruasi?", "Apa teknik pernapasan yang efektif untuk haid?"],
+      "responses": ["Teknik pernapasan dalam dapat membantu meredakan nyeri dengan memfokuskan perhatian pada pernapasan Anda dan mengurangi ketegangan. Cobalah pernapasan dalam perlahan dan dalam, menghirup melalui hidung dan mengeluarkannya melalui mulut. Luangkan waktu untuk melakukannya dengan tenang."]
+    },
+    {
+      "tag": "Latihan Relaksasi",
+      "input": ["Bagaimana latihan relaksasi membantu selama menstruasi?", "Apa jenis latihan relaksasi yang direkomendasikan?"],
+      "responses": ["Latihan relaksasi seperti yoga atau meditasi dapat membantu mengurangi stres dan ketegangan, yang dapat memperparah nyeri menstruasi. Cobalah latihan relaksasi yang Anda sukai dan lakukan secara teratur untuk mendapatkan manfaat maksimal."]
+    },
+    {
+      "tag": "Minuman Herbal",
+      "input": ["Apakah minuman herbal dapat membantu meredakan nyeri menstruasi?", "Apa jenis minuman herbal yang baik selama haid?"],
+      "responses": ["Minuman herbal seperti teh chamomile, peppermint, atau jahe dapat memiliki efek menenangkan dan meredakan nyeri perut. Cobalah minum secangkir teh herbal saat Anda merasa nyeri."]
+    },
+    {
+      "tag": "Perhatian Terhadap Gizi",
+      "input": ["Apakah diet berperan dalam meredakan nyeri menstruasi?", "Apa yang harus saya makan selama haid untuk mengurangi nyeri?"],
+      "responses": ["Diet yang seimbang dengan asupan makanan kaya zat besi dan serat dapat membantu mengurangi nyeri menstruasi. Hindari makanan berlemak tinggi, gula berlebih, dan kafein. Konsumsi buah-buahan, sayuran, dan makanan yang kaya serat."]
+    },
+    {
+      "tag": "Aktivitas Ringan",
+      "input": ["Apakah aktivitas ringan membantu meredakan nyeri menstruasi?", "Apa jenis aktivitas ringan yang disarankan saat haid?"],
+      "responses": ["Aktivitas ringan seperti berjalan kaki atau yoga dapat membantu meningkatkan aliran darah ke area perut dan mengurangi ketegangan otot. Cobalah untuk tetap aktif, meskipun dalam tingkat intensitas yang sesuai dengan kenyamanan Anda."]
+    },
+    {
+      "tag": "Pijatan",
+      "input": ["Bagaimana pijatan dapat membantu meredakan nyeri menstruasi?", "Apakah ada teknik pijatan yang direkomendasikan untuk haid?"],
+      "responses": ["Pijatan lembut di area perut dengan menggunakan gerakan melingkar dapat membantu meredakan nyeri menstruasi. Anda juga dapat mencoba pijatan dengan minyak esensial seperti lavender atau minyak esensial peppermint untuk meredakan ketegangan."]
+    },
+    {
+      "tag": "Konsultasi Medis",
+      "input": ["Kapan saya sebaiknya berkonsultasi dengan dokter tentang nyeri menstruasi?", "Apa tanda-tanda bahwa saya perlu mencari bantuan medis untuk nyeri haid?"],
+      "responses": ["Jika nyeri menstruasi Anda sangat parah, tidak merespons pengobatan rumahan, atau disertai dengan gejala lain seperti perdarahan berat atau mual yang parah, segera konsultasikan dengan dokter Anda. Ini dapat menjadi tanda adanya masalah medis yang memerlukan perhatian lebih lanjut."]
+    },
+    {
+      "tag": "Pembalut dan Tampon",
+      "input": ["Apa saja jenis-jenis pembalut dan tampon yang tersedia?", "Bagaimana memilih pembalut atau tampon yang sesuai?"],
+      "responses": ["Ada berbagai jenis pembalut dan tampon yang tersedia. Pembalut biasa, pembalut dengan sayap, pembalut berbentuk pantyliner, serta tampon dengan berbagai ukuran dan tingkat penyerapan. Pemilihan tergantung pada tingkat aliran Anda dan preferensi pribadi."]
+    },
+    {
+      "tag": "Pembalut Biasa",
+      "input": ["Apa itu pembalut biasa?", "Bagaimana cara menggunakan pembalut biasa?"],
+      "responses": ["Pembalut biasa adalah pembalut yang tidak memiliki sayap. Cara menggunakannya adalah dengan meletakkan bagian berperekat di bawah pakaian dalam Anda sehingga pembalut tetap di tempat. Ganti pembalut secara teratur sesuai kebutuhan."]
+    },
+    {
+      "tag": "Pembalut dengan Sayap",
+      "input": ["Apa yang dimaksud dengan pembalut dengan sayap?", "Apa manfaat pembalut dengan sayap?"],
+      "responses": ["Pembalut dengan sayap memiliki flap atau sayap yang dapat ditekuk ke sisi pakaian dalam Anda. Ini membantu mencegah kebocoran di sisi dan membuat pembalut lebih aman. Cara penggunaannya mirip dengan pembalut biasa."]
+    },
+    {
+      "tag": "Pembalut Pantyliner",
+      "input": ["Apa itu pembalut berbentuk pantyliner?", "Kapan sebaiknya menggunakan pantyliner?"],
+      "responses": ["Pembalut berbentuk pantyliner adalah pembalut yang sangat tipis dan ringan. Mereka cocok digunakan saat aliran Anda sangat ringan atau sebagai perlindungan tambahan saat akhir menstruasi. Pantyliner juga digunakan untuk mengatasi kelembaban sehari-hari."]
+    },
+    {
+      "tag": "Tampon",
+      "input": ["Apa itu tampon?", "Bagaimana cara menggunakan tampon?"],
+      "responses": ["Tampon adalah produk yang dimasukkan ke dalam vagina untuk menyerap darah menstruasi. Mereka tersedia dalam berbagai ukuran dan tingkat penyerapan. Cara menggunakannya adalah dengan memasukkan tampon ke dalam vagina sesuai petunjuk kemasan. Pastikan untuk mengganti tampon setiap beberapa jam."]
+    },
+    {
+      "tag": "Ukuran Tampon",
+      "input": ["Bagaimana memilih ukuran tampon yang tepat?", "Apa yang harus dipertimbangkan saat memilih ukuran tampon?"],
+      "responses": ["Pemilihan ukuran tampon tergantung pada tingkat aliran Anda. Tampon yang lebih kecil cocok untuk aliran ringan, sedangkan yang lebih besar cocok untuk aliran yang lebih berat. Selalu pilih ukuran yang sesuai dengan kebutuhan Anda."]
+    },
+    {
+      "tag": "Tampon Aplikator",
+      "input": ["Apa itu tampon dengan aplikator?", "Apakah aplikator tampon diperlukan?"],
+      "responses": ["Tampon dengan aplikator memiliki alat yang digunakan untuk memasukkan tampon ke dalam vagina. Aplikator dapat membuat penggunaan tampon lebih mudah, terutama jika Anda baru pertama kali menggunakannya. Namun, pemilihan dengan atau tanpa aplikator adalah preferensi pribadi."]
+    },
+    {
+      "tag": "Pemilihan Produk",
+      "input": ["Bagaimana saya bisa memilih pembalut atau tampon yang tepat untuk saya?", "Apa faktor yang harus saya pertimbangkan?"],
+      "responses": ["Faktor yang harus dipertimbangkan saat memilih produk adalah tingkat aliran Anda, kenyamanan pribadi, apakah Anda memiliki alergi atau sensitivitas tertentu, dan preferensi penggunaan (misalnya, dengan atau tanpa aplikator). Cobalah beberapa jenis produk untuk menentukan mana yang paling sesuai dengan Anda."]
+    },
+    {
+      "tag": "Pembalut Kain",
+      "input": ["Apa tentang pembalut kain?", "Bagaimana cara menggunakan pembalut kain?"],
+      "responses": ["Pembalut kain adalah pembalut yang dapat dicuci dan digunakan kembali. Mereka ramah lingkungan dan dapat bertahan lama. Cara menggunakannya adalah dengan meletakkannya di dalam pakaian dalam Anda dan mencuci mereka setelah digunakan."]
+    },
+    {
+      "tag": "Keamanan dan Kenyamanan",
+      "input": ["Apakah produk ini aman dan nyaman digunakan?", "Bagaimana memastikan keamanan dan kenyamanan saat menggunakan pembalut atau tampon?"],
+      "responses": ["Produk pembalut dan tampon yang dijual di pasaran harus memenuhi standar keamanan tertentu. Pastikan untuk mengikuti petunjuk penggunaan yang ada pada kemasan. Jika Anda merasa tidak nyaman atau mengalami iritasi, hentikan penggunaan dan konsultasikan dengan dokter Anda."]
+    },
+    {
+      "tag": "Menstrual Cup",
+      "input": ["Apa itu menstrual cup?", "Bagaimana cara menggunakan menstrual cup?"],
+      "responses": ["Menstrual cup adalah produk pengumpul darah menstruasi yang terbuat dari silikon medis atau bahan lainnya. Cara menggunakannya adalah dengan memasukkan cup ke dalam vagina untuk menampung darah menstruasi. Ini adalah alternatif ramah lingkungan untuk pembalut dan tampon."]
+    },
+    {
+      "tag": "Pemilihan Ukuran",
+      "input": ["Bagaimana saya bisa memilih ukuran menstrual cup yang tepat?", "Apa yang harus dipertimbangkan saat memilih ukuran?"],
+      "responses": ["Pemilihan ukuran menstrual cup tergantung pada beberapa faktor, termasuk usia Anda, apakah Anda pernah melahirkan, dan tingkat aliran menstruasi Anda. Cup yang lebih kecil biasanya cocok untuk mereka yang belum pernah melahirkan, sementara yang lebih besar cocok untuk mereka yang pernah melahirkan. Pastikan untuk membaca panduan produsen untuk memilih ukuran yang sesuai."]
+    },
+    {
+      "tag": "Cara Memasukkan",
+      "input": ["Bagaimana cara memasukkan menstrual cup?", "Langkah-langkah untuk memasukkan cup dengan benar?"],
+      "responses": ["Langkah-langkah memasukkan menstrual cup: 1. Cuci tangan dengan bersih. 2. Lipat cup sesuai petunjuk kemasan. 3. Dudukkan cup ke dalam vagina dengan sudut yang tepat. 4. Pastikan cup terbuka dan duduk dengan nyaman. 5. Anda mungkin perlu mencoba beberapa kali untuk mendapatkan posisi yang pas."]
+    },
+    {
+      "tag": "Penjelasan Penggunaan",
+      "input": ["Apa yang harus saya perhatikan saat menggunakan menstrual cup?", "Bagaimana cara memastikan cup terpasang dengan benar?"],
+      "responses": ["Selama penggunaan menstrual cup, pastikan untuk menjaga kebersihan tangan Anda, memasang cup dengan benar agar terbuka, dan memastikan cup duduk nyaman di dalam vagina. Pastikan untuk mengikuti petunjuk penggunaan yang ada pada kemasan cup."]
+    },
+    {
+      "tag": "Durasi Penggunaan",
+      "input": ["Berapa lama saya bisa menggunakan menstrual cup sebelum harus menggantinya?", "Berapa kali saya perlu mengganti cup dalam sehari?"],
+      "responses": ["Menstrual cup dapat digunakan selama 8-12 jam sebelum perlu diganti. Namun, jika aliran menstruasi Anda sangat berat, Anda mungkin perlu menggantinya lebih sering. Pastikan untuk membersihkan cup sebelum memasangnya kembali."]
+    },
+    {
+      "tag": "Cara Mengosongkan",
+      "input": ["Bagaimana cara mengosongkan menstrual cup?", "Langkah-langkah untuk mengosongkan cup dengan benar?"],
+      "responses": ["Langkah-langkah mengosongkan menstrual cup: 1. Cuci tangan dengan bersih. 2. Dudukkan tangan Anda di dalam vagina dan pegang dasar cup. 3. Pelan-pelan tarik cup keluar. 4. Kosongkan isinya ke dalam toilet atau wastafel. 5. Cuci cup dengan air bersih sebelum memasangnya kembali."]
+    },
+    {
+      "tag": "Perawatan dan Pembersihan",
+      "input": ["Bagaimana cara merawat dan membersihkan menstrual cup?", "Apa yang harus saya lakukan setelah setiap penggunaan?"],
+      "responses": ["Setelah setiap penggunaan, bersihkan cup dengan air hangat dan sabun ringan. Anda juga dapat merendam cup dalam air mendidih selama beberapa menit untuk sterilisasi. Pastikan untuk menjaga kebersihan cup sebelum dan setelah penggunaan."]
+    },
+    {
+      "tag": "Kenyamanan dan Keamanan",
+      "input": ["Apakah menstrual cup aman dan nyaman digunakan?", "Bagaimana cara menjaga kenyamanan dan keamanan saat menggunakan cup?"],
+      "responses": ["Menstrual cup adalah alternatif yang aman dan nyaman jika digunakan dengan benar. Pastikan untuk mengikuti panduan produsen dan menjaga kebersihan tangan dan cup. Jika Anda merasa tidak nyaman atau mengalami iritasi, hentikan penggunaan dan konsultasikan dengan dokter."]
+    },
+    {
+      "tag": "Kelebihan Menstrual Cup",
+      "input": ["Apa kelebihan penggunaan menstrual cup dibandingkan pembalut atau tampon?", "Mengapa banyak orang beralih ke menstrual cup?"],
+      "responses": ["Beberapa kelebihan menstrual cup adalah ramah lingkungan, biaya jangka panjang yang lebih rendah, dan kemampuan untuk digunakan berulang kali. Mereka juga mengurangi risiko toksisitas tampon dan dapat digunakan dalam waktu yang lebih lama."]
+    },
+    {
+      "tag": "Konsultasi Medis",
+      "input": ["Kapan sebaiknya saya berkonsultasi dengan dokter tentang penggunaan menstrual cup?", "Apakah ada kondisi medis tertentu yang perlu diperhatikan?"],
+      "responses": ["Jika Anda mengalami masalah atau ketidaknyamanan yang tidak biasa saat menggunakan menstrual cup, segera berkonsultasi dengan dokter Anda. Jika Anda memiliki kondisi medis tertentu seperti endometriosis atau vaginisme, bicarakan penggunaan cup dengan dokter Anda sebelum mencobanya."]
+    },
+    {
+      "tag": "Pilihan Pembalut Ramah Lingkungan",
+      "input": ["Apa saja pilihan pembalut ramah lingkungan?", "Bagaimana saya bisa menggunakan pembalut yang lebih berkelanjutan?"],
+      "responses": ["Ada beberapa pilihan pembalut ramah lingkungan yang dapat Anda pertimbangkan, termasuk: 1. Pembalut kain yang dapat dicuci dan digunakan kembali. 2. Pembalut organik yang terbuat dari bahan-bahan alami dan bebas dari bahan kimia berbahaya. 3. Pembalut berbahan daur ulang yang terbuat dari serat daur ulang. 4. Menstrual cup, alternatif berkelanjutan yang dapat digunakan berulang kali."]
+    },
+    {
+      "tag": "Pembalut Kain",
+      "input": ["Apa itu pembalut kain?", "Bagaimana cara menggunakan pembalut kain?"],
+      "responses": ["Pembalut kain adalah pembalut yang dapat dicuci dan digunakan kembali. Cara menggunakan pembalut kain adalah dengan meletakkannya di dalam pakaian dalam Anda dan mengikatnya atau mengkaitkannya dengan cara tertentu untuk menjaga agar tetap di tempat. Setelah digunakan, cuci dan keringkan pembalut kain sebelum penggunaan berikutnya."]
+    },
+    {
+      "tag": "Pembalut Organik",
+      "input": ["Apa yang dimaksud dengan pembalut organik?", "Apa manfaat pembalut organik?"],
+      "responses": ["Pembalut organik adalah pembalut yang terbuat dari bahan-bahan alami seperti kapas organik dan bebas dari bahan kimia berbahaya atau pewarna sintetis. Manfaatnya adalah mengurangi paparan terhadap bahan kimia berpotensi berbahaya serta ramah lingkungan karena bahan-bahan alaminya."]
+    },
+    {
+      "tag": "Pembalut Daur Ulang",
+      "input": ["Apa itu pembalut berbahan daur ulang?", "Bagaimana cara menggunakan pembalut daur ulang?"],
+      "responses": ["Pembalut berbahan daur ulang terbuat dari serat daur ulang dan seringkali memiliki lapisan luar yang dapat diganti. Cara penggunaannya mirip dengan pembalut biasa. Setelah digunakan, lapisan luar dapat dibersihkan dan digunakan kembali, mengurangi limbah sampah."]
+    },
+    {
+      "tag": "Menstrual Cup",
+      "input": ["Apa itu menstrual cup?", "Bagaimana cara menggunakan menstrual cup?"],
+      "responses": ["Menstrual cup adalah produk pengumpul darah menstruasi yang terbuat dari silikon medis atau bahan lainnya. Cara menggunakannya adalah dengan memasukkan cup ke dalam vagina untuk menampung darah menstruasi. Ini adalah alternatif ramah lingkungan untuk pembalut dan tampon."]
+    },
+    {
+      "tag": "Keuntungan Pembalut Ramah Lingkungan",
+      "input": ["Apa keuntungan menggunakan pembalut ramah lingkungan?", "Mengapa banyak orang beralih ke pembalut berkelanjutan?"],
+      "responses": ["Beberapa keuntungan menggunakan pembalut ramah lingkungan adalah mengurangi sampah plastik dari pembalut sekali pakai, mengurangi paparan terhadap bahan kimia berbahaya, dan menghemat uang dalam jangka panjang karena pembalut berkelanjutan dapat digunakan berulang kali."]
+    },
+    {
+      "tag": "Pemilihan Produk",
+      "input": ["Bagaimana saya bisa memilih pembalut ramah lingkungan yang tepat?", "Apa faktor yang harus saya pertimbangkan saat memilih produk berkelanjutan?"],
+      "responses": ["Faktor yang harus dipertimbangkan saat memilih pembalut ramah lingkungan termasuk tingkat kenyamanan, tingkat aliran menstruasi Anda, apakah Anda memiliki alergi tertentu, dan preferensi pribadi. Cobalah beberapa jenis produk untuk menentukan mana yang paling sesuai dengan Anda."]
+    },
+    {
+      "tag": "Perubahan Kebiasaan",
+      "input": ["Bagaimana saya bisa mulai menggunakan pembalut ramah lingkungan?", "Apa yang perlu saya lakukan untuk beralih ke pembalut berkelanjutan?"],
+      "responses": ["Untuk mulai menggunakan pembalut ramah lingkungan, Anda perlu membeli produk yang sesuai dengan preferensi Anda. Baca panduan penggunaan dengan teliti dan berlatihlah dalam penggunaan agar nyaman. Pastikan untuk merawat dan membersihkan produk dengan benar."]
+    },
+    {
+      "tag": "Konsultasi Medis",
+      "input": ["Apakah pembalut ramah lingkungan aman untuk digunakan?", "Kapan sebaiknya saya berkonsultasi dengan dokter tentang penggunaan produk berkelanjutan?"],
+      "responses": ["Pembalut ramah lingkungan umumnya aman untuk digunakan jika sesuai dengan petunjuk penggunaan. Namun, jika Anda mengalami masalah atau ketidaknyamanan yang tidak biasa, segera berkonsultasi dengan dokter Anda. Jika Anda memiliki kondisi medis tertentu, bicarakan penggunaan produk berkelanjutan dengan dokter Anda."]
+    },
+    {
+      "tag": "Perbedaan Tampon dan Menstrual Cup",
+      "input": ["Apa perbedaan utama antara tampon dan menstrual cup?", "Bagaimana cara tampon berbeda dari menstrual cup?"],
+      "responses": ["Tampon dan menstrual cup adalah dua produk yang berbeda dalam menangani aliran menstruasi. Perbedaan utamanya termasuk jenis produk, cara penggunaan, dan dampak lingkungan."]
+    },
+    {
+      "tag": "Jenis Produk",
+      "input": ["Apa perbedaan jenis produk antara tampon dan menstrual cup?", "Bagaimana mereka berbeda dalam bentuk dan materi?"],
+      "responses": ["Tampon adalah produk bulat atau silindris yang terbuat dari bahan padat, seperti kapas, dan dimasukkan ke dalam vagina. Menstrual cup adalah cangkir fleksibel yang terbuat dari silikon medis atau bahan lainnya yang dimasukkan ke dalam vagina."]
+    },
+    {
+      "tag": "Cara Penggunaan",
+      "input": ["Bagaimana cara penggunaan tampon berbeda dari menstrual cup?", "Langkah-langkah apa yang diperlukan untuk menggunakan keduanya?"],
+      "responses": ["Tampon dimasukkan ke dalam vagina dengan tangan dan harus diganti setiap beberapa jam. Menstrual cup dimasukkan ke dalam vagina dan harus dikosongkan setiap 8-12 jam tergantung pada aliran. Menstrual cup juga harus dicuci sebelum penggunaan berikutnya."]
+    },
+    {
+      "tag": "Penyerapan",
+      "input": ["Bagaimana tingkat penyerapan tampon berbeda dari menstrual cup?", "Manakah yang lebih efektif dalam menangani aliran menstruasi berat?"],
+      "responses": ["Tampon menyerap darah menstruasi secara langsung, sementara menstrual cup menampung darah dalam cangkir. Menstrual cup cenderung menampung lebih banyak darah dibandingkan tampon, sehingga lebih efektif untuk aliran menstruasi yang lebih berat."]
+    },
+    {
+      "tag": "Keamanan",
+      "input": ["Apakah tampon dan menstrual cup sama-sama aman untuk digunakan?", "Apa risiko kesehatan yang perlu diperhatikan?"],
+      "responses": ["Secara umum, baik tampon maupun menstrual cup dianggap aman jika digunakan dengan benar. Namun, ada risiko tertentu seperti sindrom syok toksik (TSS) yang terkait dengan penggunaan tampon, yang perlu diwaspadai. Menstrual cup memiliki risiko yang lebih rendah terkait TSS."]
+    },
+    {
+      "tag": "Biaya Jangka Panjang",
+      "input": ["Bagaimana perbedaan biaya jangka panjang antara tampon dan menstrual cup?", "Manakah yang lebih ekonomis dalam jangka panjang?"],
+      "responses": ["Meskipun menstrual cup memiliki biaya awal yang lebih tinggi, mereka dapat digunakan berulang kali selama bertahun-tahun, sehingga menjadi lebih ekonomis dalam jangka panjang daripada tampon yang harus dibeli secara teratur."]
+    },
+    {
+      "tag": "Dampak Lingkungan",
+      "input": ["Bagaimana tampon dan menstrual cup mempengaruhi lingkungan?", "Manakah yang lebih ramah lingkungan?"],
+      "responses": ["Tampon sekali pakai biasanya menghasilkan lebih banyak limbah plastik daripada menstrual cup, yang dapat digunakan berulang kali. Oleh karena itu, menstrual cup dianggap lebih ramah lingkungan karena mengurangi limbah sampah plastik."]
+    },
+    {
+      "tag": "Kenyamanan",
+      "input": ["Bagaimana perbedaan kenyamanan saat menggunakan tampon dan menstrual cup?", "Manakah yang lebih nyaman menurut pengguna?"],
+      "responses": ["Kenyamanan saat menggunakan tampon atau menstrual cup bersifat subjektif dan dapat bervariasi antara individu. Beberapa orang merasa lebih nyaman dengan tampon, sementara yang lain merasa lebih nyaman dengan menstrual cup. Ini tergantung pada preferensi pribadi dan pengalaman masing-masing."]
+    },
+    {
+      "tag": "Pemilihan Produk",
+      "input": ["Bagaimana saya bisa memilih antara tampon dan menstrual cup?", "Apa yang harus saya pertimbangkan saat memilih produk yang sesuai?"],
+      "responses": ["Pemilihan antara tampon dan menstrual cup tergantung pada preferensi pribadi Anda, tingkat aliran menstruasi, kenyamanan, dan faktor lingkungan. Cobalah keduanya untuk menentukan mana yang cocok untuk Anda."]
+    },
+    {
+      "tag": "Konsultasi Medis",
+      "input": ["Apakah saya harus berkonsultasi dengan dokter sebelum menggunakan tampon atau menstrual cup?", "Kapan sebaiknya saya berkonsultasi dengan dokter tentang pemilihan produk ini?"],
+      "responses": ["Jika Anda memiliki kondisi medis tertentu seperti alergi atau masalah kesehatan tertentu, sebaiknya berkonsultasi dengan dokter sebelum memilih antara tampon dan menstrual cup. Dokter dapat memberikan saran yang sesuai dengan kondisi Anda."]
+    },
+    {
+      "tag": "Makanan Sehat Selama Menstruasi",
+      "input": ["Apa makanan yang sehat untuk dikonsumsi selama menstruasi?", "Bagaimana saya bisa menjaga pola makan sehat saat haid?"],
+      "responses": ["Selama menstruasi, penting untuk mengonsumsi makanan yang dapat membantu mengurangi nyeri dan meningkatkan energi. Beberapa makanan sehat termasuk buah-buahan, sayuran hijau, biji-bijian, ikan berlemak, kacang-kacangan, dan makanan kaya zat besi."]
+    },
+    {
+      "tag": "Kekurangan Zat Besi",
+      "input": ["Bagaimana makanan dapat membantu mengatasi kekurangan zat besi selama menstruasi?", "Apa saja makanan kaya zat besi yang dianjurkan?"],
+      "responses": ["Kehilangan darah selama menstruasi dapat menyebabkan kekurangan zat besi. Anda dapat mengatasi ini dengan mengonsumsi makanan kaya zat besi seperti daging merah, ayam, sayuran berdaun hijau, dan sereal diperkaya zat besi."]
+    },
+    {
+      "tag": "Antiinflamasi",
+      "input": ["Bagaimana makanan antiinflamasi dapat membantu selama menstruasi?", "Apa makanan yang memiliki efek antiinflamasi?"],
+      "responses": ["Makanan antiinflamasi seperti blueberry, tomat, salmon, minyak zaitun, dan kurkumin (ditemukan dalam kunyit) dapat membantu mengurangi peradangan dan nyeri selama menstruasi."]
+    },
+    {
+      "tag": "Serat",
+      "input": ["Apakah serat penting selama menstruasi?", "Apa manfaat mengonsumsi makanan tinggi serat selama haid?"],
+      "responses": ["Serat membantu mengatur pencernaan dan mengurangi sembelit, yang bisa menjadi masalah selama menstruasi. Makanan tinggi serat termasuk buah-buahan, sayuran, sereal, dan biji-bijian."]
+    },
+    {
+      "tag": "Hidrasi",
+      "input": ["Mengapa penting untuk tetap terhidrasi selama menstruasi?", "Apa manfaat minum air yang cukup?"],
+      "responses": ["Menstruasi dapat menyebabkan dehidrasi. Minum cukup air membantu menjaga keseimbangan cairan tubuh dan dapat mengurangi gejala seperti kram dan sakit kepala."]
+    },
+    {
+      "tag": "Makanan Berlemak Sehat",
+      "input": ["Apa peran makanan berlemak sehat selama menstruasi?", "Apa contoh makanan berlemak sehat yang bisa saya konsumsi?"],
+      "responses": ["Makanan berlemak sehat seperti alpukat, kacang-kacangan, minyak zaitun, dan ikan berlemak (seperti salmon) mengandung asam lemak omega-3 yang dapat membantu mengurangi peradangan dan nyeri."]
+    },
+    {
+      "tag": "Penghindaran Makanan Proses",
+      "input": ["Mengapa sebaiknya menghindari makanan olahan selama menstruasi?", "Apa efek makanan olahan pada kesehatan selama haid?"],
+      "responses": ["Makanan olahan, terutama yang tinggi gula dan lemak trans, dapat meningkatkan peradangan dan mengakibatkan fluktuasi gula darah. Sebaiknya hindari makanan olahan selama menstruasi."]
+    },
+    {
+      "tag": "Kafein",
+      "input": ["Apakah kafein perlu dihindari selama menstruasi?", "Bagaimana kafein dapat memengaruhi gejala menstruasi?"],
+      "responses": ["Kafein dapat memicu ketegangan dan kelelahan selama menstruasi. Jika Anda merasa sensitif terhadap kafein, pertimbangkan untuk mengurangi konsumsinya selama haid."]
+    },
+    {
+      "tag": "Makanan Rendah Garam",
+      "input": ["Mengapa sebaiknya mengonsumsi makanan rendah garam selama menstruasi?", "Apa pengaruh garam berlebih pada tubuh saat haid?"],
+      "responses": ["Garam berlebih dapat menyebabkan retensi cairan yang memperparah kembung dan kram selama menstruasi. Sebaiknya kurangi konsumsi garam dan pilih makanan rendah garam selama haid."]
+    },
+    {
+      "tag": "Suplemen",
+      "input": ["Apakah ada suplemen yang dianjurkan selama menstruasi?", "Bagaimana saya bisa memilih suplemen yang tepat?"],
+      "responses": ["Anda dapat mempertimbangkan suplemen seperti zat besi, magnesium, dan omega-3, tetapi konsultasikan dengan profesional medis sebelum mengonsumsi suplemen untuk memastikan sesuai dengan kebutuhan Anda."]
+    },
+    {
+      "tag": "Kapan Mengganti Pembalut atau Tampon",
+      "input": ["Kapan sebaiknya saya mengganti pembalut atau tampon?", "Berapa lama saya bisa menggunakan pembalut atau tampon sebelum harus diganti?"],
+      "responses": ["Anda sebaiknya mengganti pembalut atau tampon setiap 3-6 jam, tergantung pada tingkat aliran menstruasi Anda. Penting untuk tidak menunggu terlalu lama, karena penggunaan terlalu lama dapat meningkatkan risiko kebocoran dan infeksi."]
+    },
+    {
+      "tag": "Aliran Menstruasi Ringan",
+      "input": ["Bagaimana jika aliran menstruasi saya ringan?", "Berapa sering saya harus mengganti pembalut atau tampon saat aliran ringan?"],
+      "responses": ["Jika aliran menstruasi Anda ringan, Anda mungkin hanya perlu mengganti pembalut atau tampon setiap 4-6 jam. Tetap perhatikan perasaan nyaman dan kebersihan, dan sesuaikan penggantian sesuai kebutuhan."]
+    },
+    {
+      "tag": "Aliran Menstruasi Sedang",
+      "input": ["Apa yang harus saya lakukan jika aliran menstruasi saya sedang?", "Berapa sering mengganti pembalut atau tampon saat aliran sedang?"],
+      "responses": ["Saat aliran menstruasi sedang, disarankan untuk mengganti pembalut atau tampon setiap 3-4 jam untuk menjaga kenyamanan dan mencegah kebocoran."]
+    },
+    {
+      "tag": "Aliran Menstruasi Berat",
+      "input": ["Bagaimana jika aliran menstruasi saya berat?", "Berapa sering saya harus mengganti pembalut atau tampon saat aliran berat?"],
+      "responses": ["Saat aliran menstruasi berat, Anda perlu mengganti pembalut atau tampon lebih sering, mungkin setiap 2-3 jam. Hal ini diperlukan untuk mencegah kebocoran dan menjaga kebersihan."]
+    },
+    {
+      "tag": "Menggunakan Tampon",
+      "input": ["Bagaimana cara penggunaan tampon memengaruhi frekuensi penggantian?", "Berapa lama saya bisa menggunakan tampon sebelum harus diganti?"],
+      "responses": ["Tampon dapat digunakan selama 4-8 jam tergantung pada tingkat aliran menstruasi Anda. Penting untuk tidak melebihi waktu yang disarankan untuk mencegah risiko sindrom syok toksik (TSS)."]
+    },
+    {
+      "tag": "Menggunakan Pembalut",
+      "input": ["Apa yang perlu diperhatikan saat menggunakan pembalut?", "Berapa lama saya bisa menggunakan pembalut sebelum harus diganti?"],
+      "responses": ["Pembalut biasa dan dengan sayap dapat digunakan selama 4-6 jam, sementara pembalut berbentuk pantyliner mungkin bisa digunakan hingga 8 jam. Pastikan untuk mengganti pembalut sesuai petunjuk produsen."]
+    },
+    {
+      "tag": "Pemilihan Produk",
+      "input": ["Bagaimana memilih pembalut atau tampon yang sesuai dengan aliran menstruasi saya?", "Apa faktor yang harus saya pertimbangkan saat memilih produk?"],
+      "responses": ["Faktor yang harus dipertimbangkan saat memilih pembalut atau tampon adalah tingkat aliran menstruasi Anda, preferensi pribadi, dan kenyamanan. Cobalah beberapa jenis produk untuk menentukan mana yang paling sesuai dengan Anda."]
+    },
+    {
+      "tag": "Penggantian Malam Hari",
+      "input": ["Bagaimana dengan penggantian pembalut atau tampon saat tidur malam?", "Berapa lama saya bisa menggunakan produk ini saat tidur?"],
+      "responses": ["Selama tidur malam, Anda dapat menggunakan produk yang lebih menyerap dan mengganti sebelum tidur dan segera setelah bangun pagi. Pastikan untuk tidak melebihi waktu yang disarankan pada kemasan produk."]
+    },
+    {
+      "tag": "Kenyamanan Pribadi",
+      "input": ["Apakah kenyamanan pribadi memengaruhi frekuensi penggantian?", "Bagaimana cara menyesuaikan penggantian dengan kenyamanan saya?"],
+      "responses": ["Kenyamanan pribadi memengaruhi frekuensi penggantian. Jika Anda merasa tidak nyaman atau produk terasa penuh, segera ganti. Setiap orang memiliki tingkat kenyamanan yang berbeda."]
+    },
+    {
+      "tag": "Konsultasi Medis",
+      "input": ["Apakah ada situasi khusus di mana saya harus berkonsultasi dengan dokter tentang penggantian pembalut atau tampon?", "Kapan sebaiknya saya mencari saran medis?"],
+      "responses": ["Jika Anda mengalami masalah seperti perdarahan berlebih atau infeksi selama menstruasi, segera konsultasikan dengan dokter Anda. Mereka dapat memberikan saran medis yang sesuai."]
+    },
+    {
+      "tag": "Alasan Nyeri Menstruasi",
+      "input": ["Apa penyebab nyeri menstruasi yang berlebihan?", "Mengapa beberapa wanita mengalami menstruasi yang sangat nyeri?"],
+      "responses": ["Nyeri menstruasi yang berlebihan, atau dismenore, dapat disebabkan oleh beberapa faktor, termasuk ketegangan otot rahim, ketidakseimbangan hormon, endometriosis, fibroid rahim, atau kondisi medis lainnya."]
+    },
+    {
+      "tag": "Ketegangan Otot Rahim",
+      "input": ["Bagaimana ketegangan otot rahim berkontribusi pada nyeri menstruasi?", "Apa yang terjadi pada otot rahim selama menstruasi?"],
+      "responses": ["Selama menstruasi, rahim berkontraksi untuk membantu mengeluarkan darah menstruasi. Jika kontraksi ini terlalu kuat atau berlebihan, dapat menyebabkan nyeri menstruasi yang intens."]
+    },
+    {
+      "tag": "Ketidakseimbangan Hormon",
+      "input": ["Apa peran ketidakseimbangan hormon dalam nyeri menstruasi?", "Bagaimana hormon memengaruhi siklus menstruasi?"],
+      "responses": ["Ketidakseimbangan hormon, seperti prostaglandin yang berlebihan, dapat memicu kontraksi rahim yang lebih kuat dan nyeri menstruasi yang lebih parah. Hormon juga dapat memengaruhi regulasi nyeri selama menstruasi."]
+    },
+    {
+      "tag": "Endometriosis",
+      "input": ["Apa itu endometriosis dan bagaimana berhubungan dengan nyeri menstruasi?", "Apa gejala endometriosis?"],
+      "responses": ["Endometriosis adalah kondisi di mana jaringan yang biasanya melapisi rahim (endometrium) tumbuh di luar rahim. Ini dapat menyebabkan nyeri menstruasi hebat, serta nyeri panggul kronis, dan gangguan reproduksi. Gejala meliputi nyeri panggul dan perdarahan yang berlebihan selama menstruasi."]
+    },
+    {
+      "tag": "Fibroid Rahim",
+      "input": ["Apa itu fibroid rahim dan bagaimana memengaruhi nyeri menstruasi?", "Apa gejala fibroid rahim?"],
+      "responses": ["Fibroid rahim adalah tumor jinak yang tumbuh di rahim. Mereka dapat menyebabkan nyeri menstruasi yang intens, serta perdarahan berlebihan dan nyeri panggul. Gejala lainnya termasuk nyeri saat berhubungan seks dan perubahan siklus menstruasi."]
+    },
+    {
+      "tag": "Kondisi Medis Lainnya",
+      "input": ["Selain endometriosis dan fibroid, apa kondisi medis lain yang dapat menyebabkan nyeri menstruasi?", "Apa saja kondisi lain yang dapat memengaruhi menstruasi?"],
+      "responses": ["Beberapa kondisi medis lain yang dapat menyebabkan nyeri menstruasi meliputi infeksi panggul, polip rahim, adenomyosis, atau gangguan peradangan panggul. Semua kondisi ini memerlukan penanganan medis."]
+    },
+    {
+      "tag": "Genetika",
+      "input": ["Apakah faktor genetika memainkan peran dalam nyeri menstruasi yang berlebihan?", "Apakah nyeri menstruasi dapat menjadi faktor turun-temurun?"],
+      "responses": ["Faktor genetika dapat memengaruhi sejauh mana seseorang mengalami nyeri menstruasi yang berlebihan. Jika ada riwayat keluarga dengan sejarah nyeri menstruasi yang parah, Anda mungkin memiliki risiko yang lebih tinggi."]
+    },
+    {
+      "tag": "Pola Pendarahan",
+      "input": ["Bagaimana pola pendarahan memengaruhi nyeri menstruasi?", "Apa hubungan antara aliran menstruasi dan nyeri yang dirasakan?"],
+      "responses": ["Jumlah dan pola pendarahan selama menstruasi dapat memengaruhi tingkat nyeri yang dirasakan. Aliran yang lebih berat atau lebih lama dapat menyebabkan nyeri menstruasi yang lebih intens."]
+    },
+    {
+      "tag": "Perawatan",
+      "input": ["Apa yang bisa dilakukan untuk mengatasi nyeri menstruasi yang berlebihan?", "Bagaimana cara meredakan nyeri menstruasi yang parah?"],
+      "responses": ["Pilihan perawatan untuk nyeri menstruasi yang berlebihan meliputi penggunaan obat pereda nyeri, terapi hormon, fisioterapi, atau dalam kasus yang lebih parah, tindakan bedah. Konsultasikan dengan dokter untuk merencanakan perawatan yang sesuai."]
+    },
+    {
+      "tag": "Konsultasi Medis",
+      "input": ["Kapan sebaiknya saya berkonsultasi dengan dokter tentang nyeri menstruasi yang berlebihan?", "Apa tanda bahwa saya perlu mencari bantuan medis?"],
+      "responses": ["Jika Anda mengalami nyeri menstruasi yang sangat parah, berkepanjangan, atau disertai gejala lain yang mengganggu, seperti mual atau muntah, segera berkonsultasi dengan dokter Anda. Ini bisa menjadi tanda adanya masalah medis yang perlu ditangani."]
+    },
+    {
+      "tag": "Mengukur Siklus Haid",
+      "input": ["Bagaimana cara mengukur siklus haid?", "Apa yang perlu saya lakukan untuk melacak siklus haid saya?"],
+      "responses": ["Mengukur siklus haid dapat membantu Anda memahami pola menstruasi Anda. Cara melakukannya adalah dengan mencatat tanggal pertama menstruasi (hari pertama haid) dan tanggal pertama menstruasi berikutnya."]
+    },
+    {
+      "tag": "Hari Pertama Haid",
+      "input": ["Apa yang dimaksud dengan hari pertama haid?", "Bagaimana saya tahu kapan hari pertama haid saya?"],
+      "responses": ["Hari pertama haid adalah hari pertama ketika Anda mengalami perdarahan menstruasi. Ini biasanya ditandai dengan keluarnya darah merah dari vagina. Ini adalah titik awal dalam mengukur siklus haid."]
+    },
+    {
+      "tag": "Durasi Siklus",
+      "input": ["Bagaimana menghitung durasi siklus haid?", "Apa yang perlu saya lakukan setelah mencatat tanggal pertama haid dan tanggal pertama berikutnya?"],
+      "responses": ["Durasi siklus haid dihitung dari hari pertama haid satu bulan ke hari pertama haid berikutnya. Misalnya, jika haid pertama Anda dimulai pada tanggal 1 Januari dan haid berikutnya dimulai pada tanggal 29 Januari, maka durasi siklus Anda adalah 29 hari."]
+    },
+    {
+      "tag": "Siklus Menstruasi Normal",
+      "input": ["Apa yang dianggap sebagai siklus menstruasi normal?", "Berapa rentang durasi siklus yang normal?"],
+      "responses": ["Siklus menstruasi normal berkisar antara 21 hingga 35 hari, dengan rata-rata sekitar 28 hari. Rentang ini dapat bervariasi antara individu dan masih dianggap normal jika konsisten setiap bulan."]
+    },
+    {
+      "tag": "Pola Siklus Tidak Teratur",
+      "input": ["Apa yang harus saya lakukan jika memiliki siklus tidak teratur?", "Bagaimana mengukur siklus jika tidak konsisten setiap bulan?"],
+      "responses": ["Jika Anda memiliki siklus tidak teratur, Anda tetap dapat mencatat tanggal pertama haid setiap bulan. Dengan mencatatnya selama beberapa bulan, Anda dapat melihat pola siklus Anda meskipun tidak teratur."]
+    },
+    {
+      "tag": "Aplikasi Pelacakan Siklus",
+      "input": ["Apakah ada aplikasi yang dapat membantu saya melacak siklus haid?", "Apa manfaat menggunakan aplikasi pelacakan siklus?"],
+      "responses": ["Ada banyak aplikasi pelacakan siklus yang tersedia untuk ponsel pintar yang dapat membantu Anda mencatat dan melacak siklus haid dengan mudah. Aplikasi ini seringkali memberikan informasi tambahan tentang masa subur dan gejala lain selama siklus."]
+    },
+    {
+      "tag": "Manfaat Melacak Siklus",
+      "input": ["Apa manfaat dari melacak siklus haid?", "Mengapa penting untuk mengetahui pola siklus haid?"],
+      "responses": ["Melacak siklus haid dapat membantu Anda memahami pola aliran menstruasi Anda, memprediksi masa subur, dan mendeteksi perubahan atau masalah kesehatan yang mungkin memengaruhi siklus Anda. Ini juga bisa membantu dalam perencanaan kehamilan atau kontrasepsi."]
+    },
+    {
+      "tag": "Konsultasi Medis",
+      "input": ["Kapan sebaiknya saya berkonsultasi dengan dokter tentang siklus haid yang tidak normal?", "Apa tanda-tanda bahwa saya perlu mencari bantuan medis terkait siklus haid?"],
+      "responses": ["Jika Anda mengalami perubahan mendalam dalam siklus haid, seperti perdarahan berlebih atau ketidaknyamanan yang parah, segera berkonsultasi dengan dokter Anda. Ini bisa menjadi tanda adanya masalah kesehatan yang memerlukan perhatian medis."]
+    },
+    {
+      "tag": "Masa Subur",
+      "input": ["Apa yang dimaksud dengan masa subur dalam siklus haid?", "Bagaimana cara menentukan kapan masa subur saya?"],
+      "responses": ["Masa subur adalah waktu di tengah siklus ketika kemungkinan terjadinya kehamilan paling tinggi. Biasanya, ini terjadi sekitar 14 hari sebelum hari pertama haid berikutnya. Anda dapat menggunakan pelacakan siklus untuk membantu menentukan waktu masa subur Anda."]
+    },
+    {
+      "tag": "Menggunakan Tes Ovulasi",
+      "input": ["Bagaimana cara menggunakan tes ovulasi untuk menentukan masa subur?", "Apa yang perlu saya ketahui tentang tes ovulasi?"],
+      "responses": ["Tes ovulasi adalah alat yang dapat membantu Anda menentukan kapan Anda sedang dalam masa subur. Anda dapat menggunakan tes ini dengan mengikuti petunjuk yang tertera pada kemasannya. Biasanya, tes ini mengukur kadar hormon luteinizing (LH) dalam urin Anda."]
+    },
+    {
+      "tag": "Keseimbangan Hormon dan Menstruasi",
+      "input": ["Apa hubungan antara keseimbangan hormon dan menstruasi?", "Bagaimana hormon memengaruhi siklus menstruasi?"],
+      "responses": ["Keseimbangan hormon memainkan peran penting dalam mengatur siklus menstruasi. Hormon seperti estrogen dan progesteron berinteraksi untuk mengendalikan pertumbuhan lapisan rahim dan pelepasan sel telur. Ketidakseimbangan hormon dapat menyebabkan perubahan dalam siklus menstruasi."]
+    },
+    {
+      "tag": "Estrogen",
+      "input": ["Apa peran estrogen dalam siklus menstruasi?", "Bagaimana estrogen memengaruhi menstruasi?"],
+      "responses": ["Estrogen adalah hormon yang meningkatkan pertumbuhan lapisan rahim (endometrium) selama siklus menstruasi. Peningkatan estrogen mempersiapkan rahim untuk menerima sel telur yang telah matang."]
+    },
+    {
+      "tag": "Progesteron",
+      "input": ["Apa peran progesteron dalam siklus menstruasi?", "Bagaimana progesteron memengaruhi menstruasi?"],
+      "responses": ["Progesteron adalah hormon yang diproduksi setelah pelepasan sel telur dari ovarium (ovulasi). Ini membantu menjaga lapisan rahim yang telah tumbuh dan mempersiapkan rahim untuk kehamilan. Jika kehamilan tidak terjadi, kadar progesteron menurun, dan ini memicu menstruasi."]
+    },
+    {
+      "tag": "Siklus Menstruasi Normal",
+      "input": ["Apa yang dianggap sebagai siklus menstruasi normal dari segi hormon?", "Bagaimana hormon berperan dalam menjaga siklus menstruasi yang sehat?"],
+      "responses": ["Siklus menstruasi normal melibatkan keseimbangan hormon estrogen dan progesteron yang tepat. Estrogen meningkat di awal siklus untuk merangsang pertumbuhan endometrium, sementara progesteron meningkat setelah ovulasi untuk menjaga lapisan rahim. Ketika tidak ada kehamilan, penurunan progesteron memicu menstruasi."]
+    },
+    {
+      "tag": "Ketidakseimbangan Hormon",
+      "input": ["Apa yang terjadi jika terjadi ketidakseimbangan hormon selama menstruasi?", "Apa efek dari hormon yang tidak seimbang pada siklus menstruasi?"],
+      "responses": ["Ketidakseimbangan hormon selama menstruasi dapat menyebabkan gangguan seperti perdarahan yang tidak teratur, menstruasi yang berat, atau siklus menstruasi yang tidak teratur. Ini dapat disebabkan oleh berbagai faktor, termasuk masalah kesehatan dan stres."]
+    },
+    {
+      "tag": "Sindrom Pramenstruasi (PMS)",
+      "input": ["Apa hubungan antara hormon dan sindrom pramenstruasi (PMS)?", "Bagaimana hormon memengaruhi gejala PMS?"],
+      "responses": ["Sindrom pramenstruasi (PMS) adalah kondisi yang terkait dengan fluktuasi hormon menjelang menstruasi. Perubahan hormon seperti peningkatan estrogen dan penurunan progesteron dapat memengaruhi mood, gejala fisik, dan kenyamanan sebelum menstruasi."]
+    },
+    {
+      "tag": "Menopause",
+      "input": ["Bagaimana perubahan hormon terkait dengan menopause memengaruhi menstruasi?", "Apa yang terjadi pada siklus menstruasi selama menopause?"],
+      "responses": ["Selama menopause, ovarium berhenti menghasilkan telur dan hormon reproduksi seperti estrogen dan progesteron mulai menurun. Ini mengakibatkan perubahan dalam siklus menstruasi, termasuk menstruasi yang tidak teratur dan akhirnya berhenti menstruasi."]
+    },
+    {
+      "tag": "Pengaruh Pola Makan",
+      "input": ["Bagaimana pola makan memengaruhi keseimbangan hormon selama menstruasi?", "Apa makanan yang dapat membantu menjaga keseimbangan hormon?"],
+      "responses": ["Pola makan yang seimbang dapat membantu menjaga keseimbangan hormon selama menstruasi. Makanan kaya nutrisi seperti sayuran, buah-buahan, dan makanan berlemak sehat dapat mendukung produksi hormon yang sehat."]
+    },
+    {
+      "tag": "Konsultasi Medis",
+      "input": ["Kapan sebaiknya saya berkonsultasi dengan dokter tentang masalah keseimbangan hormon selama menstruasi?", "Apa tanda bahwa saya perlu mencari bantuan medis terkait hormon dan menstruasi?"],
+      "responses": ["Jika Anda mengalami masalah serius dengan keseimbangan hormon yang memengaruhi siklus menstruasi atau kesehatan Anda secara keseluruhan, segera berkonsultasi dengan dokter atau spesialis hormon. Mereka dapat memberikan evaluasi dan perawatan yang sesuai."]
+    },
+    {
+      "tag": "Perawatan Hormon",
+      "input": ["Apakah ada perawatan hormon yang tersedia untuk masalah keseimbangan hormon selama menstruasi?", "Bagaimana cara perawatan hormon bekerja?"],
+      "responses": ["Ya, ada perawatan hormon yang tersedia untuk mengatasi masalah keseimbangan hormon, seperti penggunaan terapi hormon atau obat hormonal tertentu. Ini dapat membantu mengatur siklus menstruasi dan mengatasi gejala yang terkait dengan ketidakseimbangan hormon."]
+    },
+    {
+      "tag": "Tanda-tanda Awal Menstruasi",
+      "input": ["Apa tanda-tanda awal menstruasi?", "Bagaimana saya bisa tahu menstruasi akan datang?"],
+      "responses": ["Tanda-tanda awal menstruasi bisa bervariasi antara individu, tetapi beberapa tanda umum termasuk rasa tidak nyaman di perut bawah, perubahan mood, dan sensasi tertentu yang mengindikasikan menstruasi akan segera datang."]
+    },
+    {
+      "tag": "Perubahan Mood",
+      "input": ["Bagaimana perubahan mood terkait dengan menstruasi?", "Apakah suasana hati bisa berubah menjelang menstruasi?"],
+      "responses": ["Ya, perubahan mood adalah salah satu tanda umum menjelang menstruasi. Banyak wanita mengalami gejala PMS (Sindrom Pramenstruasi) yang meliputi iritabilitas, depresi ringan, atau perasaan lekas marah dalam beberapa hari sebelum menstruasi."]
+    },
+    {
+      "tag": "Nyeri Perut Bawah",
+      "input": ["Mengapa perut bawah terasa nyeri sebelum menstruasi?", "Apa yang menyebabkan nyeri perut menjelang menstruasi?"],
+      "responses": ["Nyeri perut bawah atau kram adalah tanda umum yang disebabkan oleh kontraksi rahim saat menstruasi. Hormon prostaglandin juga memainkan peran dalam merangsang kontraksi ini dan dapat menyebabkan rasa sakit." ]
+    },
+    {
+      "tag": "Pembengkakan Payudara",
+      "input": ["Apakah pembengkakan payudara adalah tanda awal menstruasi?", "Mengapa payudara bisa membengkak menjelang menstruasi?"],
+      "responses": ["Ya, pembengkakan payudara atau sensitivitas payudara adalah tanda umum sebelum menstruasi. Hal ini disebabkan oleh perubahan hormon dalam tubuh yang dapat memengaruhi jaringan payudara dan menyebabkan pembengkakan dan nyeri." ]
+    },
+    {
+      "tag": "Berkurangnya Energi",
+      "input": ["Apakah merasa kurang berenergi adalah tanda awal menstruasi?", "Mengapa energi saya berkurang menjelang menstruasi?"],
+      "responses": ["Banyak wanita melaporkan merasa lebih lelah atau kurang berenergi menjelang menstruasi. Hal ini bisa disebabkan oleh fluktuasi hormon atau gejala PMS seperti perubahan mood dan kram yang dapat mengganggu tidur." ]
+    },
+    {
+      "tag": "Perubahan Pola Buang Air Besar",
+      "input": ["Apakah perubahan pola buang air besar terkait dengan menstruasi?", "Mengapa pola buang air besar bisa berubah menjelang menstruasi?"],
+      "responses": ["Beberapa wanita mengalami perubahan pola buang air besar seperti diare atau sembelit menjelang menstruasi. Ini mungkin terkait dengan perubahan hormon dalam tubuh yang memengaruhi sistem pencernaan." ]
+    },
+    {
+      "tag": "Sensitivitas Indra Penciuman",
+      "input": ["Apakah sensitivitas indra penciuman dapat meningkat menjelang menstruasi?", "Mengapa saya lebih peka terhadap bau menjelang menstruasi?"],
+      "responses": ["Beberapa wanita melaporkan bahwa indra penciuman mereka lebih peka menjelang menstruasi. Ini mungkin disebabkan oleh perubahan hormon dalam tubuh yang memengaruhi persepsi bau." ]
+    },
+    {
+      "tag": "Nyeri Punggung",
+      "input": ["Apakah nyeri punggung adalah tanda awal menstruasi?", "Mengapa saya mengalami nyeri punggung menjelang menstruasi?"],
+      "responses": ["Nyeri punggung adalah tanda umum yang dapat terjadi menjelang menstruasi. Ini dapat disebabkan oleh perubahan hormon, peningkatan cairan rahim, atau efek samping dari kram rahim." ]
+    },
+    {
+      "tag": "Pembengkakan Perut",
+      "input": ["Mengapa perut bisa membengkak sebelum menstruasi?", "Apakah pembengkakan perut adalah tanda umum menjelang menstruasi?"],
+      "responses": ["Pembengkakan perut atau perasaan kembung adalah tanda umum yang terkait dengan menstruasi. Hal ini disebabkan oleh perubahan hormon dan retensi cairan dalam tubuh." ]
+    },
+    {
+      "tag": "Perdarahan Ringan",
+      "input": ["Apakah perdarahan ringan sebelum menstruasi adalah tanda awal menstruasi?", "Mengapa saya mengalami perdarahan ringan menjelang menstruasi?"],
+      "responses": ["Beberapa wanita mengalami perdarahan ringan atau bercak coklat sebelum menstruasi yang disebut spotting. Ini bisa terjadi karena perubahan hormon dan pelepasan darah yang belum sepenuhnya." ]
+    },
+    {
+      "tag": "Kontrasepsi Selama Menstruasi",
+      "input": ["Apa metode kontrasepsi yang aman selama menstruasi?", "Bagaimana menjaga kontrasepsi saat menstruasi?"],
+      "responses": ["Selama menstruasi, metode kontrasepsi seperti kondom, diafragma, atau pil kontrasepsi yang mengandung hormon dapat digunakan untuk mencegah kehamilan. Namun, penting untuk berkonsultasi dengan dokter atau profesional kesehatan Anda untuk memilih metode yang paling sesuai."]
+    },
+    {
+      "tag": "Kondom",
+      "input": ["Bagaimana kondom dapat digunakan sebagai metode kontrasepsi selama menstruasi?", "Apakah kondom efektif selama menstruasi?"],
+      "responses": ["Kondom adalah metode kontrasepsi yang efektif selama menstruasi. Ini tidak hanya membantu mencegah kehamilan, tetapi juga melindungi dari infeksi menular seksual (IMS). Pastikan untuk menggunakan kondom dengan benar dan menggantinya dengan yang baru setiap kali berhubungan seks."]
+    },
+    {
+      "tag": "Diafragma",
+      "input": ["Apa itu diafragma dan bagaimana cara menggunakannya selama menstruasi?", "Apakah diafragma aman sebagai metode kontrasepsi?"],
+      "responses": ["Diafragma adalah cangkir karet yang ditempatkan di dalam vagina untuk menutupi leher rahim. Ini harus digunakan bersama dengan spermisida. Diafragma bisa menjadi metode kontrasepsi yang efektif selama menstruasi jika digunakan dengan benar."]
+    },
+    {
+      "tag": "Pil Kontrasepsi",
+      "input": ["Bagaimana pil kontrasepsi yang mengandung hormon dapat digunakan selama menstruasi?", "Apakah pil kontrasepsi aman saat menstruasi?"],
+      "responses": ["Pil kontrasepsi yang mengandung hormon bisa digunakan selama menstruasi. Mereka membantu mencegah kehamilan dengan mengatur ovulasi dan mengubah kondisi dalam rahim untuk menghambat pembuahan. Penting untuk mengikuti jadwal penggunaan pil dengan benar."]
+    },
+    {
+      "tag": "Spermisida",
+      "input": ["Apa itu spermisida dan bagaimana cara menggunakannya selama menstruasi?", "Apakah spermisida efektif sebagai metode kontrasepsi?"],
+      "responses": ["Spermisida adalah zat kimia yang digunakan untuk membunuh sperma. Ini dapat digunakan bersama dengan metode kontrasepsi lain seperti kondom atau diafragma. Spermisida bisa menjadi tambahan yang efektif dalam mencegah kehamilan selama menstruasi."]
+    },
+    {
+      "tag": "Intrauterine Device (IUD)",
+      "input": ["Apakah IUD dapat digunakan sebagai metode kontrasepsi selama menstruasi?", "Bagaimana cara menggunakan IUD selama menstruasi?"],
+      "responses": ["IUD adalah metode kontrasepsi yang dimasukkan ke dalam rahim oleh dokter atau profesional kesehatan. Ini bisa digunakan selama menstruasi atau kapan saja selama siklus. IUD memiliki tingkat keberhasilan yang tinggi dalam mencegah kehamilan."]
+    },
+    {
+      "tag": "Implan Kontrasepsi",
+      "input": ["Bagaimana implan kontrasepsi dapat digunakan selama menstruasi?", "Apakah implan kontrasepsi aman saat menstruasi?"],
+      "responses": ["Implan kontrasepsi adalah perangkat kecil yang ditanamkan di bawah kulit lengan atas. Ini adalah metode kontrasepsi yang efektif yang bisa digunakan selama menstruasi atau kapan saja selama siklus. Implan dapat mencegah kehamilan dalam jangka waktu yang panjang."]
+    },
+    {
+      "tag": "Suntikan Kontrasepsi",
+      "input": ["Apa itu suntikan kontrasepsi dan bagaimana cara menggunakannya selama menstruasi?", "Apakah suntikan kontrasepsi efektif selama menstruasi?"],
+      "responses": ["Suntikan kontrasepsi adalah metode kontrasepsi yang diberikan oleh profesional kesehatan setiap beberapa bulan. Ini dapat digunakan selama menstruasi atau kapan saja selama siklus. Suntikan kontrasepsi memiliki tingkat keberhasilan yang tinggi."]
+    },
+    {
+      "tag": "Konsultasi Profesional",
+      "input": ["Kapan sebaiknya saya berkonsultasi dengan dokter tentang pemilihan metode kontrasepsi selama menstruasi?", "Apa yang harus saya pertimbangkan sebelum memilih metode kontrasepsi?"],
+      "responses": ["Anda sebaiknya berkonsultasi dengan dokter atau profesional kesehatan sebelum memilih metode kontrasepsi. Mereka dapat membantu Anda memilih yang paling sesuai dengan kebutuhan Anda dan memberikan informasi tentang efek samping dan cara penggunaannya."]
+    },
+    {
+      "tag": "Kondom Wanita",
+      "input": ["Apakah ada kondom khusus untuk wanita yang dapat digunakan selama menstruasi?", "Bagaimana cara menggunakan kondom wanita?"],
+      "responses": ["Ya, ada kondom khusus untuk wanita yang dapat digunakan selama menstruasi. Kondom wanita ditempatkan di dalam vagina sebelum berhubungan seks dan membantu mencegah kehamilan serta melindungi dari IMS. Pastikan untuk mengikuti petunjuk penggunaan dengan benar."]
+    },
+    {
+      "tag": "Suplemen Kesehatan Menstruasi",
+      "input": ["Apa suplemen yang dapat membantu kesehatan menstruasi?", "Bagaimana menggunakan suplemen untuk meningkatkan kesehatan menstruasi?"],
+      "responses": ["Suplemen tertentu dapat membantu meningkatkan kesehatan menstruasi dengan menyediakan nutrisi yang penting untuk tubuh. Namun, penting untuk berkonsultasi dengan dokter sebelum mengonsumsi suplemen."]
+    },
+    {
+      "tag": "Vitamin D",
+      "input": ["Apa peran vitamin D dalam kesehatan menstruasi?", "Bagaimana mengonsumsi vitamin D untuk menstruasi yang sehat?"],
+      "responses": ["Vitamin D dapat mendukung kesehatan menstruasi dengan mengatur siklus haid dan mengurangi risiko gangguan menstruasi. Anda dapat mendapatkan vitamin D melalui paparan sinar matahari dan makanan tertentu atau sebagai suplemen sesuai anjuran dokter."]
+    },
+    {
+      "tag": "Kalsium",
+      "input": ["Bagaimana kalsium memengaruhi menstruasi?", "Apa sumber-sumber kalsium yang baik untuk kesehatan menstruasi?"],
+      "responses": ["Kalsium penting untuk kesehatan tulang dan otot, serta pengaturan siklus haid yang normal. Makanan kaya kalsium meliputi produk susu, sayuran berdaun hijau, dan suplemen kalsium sesuai anjuran dokter."]
+    },
+    {
+      "tag": "Magnesium",
+      "input": ["Apa peran magnesium dalam kesehatan menstruasi?", "Bagaimana mengonsumsi magnesium untuk mendukung siklus menstruasi yang sehat?"],
+      "responses": ["Magnesium dapat membantu mengurangi gejala PMS (Sindrom Pramenstruasi) seperti kram dan ketegangan payudara. Anda dapat memperoleh magnesium dari makanan seperti kacang-kacangan, biji-bijian, atau melalui suplemen sesuai anjuran dokter."]
+    },
+    {
+      "tag": "Zat Besi",
+      "input": ["Apa hubungan antara zat besi dan menstruasi?", "Bagaimana mengonsumsi cukup zat besi untuk kesehatan menstruasi?"],
+      "responses": ["Zat besi adalah nutrisi penting yang membantu mencegah anemia. Menstruasi dapat menyebabkan kehilangan darah, sehingga penting untuk mendapatkan cukup zat besi melalui makanan seperti daging merah, sayuran berdaun hijau, atau suplemen sesuai anjuran dokter."]
+    },
+    {
+      "tag": "Vitamin B6",
+      "input": ["Apa peran vitamin B6 dalam kesehatan menstruasi?", "Bagaimana mengonsumsi vitamin B6 untuk mengurangi gejala PMS?"],
+      "responses": ["Vitamin B6 dapat membantu mengurangi gejala PMS seperti perubahan mood dan nyeri payudara. Anda dapat mendapatkan vitamin B6 dari makanan seperti pisang, kentang, dan suplemen sesuai anjuran dokter."]
+    },
+    {
+      "tag": "Omega-3",
+      "input": ["Bagaimana omega-3 memengaruhi kesehatan menstruasi?", "Apa sumber-sumber omega-3 yang baik untuk kesehatan menstruasi?"],
+      "responses": ["Omega-3, seperti yang ditemukan dalam ikan berlemak dan minyak ikan, dapat membantu mengurangi peradangan dan nyeri menstruasi. Anda dapat mengonsumsinya melalui makanan atau suplemen sesuai anjuran dokter."]
+    },
+    {
+      "tag": "Vitamin E",
+      "input": ["Apa peran vitamin E dalam menjaga kesehatan menstruasi?", "Bagaimana mengonsumsi vitamin E untuk mengurangi gejala menstruasi yang tidak nyaman?"],
+      "responses": ["Vitamin E dapat membantu mengurangi gejala menstruasi yang tidak nyaman seperti kram dan nyeri. Anda dapat mendapatkan vitamin E dari makanan seperti kacang-kacangan, biji-bijian, dan suplemen sesuai anjuran dokter."]
+    },
+    {
+      "tag": "Zat Besi",
+      "input": ["Bagaimana zat besi memengaruhi menstruasi?", "Apakah kekurangan zat besi dapat memengaruhi siklus menstruasi?"],
+      "responses": ["Kekurangan zat besi dapat memengaruhi kesehatan menstruasi dengan menyebabkan anemia. Penting untuk menjaga asupan zat besi yang cukup melalui makanan atau suplemen sesuai anjuran dokter."]
+    },
+    {
+      "tag": "Asupan Nutrisi Seimbang",
+      "input": ["Apa pentingnya asupan nutrisi seimbang untuk kesehatan menstruasi?", "Bagaimana menjaga diet yang seimbang selama menstruasi?"],
+      "responses": ["Asupan nutrisi seimbang sangat penting untuk kesehatan menstruasi. Pastikan Anda mendapatkan cukup protein, vitamin, dan mineral melalui makanan sehari-hari untuk mendukung siklus menstruasi yang sehat."]
+    },
+    {
+      "tag": "Menstruasi pada Masa Remaja",
+      "input": ["Apa yang harus saya ketahui tentang menstruasi saat remaja?", "Bagaimana menghadapi menstruasi selama masa remaja?"],
+      "responses": ["Menstruasi adalah bagian normal dari perkembangan remaja perempuan. Ini adalah tanda bahwa tubuh sedang mempersiapkan diri untuk fungsi reproduksi. Penting untuk memahami apa yang terjadi selama menstruasi dan bagaimana merawat diri dengan baik."]
+    },
+    {
+      "tag": "Usia Pertama Menstruasi",
+      "input": ["Kapan biasanya remaja mengalami menstruasi pertama?", "Apakah usia pertama menstruasi bervariasi antar individu?"],
+      "responses": ["Usia pertama menstruasi (menarche) bervariasi antar individu, tetapi biasanya terjadi antara usia 9 hingga 16 tahun. Faktor genetik, nutrisi, dan kesehatan dapat memengaruhi usia menarche."]
+    },
+    {
+      "tag": "Siklus Menstruasi Awal",
+      "input": ["Bagaimana siklus menstruasi pada masa remaja?", "Apakah siklus menstruasi selalu teratur pada masa remaja?"],
+      "responses": ["Siklus menstruasi pada masa remaja cenderung tidak teratur. Ini adalah hal yang wajar karena tubuh sedang beradaptasi dengan perubahan hormon. Siklus dapat menjadi teratur seiring pertambahan usia."]
+    },
+    {
+      "tag": "Gejala Menstruasi",
+      "input": ["Apa gejala yang mungkin dialami selama menstruasi pada masa remaja?", "Bagaimana mengatasi gejala menstruasi yang tidak nyaman?"],
+      "responses": ["Selama menstruasi, remaja dapat mengalami gejala seperti nyeri perut, kram, ketidaknyamanan, perubahan mood, dan sensasi fisik lainnya. Menggunakan pembalut atau tampon yang tepat serta menjaga pola makan yang sehat dapat membantu mengatasi gejala tersebut."]
+    },
+    {
+      "tag": "Menstruasi Pertama",
+      "input": ["Bagaimana menghadapi menstruasi pertama?", "Apa yang perlu dilakukan ketika mengalami menstruasi pertama?"],
+      "responses": ["Ketika mengalami menstruasi pertama, penting untuk tetap tenang dan tidak panik. Pastikan Anda memiliki persediaan pembalut atau tampon yang sesuai. Jika Anda tidak yakin, berbicaralah dengan ibu atau seorang wanita dewasa yang dapat memberikan panduan."]
+    },
+    {
+      "tag": "Edukasi Seksual",
+      "input": ["Apakah remaja perlu mendapatkan edukasi seksual sehubungan dengan menstruasi?", "Bagaimana memberikan edukasi seksual yang baik kepada remaja perempuan?"],
+      "responses": ["Edukasi seksual penting bagi remaja perempuan, termasuk informasi tentang menstruasi, siklus haid, dan perubahan tubuh. Orangtua atau pengajar seharusnya memberikan edukasi yang akurat dan mendukung."]
+    },
+    {
+      "tag": "Menstruasi dan Aktivitas Fisik",
+      "input": ["Bagaimana menstruasi memengaruhi aktivitas fisik pada remaja?", "Apakah ada batasan aktivitas selama menstruasi?"],
+      "responses": ["Menstruasi tidak seharusnya menjadi hambatan besar untuk aktivitas fisik. Beberapa remaja mungkin merasa lebih nyaman dengan aktivitas yang lebih ringan selama menstruasi, tetapi banyak yang tetap bisa melakukan aktivitas biasa dengan nyaman."]
+    },
+    {
+      "tag": "Pentingnya Kesehatan Menstruasi",
+      "input": ["Mengapa penting untuk menjaga kesehatan menstruasi pada masa remaja?", "Apa dampak buruk jika kesehatan menstruasi diabaikan?"],
+      "responses": ["Kesehatan menstruasi yang baik pada masa remaja penting karena itu bisa mencerminkan kesehatan reproduksi dan keseluruhan kesehatan. Mengabaikan masalah menstruasi dapat berdampak pada kesehatan dan kualitas hidup di kemudian hari."]
+    },
+    {
+      "tag": "Kapan Mengkonsultasikan dengan Dokter",
+      "input": ["Kapan sebaiknya remaja berkonsultasi dengan dokter tentang masalah menstruasi?", "Apa tanda-tanda bahwa perlu dicari bantuan medis terkait menstruasi?"],
+      "responses": ["Remaja sebaiknya berkonsultasi dengan dokter jika mereka mengalami masalah menstruasi yang signifikan, seperti perdarahan berlebihan, nyeri yang tidak tertahankan, atau gangguan siklus yang parah. Ini bisa menjadi tanda masalah medis yang perlu ditangani."]
+    },
+    {
+      "tag": "Kesehatan Mental dan Emosional",
+      "input": ["Bagaimana menstruasi memengaruhi kesehatan mental dan emosional pada remaja?", "Apa yang bisa dilakukan untuk menjaga kesehatan mental selama menstruasi?"],
+      "responses": ["Menstruasi dapat memengaruhi kesehatan mental dan emosional remaja. Penting untuk memberikan dukungan, memahami perubahan emosi yang mungkin terjadi, dan mencari cara untuk mengatasi stres dan perasaan negatif selama menstruasi."]
+    },
+    {
+      "tag": "Menstruasi dan Kehamilan",
+      "input": ["Bagaimana menstruasi memengaruhi kemungkinan kehamilan?", "Apakah mungkin hamil saat menstruasi?"],
+      "responses": ["Biasanya, menstruasi menunjukkan bahwa tidak ada kehamilan. Namun, dalam beberapa kasus, wanita bisa mengalami perdarahan implantasi yang terjadi saat sel telur yang dibuahi menempel pada dinding rahim, mirip dengan menstruasi."]
+    },
+    {
+      "tag": "Kehamilan dan Siklus Menstruasi",
+      "input": ["Bagaimana siklus menstruasi berhubungan dengan kehamilan?", "Apa yang harus diketahui tentang menstruasi saat mencoba hamil?"],
+      "responses": ["Siklus menstruasi berperan penting dalam proses kehamilan. Ovulasi, yaitu pelepasan sel telur yang siap dibuahi, terjadi pada pertengahan siklus. Jika terjadi pembuahan sperma saat ovulasi, maka kehamilan dapat terjadi."]
+    },
+    {
+      "tag": "Periode yang Tidak Teratur",
+      "input": ["Apakah perdarahan tidak teratur dapat menandakan masalah kehamilan?", "Bagaimana mengenali perbedaan antara menstruasi dan perdarahan kehamilan?"],
+      "responses": ["Perdarahan tidak teratur dapat menjadi tanda-tanda masalah kehamilan atau masalah kesehatan lainnya. Perbedaan antara menstruasi dan perdarahan kehamilan mungkin sulit dikenali, tetapi perdarahan kehamilan biasanya lebih ringan dan berlangsung lebih singkat daripada menstruasi."]
+    },
+    {
+      "tag": "Tes Kehamilan",
+      "input": ["Kapan sebaiknya melakukan tes kehamilan?", "Bagaimana cara melakukan tes kehamilan yang akurat?"],
+      "responses": ["Tes kehamilan dapat dilakukan setelah sekitar satu hingga dua minggu setelah hubungan seks yang mungkin mengakibatkan kehamilan. Tes harus dilakukan dengan urin pagi hari untuk hasil yang lebih akurat. Anda juga dapat berkonsultasi dengan dokter untuk tes darah yang lebih akurat."]
+    },
+    {
+      "tag": "Kondisi Medis dan Kehamilan",
+      "input": ["Bagaimana kondisi medis seperti PCOS atau endometriosis memengaruhi kehamilan?", "Apa yang harus diketahui jika memiliki kondisi medis tertentu saat mencoba hamil?"],
+      "responses": ["Beberapa kondisi medis, seperti Polikistik Ovarium Syndrome (PCOS) atau endometriosis, dapat memengaruhi kesuburan dan kemungkinan kehamilan. Jika Anda memiliki kondisi medis ini, berkonsultasilah dengan dokter atau spesialis kesuburan untuk bantuan lebih lanjut."]
+    },
+    {
+      "tag": "Mengenali Tanda-tanda Kehamilan",
+      "input": ["Apa tanda-tanda awal kehamilan yang harus dikenali?", "Bagaimana cara mengenali tanda-tanda bahwa seseorang mungkin hamil?"],
+      "responses": ["Tanda-tanda awal kehamilan dapat mencakup mual, muntah, payudara yang membengkak atau nyeri, peningkatan frekuensi buang air kecil, peningkatan sensitivitas terhadap bau, dan keterlambatan menstruasi. Jika Anda mencurigai kehamilan, sebaiknya lakukan tes kehamilan atau berkonsultasi dengan dokter."]
+    },
+    {
+      "tag": "Konsultasi dengan Dokter",
+      "input": ["Kapan sebaiknya berkonsultasi dengan dokter tentang kehamilan?", "Apa yang harus dilakukan jika mencurigai kehamilan?"],
+      "responses": ["Anda sebaiknya berkonsultasi dengan dokter jika Anda mencurigai kehamilan atau mengalami gejala kehamilan. Dokter dapat melakukan pemeriksaan yang diperlukan, memberikan nasihat, dan merujuk Anda ke spesialis kehamilan jika diperlukan."]
+    },
+    {
+      "tag": "Kehamilan yang Direncanakan",
+      "input": ["Apa yang harus dilakukan jika seseorang merencanakan kehamilan?", "Bagaimana persiapan yang perlu dilakukan sebelum hamil?"],
+      "responses": ["Jika Anda merencanakan kehamilan, penting untuk menjalani gaya hidup sehat, mengonsumsi nutrisi yang cukup, berhenti merokok dan minum alkohol, serta berkonsultasi dengan dokter untuk pemeriksaan prakehamilan dan nasihat lebih lanjut."]
+    },
+    {
+      "tag": "Kehamilan yang Tidak Direncanakan",
+      "input": ["Bagaimana menghadapi kehamilan yang tidak direncanakan?", "Apa yang harus dilakukan jika tidak siap untuk kehamilan?"],
+      "responses": ["Kehamilan yang tidak direncanakan bisa menjadi situasi yang menantang. Jika Anda tidak siap untuk kehamilan, segera berkonsultasi dengan dokter atau klinik kesehatan reproduksi untuk mendiskusikan opsi dan rencana yang sesuai dengan kebutuhan Anda."]
+    },
+    {
+      "tag": "Kesehatan Kehamilan",
+      "input": ["Apa yang perlu diperhatikan untuk menjaga kesehatan selama kehamilan?", "Bagaimana merawat diri dengan baik selama masa kehamilan?"],
+      "responses": ["Selama kehamilan, penting untuk menjaga kesehatan dengan mengikuti anjuran dokter, mengonsumsi makanan sehat, menghindari alkohol dan obat-obatan terlarang, dan menjalani pemeriksaan kehamilan secara teratur. Juga, berbicaralah dengan dokter tentang semua kekhawatiran kesehatan Anda."]
+    },
+    {
+      "tag": "Mengelola Emosi saat Menstruasi",
+      "input": ["Bagaimana cara mengelola perubahan emosi selama menstruasi?", "Apa yang bisa saya lakukan untuk merasa lebih baik secara emosional selama menstruasi?"],
+      "responses": ["Mengelola perubahan emosi selama menstruasi adalah penting. Anda dapat mencoba teknik seperti meditasi, yoga, olahraga ringan, dan relaksasi untuk mengurangi stres dan kecemasan. Berbicara dengan teman atau anggota keluarga yang Anda percayai juga bisa membantu."]
+    },
+    {
+      "tag": "PMS (Sindrom Pramenstruasi)",
+      "input": ["Apa itu PMS?", "Bagaimana mengatasi gejala PMS secara emosional?"],
+      "responses": ["Sindrom Pramenstruasi (PMS) adalah kondisi yang mencakup gejala seperti perubahan mood, iritabilitas, dan kecemasan yang muncul sebelum menstruasi. Untuk mengatasi gejala PMS secara emosional, cobalah menerapkan pola makan sehat, tidur yang cukup, dan menjaga stres."]
+    },
+    {
+      "tag": "Pentingnya Berbicara",
+      "input": ["Mengapa penting untuk berbicara tentang perubahan emosi saat menstruasi?", "Apa manfaatnya dalam mengatasi perubahan emosi?"],
+      "responses": ["Berbicara tentang perubahan emosi selama menstruasi dapat membantu mengurangi isolasi dan merasa lebih didukung. Teman, anggota keluarga, atau profesional kesehatan dapat memberikan dukungan, saran, atau pemahaman yang Anda butuhkan."]
+    },
+    {
+      "tag": "Stres dan Menstruasi",
+      "input": ["Bagaimana menstruasi dapat memengaruhi tingkat stres?", "Apa yang bisa dilakukan untuk mengurangi stres selama menstruasi?"],
+      "responses": ["Menstruasi dapat meningkatkan tingkat stres pada beberapa wanita. Untuk menguranginya, cobalah teknik relaksasi seperti pernapasan dalam, meditasi, atau aktivitas fisik yang dapat melepaskan endorfin, hormon yang meningkatkan suasana hati."]
+    },
+    {
+      "tag": "Aktivitas Fisik",
+      "input": ["Bagaimana aktivitas fisik dapat membantu mengatasi perubahan emosi selama menstruasi?", "Apakah olahraga bermanfaat selama menstruasi?"],
+      "responses": ["Olahraga dapat membantu meredakan perubahan emosi selama menstruasi dengan melepaskan hormon endorfin yang meningkatkan suasana hati. Cobalah berjalan kaki, bersepeda, atau yoga untuk merasa lebih baik secara emosional."]
+    },
+    {
+      "tag": "Nutrisi yang Tepat",
+      "input": ["Apa peran nutrisi dalam mengelola perubahan emosi selama menstruasi?", "Apa makanan yang baik untuk mood selama menstruasi?"],
+      "responses": ["Nutrisi memainkan peran penting dalam mengelola perubahan emosi selama menstruasi. Makan makanan kaya serat, sayuran, buah-buahan, dan protein seimbang dapat membantu menjaga mood yang stabil. Hindari konsumsi gula berlebih dan kafein."]
+    },
+    {
+      "tag": "Pentingnya Tidur",
+      "input": ["Bagaimana tidur yang cukup dapat membantu mengatasi perubahan emosi?", "Apa yang dapat dilakukan untuk meningkatkan kualitas tidur selama menstruasi?"],
+      "responses": ["Tidur yang cukup penting untuk mengatasi perubahan emosi selama menstruasi. Cobalah menjaga rutinitas tidur yang konsisten, hindari tidur siang berlebihan, dan ciptakan lingkungan tidur yang nyaman untuk meningkatkan kualitas tidur Anda."]
+    },
+    {
+      "tag": "Mengenal Pola Emosi",
+      "input": ["Bagaimana mengenali pola emosi selama siklus menstruasi?", "Apa yang dapat membantu saya memahami perubahan emosi yang terjadi setiap bulan?"],
+      "responses": ["Mengenali pola emosi selama siklus menstruasi bisa membantu Anda lebih siap menghadapinya. Membuat catatan tentang perasaan dan gejala selama beberapa bulan dapat membantu Anda memahami bagaimaimana siklus Anda memengaruhi suasana hati dan perasaan Anda."]
+    },
+    {
+      "tag": "Pemahaman Hormon",
+      "input": ["Bagaimana pemahaman tentang perubahan hormon dapat membantu mengelola emosi saat menstruasi?", "Apa yang perlu saya ketahui tentang perubahan hormonal selama siklus menstruasi?"],
+      "responses": ["Memahami perubahan hormonal yang terjadi selama siklus menstruasi dapat membantu Anda merasa lebih terkendali. Hormon seperti estrogen dan progesteron berfluktuasi, dan ini dapat memengaruhi suasana hati. Jika Anda mengerti hal ini, Anda dapat lebih baik mempersiapkan diri."]
+    },
+    {
+      "tag": "Konsultasi dengan Profesional",
+      "input": ["Kapan sebaiknya saya berkonsultasi dengan profesional kesehatan tentang perubahan emosi selama menstruasi?", "Apakah ada tanda-tanda bahwa saya memerlukan bantuan lebih lanjut?"],
+      "responses": ["Jika perubahan emosi selama menstruasi sangat mengganggu kehidupan sehari-hari atau Anda merasa tidak mampu mengatasinya, segera berkonsultasi dengan profesional kesehatan atau seorang psikolog. Mereka dapat memberikan bantuan dan dukungan yang diperlukan."]
+    },
+    {
+      "tag": "Perubahan Fisik saat Menstruasi",
+      "input": ["Apa saja perubahan fisik yang dapat terjadi selama menstruasi?", "Bagaimana mengatasi perubahan fisik saat menstruasi?"],
+      "responses": ["Selama menstruasi, banyak wanita mengalami perubahan fisik seperti kram perut, sakit punggung, pembengkakan payudara, kulit berminyak, atau jerawat. Anda dapat mengatasi perubahan fisik ini dengan perawatan yang sesuai dan menjaga gaya hidup sehat."]
+    },
+    {
+      "tag": "Nyeri Perut (Dismenore)",
+      "input": ["Apa itu dismenore?", "Bagaimana mengatasi nyeri perut saat menstruasi?"],
+      "responses": ["Dismenore adalah nyeri perut yang terjadi selama menstruasi. Untuk mengatasi nyeri perut, Anda dapat menggunakan bantalan pemanas, minum analgesik, beristirahat, dan mencoba teknik relaksasi seperti yoga atau meditasi."]
+    },
+    {
+      "tag": "Perubahan Kulit",
+      "input": ["Mengapa kulit saya dapat berubah selama menstruasi?", "Apa yang dapat saya lakukan untuk merawat kulit saat menstruasi?"],
+      "responses": ["Perubahan hormon selama menstruasi dapat memengaruhi kulit, seperti kulit berminyak atau timbulnya jerawat. Untuk merawat kulit, hindari mencuci muka terlalu keras, gunakan produk perawatan kulit yang lembut, dan pertimbangkan konsultasi dengan seorang dermatolog jika perlu."]
+    },
+    {
+      "tag": "Pembengkakan Payudara",
+      "input": ["Mengapa payudara saya bisa membengkak selama menstruasi?", "Bagaimana mengatasi pembengkakan payudara yang tidak nyaman?"],
+      "responses": ["Pembengkakan payudara selama menstruasi biasanya terkait dengan perubahan hormon. Anda dapat mengatasi pembengkakan ini dengan mengenakan bra yang nyaman dan memberikan dukungan yang cukup kepada payudara Anda."]
+    },
+    {
+      "tag": "Sakit Punggung",
+      "input": ["Mengapa sakit punggung sering terjadi saat menstruasi?", "Apa yang bisa saya lakukan untuk meredakan sakit punggung selama menstruasi?"],
+      "responses": ["Sakit punggung saat menstruasi biasanya terjadi karena kontraksi otot rahim. Anda dapat meredakannya dengan menggunakan bantalan pemanas, melakukan latihan peregangan ringan, dan mengonsumsi analgesik jika diperlukan."]
+    },
+    {
+      "tag": "Perdarahan Menstruasi",
+      "input": ["Apa yang normal dalam hal perdarahan menstruasi?", "Bagaimana mengatasi perdarahan menstruasi yang berlebihan?"],
+      "responses": ["Jumlah perdarahan menstruasi yang normal bervariasi antar wanita. Jika Anda mengalami perdarahan yang sangat berlebihan atau memerlukan pergantian pembalut/tampon yang sangat sering, segera berkonsultasi dengan dokter untuk mengevaluasi masalah yang mungkin ada."]
+    },
+    {
+      "tag": "Nyeri Pinggang Bawah",
+      "input": ["Mengapa nyeri pinggang bawah dapat terjadi selama menstruasi?", "Apa yang bisa saya lakukan untuk mengatasi nyeri pinggang bawah ini?"],
+      "responses": ["Nyeri pinggang bawah selama menstruasi dapat terjadi karena kontraksi otot rahim. Anda dapat meredakannya dengan latihan peregangan pinggang bawah, penggunaan bantalan pemanas, atau perawatan fisioterapi jika diperlukan."]
+    },
+    {
+      "tag": "Pembengkakan Perut",
+      "input": ["Mengapa perut saya bisa membengkak saat menstruasi?", "Bagaimana mengatasi pembengkakan perut yang tidak nyaman?"],
+      "responses": ["Pembengkakan perut selama menstruasi sering disebabkan oleh retensi cairan. Anda dapat mengatasi pembengkakan ini dengan mengurangi konsumsi garam, minum cukup air, dan menjaga aktivitas fisik yang sehat."]
+    },
+    {
+      "tag": "Konsumsi Makanan Sehat",
+      "input": ["Apakah makanan berperan dalam mengatasi perubahan fisik saat menstruasi?", "Apa makanan yang baik untuk meredakan gejala fisik selama menstruasi?"],
+      "responses": ["Makanan sehat dapat membantu mengurangi gejala fisik selama menstruasi. Cobalah mengonsumsi makanan yang kaya serat, buah-buahan, sayuran, dan makanan yang mengandung zat besi untuk menjaga energi selama menstruasi."]
+    },
+    {
+      "tag": "Pentingnya Konsultasi Medis",
+      "input": ["Kapan sebaiknya saya berkonsultasi dengan dokter tentang perubahan fisik selama menstruasi?", "Apakah ada tanda-tanda bahwa perlu dicari bantuan medis terkait perubahan fisik ini?"],
+      "responses": ["Jika perubahan fisik selama menstruasi sangat mengganggu atau menyakitkan, segera berkonsultasi dengan dokter. Ada beberapa kondisi medis seperti endometriosis atau fibroid yang dapat memengaruhi gejala fisik dan memerlukan perawatan medis."]
+    },
+    {
+      "tag": "Pola Makan Seimbang untuk Mengatasi PMS",
+      "input": ["Bagaimana pola makan dapat membantu mengatasi PMS?", "Apa yang sebaiknya dimakan untuk meredakan gejala PMS?"],
+      "responses": ["Pola makan seimbang dapat membantu mengurangi gejala PMS seperti kram perut, perubahan mood, dan nyeri payudara. Penting untuk mengonsumsi makanan yang kaya nutrisi dan menghindari makanan yang dapat memperburuk gejala PMS."]
+    },
+    {
+      "tag": "Kurangi Garam",
+      "input": ["Bagaimana mengurangi konsumsi garam dapat membantu mengatasi PMS?", "Apa yang perlu diperhatikan saat mengurangi garam dalam makanan?"],
+      "responses": ["Mengurangi konsumsi garam dapat membantu mengatasi retensi cairan yang sering terjadi selama PMS. Hindari makanan tinggi garam seperti makanan olahan, keripik, dan camilan asin. Gantilah dengan makanan rendah garam seperti sayuran segar dan buah-buahan."]
+    },
+    {
+      "tag": "Zat Besi",
+      "input": ["Apa peran zat besi dalam mengatasi PMS?", "Apa sumber-sumber makanan yang mengandung zat besi?"],
+      "responses": ["Zat besi penting untuk menjaga energi selama PMS. Sumber-sumber makanan yang kaya zat besi meliputi daging merah, ayam, ikan, sayuran hijau, kacang-kacangan, dan sereal yang diperkaya zat besi."]
+    },
+    {
+      "tag": "Serat",
+      "input": ["Bagaimana serat dapat membantu meredakan gejala PMS?", "Apa makanan yang tinggi serat yang sebaiknya dikonsumsi?"],
+      "responses": ["Serat membantu mengatur pencernaan dan mengurangi kembung yang mungkin terjadi selama PMS. Makanan tinggi serat meliputi gandum utuh, oatmeal, sayuran, buah-buahan, dan kacang-kacangan."]
+    },
+    {
+      "tag": "Makanan Rendah Gula",
+      "input": ["Mengapa sebaiknya menghindari makanan tinggi gula saat PMS?", "Apa yang dapat digunakan sebagai alternatif makanan manis saat PMS?"],
+      "responses": ["Makanan tinggi gula dapat memengaruhi kadar gula darah dan memperburuk gejala PMS seperti perubahan mood dan keinginan makanan manis yang berlebihan. Sebagai alternatif, konsumsi buah segar atau yogurt rendah gula untuk memuaskan selera manis Anda."]
+    },
+    {
+      "tag": "Asam Lemak Omega-3",
+      "input": ["Apa peran asam lemak omega-3 dalam mengatasi PMS?", "Apa sumber-sumber makanan yang mengandung omega-3?"],
+      "responses": ["Asam lemak omega-3 dapat membantu mengurangi peradangan dan meredakan gejala PMS seperti nyeri payudara. Sumber-sumber makanan yang kaya omega-3 meliputi ikan berlemak (salmon, sarden), biji chia, dan kenari."]
+    },
+    {
+      "tag": "Vitamin D",
+      "input": ["Mengapa vitamin D penting dalam mengatasi PMS?", "Apa sumber-sumber makanan yang mengandung vitamin D?"],
+      "responses": ["Vitamin D dapat membantu mengatur siklus menstruasi dan meredakan gejala PMS. Anda dapat mendapatkan vitamin D dari paparan sinar matahari yang cukup atau makanan seperti telur, ikan berlemak, dan produk susu yang diperkaya vitamin D."]
+    },
+    {
+      "tag": "Antioksidan",
+      "input": ["Bagaimana antioksidan dapat membantu mengatasi PMS?", "Apa makanan yang tinggi antioksidan yang sebaiknya dikonsumsi?"],
+      "responses": ["Antioksidan membantu melawan radikal bebas yang dapat memperburuk gejala PMS. Makanan tinggi antioksidan termasuk berbagai jenis buah-buahan seperti beri, jeruk, dan sayuran berdaun hijau."]
+    },
+    {
+      "tag": "Air Putih",
+      "input": ["Mengapa penting untuk minum cukup air putih saat PMS?", "Berapa banyak air putih yang sebaiknya dikonsumsi?"],
+      "responses": ["Minum cukup air putih penting untuk mengatasi retensi cairan dan menjaga tubuh terhidrasi selama PMS. Disarankan untuk minum setidaknya 8 gelas air putih sehari atau lebih jika Anda aktif secara fisik."]
+    },
+    {
+      "tag": "Pentingnya Pola Makan Seimbang",
+      "input": ["Mengapa penting untuk menjaga pola makan seimbang selama PMS?", "Apa dampak buruk jika pola makan tidak seimbang selama PMS?"],
+      "responses": ["Pola makan seimbang selama PMS dapat membantu mengurangi gejala dan meningkatkan kesejahteraan Anda. Pola makan yang tidak seimbang, seperti konsumsi makanan cepat saji dan tinggi gula, dapat memperburuk gejala PMS dan memengaruhi kesehatan secara keseluruhan."]
+    },
+    {
+      "tag": "Endometriosis",
+      "input": ["Apa itu endometriosis?", "Apa yang perlu saya ketahui tentang endometriosis?"],
+      "responses": ["Endometriosis adalah penyakit yang terjadi saat jaringan yang biasanya melapisi dinding rahim (endometrium) tumbuh di luar rahim. Ini dapat menyebabkan nyeri pelvis, perdarahan yang tidak normal, dan kesulitan hamil."]
+    },
+    {
+      "tag": "Gejala Endometriosis",
+      "input": ["Apa gejala endometriosis?", "Bagaimana cara mengenali gejala endometriosis?"],
+      "responses": ["Gejala endometriosis dapat mencakup nyeri panggul yang parah selama menstruasi, perdarahan menstruasi yang sangat berlebihan, nyeri saat berhubungan seks, serta masalah kesuburan. Jika Anda mengalami gejala ini, segera berkonsultasi dengan dokter."]
+    },
+    {
+      "tag": "Diagnosa Endometriosis",
+      "input": ["Bagaimana endometriosis didiagnosis?", "Apa yang perlu saya lakukan jika mencurigai endometriosis?"],
+      "responses": ["Diagnosa endometriosis biasanya melibatkan sejarah medis, pemeriksaan fisik, dan mungkin pemeriksaan pencitraan seperti USG atau laparoskopi. Jika Anda mencurigai endometriosis, bicarakan dengan dokter Anda untuk evaluasi lebih lanjut."]
+    },
+    {
+      "tag": "Pengobatan Endometriosis",
+      "input": ["Bagaimana endometriosis diobati?", "Apa pilihan pengobatan yang tersedia untuk endometriosis?"],
+      "responses": ["Pengobatan endometriosis dapat melibatkan penggunaan obat-obatan untuk mengurangi nyeri dan peradangan, serta operasi untuk mengangkat jaringan endometriosis yang abnormal. Pengobatan akan disesuaikan dengan tingkat keparahan dan keinginan Anda untuk hamil."]
+    },
+    {
+      "tag": "Pentingnya Konsultasi dengan Dokter",
+      "input": ["Mengapa penting untuk berkonsultasi dengan dokter jika mencurigai endometriosis?", "Apa dampak buruk jika endometriosis tidak diobati?"],
+      "responses": ["Penting untuk berkonsultasi dengan dokter jika mencurigai endometriosis karena kondisi ini dapat mempengaruhi kualitas hidup dan kesuburan. Jika tidak diobati, endometriosis dapat menyebabkan komplikasi serius seperti infertilitas."]
+    },
+    {
+      "tag": "Dukungan Psikologis",
+      "input": ["Bagaimana mendapatkan dukungan psikologis saat menghadapi endometriosis?", "Apa yang dapat saya lakukan jika merasa cemas atau stres karena penyakit ini?"],
+      "responses": ["Menghadapi endometriosis bisa sangat menantang secara emosional. Anda dapat mencari dukungan dari teman, keluarga, atau bergabung dengan kelompok dukungan online. Jika perlu, pertimbangkan konseling atau terapi untuk mengatasi stres dan kecemasan."]
+    },
+    {
+      "tag": "Pentingnya Gaya Hidup Sehat",
+      "input": ["Bagaimana gaya hidup sehat dapat membantu mengelola endometriosis?", "Apa yang sebaiknya saya hindari dalam gaya hidup saya?"],
+      "responses": ["Gaya hidup sehat seperti makan makanan seimbang, berolahraga teratur, menghindari merokok, dan mengelola stres dapat membantu mengurangi gejala endometriosis. Hindari juga konsumsi alkohol berlebihan dan makanan yang dapat memicu peradangan."]
+    },
+    {
+      "tag": "Peran Nutrisi",
+      "input": ["Apa peran nutrisi dalam mengelola endometriosis?", "Apa makanan yang sebaiknya dikonsumsi atau dihindari saat memiliki endometriosis?"],
+      "responses": ["Nutrisi dapat memainkan peran dalam mengelola gejala endometriosis. Makan makanan yang mengandung antioksidan, omega-3, dan zat besi dapat membantu mengurangi peradangan. Hindari makanan yang dapat memicu peradangan seperti makanan tinggi gula dan makanan olahan."]
+    },
+    {
+      "tag": "Pentingnya Pemantauan Teratur",
+      "input": ["Mengapa penting untuk pemantauan teratur jika memiliki endometriosis?", "Apa yang perlu dipantau untuk mengelola penyakit ini dengan baik?"],
+      "responses": ["Pemantauan teratur dengan dokter adalah penting untuk mengelola endometriosis. Ini termasuk pemeriksaan rutin, pemantauan gejala, dan diskusi tentang perubahan dalam pengobatan atau manajemen penyakit. Dengan pemantauan yang baik, Anda dapat mengelola endometriosis dengan lebih efektif."]
+    },
+    {
+      "tag": "PCOS (Sindrom Ovarium Polikistik)",
+      "input": ["Apa itu PCOS?", "Apa yang perlu saya ketahui tentang Sindrom Ovarium Polikistik (PCOS)?"],
+      "responses": ["PCOS adalah kondisi hormonal yang umum terjadi pada wanita yang dapat memengaruhi siklus menstruasi, kesuburan, dan kesehatan secara keseluruhan. Hal ini sering ditandai oleh pertumbuhan folikel yang tidak normal di dalam ovarium."]
+    },
+    {
+      "tag": "Gejala PCOS",
+      "input": ["Apa gejala PCOS?", "Bagaimana cara mengenali gejala PCOS?"],
+      "responses": ["Gejala PCOS dapat mencakup siklus menstruasi yang tidak teratur atau absen, pertumbuhan rambut berlebihan di wajah atau tubuh (hirsutisme), jerawat, perubahan berat badan, dan masalah kesuburan. Jika Anda mengalami gejala ini, segera konsultasikan dengan dokter."]
+    },
+    {
+      "tag": "Pengobatan PCOS",
+      "input": ["Bagaimana PCOS diobati?", "Apa pilihan pengobatan yang tersedia untuk PCOS?"],
+      "responses": ["Pengobatan PCOS dapat melibatkan perubahan gaya hidup seperti diet seimbang dan olahraga, penggunaan obat-obatan untuk mengatur siklus menstruasi dan mengelola gejala, serta terapi hormon jika diperlukan. Pengobatan akan disesuaikan dengan kebutuhan individu."]
+    },
+    {
+      "tag": "Kehamilan dan PCOS",
+      "input": ["Bagaimana PCOS memengaruhi kesuburan?", "Apa yang sebaiknya dilakukan jika ingin hamil dengan PCOS?"],
+      "responses": ["PCOS dapat memengaruhi kesuburan dengan mengganggu ovulasi. Jika ingin hamil dengan PCOS, konsultasikan dengan dokter Anda. Pengobatan dan perawatan kesuburan seperti stimulasi ovarium atau inseminasi buatan mungkin diperlukan."]
+    },
+    {
+      "tag": "Pentingnya Diet Seimbang",
+      "input": ["Mengapa diet seimbang penting bagi wanita dengan PCOS?", "Apa yang sebaiknya dimasukkan dalam diet untuk mengelola PCOS?"],
+      "responses": ["Diet seimbang dapat membantu mengatur kadar gula darah dan hormon pada wanita dengan PCOS. Penting untuk mengonsumsi makanan tinggi serat, rendah gula, lemak sehat, dan menghindari makanan olahan. Konsultasikan dengan ahli gizi untuk rencana makan yang sesuai."]
+    },
+    {
+      "tag": "Pentingnya Olahraga",
+      "input": ["Bagaimana olahraga dapat membantu wanita dengan PCOS?", "Apa jenis olahraga yang dianjurkan untuk mengelola PCOS?"],
+      "responses": ["Olahraga dapat membantu mengatur berat badan, mengurangi resistensi insulin, dan meredakan gejala PCOS. Aktivitas fisik yang disarankan termasuk aerobik, yoga, dan latihan kekuatan. Konsultasikan dengan dokter sebelum memulai program olahraga baru."]
+    },
+    {
+      "tag": "Dukungan Psikologis",
+      "input": ["Bagaimana mendapatkan dukungan psikologis saat menghadapi PCOS?", "Apa yang dapat saya lakukan jika merasa cemas atau stres karena kondisi ini?"],
+      "responses": ["Menghadapi PCOS bisa menjadi tantangan emosional. Cari dukungan dari teman, keluarga, atau kelompok dukungan online. Terapi kognitif perilaku atau dukungan psikologis dapat membantu mengatasi stres dan kecemasan yang mungkin muncul."]
+    },
+    {
+      "tag": "Peran Hormon",
+      "input": ["Bagaimana peran hormon dalam PCOS?", "Apa yang perlu saya ketahui tentang perubahan hormon yang terjadi dalam PCOS?"],
+      "responses": ["PCOS sering kali terkait dengan ketidakseimbangan hormon seperti insulin, estrogen, dan progesteron. Perubahan hormon ini dapat memengaruhi siklus menstruasi dan gejala lainnya. Dokter akan meresepkan pengobatan yang sesuai untuk mengatasi ketidakseimbangan hormon ini."]
+    },
+    {
+      "tag": "Pentingnya Konsultasi dengan Dokter",
+      "input": ["Mengapa penting untuk berkonsultasi dengan dokter jika memiliki PCOS?", "Apa dampak buruk jika PCOS tidak diobati atau tidak dikelola dengan baik?"],
+      "responses": ["Penting untuk berkonsultasi dengan dokter jika memiliki PCOS karena kondisi ini dapat menyebabkan komplikasi serius seperti diabetes tipe 2, penyakit jantung, dan masalah kesehatan lainnya. Dengan pengelolaan yang tepat, risiko komplikasi dapat dikurangi."]
+    },
+    {
+      "tag": "Ketidakreguleran Siklus Menstruasi",
+      "input": ["Apa itu ketidakreguleran siklus menstruasi?", "Bagaimana saya bisa mengidentifikasi ketidakreguleran siklus menstruasi?"],
+      "responses": ["Ketidakreguleran siklus menstruasi adalah ketidaksesuaian antara siklus menstruasi yang normal (28-35 hari) dengan siklus yang lebih pendek atau lebih panjang. Anda dapat mengidentifikasi ketidakreguleran ini jika menstruasi Anda datang dengan jarak waktu yang tidak tetap atau durasi yang berbeda."]
+    },
+    {
+      "tag": "Penyebab Ketidakreguleran",
+      "input": ["Apa penyebab umum ketidakreguleran siklus menstruasi?", "Apa yang dapat memengaruhi siklus menstruasi saya?"],
+      "responses": ["Beberapa faktor yang dapat menyebabkan ketidakreguleran siklus menstruasi meliputi stres, perubahan berat badan yang drastis, gangguan hormon, kondisi medis seperti PCOS, dan penggunaan obat-obatan tertentu. Faktor-faktor ini dapat memengaruhi keseimbangan hormon dalam tubuh Anda."]
+    },
+    {
+      "tag": "Dampak Ketidakreguleran",
+      "input": ["Apa dampak ketidakreguleran siklus menstruasi pada kesehatan saya?", "Bagaimana ketidakreguleran siklus dapat memengaruhi kesuburan?"],
+      "responses": ["Ketidakreguleran siklus menstruasi dapat memengaruhi kesuburan, karena ovulasi yang tidak teratur dapat menyulitkan pembuahan. Selain itu, kondisi ini juga dapat memengaruhi kualitas hidup, menyebabkan stres, dan mempengaruhi aspek emosional dan fisik Anda."]
+    },
+    {
+      "tag": "Konsultasi dengan Dokter",
+      "input": ["Kapan sebaiknya saya berkonsultasi dengan dokter tentang ketidakreguleran siklus menstruasi?", "Apa tanda-tanda bahwa saya perlu mencari bantuan medis terkait ketidakreguleran siklus?"],
+      "responses": ["Jika Anda mengalami ketidakreguleran siklus menstruasi secara terus-menerus atau jika siklus tidak normal Anda berlangsung lebih dari beberapa bulan, sebaiknya segera berkonsultasi dengan dokter. Tanda-tanda lain termasuk perdarahan yang berlebihan, nyeri yang sangat hebat, atau gejala lain yang mengganggu keseharian Anda."]
+    },
+    {
+      "tag": "Diagnosa dan Pengobatan",
+      "input": ["Bagaimana ketidakreguleran siklus menstruasi didiagnosis?", "Apa yang dapat dilakukan dokter untuk mengatasi ketidakreguleran siklus?"],
+      "responses": ["Dokter dapat mendiagnosis penyebab ketidakreguleran siklus menstruasi melalui sejarah medis, pemeriksaan fisik, dan pemeriksaan pencitraan seperti USG. Pengobatan tergantung pada penyebabnya, dan dapat melibatkan perubahan gaya hidup, penggunaan obat-obatan hormon, atau terapi lainnya."]
+    },
+    {
+      "tag": "Peran Gaya Hidup",
+      "input": ["Bagaimana gaya hidup sehat dapat membantu mengatasi ketidakreguleran siklus menstruasi?", "Apa yang sebaiknya saya lakukan untuk menjaga siklus menstruasi yang teratur?"],
+      "responses": ["Gaya hidup sehat seperti makan makanan seimbang, berolahraga teratur, mengelola stres, dan cukup tidur dapat membantu menjaga siklus menstruasi yang teratur. Hindari merokok dan konsumsi alkohol berlebihan karena dapat memengaruhi keseimbangan hormon Anda."]
+    },
+    {
+      "tag": "Peran Nutrisi",
+      "input": ["Apa peran nutrisi dalam menjaga siklus menstruasi yang teratur?", "Apa makanan yang sebaiknya dikonsumsi untuk mengelola ketidakreguleran siklus menstruasi?"],
+      "responses": ["Nutrisi berperan penting dalam menjaga kesehatan hormon dan siklus menstruasi yang teratur. Makanan yang mengandung zat besi, omega-3, serat, dan antioksidan dapat membantu. Hindari makanan tinggi gula dan lemak jenuh."]
+    },
+    {
+      "tag": "Dukungan Emosional",
+      "input": ["Bagaimana mendapatkan dukungan emosional saat menghadapi ketidakreguleran siklus menstruasi?", "Apa yang dapat saya lakukan jika merasa stres atau cemas karena kondisi ini?"],
+      "responses": ["Menghadapi ketidakreguleran siklus menstruasi dapat menimbulkan stres. Cari dukungan dari teman, keluarga, atau kelompok dukungan online. Terapi kognitif perilaku atau konseling juga dapat membantu Anda mengelola stres dan emosi negatif."]
+    },
+    {
+      "tag": "Pentingnya Pemantauan Teratur",
+      "input": ["Mengapa penting untuk memantau siklus menstruasi saya secara teratur?", "Apa yang perlu saya catat atau pantau untuk membantu dokter dalam diagnosis?"],
+      "responses": ["Memantau siklus menstruasi Anda secara teratur dapat membantu dokter dalam diagnosis dan pengobatan. Catat tanggal awal menstruasi, lamanya siklus, serta gejala seperti perdarahan dan nyeri. Informasi ini akan berguna dalam evaluasi medis."]
+    },
+    {
+      "tag": "Menstruasi dan Berat Badan",
+      "input": ["Bagaimana berat badan memengaruhi menstruasi?", "Apa hubungan antara berat badan dan siklus menstruasi?"],
+      "responses": ["Berat badan dapat memengaruhi siklus menstruasi. Wanita dengan berat badan yang sangat rendah atau sangat tinggi mungkin mengalami gangguan siklus menstruasi. Berat badan yang sehat dan stabil dapat mendukung siklus menstruasi yang teratur."]
+    },
+    {
+      "tag": "Kurangnya Berat Badan dan Amenore (Tidak Menstruasi)",
+      "input": ["Apa yang terjadi jika saya memiliki berat badan yang sangat rendah?", "Bagaimana berat badan yang kurang dapat memengaruhi menstruasi saya?"],
+      "responses": ["Berat badan yang sangat rendah, terutama pada atlet atau wanita dengan gangguan makan, dapat menyebabkan amenore, yaitu tidak menstruasi selama beberapa bulan atau lebih. Ini disebabkan oleh ketidakcukupan lemak tubuh yang diperlukan untuk menjaga siklus menstruasi."]
+    },
+    {
+      "tag": "Berat Badan Berlebih dan Polikistik Ovarium (PCOS)",
+      "input": ["Bagaimana berat badan berlebih memengaruhi siklus menstruasi?", "Apakah berat badan berlebih dapat menyebabkan PCOS?"],
+      "responses": ["Berat badan berlebih atau obesitas dapat meningkatkan risiko pengembangan Sindrom Ovarium Polikistik (PCOS), yang seringkali menyebabkan gangguan siklus menstruasi. PCOS dapat memengaruhi kesuburan dan kesehatan hormon."]
+    },
+    {
+      "tag": "Perubahan Berat Badan dan Perubahan Siklus Menstruasi",
+      "input": ["Apa yang sebaiknya saya ketahui tentang perubahan berat badan dan siklus menstruasi?", "Bagaimana perubahan berat badan dapat memengaruhi menstruasi saya?"],
+      "responses": ["Perubahan berat badan yang drastis, baik penurunan berat badan cepat atau penambahan berat badan yang signifikan, dapat memengaruhi siklus menstruasi. Ini karena perubahan berat badan dapat memengaruhi keseimbangan hormon dalam tubuh Anda."]
+    },
+    {
+      "tag": "Berat Badan yang Sehat",
+      "input": ["Apa yang sebaiknya saya lakukan untuk menjaga berat badan yang sehat dan mendukung siklus menstruasi?", "Bagaimana diet dan olahraga dapat membantu?"],
+      "responses": ["Untuk menjaga berat badan yang sehat dan mendukung siklus menstruasi yang teratur, perhatikan diet seimbang dengan konsumsi nutrisi yang cukup, hindari makanan olahan, dan berolahraga secara teratur. Konsultasikan dengan ahli gizi atau dokter jika Anda memiliki kekhawatiran terkait berat badan dan menstruasi."]
+    },
+    {
+      "tag": "Pentingnya Konsultasi Medis",
+      "input": ["Kapan sebaiknya saya berkonsultasi dengan dokter tentang berat badan dan siklus menstruasi?", "Apa tanda-tanda bahwa saya perlu mencari bantuan medis terkait berat badan dan menstruasi?"],
+      "responses": ["Jika Anda mengalami gangguan siklus menstruasi yang berhubungan dengan perubahan berat badan, segera konsultasikan dengan dokter Anda. Tanda-tanda lain yang perlu diperhatikan termasuk perdarahan yang tidak normal, nyeri hebat, atau gangguan lain yang mengganggu kualitas hidup Anda."]
+    },
+    {
+      "tag": "Pentingnya Pemantauan Teratur",
+      "input": ["Mengapa penting untuk memantau perubahan berat badan dan siklus menstruasi secara teratur?", "Apa yang perlu saya catat atau pantau untuk membantu dokter dalam diagnosis?"],
+      "responses": ["Memantau perubahan berat badan dan siklus menstruasi secara teratur dapat membantu Anda memahami bagaimana keduanya berkaitan. Catat perubahan berat badan, tanggal menstruasi, serta gejala seperti perdarahan dan nyeri untuk membantu dokter dalam diagnosis dan pengobatan."]
+    },
+    {
+      "tag": "Perubahan Kulit saat Menstruasi",
+      "input": ["Apa yang terjadi pada kulit selama menstruasi?", "Bagaimana saya bisa mengatasi perubahan kulit saat menstruasi?"],
+      "responses": ["Selama menstruasi, beberapa wanita mengalami perubahan kulit seperti jerawat, kulit kusam, atau peradangan. Ini dapat disebabkan oleh perubahan hormon dalam tubuh. Ada beberapa cara untuk mengatasi perubahan kulit ini."]
+    },
+    {
+      "tag": "Perawatan Kulit yang Tepat",
+      "input": ["Apa yang sebaiknya saya lakukan untuk merawat kulit saya selama menstruasi?", "Bagaimana perawatan kulit yang tepat dapat membantu mengurangi perubahan kulit?"],
+      "responses": ["Perawatan kulit yang tepat sangat penting. Gunakan pembersih yang lembut, hindari scrub yang kasar, dan gunakan pelembap yang cocok untuk jenis kulit Anda. Selalu hindari pemakaian kosmetik berat yang bisa menyumbat pori-pori."]
+    },
+    {
+      "tag": "Pentingnya Hidrasi",
+      "input": ["Mengapa hidrasi penting bagi kulit selama menstruasi?", "Bagaimana minum air cukup dapat membantu kulit saya?"],
+      "responses": ["Hidrasi sangat penting untuk kulit yang sehat. Minum air cukup membantu menjaga kelembaban kulit dan membantu tubuh mengeluarkan toksin. Ini dapat membantu mengurangi risiko jerawat dan menjaga kulit tetap segar."]
+    },
+    {
+      "tag": "Diet yang Sehat",
+      "input": ["Bagaimana diet sehat dapat membantu mengatasi perubahan kulit saat menstruasi?", "Apa yang sebaiknya saya makan untuk kulit yang lebih baik?"],
+      "responses": ["Diet sehat yang kaya akan antioksidan, vitamin, dan mineral dapat mendukung kesehatan kulit. Makan makanan seperti buah-buahan, sayuran, ikan berlemak, dan makanan tinggi serat dapat membantu mengurangi peradangan dan menjaga kulit tetap berseri."]
+    },
+    {
+      "tag": "Hindari Sentuhan Berlebih",
+      "input": ["Apakah saya sebaiknya menghindari menyentuh wajah saya selama menstruasi?", "Bagaimana sentuhan berlebihan dapat memengaruhi kulit saya?"],
+      "responses": ["Ya, sebaiknya hindari menyentuh wajah Anda terlalu sering, terutama dengan tangan yang tidak bersih. Sentuhan berlebihan dapat memindahkan kotoran dan bakteri dari tangan ke wajah, meningkatkan risiko jerawat."]
+    },
+    {
+      "tag": "Penggunaan Produk Kulit yang Tepat",
+      "input": ["Apa produk perawatan kulit yang sebaiknya saya gunakan saat menstruasi?", "Bagaimana memilih produk yang sesuai untuk kulit saya?"],
+      "responses": ["Pilih produk perawatan kulit yang cocok untuk jenis kulit Anda. Produk yang mengandung salicylic acid atau benzoyl peroxide dapat membantu mengatasi jerawat. Namun, gunakan dengan bijak dan perhatikan reaksi kulit Anda."]
+    },
+    {
+      "tag": "Pentingnya Konsultasi dengan Ahli Kulit",
+      "input": ["Kapan sebaiknya saya berkonsultasi dengan ahli kulit tentang perubahan kulit selama menstruasi?", "Apa tanda-tanda bahwa saya perlu mencari bantuan medis terkait perubahan kulit?"],
+      "responses": ["Jika perubahan kulit Anda sangat signifikan atau tidak merespons perawatan yang biasa Anda lakukan, segera berkonsultasi dengan ahli kulit. Ini bisa menjadi tanda masalah kulit yang lebih serius yang memerlukan perhatian medis."]
+    },
+    {
+      "tag": "Pentingnya Kesehatan Mental",
+      "input": ["Bagaimana kesehatan mental saya dapat memengaruhi perubahan kulit saat menstruasi?", "Apa yang bisa saya lakukan untuk mengurangi stres yang mungkin memengaruhi kulit saya?"],
+      "responses": ["Kesehatan mental Anda dapat memengaruhi kondisi kulit Anda. Stres dapat memicu perubahan hormon yang mempengaruhi kulit. Usahakan untuk mengelola stres dengan olahraga, meditasi, atau hobi yang menyenangkan."]
+    },
+    {
+      "tag": "Pentingnya Pemantauan Teratur",
+      "input": ["Mengapa penting untuk memantau perubahan kulit saya secara teratur?", "Apa yang perlu saya perhatikan dalam pemantauan kulit selama menstruasi?"],
+      "responses": ["Memantau perubahan kulit Anda secara teratur dapat membantu Anda mengidentifikasi perubahan yang mungkin perlu perhatian lebih lanjut. Catat perubahan seperti jerawat yang muncul di area tertentu atau peradangan yang tidak kunjung mereda."]
+    }
+    ,
+    {
+      "tag": "Kapan Menghubungi Dokter",
+      "patterns": ["Kapan saya harus menghubungi dokter tentang masalah menstruasi?", "Apa tanda-tanda bahwa saya perlu mencari bantuan medis terkait menstruasi?"],
+      "responses": ["Anda sebaiknya menghubungi dokter jika Anda mengalami masalah menstruasi yang sangat mengganggu atau jika Anda memiliki gejala yang tidak biasa. Ini termasuk perdarahan berat yang tidak normal, nyeri hebat, atau gejala lain yang mengganggu kualitas hidup Anda."]
+    },
+    {
+      "tag": "Perdarahan yang Berat",
+      "patterns": ["Apa yang seharusnya saya lakukan jika mengalami perdarahan menstruasi yang sangat berat?", "Kapan perdarahan dianggap berlebihan?"],
+      "responses": ["Perdarahan yang berlebihan selama menstruasi dapat menjadi tanda masalah medis seperti fibroid atau gangguan pembekuan darah. Jika Anda mengganti pembalut atau tampon setiap jam, atau jika menstruasi Anda berlangsung lebih dari 7 hari dengan perdarahan berat, hubungi dokter Anda."]
+    },
+    {
+      "tag": "Nyeri yang Parah",
+      "patterns": ["Apa yang seharusnya saya lakukan jika mengalami nyeri menstruasi yang sangat hebat?", "Kapan nyeri menstruasi dianggap tidak normal?"],
+      "responses": ["Nyeri menstruasi yang sangat hebat, atau dismenore, dapat mengganggu kualitas hidup Anda. Jika nyeri tidak merespons obat-obatan over-the-counter atau mengganggu aktivitas sehari-hari, sebaiknya berkonsultasi dengan dokter untuk mencari penyebabnya dan opsi pengobatan."]
+    },
+    {
+      "tag": "Perubahan Drastis dalam Siklus",
+      "patterns": ["Apa yang harus saya lakukan jika mengalami perubahan drastis dalam siklus menstruasi?", "Kapan perubahan siklus menstruasi dianggap tidak normal?"],
+      "responses": ["Jika Anda mengalami perubahan drastis dalam siklus menstruasi seperti menstruasi yang sangat pendek, sangat panjang, atau siklus yang tidak teratur, segera berkonsultasi dengan dokter. Perubahan ini bisa menjadi tanda masalah kesehatan yang perlu diatasi."]
+    },
+    {
+      "tag": "Gejala Pramenstruasi yang Parah",
+      "patterns": ["Bagaimana jika gejala pramenstruasi saya sangat parah?", "Kapan gejala pramenstruasi dianggap mengganggu keseharian saya?"],
+      "responses": ["Gejala pramenstruasi yang sangat parah seperti perubahan mood yang parah, kecemasan, atau gejala fisik yang kuat dapat memengaruhi kualitas hidup Anda. Jika gejala ini mengganggu aktivitas sehari-hari Anda, pertimbangkan untuk berkonsultasi dengan dokter."]
+    },
+    {
+      "tag": "Perubahan Drastis dalam Berat Badan",
+      "patterns": ["Apa yang seharusnya saya lakukan jika mengalami perubahan drastis dalam berat badan saat menstruasi?", "Kapan perubahan berat badan dianggap sebagai masalah menstruasi?"],
+      "responses": ["Perubahan drastis dalam berat badan saat menstruasi, terutama jika tidak disengaja, bisa menjadi tanda masalah seperti gangguan makan atau masalah hormon. Segera konsultasikan dengan dokter untuk menentukan penyebabnya."]
+    },
+    {
+      "tag": "Masalah Kesehatan yang Mendasarinya",
+      "patterns": ["Apa yang seharusnya saya lakukan jika saya memiliki masalah kesehatan yang mendasarinya dan menstruasi saya terganggu?", "Kapan masalah kesehatan saya harus dihubungkan dengan menstruasi saya?"],
+      "responses": ["Jika Anda memiliki masalah kesehatan seperti PCOS, endometriosis, atau gangguan tiroid yang dapat memengaruhi menstruasi Anda, penting untuk berkonsultasi dengan dokter dan menjelaskan bagaimana masalah kesehatan tersebut memengaruhi siklus menstruasi Anda."]
+    },
+    {
+      "tag": "Kehamilan yang Mungkin",
+      "patterns": ["Apa tanda-tanda bahwa saya mungkin hamil dan harus menghubungi dokter?", "Bagaimana gejala hamil berkaitan dengan menstruasi?"],
+      "responses": ["Jika Anda memiliki gejala seperti penundaan menstruasi, mual, muntah, dan tanda-tanda kehamilan lainnya, segera berkonsultasi dengan dokter untuk mengkonfirmasi kehamilan dan mendiskusikan perawatan prenatal yang sesuai."]
+    },
+    {
+      "tag": "Pentingnya Pencegahan",
+      "patterns": ["Mengapa penting untuk mencegah masalah menstruasi sejak dini?", "Apa manfaat pencegahan dalam masalah menstruasi?"],
+      "responses": ["Pencegahan masalah menstruasi sejak dini dapat membantu mengidentifikasi masalah kesehatan yang mendasarinya lebih awal dan mengambil tindakan yang sesuai. Ini dapat mengurangi risiko komplikasi dan meningkatkan kualitas hidup Anda."]
+    },
+    {
+      "tag": "Pentingnya Pemantauan Teratur",
+      "patterns": ["Mengapa penting untuk memantau siklus menstruasi dan gejala yang terkait?", "Apa yang perlu saya catat atau perhatikan untuk membantu dokter dalam diagnosis?"],
+      "responses": ["Memantau siklus menstruasi dan gejala yang terkait dapat membantu Anda mengidentifikasi perubahan yang mungkin perlu perhatian medis. Catat tanggal menstruasi, lamanya siklus, serta gejala seperti perdarahan, nyeri, dan perubahan berat badan."]
+    },
+    {
+      "tag": "Kapan Menghubungi Dokter",
+      "patterns": ["Kapan saya harus menghubungi dokter tentang masalah menstruasi?", "Apa tanda-tanda bahwa saya perlu mencari bantuan medis terkait menstruasi?"],
+      "responses": ["Anda sebaiknya menghubungi dokter jika Anda mengalami masalah menstruasi yang sangat mengganggu atau jika Anda memiliki gejala yang tidak biasa. Ini termasuk perdarahan berat yang tidak normal, nyeri hebat, atau gejala lain yang mengganggu kualitas hidup Anda."]
+    },
+    {
+      "tag": "Perdarahan yang Berat",
+      "patterns": ["Apa yang seharusnya saya lakukan jika mengalami perdarahan menstruasi yang sangat berat?", "Kapan perdarahan dianggap berlebihan?"],
+      "responses": ["Perdarahan yang berlebihan selama menstruasi dapat menjadi tanda masalah medis seperti fibroid atau gangguan pembekuan darah. Jika Anda mengganti pembalut atau tampon setiap jam, atau jika menstruasi Anda berlangsung lebih dari 7 hari dengan perdarahan berat, hubungi dokter Anda."]
+    },
+    {
+      "tag": "Nyeri yang Parah",
+      "patterns": ["Apa yang seharusnya saya lakukan jika mengalami nyeri menstruasi yang sangat hebat?", "Kapan nyeri menstruasi dianggap tidak normal?"],
+      "responses": ["Nyeri menstruasi yang sangat hebat, atau dismenore, dapat mengganggu kualitas hidup Anda. Jika nyeri tidak merespons obat-obatan over-the-counter atau mengganggu aktivitas sehari-hari, sebaiknya berkonsultasi dengan dokter untuk mencari penyebabnya dan opsi pengobatan."]
+    },
+    {
+      "tag": "Perubahan Drastis dalam Siklus",
+      "patterns": ["Apa yang harus saya lakukan jika mengalami perubahan drastis dalam siklus menstruasi?", "Kapan perubahan siklus menstruasi dianggap tidak normal?"],
+      "responses": ["Jika Anda mengalami perubahan drastis dalam siklus menstruasi seperti menstruasi yang sangat pendek, sangat panjang, atau siklus yang tidak teratur, segera berkonsultasi dengan dokter. Perubahan ini bisa menjadi tanda masalah kesehatan yang perlu diatasi."]
+    },
+    {
+      "tag": "Gejala Pramenstruasi yang Parah",
+      "patterns": ["Bagaimana jika gejala pramenstruasi saya sangat parah?", "Kapan gejala pramenstruasi dianggap mengganggu keseharian saya?"],
+      "responses": ["Gejala pramenstruasi yang sangat parah seperti perubahan mood yang parah, kecemasan, atau gejala fisik yang kuat dapat memengaruhi kualitas hidup Anda. Jika gejala ini mengganggu aktivitas sehari-hari Anda, pertimbangkan untuk berkonsultasi dengan dokter."]
+    },
+    {
+      "tag": "Perubahan Drastis dalam Berat Badan",
+      "patterns": ["Apa yang seharusnya saya lakukan jika mengalami perubahan drastis dalam berat badan saat menstruasi?", "Kapan perubahan berat badan dianggap sebagai masalah menstruasi?"],
+      "responses": ["Perubahan drastis dalam berat badan saat menstruasi, terutama jika tidak disengaja, bisa menjadi tanda masalah seperti gangguan makan atau masalah hormon. Segera konsultasikan dengan dokter untuk menentukan penyebabnya."]
+    },
+    {
+      "tag": "Masalah Kesehatan yang Mendasarinya",
+      "patterns": ["Apa yang seharusnya saya lakukan jika saya memiliki masalah kesehatan yang mendasarinya dan menstruasi saya terganggu?", "Kapan masalah kesehatan saya harus dihubungkan dengan menstruasi saya?"],
+      "responses": ["Jika Anda memiliki masalah kesehatan seperti PCOS, endometriosis, atau gangguan tiroid yang dapat memengaruhi menstruasi Anda, penting untuk berkonsultasi dengan dokter dan menjelaskan bagaimana masalah kesehatan tersebut memengaruhi siklus menstruasi Anda."]
+    },
+    {
+      "tag": "Kehamilan yang Mungkin",
+      "patterns": ["Apa tanda-tanda bahwa saya mungkin hamil dan harus menghubungi dokter?", "Bagaimana gejala hamil berkaitan dengan menstruasi?"],
+      "responses": ["Jika Anda memiliki gejala seperti penundaan menstruasi, mual, muntah, dan tanda-tanda kehamilan lainnya, segera berkonsultasi dengan dokter untuk mengkonfirmasi kehamilan dan mendiskusikan perawatan prenatal yang sesuai."]
+    },
+    {
+      "tag": "Pentingnya Pencegahan",
+      "patterns": ["Mengapa penting untuk mencegah masalah menstruasi sejak dini?", "Apa manfaat pencegahan dalam masalah menstruasi?"],
+      "responses": ["Pencegahan masalah menstruasi sejak dini dapat membantu mengidentifikasi masalah kesehatan yang mendasarinya lebih awal dan mengambil tindakan yang sesuai. Ini dapat mengurangi risiko komplikasi dan meningkatkan kualitas hidup Anda."]
+    },
+    {
+      "tag": "Pentingnya Pemantauan Teratur",
+      "patterns": ["Mengapa penting untuk memantau siklus menstruasi dan gejala yang terkait?", "Apa yang perlu saya catat atau perhatikan untuk membantu dokter dalam diagnosis?"],
+      "responses": ["Memantau siklus menstruasi dan gejala yang terkait dapat membantu Anda mengidentifikasi perubahan yang mungkin perlu perhatian medis. Catat tanggal menstruasi, lamanya siklus, serta gejala seperti perdarahan, nyeri, dan perubahan berat badan."]
+    },
+    {
+      "tag": "Pola Tidur yang Baik selama Menstruasi",
+      "patterns": ["Bagaimana saya bisa memiliki pola tidur yang baik selama menstruasi?", "Apa yang sebaiknya saya lakukan untuk tidur nyenyak saat menstruasi?"],
+      "responses": ["Memiliki pola tidur yang baik selama menstruasi sangat penting untuk kesejahteraan Anda. Berikut beberapa tips untuk membantu Anda tidur nyenyak saat menstruasi."]
+    },
+    {
+      "tag": "Hindari Kafein dan Alkohol",
+      "patterns": ["Apakah konsumsi kafein dan alkohol dapat memengaruhi tidur selama menstruasi?", "Bagaimana saya bisa mengurangi konsumsi kafein dan alkohol?"],
+      "responses": ["Kafein dan alkohol dapat mengganggu tidur Anda. Hindari minuman berkafein dan alkohol beberapa jam sebelum tidur untuk memastikan tidur Anda lebih berkualitas selama menstruasi."]
+    },
+    {
+      "tag": "Atur Lingkungan Tidur yang Nyaman",
+      "patterns": ["Apa yang seharusnya saya lakukan untuk menciptakan lingkungan tidur yang nyaman?", "Bagaimana mengatur kamar tidur dapat membantu tidur lebih baik?"],
+      "responses": ["Pastikan kamar tidur Anda tenang, gelap, dan sejuk. Gunakan kasur dan bantal yang nyaman, dan hindari gangguan seperti cahaya terang atau suara bising. Ini dapat membantu Anda tidur lebih baik selama menstruasi."]
+    },
+    {
+      "tag": "Relaksasi sebelum Tidur",
+      "patterns": ["Bagaimana teknik relaksasi dapat membantu tidur selama menstruasi?", "Apa yang sebaiknya saya lakukan sebelum tidur untuk merilekskan diri?"],
+      "responses": ["Praktekkan teknik relaksasi seperti meditasi, pernapasan dalam, atau yoga ringan sebelum tidur. Ini dapat membantu meredakan stres dan kecemasan yang mungkin memengaruhi tidur Anda selama menstruasi."]
+    },
+    {
+      "tag": "Perhatikan Pola Makan Sebelum Tidur",
+      "patterns": ["Apa yang seharusnya saya makan sebelum tidur selama menstruasi?", "Bagaimana diet sebelum tidur dapat memengaruhi tidur saya?"],
+      "responses": ["Hindari makan makanan berat atau pedas sebelum tidur. Makan camilan ringan seperti buah atau yogurt bisa membantu Anda tidur lebih nyenyak. Perhatikan juga jumlah makanan yang Anda konsumsi sebelum tidur."]
+    },
+    {
+      "tag": "Perawatan PMS",
+      "patterns": ["Bagaimana mengatasi gejala PMS dapat membantu tidur selama menstruasi?", "Apa yang seharusnya saya lakukan jika PMS memengaruhi tidur saya?"],
+      "responses": ["Mengatasi gejala PMS seperti nyeri dan perubahan mood dapat membantu Anda tidur lebih nyenyak. Konsultasikan dengan dokter jika Anda memerlukan obat-obatan atau perawatan khusus untuk mengelola PMS."]
+    },
+    {
+      "tag": "Hindari Gadget Sebelum Tidur",
+      "patterns": ["Mengapa sebaiknya saya hindari gadget sebelum tidur?", "Bagaimana radiasi dari gadget dapat memengaruhi tidur saya?"],
+      "responses": ["Gadget seperti smartphone dan tablet menghasilkan cahaya biru yang dapat mengganggu ritme sirkadian Anda. Hindari penggunaan gadget sebelum tidur dan coba untuk menjauhkannya dari kamar tidur."]
+    },
+    {
+      "tag": "Kapan Harus Berkonsultasi dengan Dokter",
+      "patterns": ["Kapan sebaiknya saya berkonsultasi dengan dokter tentang masalah tidur selama menstruasi?", "Apa tanda-tanda bahwa masalah tidur saya mungkin memerlukan bantuan medis?"],
+      "responses": ["Jika Anda mengalami masalah tidur yang kronis selama menstruasi atau gejala tidur yang sangat mengganggu, segera konsultasikan dengan dokter. Ini bisa menjadi tanda masalah tidur yang perlu diatasi."]
+    },
+    {
+      "tag": "Pentingnya Pola Tidur yang Baik",
+      "patterns": ["Mengapa penting memiliki pola tidur yang baik selama menstruasi?", "Apa manfaat tidur yang cukup bagi kesehatan saya?"],
+      "responses": ["Tidur yang cukup selama menstruasi membantu tubuh memulihkan diri dan mengatasi gejala seperti nyeri dan kelelahan. Ini juga mendukung kesehatan mental dan fisik Anda secara keseluruhan."]
+    },
+    {
+      "tag": "Pentingnya Keseimbangan Hormon",
+      "patterns": ["Bagaimana pola tidur yang baik dapat membantu menjaga keseimbangan hormon selama menstruasi?", "Apa hubungan antara tidur dan hormon dalam tubuh?"],
+      "responses": ["Pola tidur yang baik dapat membantu menjaga keseimbangan hormon dalam tubuh. Tidur yang cukup membantu mengatur hormon seperti estrogen dan progesteron, yang dapat memengaruhi siklus menstruasi dan kesejahteraan Anda."]
+    },
+    {
+      "tag": "Efek Merokok dan Alkohol pada Siklus Haid",
+      "patterns": ["Bagaimana merokok dan alkohol dapat memengaruhi siklus haid?", "Apa yang perlu saya ketahui tentang dampak merokok dan alkohol pada menstruasi?"],
+      "responses": ["Merokok dan alkohol dapat memiliki dampak negatif pada siklus haid. Ini penting untuk memahami bagaimana perilaku ini dapat memengaruhi kesehatan reproduksi Anda."]
+    },
+    {
+      "tag": "Dampak Merokok pada Siklus Haid",
+      "patterns": ["Bagaimana merokok memengaruhi siklus haid?", "Apa yang harus saya ketahui tentang rokok dan menstruasi?"],
+      "responses": ["Merokok dapat menyebabkan ketidakseimbangan hormon dalam tubuh, termasuk hormon yang mengatur siklus haid. Ini dapat mengakibatkan siklus yang tidak teratur, perdarahan berat, atau bahkan amenore (tidak menstruasi). Merokok juga dapat meningkatkan risiko endometriosis."]
+    },
+    {
+      "tag": "Dampak Alkohol pada Siklus Haid",
+      "patterns": ["Bagaimana alkohol memengaruhi siklus haid?", "Apa yang sebaiknya saya ketahui tentang alkohol dan menstruasi?"],
+      "responses": ["Konsumsi alkohol yang berlebihan juga dapat memengaruhi siklus haid. Alkohol dapat mengganggu keseimbangan hormon dan merusak fungsi hati, yang berperan dalam pemecahan hormon. Hal ini dapat menyebabkan siklus yang tidak teratur dan masalah menstruasi lainnya."]
+    },
+    {
+      "tag": "Pentingnya Gaya Hidup Sehat",
+      "patterns": ["Mengapa penting untuk menjalani gaya hidup sehat terkait merokok dan alkohol?", "Bagaimana menghindari rokok dan alkohol dapat mendukung kesehatan reproduksi saya?"],
+      "responses": ["Menghindari merokok dan alkohol adalah langkah penting untuk menjaga kesehatan reproduksi Anda. Ini membantu mempertahankan keseimbangan hormon dan siklus haid yang sehat. Gaya hidup sehat juga mendukung kesuburan."]
+    },
+    {
+      "tag": "Resiko Kehamilan yang Tertunda",
+      "patterns": ["Bagaimana merokok dan alkohol dapat memengaruhi rencana kehamilan?", "Apa hubungan antara konsumsi rokok dan alkohol dengan kesuburan?"],
+      "responses": ["Merokok dan alkohol dapat mengurangi kesuburan. Wanita yang merokok atau mengonsumsi alkohol berlebihan mungkin menghadapi kesulitan untuk hamil. Menghentikan perilaku ini dapat meningkatkan peluang kehamilan yang sukses."]
+    },
+    {
+      "tag": "Peran Keseimbangan Hormon",
+      "patterns": ["Bagaimana perokok dan alkohol dapat memengaruhi keseimbangan hormon?", "Apa yang sebaiknya saya ketahui tentang hubungan antara hormon dan merokok/alkohol?"],
+      "responses": ["Merokok dan alkohol dapat memengaruhi keseimbangan hormon dalam tubuh. Merokok meningkatkan kadar hormon stres, sementara alkohol dapat mengganggu produksi hormon seks seperti estrogen. Ini bisa mengakibatkan masalah menstruasi dan kesehatan reproduksi."]
+    },
+    {
+      "tag": "Kapan Harus Berkonsultasi dengan Dokter",
+      "patterns": ["Kapan sebaiknya saya berkonsultasi dengan dokter tentang dampak merokok dan alkohol pada siklus haid?", "Apa tanda-tanda bahwa saya perlu mencari bantuan medis terkait merokok dan alkohol?"],
+      "responses": ["Jika Anda memiliki riwayat merokok atau konsumsi alkohol berlebihan dan mengalami masalah menstruasi atau kesuburan, segera konsultasikan dengan dokter. Dokter dapat memberikan nasihat dan perawatan yang sesuai."]
+    },
+    {
+      "tag": "Pentingnya Kesadaran akan Dampaknya",
+      "patterns": ["Mengapa penting untuk meningkatkan kesadaran tentang dampak merokok dan alkohol pada siklus haid?", "Apa manfaat meningkatkan pemahaman tentang hubungan ini?"],
+      "responses": ["Meningkatkan kesadaran tentang dampak merokok dan alkohol pada siklus haid adalah langkah penting untuk menjaga kesehatan reproduksi. Semakin banyak wanita memahami risiko ini, semakin besar peluang mereka untuk menghindari perilaku yang berbahaya."]
+    },
+    {
+      "tag": "Mengatasi Ketergantungan",
+      "patterns": ["Bagaimana saya bisa mengatasi ketergantungan pada rokok dan alkohol?", "Apa langkah-langkah yang sebaiknya saya ambil jika ingin berhenti?"],
+      "responses": ["Mengatasi ketergantungan pada rokok dan alkohol bisa sulit, tetapi sangat penting. Pertimbangkan untuk mencari dukungan dari keluarga, teman, atau profesional kesehatan. Ada juga program dan sumber daya yang dapat membantu Anda berhenti."]
+    }
+  ]
+}
