@@ -1,8 +1,7 @@
-{
-  "intents": [
+[
       {
           "tag": "salam",
-          "patterns": ["Halo", "Apa kabar", "Ada yang di sana?", "Hai", "Selamat siang"],
+          "patterns": ["Halo", "Apa kabar", "Hai", "Selamat siang"],
           "responses": ["Halo, terima kasih telah berkunjung", "Senang melihatmu lagi", "Hai, ada yang bisa saya bantu?"],
           "context_set": ""
       },
@@ -1364,15 +1363,12 @@
     }
     
 
-    
-
-    
-    
-
-    
-    
-
-
-         
   ]
-}
+
+    
+    
+
+    
+    
+
+

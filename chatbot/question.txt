@@ -48,11 +48,6 @@ Bagaimana cara menggunakan menstrual cup?
 Apa manfaat dan kelemahan menggunakan menstrual cup?
 Bagaimana membersihkan menstrual cup dengan benar?
 Berapa lama menstrual cup bisa digunakan sebelum perlu diganti?
-Apa itu menstrual cup?
-Bagaimana cara menggunakan menstrual cup?
-Apa manfaat dan kelemahan menggunakan menstrual cup?
-Bagaimana membersihkan menstrual cup dengan benar?
-Berapa lama menstrual cup bisa digunakan sebelum perlu diganti?
 Apa itu pembalut?
 Bagaimana cara memakai pembalut dengan benar?
 Apa manfaat dan kerugian penggunaan pembalut?
@@ -123,26 +118,18 @@ Bagaimana cara mengatasi keputihan yang tidak normal?
 Apakah ada obat atau krim yang aman digunakan untuk mengatasi keputihan?
 Bagaimana menjaga kebersihan area genital dapat membantu mengatasi keputihan?
 Apakah perubahan gaya hidup seperti pilihan pakaian dapat memengaruhi keputihan?
-Apa perbandingan antara menstrual cup, tampon, dan pembalut dalam hal keamanan dan kenyamanan?
 Bagaimana memilih produk menstruasi yang sesuai dengan kebutuhan pribadi?
 Apakah ada perbedaan signifikan dalam biaya antara produk menstruasi yang berbeda?
 Bagaimana memahami dampak lingkungan dari berbagai produk menstruasi?
+
+
 Apakah aman berolahraga saat haid?
 Bagaimana jenis olahraga yang paling sesuai saat haid?
 Apakah ada manfaat atau risiko khusus yang terkait dengan olahraga saat haid?
 Bagaimana menjaga kenyamanan saat berolahraga saat haid?
-Apa yang dimaksud dengan monoupouse?
-Apa tanda-tanda utama yang mengindikasikan masuk dalam tahap monoupouse?
+
 Apa itu endometriosis?
 Apa gejala endometriosis?
-
-
-
-
-
-
-
-
 Bagaimana cara mengobati endometriosis?
 Apa yang menyebabkan endometriosis?
 Apa perbedaan antara endometriosis dan PCOS?
@@ -171,15 +158,10 @@ Apa yang menjadi penyebab siklus haid tidak normal?
 Bagaimana cara mengobati gangguan siklus menstruasi?
 Bagaimana menghitung siklus menstruasi yang normal?
 Apa arti warna darah menstruasi?
-31. Apa yang dimaksud dengan fase menstruasi?
 Apa yang terjadi selama fase folikular?
 Apa yang terjadi selama fase ovulasi?
 Apa yang terjadi selama fase luteal?
-Bagaimana hormon memengaruhi setiap fase siklus menstruasi?
-Apa peran ovarium dalam fase-fase siklus menstruasi?
-Bagaimana fase-fase ini berkontribusi terhadap fertilitas?
-Apa yang dapat mengganggu fase-fase siklus menstruasi?
-39. Apa yang dimaksud dengan nyeri haid?
+Apa yang dimaksud dengan nyeri haid?
 Apa penyebab nyeri haid?
 Apa faktor risiko yang dapat memperburuk nyeri haid?
 Apa gejala nyeri haid?
@@ -208,25 +190,24 @@ Bagaimana cara mengatasi darah haid yang menggumpal?
 Apakah darah haid yang menggumpal merupakan tanda masalah kesehatan?
 Bagaimana membedakan darah haid normal dengan yang menggumpal?
 Apakah ada faktor-faktor tertentu yang mempengaruhi tekstur darah haid?
-68. Apa penyebab menstruasi yang tidak lancar?
+Apa penyebab menstruasi yang tidak lancar?
 Bagaimana cara menjaga agar menstruasi tetap lancar?
 Apa yang memengaruhi siklus menstruasi yang tidak lancar?
 Apa yang dapat dilakukan untuk mengatasi masalah menstruasi yang tidak lancar?
 Apakah ada makanan yang dapat membantu menjaga menstruasi tetap lancar?
-73. Hormon apa saja yang memengaruhi siklus menstruasi?
+Hormon apa saja yang memengaruhi siklus menstruasi?
 Bagaimana hormon-hormon ini berinteraksi dalam tubuh?
 Apa peran hormon estrogen dalam siklus menstruasi?
 Bagaimana hormon progesteron mempengaruhi siklus menstruasi?
-Apa yang terjadi ketika hormon-hormon ini tidak seimbang?
+Apa yang terjadi ketika hormon-hormon tidak seimbang?
 78. Apa penyakit-penyakit yang dapat memicu telat haid?
 Bagaimana cara mengidentifikasi penyakit yang bisa menyebabkan haid terlambat?
 Bagaimana pengobatan penyakit dapat memengaruhi siklus menstruasi?
-Apa hubungan antara penyakit tertentu dan siklus menstruasi?
-82. Bagaimana wanita dapat memantau dan memeriksa kesehatan menstruasi mereka?
+Bagaimana wanita dapat memantau dan memeriksa kesehatan menstruasi mereka?
 Apakah ada tanda-tanda yang perlu diperhatikan dalam kesehatan menstruasi?
 Apa yang perlu dilakukan jika terdapat masalah dalam siklus menstruasi?
 arti darah haid
-85. Bagaimana gaya hidup seperti pola makan dan olahraga memengaruhi siklus menstruasi?
+Bagaimana gaya hidup seperti pola makan dan olahraga memengaruhi siklus menstruasi?
 Apakah diet tertentu dapat membantu menjaga siklus menstruasi tetap sehat?
 Apakah aktivitas fisik tertentu dapat memengaruhi menstruasi?
 88. Apa yang dapat memicu perubahan tiba-tiba dalam siklus menstruasi?
@@ -237,18 +218,16 @@ Apa yang perlu diperhatikan dalam merawat kesehatan reproduksi wanita?
 Apa dampak dari ketidaknormalan dalam siklus menstruasi terhadap kemampuan reproduksi?
 94. Apa pilihan pengobatan yang tersedia untuk gangguan siklus menstruasi?
 Bagaimana dokter biasanya meresepkan pengobatan untuk masalah ini?
-Apakah terapi alternatif seperti akupunktur atau yoga dapat membantu mengatasi gangguan siklus menstruasi?
-97. Apa beberapa mitos umum yang beredar tentang menstruasi?
+terapi alternatif seperti akupunktur atau yoga dapat membantu mengatasi gangguan siklus menstruasi?
+mitos umum yang beredar tentang menstruasi?
 Bagaimana mengidentifikasi mitos dan fakta yang benar tentang menstruasi?
-Apakah ada dampak psikologis yang mungkin terkait dengan mitos menstruasi?
-100. Bagaimana olahraga dan aktivitas fisik dapat memengaruhi siklus menstruasi?
+Bagaimana olahraga dan aktivitas fisik dapat memengaruhi siklus menstruasi?
 Apakah ada jenis olahraga yang disarankan atau dihindari selama menstruasi?
 Bagaimana merawat kesehatan fisik selama menstruasi?
-103. Apakah ada makanan yang dapat membantu menjaga kesehatan menstruasi?
+Apakah ada makanan yang dapat membantu menjaga kesehatan menstruasi?
 Bagaimana diet harian dapat berkontribusi pada kesehatan siklus menstruasi?
 Apa makanan yang harus dihindari selama menstruasi?
 Bagaimana pola makan dapat memengaruhi gejala menstruasi?
-107. Bagaimana menstruasi dapat memengaruhi kesejahteraan mental?
 Apakah ada metode yang efektif untuk mengatasi stres dan perubahan mood selama menstruasi?
 Bagaimana pendekatan psikologis dapat membantu mengelola gejala menstruasi?
 110. Bagaimana kesehatan menstruasi berkaitan dengan kesehatan seksual wanita?
@@ -259,12 +238,9 @@ Bagaimana mengedukasi anak-anak tentang menstruasi secara positif dan informatif
 Apakah ada program pendidikan tentang menstruasi yang efektif?
 116. Apa strategi non-obat yang efektif untuk mengatasi nyeri haid?
 Apakah metode seperti pijat atau terapi panas dapat membantu?
-Bagaimana merawat diri sendiri secara alami selama menstruasi?
 119. Apakah menstruasi terlambat selalu berarti kehamilan?
 Apa yang perlu diperhatikan dalam merencanakan kehamilan dan menstruasi?
-121. Apa penyakit lain yang berhubungan dengan masalah menstruasi?
 Bagaimana mengenali tanda-tanda penyakit terkait menstruasi?
-Apa hubungan antara penyakit tertentu dan siklus menstruasi?
 124. Apa obat-obatan yang mungkin memengaruhi siklus menstruasi?
 Bagaimana penggunaan obat-obatan tertentu dapat memengaruhi kesehatan menstruasi?
 126. Bagaimana menjalani gaya hidup sehat dapat mendukung kesehatan menstruasi?
