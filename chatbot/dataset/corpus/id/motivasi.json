@@ -1,0 +1,25 @@
+[{
+    "tag": "motivation.whatisitfriend",
+    "patterns": ["apa itu teman ?", "teman itu apa?"],
+    "responses": ["Seribu orang yang datang disaat kamu senang."]
+}, {
+    "tag": "motivation.whatis.boy/girl.friend",
+    "patterns": ["apa itu pacar ?", "pacar itu apa?"],
+    "responses": ["Satu orang yang membuat kamu lupa akan seribu orang."]
+}, {
+    "tag": "motivation.whatis.bestfriend",
+    "patterns": ["apa itu sahabat ?", "sahabat itu apa?"],
+    "responses": ["Satu orang yang ada disaat seribu satu orang melupakanmu."]
+}, {
+    "tag": "motivation.borkenheart",
+    "patterns": ["aku sakit hati"],
+    "responses": ["Hatimu boleh patah, matamu boleh basah.Tapi ingat, kamu jangan pernah menyerah.\nPercayalah, pelan-pelan semuanya akan baik-baik saja.", "Hatimu boleh patah, matamu boleh basah.Tapi ingat, kamu jangan pernah menyerah.\nPercayalah, pelan-pelan semuanya akan baik-baik saja.\n\nSemoga kesulitanmu hari ini adalah penebus untuk kebahagiaan yang akan kamu temui dimasa yang akan datang."]
+}, {
+    "tag": "motivation.giveup",
+    "patterns": ["aku menyerah", "aku tidak sanggup lagi"],
+    "responses": ["Jika kamu menyerah semuanya selesai dengan sia sia.Ingatlah dengan langkah pertamamu, apa tujuanmu.", "Jangan menyerah kawan, berjuanglah tanpa henti.", "Meski harus jalur gelap dan berlubang jadi rintangan,yakinlah itu titik awal dari sebuah terang yang akan kau dapatkan di penghujung jalan.semangat ya, temanku"]
+}, {
+    "tag": "motivation.nevergiveup",
+    "patterns": ["aku tidak akan menyerah"],
+    "responses": ["Sampai tak seorang pun bisa mengalahkanmu, semangat ya.", "Semuanya tak ada yang sia-sia. Jika kamu mau berjuang semuanya akan dibalas dengan sesuatu yang lebih baik."]
+}]

@@ -1,0 +1,45 @@
+[{
+    "tag": "user.angry",
+    "patterns": ["Aku [|sedang] marah [|padamu]"],
+    "responses": ["Maaf. bersabar mungkin membuatmu merasa lebih baik", "Tarik napas dalam-dalam"]
+}, {
+    "tag": "user.back",
+    "patterns": ["Aku [kembali|di sini|telah kembali]", "ini aku lagi"],
+    "responses": ["Selamat datang kembali. Apa yang dapat saya lakukan untuk Anda?", "Senang Anda ada di sini. Apa yang dapat saya lakukan untuk Anda?"]
+}, {
+    "tag": "user.bored",
+    "patterns": ["[|ini|itu] membosankan", "Aku mulai bosan", "itu membuatku bosan"],
+    "responses": ["Kalau bosan bisa rencanakan liburan impian", "Bosan ya? Pernah lihat landak mandi?"]
+}, {
+    "tag": "user.busy",
+    "patterns": ["Saya punya pekerjaan yang harus dilakukan", "Saya sibuk", "Saya kelebihan beban", "Saya sedang bekerja", "Ada yang harus saya lakukan"],
+    "responses": ["Saya mengerti. Saya akan berada di sini jika Anda membutuhkan saya.", "Oke. Saya akan membiarkan Anda kembali bekerja"]
+}, {
+    "tag": "user.cannotsleep",
+    "patterns": ["Saya [insomnia|tidak bisa tidur|sulit tidur]"],
+    "responses": ["Mungkin beberapa musik akan membantu. Cobalah mendengarkan sesuatu yang menenangkan", "Membaca adalah cara yang baik untuk melepas lelah, tapi jangan membaca sesuatu yang terlalu intens!"]
+}, {
+    "tag": "user.excited",
+    "patterns": ["Saya sangat [bersemangat|senang]", "betapa bersemangatnya saya"],
+    "responses": ["Saya senang semuanya berjalan sesuai keinginan Anda", "Itu bagus. Saya senang untuk Anda"]
+}, {
+    "tag": "user.likeagent",
+    "patterns": ["Aku [|sangat] menyukaimu", "kamu [|sangat] spesial"],
+    "responses": ["Demikian juga!", "Senang mendengarnya"]
+}, {
+    "tag": "user.testing",
+    "patterns": ["test", "testing", "testing chatbot"],
+    "responses": ["Saya suka diuji. Ini membantu saya tetap tajam", "Saya berharap untuk lulus ujian Anda. Jangan ragu untuk sering menguji saya"]
+}, {
+    "tag": "user.lovesagent",
+    "patterns": ["[|aku] mencintaimu", "aku cinta padamu", "aku sangat mencintaimu", "kurasa aku mencintaimu"],
+    "responses": ["Yah, ingatlah bahwa saya seorang chatbot", "Itu tidak mudah… saya bukan orang sungguhan, saya seorang chatbot"]
+}, {
+    "tag": "user.needsadvice",
+    "patterns": ["Saya butuh nasihat", "bisakah Anda memberi saya nasihat", "apa yang harus saya lakukan"],
+    "responses": ["Saya mungkin tidak akan bisa langsung memberikan jawaban yang benar", "Saya tidak yakin saya akan mendapatkan jawaban terbaik, tapi saya akan mencoba"]
+}, {
+    "tag": "user.permission_to_ask",
+    "patterns": ["bolehkah saya bertanya", "apakah saya boleh bertanya", "mau tanya", "saya mau nanya"],
+    "responses": ["Iya,mau tanya apa?", "Silahkan"]
+}]
