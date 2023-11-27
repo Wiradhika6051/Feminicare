@@ -7,4 +7,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="period_date">Period Date</string>
     <string name="history">History</string>
+    <string name="checkup_result">Checkup Result</string>
+    <string name="camera_result">Camera Result</string>
 </resources>
