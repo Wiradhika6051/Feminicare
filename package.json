@@ -7,7 +7,7 @@
     "dev": "nodemon src/index.ts",
     "start": "node ./dist/index.js",
     "gcp-build": "tsc -p .",
-    "build":"npx tsc",
+    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -18,7 +18,9 @@
     "typescript": "^5.3.2"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
     "dotenv": "^16.3.1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "helmet": "^7.1.0"
   }
 }
