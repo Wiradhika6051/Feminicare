@@ -14,13 +14,10 @@ app.use(bodyParser.json({limit:'50mb'}))
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(helmet({crossOriginResourcePolicy: false}))
 
-//routing
-// const router = express.Router()
-// app.use(router)
-
 app.use('/api/v1/blood-analysis', BloodAnalyzerRoutes);
 //default
 app.get('/',(req:Request,res:Response)=>{
+  console.log("test request")
   res.send("Request success!")
 })
 
