@@ -17,7 +17,7 @@ app.use(helmet({crossOriginResourcePolicy: false}))
 app.use('/api/v1/blood-analysis', BloodAnalyzerRoutes);
 //default
 app.get('/',(req:Request,res:Response)=>{
-  console.log("test request")
+  console.log("test request!")
   res.send("Request success!")
 })
 
