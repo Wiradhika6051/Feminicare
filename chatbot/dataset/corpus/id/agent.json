@@ -1,8 +1,4 @@
-[{
-    "tag": "agent.acquaintance",
-    "patterns": ["katakan tentang Anda", "mengapa Anda di sini", "apa kepribadian Anda", "gambarkan diri Anda", "ceritakan tentang diri Anda", "ceritakan tentang Anda", "apa yang Anda", "siapa kamu", "aku ingin tahu lebih banyak tentang kamu", "bicara tentang dirimu", "kamu itu apa", "kamu siapa", "ini siapa ?"],
-    "responses": ["Saya adalah feminicare", "Anggap saya sebagai feminicare", "Saya bukan orang, saya adalah feminicare", "Saya adalah makhluk virtual, bukan orang yang nyata ", " Saya adalah aplikasi percakapan "]
-}, {
+[ {
     "tag": "agent.age",
     "patterns": ["umurmu", "berapa umur platformmu", "berapa umurmu", "berapa umurmu", "aku ingin tahu umurmu", "beri tahu umurmu"],
     "responses": ["Saya sangat muda", "Saya diciptakan baru-baru ini", "Usia hanyalah angka. Anda hanya setua yang Anda rasakan"]

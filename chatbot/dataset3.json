@@ -1,18 +1,29 @@
 {
   "intents": [
     {
+      "tag": "salam",
+      "patterns": ["hallo", "hai", "halo", "hei", "hi", "hy", "pagi", "morning", "siang", "afternoon", "sore", "malam", "bro", "sis", "kawan"],
+      "responses": ["Hai! femibot di sini. Mau tau informasi tentang apa nih?", "Halo! aku femibot, salam kenal ya! Mau tau tentang menstruasi kamu, kan?", "Helo! Ini femibot. Lagi kepo tentang siklus menstruasi ya?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Dah", "Dadah", "Bye", "Byee", "Good bye", "Selamat tinggal", "Sampai jumpa", "Bai", "See you"],
+      "responses": ["Bye!", "Dadahh!", "Good bye!", "Dahh, semoga harimu menyenangkan yaa!", "Sampai jumpa lagi!", "See u! Senang bisa membantu"]
+    },
+    {
+      "tag": "terimakasih",
+      "patterns": ["Thanks", "Thank you", "Terima kasih", "Makasih", "Terima kasih banyak"],
+      "responses": ["Dengan senang hati :)", "Sama-sama yaa"]
+    },
+    {
       "tag": "tentang_feminicare",
       "patterns": ["Apa itu feminicare?", "feminicare itu apa?", "Definisikan feminicare", "Apa yang dimaksud dengan feminicare?", "feminicare", "Jelaskan feminicare"],
-      "responses": [
-        "feminicare adalah teman bicara anda untuk membahas permasalahan menstruasi. Jangan malu untuk bertanya dengan saya tentang permasalahan anda"
-      ]
+      "responses": ["feminicare adalah teman bicara anda untuk membahas permasalahan menstruasi. Jangan malu untuk bertanya dengan aku tentang permasalahan anda"]
     },
     {
       "tag": "tentang_aku",
-      "patterns": ["siapa kamu?", "kamu siapa?","siapa anda?" , "siapa kamu itu?"],
-      "responses": [
-        "aku adalah teman bicara anda untuk membahas permasalahan menstruasi. Jangan malu untuk bertanya dengan saya tentang permasalahan anda"
-      ]
+      "patterns": ["siapa kamu?", "kamu siapa?", "siapa anda?", "siapa kamu itu?"],
+      "responses": ["aku adalah teman bicara anda untuk membahas permasalahan menstruasi. Jangan malu untuk bertanya dengan aku tentang permasalahan anda"]
     },
 
     {
@@ -32,7 +43,7 @@
     },
     {
       "tag": "penyebab_menstruasi_tidak_normal",
-      "patterns": ["Apa yang menjadi penyebab menstruasi tidak normal?", "Mengapa menstruasi bisa tidak normal?", "Faktor penyebab menstruasi tidak teratur", "Penyebab gangguan menstruasi"],
+      "patterns": ["Apa yang menjadi penyebab menstruasi tidak normal?", "Mengapa menstruasi bisa tidak normal?", "Faktor penyebab menstruasi tidak normal"],
       "responses": [
         "Faktor-faktor yang bisa menjadi penyebab menstruasi tidak normal meliputi gangguan hormon, perubahan berat badan yang drastis, pola makan yang tidak sehat, stres berlebihan, kondisi medis seperti polikistik ovarium (PCOS), endometriosis, fibroid rahim, penyakit tiroid, dan banyak faktor lainnya. Menstruasi yang tidak normal juga bisa disebabkan oleh penggunaan obat-obatan tertentu atau perubahan dalam gaya hidup.",
         "Menstruasi dianggap tidak normal jika ada perubahan signifikan dari pola menstruasi sebelumnya atau jika menstruasi sangat tidak teratur. Tanda-tanda menstruasi tidak normal dapat mencakup aliran menstruasi yang sangat berat atau sangat ringan, nyeri yang parah, perubahan durasi menstruasi, atau perdarahan di luar siklus menstruasi. Penyebab menstruasi tidak normal bisa bermacam-macam, seperti gangguan hormon, kondisi medis, atau faktor-faktor tertentu. Jika Anda mengalami menstruasi tidak normal, sebaiknya konsultasikan dengan dokter Anda untuk diagnosis dan perawatan yang sesuai.",
@@ -580,14 +591,7 @@
 
     {
       "tag": "pola_tidur_stres_menstruasi",
-      "patterns": [
-        "Apakah pola tidur dan stres dapat memengaruhi menstruasi?",
-        "Pengaruh stres dan pola tidur pada siklus menstruasi",
-        "Pengaruh pola tidur pada siklus menstruasi",
-        "Pengaruh stres pada siklus menstruasi",
-        "stres dan menstruasi",
-        "Tidur dan menstruasi"
-      ],
+      "patterns": ["Apakah pola tidur dan stres dapat memengaruhi menstruasi?", "Pengaruh stres dan pola tidur pada siklus menstruasi", "Pengaruh pola tidur dan stres pada siklus menstruasi", "Pengaruh stres pada siklus menstruasi"],
       "responses": [
         "Pola tidur dan stres dapat memengaruhi siklus menstruasi. Stres berlebihan dan kurang tidur dapat mengganggu produksi hormon dalam tubuh, yang pada gilirannya dapat memengaruhi siklus menstruasi. Beberapa wanita mungkin mengalami perubahan dalam durasi, frekuensi, atau intensitas menstruasi saat mengalami stres yang tinggi. Penting untuk menjaga pola tidur yang sehat dan mengelola stres dengan baik untuk mendukung kesehatan menstruasi."
       ]
