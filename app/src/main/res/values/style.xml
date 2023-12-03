@@ -4,6 +4,13 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="RoundedTopBorder" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>> <!-- Adjust this based on your design -->
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeTopRight">20dp</item>
+    </style>
+
     <style name="RoundedBottomBorder" parent="">
         <item name="cornerFamilyTopLeft">cut</item>
         <item name="cornerFamilyTopRight">cut</item>

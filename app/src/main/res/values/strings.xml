@@ -9,4 +9,19 @@
     <string name="history">History</string>
     <string name="checkup_result">Checkup Result</string>
     <string name="camera_result">Camera Result</string>
+    <string name="result_loading">Getting Your Result…</string>
+    <string name="you_menstrual_blood_is">You Menstrual Blood is</string>
+    <string name="your_menstrual_blood_is">Your menstrual blood is </string>
+    <string name="healthy">Healthy</string>
+    <string name="next_period_estimated_on">Next Period\nestimated on</string>
+    <string name="december">December</string>
+    <string name="tap_me">Tap Me!</string>
+    <string name="period_starts">Period Starts?</string>
+    <string name="greetings">Good %s </string>
+    <string name="my_period_calendar">My Period Calendar</string>
+    <string name="menstrual_blood_health_nchekup_history">Menstrual Blood Health\nChekup History</string>
+    <string name="ask_anything">Ask anything…</string>
+    <string name="bot_name">Femi</string>
+    <string name="chat_with_femi">Chat With Femi</string>
+    <string name="generating">Generating…</string>
 </resources>

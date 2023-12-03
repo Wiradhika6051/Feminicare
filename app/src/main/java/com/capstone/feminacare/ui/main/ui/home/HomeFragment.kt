@@ -1,13 +1,15 @@
 package com.capstone.feminacare.ui.main.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.capstone.feminacare.R
 import com.capstone.feminacare.databinding.FragmentHomeBinding
+import com.capstone.feminacare.ui.chatbot.ChatBotActivity
 
 class HomeFragment : Fragment() {
 
@@ -28,10 +30,16 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        homeViewModel.timeOfDay.observe(viewLifecycleOwner) {
+            val greet = getString(R.string.greetings, it)
+            binding.tvGreetingTime.text = greet
         }
+
+        binding.fabChatbot.setOnClickListener {
+            startActivity(Intent(context, ChatBotActivity::class.java))
+        }
+
+
         return root
     }
 
