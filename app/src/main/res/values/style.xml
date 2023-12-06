@@ -11,6 +11,10 @@
         <item name="cornerSizeTopRight">20dp</item>
     </style>
 
+    <style name="RoundedBorder" parent="">
+        <item name="cornerSize">16dp</item>
+    </style>
+
     <style name="RoundedBottomBorder" parent="">
         <item name="cornerFamilyTopLeft">cut</item>
         <item name="cornerFamilyTopRight">cut</item>

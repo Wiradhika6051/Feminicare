@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
-import com.capstone.feminacare.data.response.BotMessage
-import com.capstone.feminacare.data.response.Message
-import com.capstone.feminacare.data.response.MessageType
-import com.capstone.feminacare.data.response.UserMessage
+import com.capstone.feminacare.data.remote.response.BotMessage
+import com.capstone.feminacare.data.remote.response.Message
+import com.capstone.feminacare.data.remote.response.MessageType
+import com.capstone.feminacare.data.remote.response.UserMessage
 import com.capstone.feminacare.databinding.ItemMsgbotBinding
 import com.capstone.feminacare.databinding.ItemMsguserBinding
 import com.capstone.feminacare.utils.TimeUtils

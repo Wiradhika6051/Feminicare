@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.ui.home.HomeFragment">
+    tools:context=".ui.main.ui.home.HomeFragment"
+    >
 
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="?attr/actionBarSize"
+    >
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         android:layout_width="match_parent"
@@ -37,7 +44,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:text="@string/next_period_estimated_on"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/colorPrimary"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,7 +55,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="32dp"
                     android:text="12"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/colorPrimary"
                     android:textSize="60sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView3"
@@ -62,7 +69,7 @@
                     android:layout_marginTop="-8dp"
                     android:text="@string/december"
 
-                    android:textColor="@color/white"
+                    android:textColor="?attr/colorPrimary"
                     android:textSize="40sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_periodDay" />
@@ -106,29 +113,29 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:text="@string/period_starts"
-                    android:textColor="?attr/colorOnSecondary"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/textView6"
-                    app:layout_constraintStart_toStartOf="parent" />
+<!--                <TextView-->
+<!--                    android:id="@+id/textView5"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="32dp"-->
+<!--                    android:text="@string/period_starts"-->
+<!--                    android:textColor="?attr/colorOnSecondary"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/textView6"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:text="@string/tap_me"
-                    android:textColor="?attr/colorOnSecondary"
-                    android:textSize="32sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/guideline2"
-                    app:layout_constraintStart_toStartOf="@+id/textView5" />
+<!--                <TextView-->
+<!--                    android:id="@+id/textView6"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="16dp"-->
+<!--                    android:text="@string/tap_me"-->
+<!--                    android:textColor="?attr/colorOnSecondary"-->
+<!--                    android:textSize="32sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/guideline2"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/textView5" />-->
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -141,7 +148,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_begin="283dp" />
 
     <TextView
         android:id="@+id/tv_greetingTime"
@@ -163,6 +170,7 @@
         android:layout_marginEnd="8dp"
         android:text=""
         android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
         app:layout_constraintBottom_toBottomOf="@+id/tv_greetingTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_greetingTime"
@@ -174,9 +182,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_begin="318dp" />
 
     <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.Material3.CardView.Elevated"
         android:id="@+id/cv_toPeriodCalendar"
         android:clickable="true"
         android:elevation="8dp"
@@ -211,7 +220,7 @@
                 android:layout_marginEnd="8dp"
                 android:alpha="0.7"
                 android:text="@string/my_period_calendar"
-                android:textColor="@color/custom_pink"
+                android:textColor="?attr/colorPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -222,6 +231,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.Material3.CardView.Elevated"
         android:id="@+id/cv_toCheckupHistory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -256,7 +266,7 @@
                 android:layout_marginEnd="8dp"
                 android:alpha="0.7"
                 android:text="@string/menstrual_blood_health_nchekup_history"
-                android:textColor="@color/custom_pink"
+                android:textColor="?attr/colorPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textAlignment="textEnd"
@@ -267,16 +277,30 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_chatbot"
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/TextAppearance.Material3.HeadlineMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:foreground="@drawable/fab_ico"
-        app:fabCustomSize="70dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/latest_articles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_toCheckupHistory" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_articles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:scrollbars="horizontal"
+        tools:listitem="@layout/item_article"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

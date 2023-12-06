@@ -1,4 +1,4 @@
-package com.capstone.feminacare.data.response
+package com.capstone.feminacare.data.remote.response
 
 //Dummy
 data class ChatBotResponse(

@@ -2,7 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
-    id("com.google.devtools.ksp") 
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -68,7 +68,13 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:1.0.0")
     implementation("androidx.activity:activity-ktx:1.8.1")
 
-//    Room
+//  Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
+//    Lottie
+    implementation("com.airbnb.android:lottie:3.4.0")
+
+    //    Room
     val room_version = "2.6.1"
 
     implementation("androidx.room:room-runtime:$room_version")
@@ -78,10 +84,4 @@ dependencies {
 
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$room_version")
-
-//  Glide
-    implementation("com.github.bumptech.glide:glide:4.16.0")
-
-//    Lottie
-    implementation("com.airbnb.android:lottie:3.4.0")
 }

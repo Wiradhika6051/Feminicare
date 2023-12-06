@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.capstone.feminacare.data.Repository
 import com.capstone.feminacare.data.Result
-import com.capstone.feminacare.data.response.Message
+import com.capstone.feminacare.data.remote.response.Message
 import kotlinx.coroutines.launch
 
 class ChatBotViewModel(private val repository: Repository) : ViewModel() {

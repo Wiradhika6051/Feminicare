@@ -4,12 +4,13 @@ package com.capstone.feminacare.data
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
-import com.capstone.feminacare.data.response.BloodAnalysisResponse
-import com.capstone.feminacare.data.response.BotMessage
-import com.capstone.feminacare.data.response.Message
-import com.capstone.feminacare.data.response.UserMessage
-import com.capstone.feminacare.data.retrofit.ApiConfig
-import com.capstone.feminacare.data.retrofit.ApiService
+import com.capstone.feminacare.data.remote.response.ArticleResponse
+import com.capstone.feminacare.data.remote.response.BloodAnalysisResponse
+import com.capstone.feminacare.data.remote.response.BotMessage
+import com.capstone.feminacare.data.remote.response.Message
+import com.capstone.feminacare.data.remote.response.UserMessage
+import com.capstone.feminacare.data.remote.retrofit.ApiConfig
+import com.capstone.feminacare.data.remote.retrofit.ApiService
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import okhttp3.MultipartBody
@@ -52,6 +53,20 @@ class Repository(private val apiService: ApiService = ApiConfig.getApiConfig()) 
             }
         }
 
+    }
+
+    fun getArticles(query: String): LiveData<Result<ArticleResponse>> = liveData {
+        emit(Result.Loading)
+        try {
+            val apiService = ApiConfig.getRapidApiConfig()
+            val success = apiService.getArticles(query = query)
+            emit(Result.Success(success))
+        } catch (e: HttpException) {
+            val errResponse = e.response()?.errorBody()?.string()
+            emit(Result.Error(errResponse.toString()))
+        } catch (e: Exception) {
+            emit(Result.Error(e.message.toString()))
+        }
     }
 
     companion object {

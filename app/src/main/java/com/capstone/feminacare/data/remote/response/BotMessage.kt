@@ -1,4 +1,4 @@
-package com.capstone.feminacare.data.response
+package com.capstone.feminacare.data.remote.response
 
 data class BotMessage(
     override val content: String, override val timeStamp: Long,

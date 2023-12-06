@@ -24,4 +24,7 @@
     <string name="bot_name">Femi</string>
     <string name="chat_with_femi">Chat With Femi</string>
     <string name="generating">Generating…</string>
+    <string name="ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
+    <string name="chatbot">ChatBot</string>
+    <string name="latest_articles">Latest Articles</string>
 </resources>
