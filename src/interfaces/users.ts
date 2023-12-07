@@ -9,7 +9,10 @@ export default interface User {
     }
     first_name: string
     email: string
-    age: number
+    date_of_birth: {
+      _seconds: number
+      _nanoseconds: number
+    }
     username: string
   }
 }

@@ -5,6 +5,7 @@ import helmet from "helmet"
 import BloodAnalyzerRoutes from "./routes/BloodAnalysisRoutes";
 import ProfileRoutes from "./routes/ProfileRoutes";
 import { CONST } from "./utils/constant";
+import AuthenticationRoutes from "./routes/AuthenticationRoutes";
 //buat ngurus dotenv
 dotenv.config()
 const app:Application = express();
@@ -17,6 +18,7 @@ app.use(helmet({crossOriginResourcePolicy: false}))
 
 app.use('/api/v1/profile',ProfileRoutes)
 app.use('/api/v1/blood-analysis', BloodAnalyzerRoutes);
+app.use('/api/v1/auth',AuthenticationRoutes)
 //default
 app.get('/',(req:Request,res:Response)=>{
   res.send("Request success!")

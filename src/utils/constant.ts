@@ -5,4 +5,5 @@ export const CONST = {
   PROJECT_ID:process.env.PROJECT_ID,
   ENVIRONMENT:process.env.ENVIRONMENT,
   KEY_PATH:process.env.KEY_PATH,
+  SECRET:process.env.SECRET,
 }

@@ -19,7 +19,7 @@ class ProfileController extends BaseController{
         first_name: data.data.first_name,
         last_name: data.data.last_name,
         email: data.data.email,
-        age: data.data.age,
+        date_of_birth: data.data.date_of_birth,
         weight: data.data.weight
       }})
       res.json({
