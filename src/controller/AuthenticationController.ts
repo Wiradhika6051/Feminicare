@@ -63,7 +63,6 @@ class AuthenticationController extends BaseController {
         id: docRef.id,
         username
       }
-      logger.warn(jwtPayload)
       //sign token
       const token = jwt.sign(jwtPayload, CONST.SECRET as string)
       //kirim hasil
