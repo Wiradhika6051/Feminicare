@@ -66,6 +66,15 @@ class AuthenticationController extends BaseController {
           .status(400)
           .send({ message: 'username and/or password not included' })
       }
+      //cek apakah username sudah ada
+      const existingUser = await firestoreClient.collection('users').where('username','==',username).get()
+      if(!existingUser.empty){
+        //kalau dah ada, gak bisa register pakai username ini
+        res.status(409).send({
+          "message": `username ${username} already exist`
+        })
+        return
+      }
       //bikin dokumen baru
       const docRef = firestoreClient.collection('users').doc()
       //hash password
