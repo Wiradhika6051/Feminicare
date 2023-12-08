@@ -15,14 +15,40 @@ class AuthenticationController extends BaseController {
         res.status(400).send({
           message: 'invalid username and/or password'
         })
+        logger.warn(`Invalid login attempt at ${new Date().toISOString()}`)
+        return;
       }
-      //buat dokumen baru
-      const docRef = firestoreClient.collection('users').doc()
-      await docRef.set({})
-      // res.header().json({
-      //   message: 'Login successful'
-      // })
-      // logger.info(`Blood analysis return ${colorIndex}`)
+      //cek apakah ada username dan password tersebut
+      const usersRef = firestoreClient.collection('users')
+      const snapshot = await usersRef.where('username', '==', username).get()
+      if (
+        snapshot.empty ||
+        (await bcrypt.hash(password, snapshot.docs[0].data().salt)) !==
+          snapshot.docs[0].data().password
+      ) {
+        res.status(400).send({ message: 'invalid username and/or password' })
+        logger.warn(`Invalid login attempt at ${new Date().toISOString()}`)
+        return;
+      }
+      logger.info(
+        `User ${username} login at ${new Date().toISOString()}`
+      )
+      //buat jwt token
+      //buat payload
+      const jwtPayload: JwtPayload = {
+        id: snapshot.docs[0].id,
+        username
+      }
+      //sign token
+      const token = jwt.sign(jwtPayload, CONST.SECRET as string)
+      //kirim hasil
+      res.cookie('cookie', token, {
+        httpOnly: true,
+        secure: true
+      })
+      res.send({
+        message: 'login successful'
+      })
     } catch (err: unknown) {
       logger.error(err)
       res.status(500).send({
@@ -52,7 +78,8 @@ class AuthenticationController extends BaseController {
         email,
         password: hashedPassword,
         first_name,
-        last_name
+        last_name,
+        salt
       })
       logger.info(
         `User ${username} created at ${createInfo.writeTime.toDate()}`

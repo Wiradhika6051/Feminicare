@@ -13,6 +13,7 @@ export default interface User {
       _seconds: number
       _nanoseconds: number
     }
-    username: string
+    username: string,
+    salt:string,
   }
 }
