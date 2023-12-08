@@ -12,6 +12,7 @@ import com.capstone.feminacare.R
 import com.capstone.feminacare.databinding.ActivityMainBinding
 import com.capstone.feminacare.ui.ViewModelFactory
 import com.capstone.feminacare.ui.bloodcheckup.BloodCheckupResultActivity
+import com.capstone.feminacare.ui.chatbot.ChatBotActivity
 import com.capstone.feminacare.utils.CAPTURED_IMAGE_URI
 import com.capstone.feminacare.utils.ImageUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -39,6 +40,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.floatingActionButton.setOnClickListener {
             startCamera()
+        }
+
+        binding.fabChatbot.setOnClickListener {
+            startActivity(Intent(this@MainActivity, ChatBotActivity::class.java))
         }
     }
 

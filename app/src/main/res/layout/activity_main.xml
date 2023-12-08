@@ -40,7 +40,22 @@
 
         </com.google.android.material.bottomappbar.BottomAppBar>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_chatbot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_marginEnd="8dp"
+        android:text="@string/chatbot"
+        app:icon="@drawable/fab_extend"
+        app:iconSize="30dp"
+        app:iconTint="?attr/colorPrimaryInverse"
+        app:iconTintMode="multiply"
+        android:layout_gravity="end|bottom"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
