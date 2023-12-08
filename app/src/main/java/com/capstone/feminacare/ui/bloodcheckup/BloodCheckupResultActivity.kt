@@ -7,9 +7,10 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.capstone.feminacare.data.Result
 import com.capstone.feminacare.databinding.ActivityBloodCheckupResultBinding
-import com.capstone.feminacare.ui.ViewModelFactory
+import com.capstone.feminacare.ui.CheckupViewModelFactory
 import com.capstone.feminacare.utils.CAPTURED_IMAGE_URI
 import com.capstone.feminacare.utils.ImageUtils
 import com.google.android.material.appbar.MaterialToolbar
@@ -24,7 +25,7 @@ import okhttp3.RequestBody.Companion.asRequestBody
 class BloodCheckupResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBloodCheckupResultBinding
     private val viewModel by viewModels<BloodCheckupViewModel> {
-        ViewModelFactory.getInstance()
+        CheckupViewModelFactory.getInstance(this)
     }
     private var currentImage: Uri? = null
 
@@ -62,19 +63,25 @@ class BloodCheckupResultActivity : AppCompatActivity() {
             )
 
             viewModel.postPhoto(multipartBody).observe(this) { result ->
-                when(result) {
+                when (result) {
                     is Result.Loading -> {
                         showLoading(true)
                     }
+
                     is Result.Success -> {
-                        CoroutineScope(Dispatchers.Main).launch {
+                        lifecycleScope.launch {
                             delay(2000L)
                             showLoading(false)
                         }
                         binding.tvCheckupResult.text = result.data.message
                     }
+
                     is Result.Error -> {
-                        Toast.makeText(this,  "Failed to getting the result! : ${result.error}", Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            this,
+                            "Failed to getting the result! : ${result.error}",
+                            Toast.LENGTH_LONG
+                        ).show()
                         CoroutineScope(Dispatchers.Main).launch {
                             delay(Toast.LENGTH_LONG.toLong())
                             finish()
@@ -100,7 +107,8 @@ class BloodCheckupResultActivity : AppCompatActivity() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        if(isLoading)  binding.loadingIndicator.root.visibility = View.VISIBLE else  binding.loadingIndicator.root.visibility = View.GONE
+        if (isLoading) binding.loadingIndicator.root.visibility =
+            View.VISIBLE else binding.loadingIndicator.root.visibility = View.GONE
     }
 
     override fun onDestroy() {

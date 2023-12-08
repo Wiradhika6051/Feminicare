@@ -1,7 +1,9 @@
 package com.capstone.feminacare.ui.main.ui.checkuphistory
 
 import androidx.lifecycle.ViewModel
+import com.capstone.feminacare.data.CheckupRepository
 
-class CheckupHistoryViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+class CheckupHistoryViewModel(repository: CheckupRepository) : ViewModel() {
+
+    val checkupHistory = repository.getCheckupHistory()
 }

@@ -8,7 +8,6 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.capstone.feminacare.adapter.ChatBotMessageAdapter
 import com.capstone.feminacare.data.Result
 import com.capstone.feminacare.databinding.ActivityChatBotBinding
 import com.capstone.feminacare.ui.ViewModelFactory

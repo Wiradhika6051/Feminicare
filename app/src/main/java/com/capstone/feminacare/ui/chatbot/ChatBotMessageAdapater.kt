@@ -1,4 +1,4 @@
-package com.capstone.feminacare.adapter
+package com.capstone.feminacare.ui.chatbot
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
