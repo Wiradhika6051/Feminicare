@@ -6,7 +6,7 @@ import * as bcrypt from 'bcrypt'
 import JwtPayload from '../interfaces/JwtPayload'
 import jwt from 'jsonwebtoken'
 import { CONST } from '../utils/constant'
-import { Timestamp } from '@google-cloud/firestore'
+import { Filter, Timestamp } from '@google-cloud/firestore'
 
 class AuthenticationController extends BaseController {
   login = async (req: Request, res: Response, next: NextFunction) => {
@@ -66,12 +66,15 @@ class AuthenticationController extends BaseController {
           .status(400)
           .send({ message: 'username and/or password not included' })
       }
-      //cek apakah username sudah ada
-      const existingUser = await firestoreClient.collection('users').where('username','==',username).get()
+      //cek apakah username dan email sudah ada
+      const existingUser = await firestoreClient.collection('users').where(Filter.or(
+        Filter.where('username','==',username),
+        Filter.where('email','==',email)
+      )).get()
       if(!existingUser.empty){
         //kalau dah ada, gak bisa register pakai username ini
         res.status(409).send({
-          "message": `username ${username} already exist`
+          "message": `username or email already exist`
         })
         return
       }
