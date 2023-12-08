@@ -6,6 +6,7 @@ import * as bcrypt from 'bcrypt'
 import JwtPayload from '../interfaces/JwtPayload'
 import jwt from 'jsonwebtoken'
 import { CONST } from '../utils/constant'
+import { Timestamp } from '@google-cloud/firestore'
 
 class AuthenticationController extends BaseController {
   login = async (req: Request, res: Response, next: NextFunction) => {
@@ -31,7 +32,7 @@ class AuthenticationController extends BaseController {
         return;
       }
       logger.info(
-        `User ${username} login at ${new Date().toISOString()}`
+        `User [${username}] login at ${new Date().toISOString()}`
       )
       //buat jwt token
       //buat payload
@@ -79,10 +80,11 @@ class AuthenticationController extends BaseController {
         password: hashedPassword,
         first_name,
         last_name,
-        salt
+        salt,
+        register_date:Timestamp.fromDate(new Date())
       })
       logger.info(
-        `User ${username} created at ${createInfo.writeTime.toDate()}`
+        `User [${username}] created at ${createInfo.writeTime.toDate().toISOString()}`
       )
       //buat jwt token
       //buat payload
