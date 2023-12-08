@@ -7,21 +7,21 @@ import User from "../interfaces/users";
 class ProfileController extends BaseController{
   getProfile = async (req:Request,res:Response,next:NextFunction) => {
     try{
-      //tes client
-      logger.info("Profile Request For User X")
-      const usersSnapshot = await firestoreClient.collection('users').get()
-      const datas: User[] = usersSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        data: doc.data() as any,
-      }));
-      const data = datas.map((data)=>{return {
-        username: data.data.username,
-        first_name: data.data.first_name,
-        last_name: data.data.last_name,
-        email: data.data.email,
-        date_of_birth: data.data.date_of_birth,
-        weight: data.data.weight
-      }})
+      const {id} = req.params
+      logger.info(`Profile Request For User ${id}`)
+      const usersSnapshot = await firestoreClient.collection('users').doc(id).get()
+      const user: User = {
+        id: usersSnapshot.id,
+        data: usersSnapshot.data() as any,
+      };
+      const data =  {
+        username: user.data.username,
+        first_name: user.data.first_name,
+        last_name: user.data.last_name,
+        email: user.data.email,
+        date_of_birth: user.data.date_of_birth,
+        weight: user.data.weight
+      }
       res.json({
         data,       
         message: "User profile retrieved"
