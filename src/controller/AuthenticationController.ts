@@ -48,7 +48,10 @@ class AuthenticationController extends BaseController {
         secure: true
       })
       res.send({
-        message: 'login successful'
+        message: 'login successful',
+        data:{
+          userId:snapshot.docs[0].id
+        },
       })
     } catch (err: unknown) {
       logger.error(err)
@@ -112,7 +115,10 @@ class AuthenticationController extends BaseController {
         secure: true
       })
       res.send({
-        message: 'Register account successful'
+        message: 'Register account successful',
+        data:{
+          userId:docRef.id
+        },
       })
     } catch (err: unknown) {
       logger.error(err)
