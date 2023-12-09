@@ -44,19 +44,14 @@ class ProfileController extends BaseController {
       const { id } = req.params
       const data = req.body
       const userRef = await firestoreClient.collection('users').doc(id)
-      let usersSnapshot: FirebaseFirestore.DocumentSnapshot<
-        FirebaseFirestore.DocumentData,
-        FirebaseFirestore.DocumentData
-      >
-      let existingData: User | undefined
+      const usersSnapshot = await userRef.get()
+      if (!usersSnapshot.exists) {
+        res.status(404).send({ message: 'User not found' })
+      }
+      const existingData = usersSnapshot.data() as User
       //proses data yang sensitif
       if (data.date_of_birth) {
         data.date_of_birth = Timestamp.fromDate(new Date(data.date_of_birth))
-      }
-      //fetch data yang sudah ada bila perlu aja
-      if (data.username || data.email || data.password) {
-        usersSnapshot = await userRef.get()
-        existingData = usersSnapshot.data() as User
       }
       if (data.username || data.email) {
         //pastiin unik
@@ -87,9 +82,21 @@ class ProfileController extends BaseController {
       }
       //konversi ke angka
       if (data.weight) {
+        //cek jika NaN
+        if (isNaN(data.weight)) {
+          res.status(400).send({
+            message: 'Invalid input'
+          })
+        }
         data.weight = Number(data.weight)
       }
       if (data.height) {
+        //cek jika NaN
+        if (isNaN(data.height)) {
+          res.status(400).send({
+            message: 'Invalid input'
+          })
+        }
         data.height = Number(data.height)
       }
       //hash password
