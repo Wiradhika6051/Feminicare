@@ -16,14 +16,14 @@
       "responses": ["Dengan senang hati :)", "Sama-sama yaa"]
     },
     {
-      "tag": "tentang_feminicare",
-      "patterns": ["Apa itu feminicare?", "feminicare itu apa?", "Definisikan feminicare", "Apa yang dimaksud dengan feminicare?", "feminicare", "Jelaskan feminicare"],
-      "responses": ["feminicare adalah teman bicara anda untuk membahas permasalahan menstruasi. Jangan malu untuk bertanya dengan aku tentang permasalahan anda"]
+      "tag": "tentang_feminacare",
+      "patterns": ["Apa itu feminacare?", "feminacare itu apa?", "Definisikan feminacare", "Apa yang dimaksud dengan feminacare?", "feminacare", "Jelaskan feminacare"],
+      "responses": ["feminacare adalah teman bicara kamu untuk membahas permasalahan menstruasi. Jangan malu untuk bertanya dengan aku tentang permasalahan anda"]
     },
     {
       "tag": "tentang_aku",
       "patterns": ["siapa kamu?", "kamu siapa?", "siapa anda?", "siapa kamu itu?"],
-      "responses": ["aku adalah teman bicara anda untuk membahas permasalahan menstruasi. Jangan malu untuk bertanya dengan aku tentang permasalahan anda"]
+      "responses": ["aku adalah teman bicara kamu untuk membahas permasalahan menstruasi. Jangan malu untuk bertanya dengan aku tentang permasalahan kamu"]
     },
 
     {
