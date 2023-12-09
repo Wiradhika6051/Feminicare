@@ -42,35 +42,47 @@ class ProfileController extends BaseController {
   updateProfile = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const { id } = req.params
-      const data = req.body
+      const data = req.body ?? {}
       const userRef = await firestoreClient.collection('users').doc(id)
       const usersSnapshot = await userRef.get()
       if (!usersSnapshot.exists) {
         res.status(404).send({ message: 'User not found' })
+        return
       }
-      const existingData = usersSnapshot.data() as User
+      const existingData = usersSnapshot.data()
       //proses data yang sensitif
       if (data.date_of_birth) {
         data.date_of_birth = Timestamp.fromDate(new Date(data.date_of_birth))
       }
       if (data.username || data.email) {
+        //set filter
+        let filter: Filter
+        if (data.username && data.email) {
+          filter = Filter.and(
+            Filter.where(
+              'username',
+              '==',
+              data?.username ?? existingData!!.username
+            ),
+            Filter.where('email', '==', data?.email ?? existingData!!.email)
+          )
+        } else if (data.username) {
+          filter = Filter.where(
+            'username',
+            '==',
+            data?.username ?? existingData!!.username
+          )
+        } else if (data.email) {
+          filter = Filter.where(
+            'email',
+            '==',
+            data?.email ?? existingData!!.email
+          )
+        }
         //pastiin unik
         const existingUser = await firestoreClient
           .collection('users')
-          .where(
-            Filter.or(
-              Filter.where(
-                'username',
-                '==',
-                data.username ?? existingData!!.data.username
-              ),
-              Filter.where(
-                'email',
-                '==',
-                data.email ?? existingData!!.data.email
-              )
-            )
-          )
+          .where(filter!! as Filter)
           .get()
         if (!existingUser.empty) {
           //kalau dah ada, gak bisa register pakai username ini
@@ -87,6 +99,7 @@ class ProfileController extends BaseController {
           res.status(400).send({
             message: 'Invalid input'
           })
+          return
         }
         data.weight = Number(data.weight)
       }
@@ -96,15 +109,18 @@ class ProfileController extends BaseController {
           res.status(400).send({
             message: 'Invalid input'
           })
+          return
         }
         data.height = Number(data.height)
       }
       //hash password
       if (data.password) {
-        data.password = await bcrypt.hash(
-          data.password,
-          existingData!!.data.salt
-        )
+        data.password = await bcrypt.hash(data.password, existingData!!.salt)
+      }
+      //kalau bodynya kosong, return 400
+      if (!Object.keys(data).length) {
+        res.status(400).send({ message: 'No data provided' })
+        return
       }
       await userRef.update(data)
       logger.info(`Profile Modification Request For User ${id}`)
