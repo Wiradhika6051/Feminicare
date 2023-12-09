@@ -1,32 +1,131 @@
-import { Request,Response,NextFunction } from "express";
-import BaseController from "./BaseController";
-import logger from "../utils/logger";
-import firestoreClient from "../utils/firestoreClient";
-import User from "../interfaces/users";
+import { Request, Response, NextFunction } from 'express'
+import BaseController from './BaseController'
+import logger from '../utils/logger'
+import firestoreClient from '../utils/firestoreClient'
+import User from '../interfaces/users'
+import { Filter, Timestamp } from '@google-cloud/firestore'
+import * as bcrypt from 'bcrypt'
 
-class ProfileController extends BaseController{
-  getProfile = async (req:Request,res:Response,next:NextFunction) => {
-    try{
-      //tes client
-      logger.info("Profile Request For User X")
-      const usersSnapshot = await firestoreClient.collection('users').get()
-      const datas: User[] = usersSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        data: doc.data() as any,
-      }));
-      const data = datas.map((data)=>{return {
-        username: data.data.username,
-        first_name: data.data.first_name,
-        last_name: data.data.last_name,
-        email: data.data.email,
-        date_of_birth: data.data.date_of_birth,
-        weight: data.data.weight
-      }})
+class ProfileController extends BaseController {
+  getProfile = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { id } = req.params
+      logger.info(`Profile Request For User ${id}`)
+      const usersSnapshot = await firestoreClient
+        .collection('users')
+        .doc(id)
+        .get()
+      const user: User = {
+        id: usersSnapshot.id,
+        data: usersSnapshot.data() as any
+      }
+      const data = {
+        username: user.data.username,
+        first_name: user.data.first_name,
+        last_name: user.data.last_name,
+        email: user.data.email,
+        date_of_birth: user.data.date_of_birth,
+        weight: user.data.weight
+      }
       res.json({
-        data,       
-        message: "User profile retrieved"
+        data,
+        message: 'User profile retrieved'
       })
-    }catch(err:unknown){
+    } catch (err: unknown) {
+      logger.error(err)
+      res.status(500).send({
+        message: 'internal server error'
+      })
+    }
+  }
+
+  updateProfile = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { id } = req.params
+      const data = req.body ?? {}
+      const userRef = await firestoreClient.collection('users').doc(id)
+      const usersSnapshot = await userRef.get()
+      if (!usersSnapshot.exists) {
+        res.status(404).send({ message: 'User not found' })
+        return
+      }
+      const existingData = usersSnapshot.data()
+      //proses data yang sensitif
+      if (data.date_of_birth) {
+        data.date_of_birth = Timestamp.fromDate(new Date(data.date_of_birth))
+      }
+      if (data.username || data.email) {
+        //set filter
+        let filter: Filter
+        if (data.username && data.email) {
+          filter = Filter.and(
+            Filter.where(
+              'username',
+              '==',
+              data?.username ?? existingData!!.username
+            ),
+            Filter.where('email', '==', data?.email ?? existingData!!.email)
+          )
+        } else if (data.username) {
+          filter = Filter.where(
+            'username',
+            '==',
+            data?.username ?? existingData!!.username
+          )
+        } else if (data.email) {
+          filter = Filter.where(
+            'email',
+            '==',
+            data?.email ?? existingData!!.email
+          )
+        }
+        //pastiin unik
+        const existingUser = await firestoreClient
+          .collection('users')
+          .where(filter!! as Filter)
+          .get()
+        if (!existingUser.empty) {
+          //kalau dah ada, gak bisa register pakai username ini
+          res.status(409).send({
+            message: `username or email already exist`
+          })
+          return
+        }
+      }
+      //konversi ke angka
+      if (data.weight) {
+        //cek jika NaN
+        if (isNaN(data.weight)) {
+          res.status(400).send({
+            message: 'Invalid input'
+          })
+          return
+        }
+        data.weight = Number(data.weight)
+      }
+      if (data.height) {
+        //cek jika NaN
+        if (isNaN(data.height)) {
+          res.status(400).send({
+            message: 'Invalid input'
+          })
+          return
+        }
+        data.height = Number(data.height)
+      }
+      //hash password
+      if (data.password) {
+        data.password = await bcrypt.hash(data.password, existingData!!.salt)
+      }
+      //kalau bodynya kosong, return 400
+      if (!Object.keys(data).length) {
+        res.status(400).send({ message: 'No data provided' })
+        return
+      }
+      await userRef.update(data)
+      logger.info(`Profile Modification Request For User ${id}`)
+      res.send({ message: 'Profile updated' })
+    } catch (err: unknown) {
       logger.error(err)
       res.status(500).send({
         message: 'internal server error'
@@ -35,4 +134,4 @@ class ProfileController extends BaseController{
   }
 }
 
-export default new ProfileController();
+export default new ProfileController()
