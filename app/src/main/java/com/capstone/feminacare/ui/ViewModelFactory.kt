@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.feminacare.data.Repository
 import com.capstone.feminacare.di.Injection
-import com.capstone.feminacare.ui.bloodcheckup.BloodCheckupViewModel
+import com.capstone.feminacare.ui.chatbot.ChatBotViewModel
 import com.capstone.feminacare.ui.main.MainViewModel
 
 class ViewModelFactory(
@@ -16,8 +16,8 @@ class ViewModelFactory(
             modelClass.isAssignableFrom(MainViewModel::class.java) -> {
                 MainViewModel(repository) as T
             }
-            modelClass.isAssignableFrom(BloodCheckupViewModel::class.java) -> {
-                MainViewModel(repository) as T
+            modelClass.isAssignableFrom(ChatBotViewModel::class.java) -> {
+                ChatBotViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown View Model : ${modelClass.name}")
