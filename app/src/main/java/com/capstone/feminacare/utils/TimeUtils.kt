@@ -2,6 +2,7 @@ package com.capstone.feminacare.utils
 
 import java.text.SimpleDateFormat
 import java.util.Calendar
+import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
 import kotlin.math.abs
@@ -53,5 +54,14 @@ object TimeUtils {
             e.printStackTrace()
             return "Invalid date"
         }
+    }
+
+    fun timeMillisToCalendar(millis: Long) : Calendar {
+        val date = Date(millis)
+
+        val calendar = Calendar.getInstance()
+        calendar.time = date
+
+        return calendar
     }
 }

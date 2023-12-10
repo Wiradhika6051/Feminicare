@@ -31,18 +31,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/textView6"
-            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="@+id/tv_chkpYear"
+            app:layout_constraintStart_toStartOf="@+id/tv_chkpYear"
             app:layout_constraintTop_toBottomOf="@+id/tv_chkpDay"
-            tools:text="Dec" />
+            tools:text="Dec"
+            android:textColor="?attr/colorPrimary"
+            />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/tv_chkpYear"
             style="@style/TextAppearance.Material3.HeadlineSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="?attr/colorPrimary"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_chkpMonth"
             tools:text="2023" />
@@ -99,36 +102,36 @@
 
         <TextView
             android:textAppearance="?attr/textAppearanceTitleSmall"
-            android:id="@+id/textView10"
+            android:id="@+id/showDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="@string/description"
+            android:text="Show Full Description"
+            android:textColor="?attr/colorPrimary"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/guideline9"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            android:clickable="true"
+            />
 
 
-        <ScrollView
+        <TextView
+            android:id="@+id/tv_chkpDescription"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView10"
-            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/edt_text_shadow"
             android:padding="4dp"
-            >
-            <TextView
-                android:id="@+id/tv_chkpDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ipsum"
-                android:textAppearance="?attr/textAppearanceBodySmall"
-             />
+            android:text="@string/ipsum"
+            tools:text="@string/blackBlood"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/showDesc"
+            app:layout_constraintTop_toBottomOf="@+id/showDesc" />
 
-        </ScrollView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

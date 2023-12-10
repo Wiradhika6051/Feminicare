@@ -58,13 +58,14 @@ class HomeFragment : Fragment(), OnArticleClickListener {
 
     private fun getArticles() {
         viewModel.getArticles().observe(viewLifecycleOwner) { result ->
-            when(result) {
+            when (result) {
                 is Result.Loading -> {}
                 is Result.Error -> {
                     println(result.error)
                 }
+
                 is Result.Success -> {
-                    Log.d("Articles" , result.data.news.toString())
+                    Log.d("Articles", result.data.news.toString())
                     articleAdapter.submitList(result.data.news.subList(0, 3))
                 }
             }
@@ -72,6 +73,7 @@ class HomeFragment : Fragment(), OnArticleClickListener {
     }
 
     override fun onItemClick(article: NewsItem) {
+
         val intent = Intent(context, ArticleActivity::class.java)
         intent.putExtra(ARTICLE_DATA, article)
         println(article)
@@ -86,8 +88,6 @@ class HomeFragment : Fragment(), OnArticleClickListener {
     companion object {
         const val ARTICLE_DATA = "article_data"
     }
-
-
 
 
 }

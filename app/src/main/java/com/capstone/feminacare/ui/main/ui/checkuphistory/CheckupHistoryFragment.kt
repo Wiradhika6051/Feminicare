@@ -31,9 +31,12 @@ class CheckupHistoryFragment : Fragment() {
         val root: View = binding.root
 
         recycler = binding.rvCheckupHistory
-        recycler.apply {
-            layoutManager = LinearLayoutManager(requireContext())
+        recycler.layoutManager = LinearLayoutManager(requireContext())
+        val adapter = CheckupHistoryAdapter()
+        recycler.adapter = adapter
 
+        viewModel.checkupHistory.observe(viewLifecycleOwner) {
+            adapter.submitList(it)
         }
 
         return root

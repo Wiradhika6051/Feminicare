@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.capstone.feminacare.data.CheckupRepository
 import com.capstone.feminacare.di.Injection
 import com.capstone.feminacare.ui.bloodcheckup.BloodCheckupViewModel
+import com.capstone.feminacare.ui.main.ui.checkuphistory.CheckupHistoryViewModel
 
 class CheckupViewModelFactory(private val repository: CheckupRepository) :
     ViewModelProvider.NewInstanceFactory() {
@@ -15,6 +16,10 @@ class CheckupViewModelFactory(private val repository: CheckupRepository) :
         return when {
             modelClass.isAssignableFrom(BloodCheckupViewModel::class.java) -> {
                 BloodCheckupViewModel(repository) as T
+            }
+
+            modelClass.isAssignableFrom(CheckupHistoryViewModel::class.java) -> {
+                CheckupHistoryViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown View Model : ${modelClass.name}")

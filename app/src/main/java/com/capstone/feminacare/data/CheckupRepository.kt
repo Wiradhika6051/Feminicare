@@ -14,7 +14,7 @@ import retrofit2.HttpException
 
 class CheckupRepository(
     private val apiService: ApiService = ApiConfig.getApiConfig(),
-    private val checkupDao: BloodCheckupDao
+    private val checkupDao: BloodCheckupDao,
 ) {
 
     private val healthInfo = listOf(
@@ -22,18 +22,31 @@ class CheckupRepository(
         "UnHealthy"
     )
 
+
     fun postMenstrualBlood(
-        photo: MultipartBody.Part
+        photo: MultipartBody.Part,
     ): LiveData<Result<BloodAnalysisResponse>> = liveData {
         emit(Result.Loading)
         try {
             val success = apiService.postMenstrualBlood(photo)
-            val checkup = BloodCheckup(
-                timeStamp = System.currentTimeMillis(),
-                healthInfo = healthInfo.random(),
-                description = success.message
-            )
-            checkupDao.insertCheckup(checkup)
+//            val colorIndex = ColorIndex.fromInt(success.data.colorIndex) as ColorIndex
+//            val bloodIndex = BloodIndex(colorIndex, null)
+//            val desc = bloodIndex.getDescription()
+//
+//            val healthInfo = if(bloodIndex.isHealthy == true) {
+//                "Healty"
+//            } else {
+//                "Unhealthy"
+//            }
+//
+//            println(bloodIndex)
+
+//            val checkup = BloodCheckup(
+//                timeStamp = System.currentTimeMillis(),
+//                healthInfo = healthInfo,
+//                description =
+//            )
+//            checkupDao.insertCheckup(checkup)
             emit(Result.Success(success))
         } catch (e: HttpException) {
             val errResponse = e.response()?.errorBody()?.string()
@@ -43,7 +56,18 @@ class CheckupRepository(
         }
     }
 
-    fun getCheckupHistory(): List<BloodCheckup> = checkupDao.getCheckupHistory()
+//    fun getCheckupHistory(): Flow<PagingData<BloodCheckup>> {
+//        val items = Pager(
+//            config = PagingConfig(pageSize = 10, enablePlaceholders = false, initialLoadSize = 10)
+//        ) {
+//            BloodCheckupPagingSource(checkupDao)
+//        }.flow
+//        return items
+//    }
+
+    fun getCheckup(): LiveData<List<BloodCheckup>> {
+        return checkupDao.getLiveCheckupHistory()
+    }
 
     suspend fun insertBloodCheckup(checkup: BloodCheckup) {
         checkupDao.insertCheckup(checkup)
@@ -56,7 +80,7 @@ class CheckupRepository(
         fun getInstance(context: Context): CheckupRepository {
             return instance ?: synchronized(this) {
                 instance ?: CheckupRepository(
-                    checkupDao = CheckupDatabase.getInstance(context).checkupDao()
+                    checkupDao = CheckupDatabase.getInstance(context).checkupDao(),
                 ).also {
                     instance = it
                 }

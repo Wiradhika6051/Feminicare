@@ -31,4 +31,46 @@
     <string name="healthy_check">Healthy ✅️</string>
     <string name="not_healthy_check">Unhealthy ⚠️</string>
     <string name="description">Description : </string>
+
+
+    <string name="blackBlood">Hitam\nDarah hitam dapat muncul pada awal atau akhir menstruasi seseorang. Warna tersebut biasanya merupakan tanda darah lama atau darah yang telah lebih lama meninggalkan rahim dan memiliki waktu untuk teroksidasi, pertama berubah menjadi coklat atau merah tua dan akhirnya menjadi hitam.\nDarah hitam terkadang juga dapat mengindikasikan adanya penyumbatan di dalam vagina seseorang. Gejala lain dari penyumbatan vagina dapat meliputi:\n
+        a.keputihan yang berbau busuk\n
+        b.Demam\n
+        c.kesulitan buang air kecil\n
+        d.gatal atau bengkak di dalam atau di sekitar vagina\n
+    </string>
+    <string name="greyBlood">
+        Abu-abu\n
+Darah berwarna abu-abu biasanya merupakan tanda vaginosis bakterialis, suatu kondisi yang terjadi akibat ketidakseimbangan antara bakteri yang menguntungkan dan merugikan di dalam vagina.\n
+
+Gejala lain dari vaginosis bakterialis yaitu rasa gatal di dalam dan di sekitar vagina, bau vagina yang berbau busuk dan amis, buang air kecil yang terasa panas atau nyeri. Jika anda mengalami gejala diatas, segera periksakan diri ke dokter atau ginekolog. Dokter biasanya meresepkan antibiotik untuk mengobati vaginosis bakterialis.
+    </string>
+    <string name="brownBlood">
+        Coklat\n
+                Darah coklat atau merah tua adalah tanda darah tua dan dapat muncul pada awal atau akhir periode. Darah berwarna coklat atau merah tua tidak memiliki waktu yang lama untuk teroksidasi seperti darah hitam dan dapat muncul dalam berbagai warna.\n
+
+                Jika anda sedang hamil Darah atau bercak coklat terkadang juga dapat menjadi tanda awal perdarahan implantasi. Keluarnya cairan berwarna coklat atau bercak selama kehamilan dapat mengindikasikan keguguran atau kehamilan ektopik, yaitu sel telur yang telah dibuahi berimplantasi di tuba falopi, bukan di rahim. Penting bagi wanita yang mengalami flek atau perdarahan vagina selama kehamilan untuk berbicara dengan dokter atau dokter kandungan mereka.\n
+                
+                Jika anda sedang berada dalam fase baru melahirkan, anda tidak perlu khawatir. Kondisi ini disebut Lokia. Lokia merupakan cara tubuh untuk mengeluarkan kelebihan darah dan jaringan dari rahim. Durasi lokia bervariasi pada setiap orang, tetapi biasanya akan hilang dalam beberapa bulan pertama setelah melahirkan. Wanita yang mengalami perdarahan yang sangat banyak setelah melahirkan harus memeriksakan diri ke dokter.\n
+    </string>
+    <string name="redBlood">
+        Darah merah terang menandakan darah segar dan aliran yang stabil. Suatu periode dapat dimulai dengan perdarahan merah terang dan menjadi gelap menjelang akhir periode. Beberapa orang mungkin mendapati bahwa darah mereka tetap berwarna merah terang selama menstruasi.\n
+    </string>
+    <string name="orangeBlood">
+        Oranye\n
+                Darah yang bercampur dengan cairan serviks juga dapat terlihat berwarna oranye. Darah atau cairan berwarna oranye dapat mengindikasikan adanya infeksi, seperti vaginosis bakterialis atau trikomoniasis. Jika darah menstruasi anda berwarna oranye, anda harus memeriksa gejala-gejala lain, seperti gatal-gatal pada vagina, rasa tidak nyaman, dan keputihan yang berbau busuk.\n
+
+                Meskipun darah atau cairan menstruasi berwarna oranye tidak selalu mengindikasikan adanya infeksi, ada baiknya anda memeriksakan diri ke dokter atau dokter kandungan untuk evaluasi.\n
+
+    </string>
+    <string name="pinkBlood">
+        Merah muda\n
+                Darah merah muda atau bercak dapat terjadi ketika darah menstruasi bercampur dengan cairan serviks. Jika ada menggunakan kontrasepsi hormonal dapat menurunkan kadar estrogen dalam tubuh, yang dapat menyebabkan aliran yang lebih ringan dengan warna merah muda selama menstruasi.\n
+
+                Penyebab lain dari darah menstruasi berwarna merah muda yaitu penurunan berat badan yang signifikan, pola makan yang tidak sehat, dan Anemia\n
+
+                Jika anda sedang hamil, keluarnya cairan berwarna merah muda yang mengandung jaringan dan terjadi bersamaan dengan kram dapat mengindikasikan keguguran. Penting bagi wanita yang mengalami perdarahan vagina saat hamil untuk memeriksakan diri ke dokter atau dokter kandungan.\n
+
+
+    </string>
 </resources>
