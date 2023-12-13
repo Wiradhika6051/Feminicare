@@ -27,4 +27,9 @@
     <string name="ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
     <string name="chatbot">ChatBot</string>
     <string name="latest_articles">Latest Articles</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 </resources>
