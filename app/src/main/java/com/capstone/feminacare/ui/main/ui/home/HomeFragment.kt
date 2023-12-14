@@ -2,7 +2,6 @@ package com.capstone.feminacare.ui.main.ui.home
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +10,8 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.feminacare.R
-import com.capstone.feminacare.data.Result
-import com.capstone.feminacare.data.remote.response.NewsItem
+import com.capstone.feminacare.data.remote.response.ArticleDummy
+import com.capstone.feminacare.data.remote.response.Dummy
 import com.capstone.feminacare.databinding.FragmentHomeBinding
 import com.capstone.feminacare.ui.article.ArticleActivity
 import com.capstone.feminacare.ui.main.MainViewModelFactory
@@ -57,22 +56,23 @@ class HomeFragment : Fragment(), OnArticleClickListener {
     }
 
     private fun getArticles() {
-        viewModel.getArticles().observe(viewLifecycleOwner) { result ->
-            when (result) {
-                is Result.Loading -> {}
-                is Result.Error -> {
-                    println(result.error)
-                }
-
-                is Result.Success -> {
-                    Log.d("Articles", result.data.news.toString())
-                    articleAdapter.submitList(result.data.news.subList(0, 3))
-                }
-            }
-        }
+        articleAdapter.submitList(Dummy.articles)
+//        viewModel.getArticles().observe(viewLifecycleOwner) { result ->
+//            when (result) {
+//                is Result.Loading -> {}
+//                is Result.Error -> {
+//                    println(result.error)
+//                }
+//
+//                is Result.Success -> {
+//                    Log.d("Articles", result.data.news.toString())
+//                    articleAdapter.submitList(Dummy.articles)
+//                }
+//            }
+//        }
     }
 
-    override fun onItemClick(article: NewsItem) {
+    override fun onItemClick(article: ArticleDummy) {
 
         val intent = Intent(context, ArticleActivity::class.java)
         intent.putExtra(ARTICLE_DATA, article)

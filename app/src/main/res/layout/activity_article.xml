@@ -22,6 +22,9 @@
             app:titleCollapseMode="scale"
             app:titleEnabled="true"
             app:title="Article"
+            app:expandedTitleTextColor="?attr/colorSurface"
+            app:expandedTitleTextAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+            app:collapsedTitleTextColor="?attr/colorPrimary"
             >
 
             <ImageView
@@ -55,7 +58,8 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
-               >
+               app:titleTextColor="?attr/colorPrimary"
+                >
 
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
