@@ -154,6 +154,69 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/firstnameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/first_name"
+        android:textColor="@color/custom_pink"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstnameEditTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstnameTextView"
+        app:startIconDrawable="@drawable/baseline_account_box_24"
+        tools:alpha="100">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/firstnameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/lastnameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/last_name"
+        android:textColor="@color/custom_pink"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstnameEditTextLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lastnameEditTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastnameTextView"
+        app:startIconDrawable="@drawable/baseline_account_box_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lastnameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
         android:id="@+id/loginRouteDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -184,7 +247,7 @@
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:alpha="0"
         android:backgroundTint="@color/custom_pink"
@@ -192,7 +255,7 @@
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout"
+        app:layout_constraintTop_toBottomOf="@+id/lastnameEditTextLayout"
         tools:alpha="100" />
 
     <androidx.constraintlayout.widget.Guideline

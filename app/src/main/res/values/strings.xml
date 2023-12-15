@@ -32,6 +32,8 @@
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="first_name">Nama Depan</string>
+    <string name="last_name">Nama Belakang</string>
     <string name="title_login_page">Masuk Akun</string>
     <string name="message_login_page">Isi data di bawah ini untuk masuk ke akun anda</string>
     <string name="registerroute">Belum punya akun?</string>
