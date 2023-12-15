@@ -27,9 +27,18 @@
     <string name="ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
     <string name="chatbot">ChatBot</string>
     <string name="latest_articles">Latest Articles</string>
-    <string name="register">Register</string>
-    <string name="login">Login</string>
+    <string name="register">Daftar</string>
+    <string name="login">Masuk</string>
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="title_login_page">Masuk Akun</string>
+    <string name="message_login_page">Isi data di bawah ini untuk masuk ke akun anda</string>
+    <string name="registerroute">Belum punya akun?</string>
+    <string name="register_here">Daftar Disini</string>
+    <string name="title_register_page">Daftar Akun</string>
+    <string name="message_register_page">Isi data di bawah ini untuk daftar akun</string>
+    <string name="loginroute">Sudah punya akun?</string>
+    <string name="login_here">Masuk Disini</string>
+
 </resources>
