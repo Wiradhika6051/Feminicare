@@ -11,7 +11,7 @@ data class LoginResponse(
 	val message: String? = null
 )
 
-data class Data(
+data class loginData(
 
 	@field:SerializedName("userId")
 	val userId: String? = null

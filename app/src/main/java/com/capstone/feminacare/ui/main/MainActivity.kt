@@ -11,6 +11,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.capstone.feminacare.R
 import com.capstone.feminacare.databinding.ActivityMainBinding
 import com.capstone.feminacare.ui.ViewModelFactory
+import com.capstone.feminacare.ui.auth.register.RegisterActivity
 import com.capstone.feminacare.ui.bloodcheckup.BloodCheckupResultActivity
 import com.capstone.feminacare.ui.chatbot.ChatBotActivity
 import com.capstone.feminacare.utils.CAPTURED_IMAGE_URI
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val viewModel by viewModels<MainViewModel>{
-        ViewModelFactory.getInstance()
+        ViewModelFactory.getInstance(this)
     }
     private var captureImage: Uri? = null
 
@@ -45,6 +46,14 @@ class MainActivity : AppCompatActivity() {
         binding.fabChatbot.setOnClickListener {
             startActivity(Intent(this@MainActivity, ChatBotActivity::class.java))
         }
+
+        viewModel.getSession().observe(this) { user ->
+            if (!user.isLogin) {
+                startActivity(Intent(this, RegisterActivity::class.java))
+                finish()
+            }
+        }
+
     }
 
     private fun startCamera() {

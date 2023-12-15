@@ -1,5 +1,6 @@
 package com.capstone.feminacare.ui.main
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.feminacare.data.Repository
@@ -25,10 +26,10 @@ class MainViewModelFactory (
         private var instance: MainViewModelFactory? = null
 
         @JvmStatic
-        fun getInstance(): MainViewModelFactory {
+        fun getInstance(context: Context): MainViewModelFactory {
             return instance ?: synchronized(this) {
                 instance ?: MainViewModelFactory(
-                    Injection.provideRepository(),
+                    Injection.provideRepository(context),
                 )
             }
         }

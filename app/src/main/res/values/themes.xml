@@ -32,4 +32,5 @@
 
     <style name="BottomAppBar.Feminacare" parent="Theme.MaterialComponents.Light"/>
     <style name="Theme.Feminacare" parent="Base.Theme.Feminacare" />
+<!--    <style name="Theme.AppCompat.SplashScreen" parent="Theme.SplashScreen"></style>-->
 </resources>

@@ -26,7 +26,7 @@ class HomeFragment : Fragment(), OnArticleClickListener {
     private val binding get() = _binding!!
 
     private val viewModel by viewModels<HomeViewModel> {
-        MainViewModelFactory.getInstance()
+        MainViewModelFactory.getInstance(requireContext())
     }
 
     private val articleAdapter: ArticleAdapter by lazy {

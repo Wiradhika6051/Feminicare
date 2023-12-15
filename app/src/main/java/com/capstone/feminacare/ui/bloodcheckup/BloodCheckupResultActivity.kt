@@ -24,7 +24,7 @@ import okhttp3.RequestBody.Companion.asRequestBody
 class BloodCheckupResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBloodCheckupResultBinding
     private val viewModel by viewModels<BloodCheckupViewModel> {
-        ViewModelFactory.getInstance()
+        ViewModelFactory.getInstance(this)
     }
     private var currentImage: Uri? = null
 

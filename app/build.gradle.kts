@@ -84,4 +84,11 @@ dependencies {
 
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$room_version")
+
+    //splash screen
+    implementation ("androidx.core:core-splashscreen:1.0.0")
+
+    //dots indicator
+    implementation("com.tbuonomo:dotsindicator:5.0")
+
 }

@@ -65,4 +65,9 @@
     <color name="md_theme_dark_scrim">#000000</color>
     <color name="custom_pink">#EC729C</color>
     <color name="custom_pink_60">#F4AEBA</color>
+    <color name="premier_color">#8B7FF5</color>
+    <color name="s_purple">#F4F4FF</color>
+    <color name="s_yellow">#FFE3AD</color>
+    <color name="s_green">#AFE9E5</color>
+    <color name="s_pink">#F5D2DF</color>
 </resources>

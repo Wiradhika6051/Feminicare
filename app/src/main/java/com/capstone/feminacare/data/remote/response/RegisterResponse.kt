@@ -11,7 +11,7 @@ data class RegisterResponse(
 	val message: String? = null
 )
 
-data class Data(
+data class registerData(
 
 	@field:SerializedName("userId")
 	val userId: String? = null

@@ -19,7 +19,7 @@ class ChatBotActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChatBotBinding
     private lateinit var adapter: ChatBotMessageAdapter
     private val viewModel by viewModels<ChatBotViewModel> {
-        ViewModelFactory.getInstance()
+        ViewModelFactory.getInstance(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
