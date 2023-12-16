@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.feminacare.data.Repository
 import com.capstone.feminacare.di.Injection
+import com.capstone.feminacare.ui.auth.login.LoginViewModel
 //import com.capstone.feminacare.ui.auth.login.LoginViewModel
 import com.capstone.feminacare.ui.auth.register.RegisterViewModel
 import com.capstone.feminacare.ui.bloodcheckup.BloodCheckupViewModel
@@ -20,9 +21,9 @@ class ViewModelFactory(
             modelClass.isAssignableFrom(RegisterViewModel::class.java) -> {
                 RegisterViewModel(repository) as T
             }
-//            modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
-//                LoginViewModel(repository) as T
-//            }
+            modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
+                LoginViewModel(repository) as T
+            }
             modelClass.isAssignableFrom(MainViewModel::class.java) -> {
                 MainViewModel(repository) as T
             }

@@ -5,14 +5,18 @@ import com.google.gson.annotations.SerializedName
 data class LoginResponse(
 
 	@field:SerializedName("data")
-	val data: Data? = null,
+	val loginData: LoginData? = null,
 
 	@field:SerializedName("message")
 	val message: String? = null
 )
 
-data class loginData(
+data class LoginData(
 
 	@field:SerializedName("userId")
-	val userId: String? = null
+
+	val userId: String? = null,
+
+	@field:SerializedName("token")
+	val token: String? = null
 )

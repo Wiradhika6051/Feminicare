@@ -11,6 +11,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.capstone.feminacare.R
 import com.capstone.feminacare.databinding.ActivityMainBinding
 import com.capstone.feminacare.ui.ViewModelFactory
+import com.capstone.feminacare.ui.auth.login.LoginActivity
 import com.capstone.feminacare.ui.auth.register.RegisterActivity
 import com.capstone.feminacare.ui.bloodcheckup.BloodCheckupResultActivity
 import com.capstone.feminacare.ui.chatbot.ChatBotActivity
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.getSession().observe(this) { user ->
             if (!user.isLogin) {
-                startActivity(Intent(this, RegisterActivity::class.java))
+                startActivity(Intent(this, LoginActivity::class.java))
                 finish()
             }
         }

@@ -9,28 +9,33 @@ import com.capstone.feminacare.data.pref.UserPreference
 import com.capstone.feminacare.data.remote.response.ArticleResponse
 import com.capstone.feminacare.data.remote.response.BloodAnalysisResponse
 import com.capstone.feminacare.data.remote.response.BotMessage
+import com.capstone.feminacare.data.remote.response.LoginResponse
 import com.capstone.feminacare.data.remote.response.Message
 import com.capstone.feminacare.data.remote.response.RegisterResponse
 import com.capstone.feminacare.data.remote.response.UserMessage
 import com.capstone.feminacare.data.remote.retrofit.ApiConfig
 import com.capstone.feminacare.data.remote.retrofit.ApiService
+import com.google.gson.Gson
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import okhttp3.MultipartBody
 import retrofit2.HttpException
+import java.net.SocketTimeoutException
 
 class Repository(private val userPreference: UserPreference, private val apiService: ApiService = ApiConfig.getApiConfig()) {
-    suspend fun loginAccount(username: String, password: String) = liveData{
+    fun login(username: String, password: String) = liveData {
         emit(Result.Loading)
         try {
-            val response = apiService.login(username, password)
-            emit(Result.Success(response))
-        }catch (e:Exception){
-            emit(Result.Error(e.message.toString()))
+            val successResponse = apiService.login(username, password)
+            emit(Result.Success(successResponse))
+        } catch (e: HttpException) {
+            val errorBody = e.response()?.errorBody()?.string()
+            val errorResponse = Gson().fromJson(errorBody, LoginResponse::class.java)
+            emit(Result.Error(errorResponse.message ?: "Unknown error"))
+        } catch (e: SocketTimeoutException) {
+            emit(Result.Error("Request timeout. Please check your internet connection."))
         }
-        // Implementasi logika login di sini, gantilah dengan logika sesuai kebutuhan Anda
-
     }
 
     suspend fun register(username: String, email: String, password: String, first_name: String, last_name: String): RegisterResponse {
