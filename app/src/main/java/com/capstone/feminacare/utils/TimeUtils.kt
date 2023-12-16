@@ -12,9 +12,9 @@ object TimeUtils {
         val hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
 
         return when(hour) {
-            in 0..11 -> "Morning"
-            in 12..17 -> "Afternoon"
-            in 18..23 -> "Night"
+            in 0..11 -> "Pagi"
+            in 12..17 -> "Siang"
+            in 18..23 -> "Malam"
             else -> "Unknown"
         }
     }

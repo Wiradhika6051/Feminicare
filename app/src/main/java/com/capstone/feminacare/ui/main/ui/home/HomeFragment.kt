@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.feminacare.R
@@ -48,6 +49,11 @@ class HomeFragment : Fragment(), OnArticleClickListener {
         viewModel.timeOfDay.observe(viewLifecycleOwner) {
             val greet = getString(R.string.greetings, it)
             binding.tvGreetingTime.text = greet
+        }
+
+        binding.cvCheckupHistory.setOnClickListener {
+            val navController = findNavController()
+            navController.navigate(R.id.action_navigation_home_to_navigation_checkup_history)
         }
 
         getArticles()
