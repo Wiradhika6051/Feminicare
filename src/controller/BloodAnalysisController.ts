@@ -11,10 +11,9 @@ class BloodAnalysisController extends BaseController {
 
   constructor() {
     super();
-    this.readBinaryFiles();
-    // this.loadModel(
-    //   "C:/Users/ACER/Documents/GitHub/Feminicare/model/model.json"
-    // );
+    this.readBinaryFiles().then(() => {
+      this.loadModel();
+    });
   }
 
   async readBinaryFiles() {
@@ -30,22 +29,24 @@ class BloodAnalysisController extends BaseController {
         fs.mkdirSync(dir, { recursive: true });
       }
 
-      files.forEach(async (file) => {
-        const fileName = path.basename(file.name);
+      await Promise.all(
+        files.map(async (file) => {
+          const fileName = path.basename(file.name);
 
-        // Download the file as a buffer
-        const [fileContent] = await file.download();
+          // Download the file as a buffer
+          const [fileContent] = await file.download();
 
-        fs.writeFile(path.join(dir, fileName), fileContent, (err) => {
-          if (err) {
-            console.error(`Error writing file ${fileName}:`, err);
-          } else {
-            console.log(`File ${fileName} saved locally.`);
-          }
-        });
-      });
+          fs.writeFile(path.join(dir, fileName), fileContent, (err) => {
+            if (err) {
+              logger.error(`Error writing file ${fileName}:`, err);
+            } else {
+              logger.info(`File ${fileName} saved locally.`);
+            }
+          });
+        })
+      );
     } catch (err) {
-      console.error("Error reading files:", err);
+      logger.error("Error reading files:", err);
     }
   }
 
@@ -53,7 +54,7 @@ class BloodAnalysisController extends BaseController {
     try {
       const modelPath = path.join(
         __dirname,
-        "model/klasifikasiWarna/model.json"
+        "../../models/klasifikasiWarna/model.json"
       );
       this.model = await tf.loadLayersModel(`file://${modelPath}`);
       logger.info("Model loaded");
