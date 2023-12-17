@@ -9,7 +9,7 @@ class MenstrualCycleRoutes extends BaseRoutes {
     this.routes.post(
       "/daily-entry/:id",
       // [JwtPathMiddleware],
-      MenstrualCycleController.addMenstrualCycle
+      MenstrualCycleController.addDailyEntry
     );
     this.routes.get(
       "/cycle-history/:id",
