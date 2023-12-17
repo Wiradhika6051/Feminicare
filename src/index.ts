@@ -6,6 +6,8 @@ import BloodAnalyzerRoutes from "./routes/BloodAnalysisRoutes";
 import ProfileRoutes from "./routes/ProfileRoutes";
 import { CONST } from "./utils/constant";
 import AuthenticationRoutes from "./routes/AuthenticationRoutes";
+import MenstrualCycleRoutes from "./routes/MenstrualCycleRoutes";
+
 //buat ngurus dotenv
 dotenv.config();
 const app: Application = express();
@@ -19,6 +21,8 @@ app.use(helmet({ crossOriginResourcePolicy: false }));
 app.use("/api/v1/profile", ProfileRoutes);
 app.use("/api/v1/blood-analysis", BloodAnalyzerRoutes);
 app.use("/api/v1/auth", AuthenticationRoutes);
+app.use("/api/v1/menstrual-cycle", MenstrualCycleRoutes);
+
 //default
 app.get("/", (req: Request, res: Response) => {
   res.send("Request success!");
