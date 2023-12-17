@@ -14,7 +14,7 @@ class MenstrualCycleRoutes extends BaseRoutes {
     this.routes.get(
       "/cycle-history/:id",
       // [JwtPathMiddleware],
-      MenstrualCycleController.getMenstrualCycleHistory
+      MenstrualCycleController.getAllDailyEntries
     );
   }
 }

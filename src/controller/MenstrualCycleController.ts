@@ -215,11 +215,11 @@ class MenstrualCycleController extends BaseController {
     }
   };
 
-  public async getMenstrualCycleHistory(
+  getAllDailyEntries = async (
     req: Request,
     res: Response,
     next: NextFunction
-  ) {
+  ) => {
     try {
       const { id } = req.params;
       const userRef = firestoreClient.collection("users").doc(id);
@@ -229,22 +229,40 @@ class MenstrualCycleController extends BaseController {
         return;
       }
 
-      const menstrualCycleRef = userRef.collection("menstrual-cycle");
-      const menstrualCycleSnapshot = await menstrualCycleRef.get();
-      const menstrualCycle: any[] = [];
-      menstrualCycleSnapshot.forEach((doc) => {
-        menstrualCycle.push({
-          id: doc.id,
-          date: doc.data().date.toDate(),
-          userId: doc.data().userId,
-        });
+      // get all cycles
+      const allMenstrualCycleRef = userRef.collection("cycles");
+      const allMenstrualCycleSnapshot = await allMenstrualCycleRef.get();
+      if (allMenstrualCycleSnapshot.empty) {
+        res.status(404).send({ message: "Cycle not found" });
+        return;
+      }
+
+      // get all daily entries
+      let allDailyEntries = [];
+      for (const cycle of allMenstrualCycleSnapshot.docs) {
+        const dailyEntriesRef = cycle.ref.collection("dailyEntries");
+        const dailyEntriesSnapshot = await dailyEntriesRef.get();
+        if (!dailyEntriesSnapshot.empty) {
+          for (const dailyEntry of dailyEntriesSnapshot.docs) {
+            allDailyEntries.push({
+              cycleId: cycle.id,
+              id: dailyEntry.id,
+              date: dailyEntry.data()["date"].toDate(),
+            });
+          }
+        }
+      }
+
+      res.json({
+        data: allDailyEntries,
+        message: "Get all daily entries success",
       });
-      return res.status(200).json(menstrualCycle);
+      return;
     } catch (error) {
       logger.error(error);
       return next(error);
     }
-  }
+  };
 }
 
 export default new MenstrualCycleController();
