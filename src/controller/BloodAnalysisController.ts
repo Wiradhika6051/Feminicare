@@ -12,7 +12,7 @@ class BloodAnalysisController extends BaseController {
     super();
     cpyBucketFiles(
       "feminacare-ml-models",
-      "model/",
+      "klasifikasiWarna/",
       "./models/klasifikasiWarna"
     ).then(() => {
       this.loadModel();
