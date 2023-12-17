@@ -2,52 +2,21 @@ import { Request, Response, NextFunction } from "express";
 import BaseController from "./BaseController";
 import logger from "../utils/logger";
 import * as tf from "@tensorflow/tfjs-node";
-import * as fs from "fs";
 import * as path from "path";
-import storageClient from "../utils/cloudStorageClient";
+import cpyBucketFiles from "../utils/bucketObjectHandler";
 
 class BloodAnalysisController extends BaseController {
   model: tf.LayersModel | undefined;
 
   constructor() {
     super();
-    this.readBinaryFiles().then(() => {
+    cpyBucketFiles(
+      "feminacare-ml-models",
+      "model/",
+      "./models/klasifikasiWarna"
+    ).then(() => {
       this.loadModel();
     });
-  }
-
-  async readBinaryFiles() {
-    try {
-      const bucketName = "feminacare-ml-models";
-      const [files] = await storageClient
-        .bucket(bucketName)
-        .getFiles({ prefix: "model/" });
-
-      const dir = "./models/klasifikasiWarna";
-
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-
-      await Promise.all(
-        files.map(async (file) => {
-          const fileName = path.basename(file.name);
-
-          // Download the file as a buffer
-          const [fileContent] = await file.download();
-
-          fs.writeFile(path.join(dir, fileName), fileContent, (err) => {
-            if (err) {
-              logger.error(`Error writing file ${fileName}:`, err);
-            } else {
-              logger.info(`File ${fileName} saved locally.`);
-            }
-          });
-        })
-      );
-    } catch (err) {
-      logger.error("Error reading files:", err);
-    }
   }
 
   async loadModel() {
