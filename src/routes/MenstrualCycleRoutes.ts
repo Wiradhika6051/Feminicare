@@ -16,6 +16,11 @@ class MenstrualCycleRoutes extends BaseRoutes {
       // [JwtPathMiddleware],
       MenstrualCycleController.getAllDailyEntries
     );
+    this.routes.get(
+      "/cycle-prediction/:id",
+      // [JwtPathMiddleware],
+      MenstrualCycleController.getNextCyclePrediction
+    );
   }
 }
 

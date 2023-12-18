@@ -3,10 +3,51 @@ import BaseController from "./BaseController";
 import logger from "../utils/logger";
 import firestoreClient from "../utils/firestoreClient";
 import { Timestamp } from "@google-cloud/firestore";
+import * as tf from "@tensorflow/tfjs-node";
+import * as path from "path";
+import cpyBucketFiles from "../utils/bucketObjectHandler";
 
 class MenstrualCycleController extends BaseController {
+  modelMenstruasi: tf.LayersModel | undefined;
+  modelOvulasi: tf.LayersModel | undefined;
+
   constructor() {
     super();
+    (async () => {
+      await cpyBucketFiles(
+        "feminacare-ml-models",
+        "prediksiMenstruasi/",
+        "./models/prediksiMenstruasi"
+      );
+      await cpyBucketFiles(
+        "feminacare-ml-models",
+        "prediksiOvulasi/",
+        "./models/prediksiOvulasi"
+      );
+      await this.loadModel();
+    })();
+  }
+
+  async loadModel() {
+    try {
+      const modelMenstruasiPath = path.join(
+        __dirname,
+        "../../models/prediksiMenstruasi/model.json"
+      );
+      const modelOvulasiPath = path.join(
+        __dirname,
+        "../../models/prediksiOvulasi/model.json"
+      );
+      this.modelMenstruasi = await tf.loadLayersModel(
+        `file://${modelMenstruasiPath}`
+      );
+      this.modelOvulasi = await tf.loadLayersModel(
+        `file://${modelOvulasiPath}`
+      );
+      logger.info("Prediksi model loaded");
+    } catch (err: unknown) {
+      logger.error(err);
+    }
   }
 
   doesDateBelongToCycle = (date: Timestamp, cycle: any) => {
@@ -57,8 +98,8 @@ class MenstrualCycleController extends BaseController {
     }
   };
 
-  getLastCycle = async (user_id: string) => {
-    const userRef = firestoreClient.collection("users").doc(user_id);
+  getLastCycle = async (userId: string) => {
+    const userRef = firestoreClient.collection("users").doc(userId);
     const menstrualCycleRef = userRef.collection("cycles");
     const menstrualCycleSnapshot = await menstrualCycleRef
       .orderBy("end_date", "desc")
@@ -275,6 +316,228 @@ class MenstrualCycleController extends BaseController {
         message: "Get all daily entries success",
       });
       return;
+    } catch (error) {
+      logger.error(error);
+      return next(error);
+    }
+  };
+
+  getUserAge = async (userId: string) => {
+    const userRef = firestoreClient.collection("users").doc(userId);
+    const userDataRef = userRef.collection("user_data");
+    const userDataSnapshot = await userDataRef.get();
+    if (userDataSnapshot.empty) {
+      return null;
+    }
+    const userData = userDataSnapshot.docs[0].data();
+    const userAge = userData["age"];
+    return userAge;
+  };
+
+  countUserBMI = async (userId: string) => {
+    const userRef = firestoreClient.collection("users").doc(userId);
+    const userDataRef = userRef.collection("user_data");
+    const userDataSnapshot = await userDataRef.get();
+    if (userDataSnapshot.empty) {
+      return null;
+    }
+    const userData = userDataSnapshot.docs[0].data();
+    const userHeight = userData["height"];
+    const userWeight = userData["weight"];
+    const userBMI = userWeight / (userHeight * userHeight);
+    return userBMI;
+  };
+
+  getLastThreeCycleData = async (userId: string) => {
+    // works only for user who has at least 4 cycles in their db
+
+    // let's assume that the whole cycle length is counted from the last day of menstruation
+    // to the last day of the next menstruation
+    const userRef = firestoreClient.collection("users").doc(userId);
+    const menstrualCycleRef = userRef.collection("cycles");
+    const menstrualCycleSnapshot = await menstrualCycleRef
+      .orderBy("end_date", "desc")
+      .limit(4) // we take 4 cycles because we need the end date to calculate the cycle length
+      .get();
+    if (menstrualCycleSnapshot.empty) {
+      return null;
+    }
+    const menstrualCycle = menstrualCycleSnapshot.docs;
+    let cycleLengths = [];
+    let mensLengths = [];
+
+    // get cycle_length from last three cycles
+    for (let i = 0; i < 3; i++) {
+      const endDateDiff = Math.abs(
+        Math.round(
+          (menstrualCycle[i].data()["end_date"].toDate().getTime() -
+            menstrualCycle[i + 1].data()["end_date"].toDate().getTime()) /
+            86400000
+        )
+      );
+      cycleLengths.push(endDateDiff);
+      mensLengths.push(menstrualCycle[i].data()["cycle_length"]);
+    }
+    return { cycleLengths, mensLengths };
+  };
+
+  predictNextCycle = async (
+    id: string,
+    age: number,
+    bmi: number,
+    lastCycleEndDate?: Date
+  ) => {
+    const userAge = age;
+    const userBMI = bmi;
+    const lastThreeCycleData = await this.getLastThreeCycleData(id);
+
+    if (lastThreeCycleData) {
+      const newData = {
+        Age: [userAge],
+        BMI: [userBMI],
+        LengthofCycle1: [lastThreeCycleData["cycleLengths"][0]],
+        LengthofCycle2: [lastThreeCycleData["cycleLengths"][1]],
+        LengthofCycle3: [lastThreeCycleData["cycleLengths"][2]],
+        LengthOfMenses1: [lastThreeCycleData["mensLengths"][0]],
+        LengthOfMenses2: [lastThreeCycleData["mensLengths"][1]],
+        LengthOfMenses3: [lastThreeCycleData["mensLengths"][2]],
+      };
+      const newDataTensor = tf.tensor2d(
+        Object.values(newData).map((value) => Number(value)),
+        [1, Object.values(newData).length]
+      );
+      const prediction = this.modelMenstruasi?.predict(newDataTensor);
+      const nextCycleLength = Math.round(
+        (prediction as tf.Tensor).dataSync()[0]
+      );
+      const lastCycle = await this.getLastCycle(id);
+      const nextCycleNo = lastCycle ? lastCycle.cycle_no + 1 : 1;
+      const avgMensLength = Math.round(
+        (lastThreeCycleData["mensLengths"][0] +
+          lastThreeCycleData["mensLengths"][1] +
+          lastThreeCycleData["mensLengths"][2]) /
+          3
+      );
+
+      // next menstruation end date will be last cycle end date + next cycle length
+      const nextCycleEndDate = lastCycleEndDate
+        ? new Date(
+            lastCycleEndDate.getTime() + (nextCycleLength + 1) * 86400000
+          )
+        : new Date(new Date().getTime() + nextCycleLength * 86400000);
+      const nextCycleStartDate = new Date(
+        nextCycleEndDate.getTime() - (avgMensLength - 1) * 86400000
+      );
+
+      logger.info(`Next menstruation will start in ${nextCycleLength} days`);
+
+      return {
+        nextCycleLength,
+        nextCycleNo,
+        nextCycleStartDate,
+        nextCycleEndDate,
+        avgMensLength,
+      };
+    } else {
+      return null;
+    }
+  };
+
+  predictOvulationDate = async (
+    cycleLength: number,
+    mensLength: number,
+    age: number,
+    bmi: number,
+    lastCycleEndDate?: Date
+  ) => {
+    let newData = {
+      LengthofCycle: [cycleLength],
+      LengthofMenses: [mensLength],
+      Age: [age],
+      BMI: [bmi],
+    };
+    const newDataTensor = tf.tensor2d(
+      Object.values(newData).map((value) => Number(value)),
+      [1, Object.values(newData).length]
+    );
+    const prediction = this.modelOvulasi?.predict(newDataTensor);
+    const daysToNextOvulation = Math.round(
+      (prediction as tf.Tensor).dataSync()[0]
+    );
+    // daysToNextOvulation is counted from the first day of menstruation
+    // but since we count the start of the cycle from the last day of menstruation
+    // we need to subtract it with the length of menstruation
+    const nextOvulationDate = new Date(
+      lastCycleEndDate
+        ? lastCycleEndDate.getTime() +
+          (daysToNextOvulation - mensLength) * 86400000
+        : new Date().getTime() + (daysToNextOvulation - mensLength) * 86400000
+    );
+    logger.info(
+      `Next ovulation will start in ${daysToNextOvulation} days, on ${nextOvulationDate}`
+    );
+    return nextOvulationDate;
+  };
+
+  getNextCyclePrediction = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    try {
+      const { id } = req.params;
+      const userRef = firestoreClient.collection("users").doc(id);
+      const usersSnapshot = await userRef.get();
+      if (!usersSnapshot.exists) {
+        return res.status(404).send({ message: "User not found" });
+      }
+      const userAge = await this.getUserAge(id);
+      const userBMI = await this.countUserBMI(id);
+      const lastCycle = await this.getLastCycle(id);
+      const lastCycleEndDate = lastCycle
+        ? lastCycle.end_date.toDate()
+        : undefined;
+      const prediction = await this.predictNextCycle(
+        id,
+        userAge || 0,
+        userBMI || 0,
+        lastCycleEndDate
+      );
+      if (prediction) {
+        const {
+          nextCycleLength,
+          nextCycleNo,
+          nextCycleStartDate,
+          nextCycleEndDate,
+          avgMensLength,
+        } = prediction as {
+          nextCycleLength: number;
+          nextCycleNo: any;
+          nextCycleStartDate: Date;
+          nextCycleEndDate: Date;
+          avgMensLength: number;
+        };
+        const ovulationDate = await this.predictOvulationDate(
+          nextCycleLength,
+          avgMensLength,
+          userAge || 0,
+          userBMI || 0,
+          lastCycleEndDate
+        );
+        res.json({
+          cycleNo: nextCycleNo,
+          startDate: nextCycleStartDate,
+          endDate: nextCycleEndDate,
+          cycleLength: avgMensLength,
+          ovulationDate: ovulationDate,
+        });
+        return;
+      } else {
+        // Handle the case when predictNextCycle returns null
+        // Return an appropriate response or throw an error
+        res.status(404).json({ error: "Prediction not available" });
+        return;
+      }
     } catch (error) {
       logger.error(error);
       return next(error);
