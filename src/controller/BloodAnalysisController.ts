@@ -82,7 +82,7 @@ class BloodAnalysisController extends BaseController {
       const bloodColor = await this.analyze(image as Buffer);
       res.json({
         data: {
-          bloodColor,
+          colorIndex: bloodColor,
         },
         message: "Blood Analysis Finished Sucessfully",
       });
