@@ -44,6 +44,11 @@ class MainActivity : AppCompatActivity() {
             startCamera()
         }
 
+        binding.fab.setOnClickListener {
+            viewModel.logout()
+            finish()
+        }
+
         binding.fabChatbot.setOnClickListener {
             startActivity(Intent(this@MainActivity, ChatBotActivity::class.java))
         }

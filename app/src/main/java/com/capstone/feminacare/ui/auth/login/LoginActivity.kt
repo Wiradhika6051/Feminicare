@@ -14,6 +14,7 @@ import com.capstone.feminacare.data.Result
 import android.widget.Toast
 import com.capstone.feminacare.databinding.ActivityLoginBinding
 import com.capstone.feminacare.ui.ViewModelFactory
+import com.capstone.feminacare.ui.auth.register.RegisterActivity
 import com.capstone.feminacare.ui.main.MainActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -84,8 +85,11 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
+        binding.registerRoute.setOnClickListener {
+            val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
-
 
     private fun showLoading(isLoading: Boolean) {
         val progressBar = binding.progressBar

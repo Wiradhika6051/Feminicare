@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.auth.register.RegisterActivity">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:title="@string/register"
-        app:titleCentered="true"
-        app:titleTextColor="@color/custom_pink"
-        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/titleTextView"
@@ -21,8 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
+        android:gravity="center"
         android:text="@string/title_register_page"
-        android:textColor="@color/custom_pink"
+        android:textColor="@color/premier_color"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
+        android:gravity="center"
         android:text="@string/message_register_page"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -53,7 +47,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="32dp"
         android:text="Username"
-        android:textColor="@color/custom_pink"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/messageTextView" />
 
@@ -84,7 +78,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="100dp"
         android:text="@string/email"
-        android:textColor="@color/custom_pink"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/messageTextView" />
 
@@ -115,7 +109,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="@string/password"
-        android:textColor="@color/custom_pink"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
 
@@ -147,7 +141,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="@string/first_name"
-        android:textColor="@color/custom_pink"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
 
@@ -179,7 +173,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="@string/last_name"
-        android:textColor="@color/custom_pink"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstnameEditTextLayout" />
 
@@ -222,9 +216,9 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/login_here"
-        android:textStyle="bold"
+        android:textColor="@color/premier_color"
         android:textSize="16dp"
-        android:textColor="@color/custom_pink"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginRouteDesc" />
@@ -236,7 +230,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:backgroundTint="@color/custom_pink"
+        android:backgroundTint="@color/premier_color"
         android:text="@string/register"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -258,7 +252,7 @@
         android:layout_height="64dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_begin="73dp"
+        app:layout_constraintGuide_begin="56dp"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

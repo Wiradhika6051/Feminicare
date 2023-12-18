@@ -1,5 +1,6 @@
 package com.capstone.feminacare.ui.auth.register
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import com.capstone.feminacare.databinding.ActivityRegisterBinding
 import com.capstone.feminacare.ui.ViewModelFactory
+import com.capstone.feminacare.ui.auth.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
@@ -86,6 +88,11 @@ class RegisterActivity : AppCompatActivity() {
 
         binding.registerButton.setOnClickListener {
             register()
+        }
+
+        binding.LoginRoute.setOnClickListener {
+            val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+            startActivity(intent)
         }
     }
 }
