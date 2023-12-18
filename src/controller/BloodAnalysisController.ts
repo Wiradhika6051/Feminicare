@@ -26,7 +26,7 @@ class BloodAnalysisController extends BaseController {
         "../../models/klasifikasiWarna/model.json"
       );
       this.model = await tf.loadLayersModel(`file://${modelPath}`);
-      logger.info("Model loaded");
+      logger.info("Blood analysis model loaded");
     } catch (err: unknown) {
       logger.error(err);
     }
