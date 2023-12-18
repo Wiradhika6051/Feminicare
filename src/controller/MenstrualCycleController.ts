@@ -10,9 +10,9 @@ class MenstrualCycleController extends BaseController {
   }
 
   doesDateBelongToCycle = (date: Timestamp, cycle: any) => {
-    // if date has 1 to 2 days difference with either start-date or end-date of cycle, then date belongs to cycle
-    const startDate = cycle["start-date"].toDate();
-    const endDate = cycle["end-date"].toDate();
+    // if date has 1 to 2 days difference with either start_date or end_date of cycle, then date belongs to cycle
+    const startDate = cycle["start_date"].toDate();
+    const endDate = cycle["end_date"].toDate();
     const diffFromStartDate = Math.abs(
       Math.round((date.toDate().getTime() - startDate.getTime()) / 86400000)
     );
@@ -27,26 +27,41 @@ class MenstrualCycleController extends BaseController {
   updateStartWithMinDate = async (cycleRef: any, date: Timestamp) => {
     const cycleToUpdate = cycleRef.docs[0];
     const cycleToUpdateData = cycleToUpdate.data();
-    const cycleToUpdateStartDate = cycleToUpdateData["start-date"].toDate();
+    const cycleToUpdateStartDate = cycleToUpdateData["start_date"].toDate();
     if (date.toDate() < cycleToUpdateStartDate) {
-      await cycleToUpdate.ref.update({ "start-date": date });
+      await cycleToUpdate.ref.update({ start_date: date });
+      const cycleToUpdateEndDate = cycleToUpdateData["end_date"].toDate();
+      const cycleLength = Math.abs(
+        Math.round(
+          (cycleToUpdateEndDate.getTime() - date.toDate().getTime()) / 86400000
+        )
+      );
+      await cycleToUpdate.ref.update({ cycle_length: cycleLength + 1 });
     }
   };
 
   updateEndWithMaxDate = async (cycleRef: any, date: Timestamp) => {
     const cycleToUpdate = cycleRef.docs[0];
     const cycleToUpdateData = cycleToUpdate.data();
-    const cycleToUpdateEndDate = cycleToUpdateData["end-date"].toDate();
+    const cycleToUpdateEndDate = cycleToUpdateData["end_date"].toDate();
     if (date.toDate() > cycleToUpdateEndDate) {
-      await cycleToUpdate.ref.update({ "end-date": date });
+      await cycleToUpdate.ref.update({ end_date: date });
+      const cycleToUpdateStartDate = cycleToUpdateData["start_date"].toDate();
+      const cycleLength = Math.abs(
+        Math.round(
+          (date.toDate().getTime() - cycleToUpdateStartDate.getTime()) /
+            86400000
+        )
+      );
+      await cycleToUpdate.ref.update({ cycle_length: cycleLength + 1 });
     }
   };
 
-  getLastCycle = async (userId: string) => {
-    const userRef = firestoreClient.collection("users").doc(userId);
+  getLastCycle = async (user_id: string) => {
+    const userRef = firestoreClient.collection("users").doc(user_id);
     const menstrualCycleRef = userRef.collection("cycles");
     const menstrualCycleSnapshot = await menstrualCycleRef
-      .orderBy("end-date", "desc")
+      .orderBy("end_date", "desc")
       .limit(1)
       .get();
     if (menstrualCycleSnapshot.empty) {
@@ -71,7 +86,7 @@ class MenstrualCycleController extends BaseController {
 
       // get last cycle
       const lastCycle = await this.getLastCycle(id);
-      let cycleNo = lastCycle ? lastCycle.cycleNo : 1;
+      let cycleNo = lastCycle ? lastCycle.cycle_no : 1;
       let menstrualCycleRef;
 
       if (!lastCycle) {
@@ -79,28 +94,29 @@ class MenstrualCycleController extends BaseController {
         menstrualCycleRef = userRef.collection("cycles").doc();
         const menstrualCycle = {
           id: menstrualCycleRef.id,
-          cycleNo: cycleNo,
-          "start-date": date,
-          "end-date": date,
-          userId: id,
+          cycle_no: cycleNo,
+          start_date: date,
+          end_date: date,
+          cycle_length: 1,
+          user_id: id,
         };
         await menstrualCycleRef.set(menstrualCycle);
       } else {
         const allMenstrualCycleRef = userRef.collection("cycles");
 
-        // find two consecutive cycles A and B in which start-date(A) <= date <= start-date(B)
+        // find two consecutive cycles A and B in which start_date(A) <= date <= start_date(B)
 
         // find A
         const cycleARef = await allMenstrualCycleRef
-          .where("start-date", "<=", date)
-          .orderBy("start-date", "desc")
+          .where("start_date", "<=", date)
+          .orderBy("start_date", "desc")
           .limit(1)
           .get();
 
         // find B
         const cycleBRef = await allMenstrualCycleRef
-          .where("start-date", ">=", date)
-          .orderBy("start-date", "asc")
+          .where("start_date", ">=", date)
+          .orderBy("start_date", "asc")
           .limit(1)
           .get();
 
@@ -111,17 +127,17 @@ class MenstrualCycleController extends BaseController {
           // case 1
           console.log("case 1");
           if (!cycleBRef.empty) {
-            cycleNo = cycleBRef.docs[0].data().cycleNo;
+            cycleNo = cycleBRef.docs[0].data().cycle_no;
             if (this.doesDateBelongToCycle(date, cycleBRef.docs[0].data())) {
               await this.updateStartWithMinDate(cycleBRef, date);
               console.log("cycle B");
             } else {
-              // update all cycleNo after cycleB
+              // update all cycle_no after cycleB
               const cyclesToUpdate = await allMenstrualCycleRef
-                .where("cycleNo", ">=", cycleNo)
+                .where("cycle_no", ">=", cycleNo)
                 .get();
               for (const cycle of cyclesToUpdate.docs) {
-                await cycle.ref.update({ cycleNo: cycle.data().cycleNo + 1 });
+                await cycle.ref.update({ cycle_no: cycle.data().cycle_no + 1 });
               }
               console.log("cycle B - 1");
             }
@@ -130,11 +146,11 @@ class MenstrualCycleController extends BaseController {
           // case 2
           console.log("case 2");
           if (this.doesDateBelongToCycle(date, cycleARef.docs[0].data())) {
-            cycleNo = cycleARef.docs[0].data().cycleNo;
+            cycleNo = cycleARef.docs[0].data().cycle_no;
             await this.updateEndWithMaxDate(cycleARef, date);
             console.log("cycle A");
           } else {
-            cycleNo = cycleARef.docs[0].data().cycleNo + 1;
+            cycleNo = cycleARef.docs[0].data().cycle_no + 1;
             console.log("cycle A + 1");
           }
         } else {
@@ -143,41 +159,41 @@ class MenstrualCycleController extends BaseController {
           const cycleA = cycleARef.docs[0].data();
           const cycleB = cycleBRef.docs[0].data();
           if (this.doesDateBelongToCycle(date, cycleA)) {
-            cycleNo = cycleA.cycleNo;
+            cycleNo = cycleA.cycle_no;
             await this.updateEndWithMaxDate(cycleARef, date);
             console.log("cycle A");
           } else if (this.doesDateBelongToCycle(date, cycleB)) {
-            cycleNo = cycleB.cycleNo;
+            cycleNo = cycleB.cycle_no;
             await this.updateStartWithMinDate(cycleBRef, date);
             console.log("cycle B");
           } else {
-            cycleNo = cycleA.cycleNo + 1;
-            // update all cycleNo after cycleA
+            cycleNo = cycleA.cycle_no + 1;
+            // update all cycle_no after cycleA
             const cyclesToUpdate = await allMenstrualCycleRef
-              .where("cycleNo", ">", cycleA.cycleNo)
+              .where("cycle_no", ">", cycleA.cycle_no)
               .get();
             for (const cycle of cyclesToUpdate.docs) {
-              await cycle.ref.update({ cycleNo: cycle.data().cycleNo + 1 });
+              await cycle.ref.update({ cycle_no: cycle.data().cycle_no + 1 });
             }
             console.log("cycle A < cycle < cycle B");
           }
         }
       }
 
-      // check if cycleNo is already exist (date is cycle A or B)
+      // check if cycle_no is already exist (date is cycle A or B)
       const cycleRef = await userRef
         .collection("cycles")
-        .where("cycleNo", "==", cycleNo)
+        .where("cycle_no", "==", cycleNo)
         .get();
 
       if (!cycleRef.empty) {
-        // update cycle end-date with max date
+        // update cycle end_date with max date
         menstrualCycleRef = cycleRef.docs[0].ref;
         const cycleToUpdate = cycleRef.docs[0];
         const cycleToUpdateData = cycleToUpdate.data();
-        const cycleToUpdateEndDate = cycleToUpdateData["end-date"].toDate();
+        const cycleToUpdateEndDate = cycleToUpdateData["end_date"].toDate();
         if (date.toDate() > cycleToUpdateEndDate) {
-          await cycleToUpdate.ref.update({ "end-date": date });
+          await cycleToUpdate.ref.update({ end_date: date });
         }
       } else {
         // now we know that date is not cycle A or B
@@ -185,25 +201,26 @@ class MenstrualCycleController extends BaseController {
         menstrualCycleRef = userRef.collection("cycles").doc();
         const menstrualCycle = {
           id: menstrualCycleRef.id,
-          cycleNo: cycleNo,
-          "start-date": date,
-          "end-date": date,
-          userId: id,
+          cycle_no: cycleNo,
+          start_date: date,
+          end_date: date,
+          user_id: id,
+          cycle_length: 1,
         };
         await menstrualCycleRef.set(menstrualCycle);
       }
 
       // add daily entry
-      const dailyEntryRef = menstrualCycleRef.collection("dailyEntries").doc();
+      const dailyEntryRef = menstrualCycleRef.collection("daily_entries").doc();
       const dailyEntry = {
         id: dailyEntryRef.id,
         date: date,
-        userId: id,
+        user_id: id,
       };
       await dailyEntryRef.set(dailyEntry);
       res.json({
         data: {
-          cycleNo: cycleNo,
+          cycle_no: cycleNo,
           date: date.toDate(),
         },
         message: "Daily entry added successfully",
@@ -240,7 +257,7 @@ class MenstrualCycleController extends BaseController {
       // get all daily entries
       let allDailyEntries = [];
       for (const cycle of allMenstrualCycleSnapshot.docs) {
-        const dailyEntriesRef = cycle.ref.collection("dailyEntries");
+        const dailyEntriesRef = cycle.ref.collection("daily_entries");
         const dailyEntriesSnapshot = await dailyEntriesRef.get();
         if (!dailyEntriesSnapshot.empty) {
           for (const dailyEntry of dailyEntriesSnapshot.docs) {
