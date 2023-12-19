@@ -9,6 +9,8 @@ steps:
     - 'PROJECT_ID=${_PROJECT_ID}'
     - 'ENVIRONMENT=${_ENVIRONMENT}'
     - 'SECRET=${_SECRET}'
+    - 'BUCKET_CREDENTIALS=${_BUCKET_CREDENTIALS}'
+    - 'ML_BUCKET_NAME=${_ML_BUCKET_NAME}'
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
 timeout: "1600s"
