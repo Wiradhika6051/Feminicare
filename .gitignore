@@ -2,4 +2,5 @@ node_modules
 .env
 key.json
 models/*
+!models/.gitkeep
 bucketKey.json
