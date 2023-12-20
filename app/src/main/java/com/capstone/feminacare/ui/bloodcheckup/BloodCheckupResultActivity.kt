@@ -26,6 +26,7 @@ import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
+import java.util.Locale
 
 class BloodCheckupResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBloodCheckupResultBinding
@@ -84,11 +85,26 @@ class BloodCheckupResultActivity : AppCompatActivity() {
                             ColorIndex.fromInt(result.data.data.colorIndex) as ColorIndex
                         val bloodIndex = BloodIndex(colorIndex, null)
                         val descResource = getString(bloodIndex.getDescription()).trimIndent()
-                        val healthInfo = if (bloodIndex.isHealthy == true) {
-                            "Healthy"
-                        } else {
-                            "Unhealthy"
+//                        TODO: Health info Ubah ke Warna Darah
+                        val info = when(colorIndex.name) {
+                            ColorIndex.RED.name -> "Merah"
+                            ColorIndex.GREY.name -> "Abu Abu"
+                            ColorIndex.BROWN.name -> "Coklat"
+                            ColorIndex.ORANGE.name -> "Oren"
+                            ColorIndex.PINK.name -> "Merah Muda"
+                            ColorIndex.BLACK.name -> "Hitam"
+                            else -> "Tidak Diketahui"
                         }
+                        val healthInfo = info.lowercase().replaceFirstChar { char ->
+                            char.titlecase(
+                                Locale.getDefault()
+                            )
+                        }
+//                        val healthInfo = if (bloodIndex.isHealthy == true) {
+//                            "Healthy"
+//                        } else {
+//                            "Unhealthy"
+//                        }
 
                         val newCheckup = BloodCheckup(
                             timeStamp = System.currentTimeMillis(),

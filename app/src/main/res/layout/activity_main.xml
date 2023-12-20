@@ -21,6 +21,8 @@
         <com.google.android.material.bottomappbar.BottomAppBar
            style="@style/Widget.MaterialComponents.BottomAppBar"
             android:id="@+id/bottomAppBar"
+            app:elevation="0dp"
+            android:backgroundTint="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -68,19 +70,22 @@
 <!--        />-->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            app:maxImageSize="50dp"
-            app:fabCustomSize="60dp"
-            android:background="@drawable/fab"
-            android:backgroundTint="?attr/colorSecondaryContainer"
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fab"
+        android:backgroundTint="@color/custom_light_purple"
+        android:clickable="true"
+        android:foreground="@drawable/background_circle_period"
+        android:foregroundTint="#488A7FF4"
+        android:foregroundTintMode="src_in"
 
-            android:src="@drawable/baseline_photo_camera_whiite_24"
-            app:layout_anchor="@id/bottomAppBar"
-            app:borderWidth="4dp"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Fab"/>
+        android:src="@drawable/baseline_photo_camera_whiite_24"
+        android:tint="#CFB1B1"
+        app:fabCustomSize="60dp"
+        app:layout_anchor="@id/bottomAppBar"
+        app:maxImageSize="50dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Fab" />
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

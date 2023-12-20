@@ -1,6 +1,10 @@
 package com.capstone.feminacare.utils
 
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.time.temporal.ChronoUnit
+import java.time.temporal.TemporalAdjusters
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
@@ -12,9 +16,9 @@ object TimeUtils {
         val hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
 
         return when(hour) {
-            in 0..11 -> "Morning"
-            in 12..17 -> "Afternoon"
-            in 18..23 -> "Night"
+            in 0..11 -> "Pagi"
+            in 12..17 -> "Siang"
+            in 18..23 -> "Malam"
             else -> "Unknown"
         }
     }
@@ -24,6 +28,12 @@ object TimeUtils {
         val calendar = Calendar.getInstance()
         calendar.timeInMillis = millis
         return dateFormat.format(calendar.time)
+    }
+
+    fun convertDateToMillis(dateString: String): Long {
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        val date = dateFormat.parse(dateString)
+        return date?.time ?: 0
     }
 
     fun getTimeAgo(dateString: String): String {
@@ -63,5 +73,22 @@ object TimeUtils {
         calendar.time = date
 
         return calendar
+    }
+
+    fun getDaysBetween(startDate: LocalDate, endDate: LocalDate): Long {
+        return ChronoUnit.DAYS.between(startDate, endDate)
+    }
+
+    fun formatLocalDate(date: LocalDate): String {
+        val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy")
+        return date.format(formatter)
+    }
+
+    fun getMiddleDate(startDate: LocalDate, endDate: LocalDate): LocalDate {
+        val daysBetween = ChronoUnit.DAYS.between(startDate, endDate) + 1
+        val middleDate = startDate.plusDays(daysBetween / 2)
+
+        // Optional: Adjust to the first day of the month
+        return middleDate.with(TemporalAdjusters.firstDayOfMonth())
     }
 }

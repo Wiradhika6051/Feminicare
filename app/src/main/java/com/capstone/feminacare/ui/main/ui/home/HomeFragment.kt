@@ -12,12 +12,18 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.feminacare.R
-import com.capstone.feminacare.data.Result
-import com.capstone.feminacare.data.remote.response.NewsItem
+import com.capstone.feminacare.data.PredictionRepository
+import com.capstone.feminacare.data.remote.response.ArticleDummy
+import com.capstone.feminacare.data.remote.response.MenstrualCycleResponse
 import com.capstone.feminacare.databinding.FragmentHomeBinding
 import com.capstone.feminacare.ui.main.MainViewModelFactory
 import com.capstone.feminacare.ui.article.ArticleActivity
+import com.capstone.feminacare.ui.main.MainViewModel
 import com.capstone.feminacare.ui.main.MainViewModelFactory
+import com.capstone.feminacare.utils.DummyData
+import java.time.LocalDate
+import java.time.temporal.ChronoUnit
+import kotlin.math.absoluteValue
 
 class HomeFragment : Fragment(), ArticleAdapter.OnArticleClickListener {
 
@@ -29,6 +35,11 @@ class HomeFragment : Fragment(), ArticleAdapter.OnArticleClickListener {
 
     private val viewModel by viewModels<HomeViewModel> {
         MainViewModelFactory.getInstance(requireContext())
+    }
+
+    private val mainViewModel : MainViewModel by viewModels()
+    private val predictionRepository : PredictionRepository by lazy {
+        PredictionRepository(requireContext())
     }
 
     private val articleAdapter: ArticleAdapter by lazy {
@@ -53,28 +64,53 @@ class HomeFragment : Fragment(), ArticleAdapter.OnArticleClickListener {
             binding.tvGreetingTime.text = greet
         }
 
+        Log.d("Nearest Prediction", getNearestPrediction().toString())
+
+
+//        binding.cvCheckupHistory.setOnClickListener {
+//            val navController = findNavController()
+//            navController.navigate(R.id.action_navigation_home_to_navigation_checkup_history)
+//        }
+
         getArticles()
 
         return root
     }
 
-    private fun getArticles() {
-        viewModel.getArticles().observe(viewLifecycleOwner) { result ->
-            when (result) {
-                is Result.Loading -> {}
-                is Result.Error -> {
-                    println(result.error)
-                }
+    private fun getNearestPrediction() : MenstrualCycleResponse? {
+        val periodCycle = mainViewModel.getPrediction()
+        val currentDate = LocalDate.now()
+        val smallestDiff = Long.MAX_VALUE
+        var nearestCycle : MenstrualCycleResponse? = null
 
-                is Result.Success -> {
-                    Log.d("Articles", result.data.news.toString())
-                    articleAdapter.submitList(result.data.news.subList(0, 3))
-                }
+        for (cycle in periodCycle) {
+            val diff = ChronoUnit.DAYS.between(currentDate, cycle.startDate).absoluteValue
+
+            if (diff < smallestDiff) {
+                nearestCycle = cycle
             }
         }
+        return nearestCycle
     }
 
-    override fun onItemClick(article: NewsItem) {
+    private fun getArticles() {
+        articleAdapter.submitList(DummyData.articles)
+//        viewModel.getArticles().observe(viewLifecycleOwner) { result ->
+//            when (result) {
+//                is Result.Loading -> {}
+//                is Result.Error -> {
+//                    println(result.error)
+//                }
+//
+//                is Result.Success -> {
+//                    Log.d("Articles", result.data.news.toString())
+//                    articleAdapter.submitList(Dummy.articles)
+//                }
+//            }
+//        }
+    }
+
+    override fun onItemClick(article: ArticleDummy) {
 
         val intent = Intent(context, ArticleActivity::class.java)
         intent.putExtra(ARTICLE_DATA, article)

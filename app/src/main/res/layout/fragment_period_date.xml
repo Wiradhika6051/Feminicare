@@ -1,31 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.ui.perioddate.PeriodDateFragment">
-
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimaryInverse"
-        app:title="Calendar"
-        app:titleCentered="true"
-        app:titleTextColor="@color/white" />
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".ui.main.ui.perioddate.PeriodDateFragment"
+    android:paddingBottom="?attr/actionBarSize"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@id/materialToolbar">
+        >
 
-        <CalendarView
-            android:id="@+id/calendarView"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="14dp">
+
+                <ImageView
+                    android:id="@+id/toPreviousMonth"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/baseline_arrow_back_ios_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/colorOnBackground" />
+
+                <ImageView
+                    android:id="@+id/toNextMonth"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/baseline_arrow_forward_ios_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/colorOnBackground" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/toNextMonth"
+                    app:layout_constraintStart_toEndOf="@+id/toPreviousMonth"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:alpha="0.6"
+                        android:src="@drawable/baseline_date_range_24" />
+
+                    <TextView
+                        android:id="@+id/calendarMonthYearText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold"
+                        tools:text="December 2023" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+            <com.kizitonwose.calendar.view.CalendarView
+                android:id="@+id/period_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cv_dayViewResource="@layout/calendar_day"
+                app:cv_monthHeaderResource="@layout/calendar_header" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+               >
+
+                <TextView
+                    android:fontFamily="@font/nunito_bold"
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kalender_menstruasi"
+                    android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+                    android:textColor="?attr/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:fontFamily="@font/nunito_bold"
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/prediksi_jumlah_hari"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textView6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:fontFamily="@font/nunito"
+                    android:id="@+id/tv_totalMenstrualDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/totalMenstrualOrOvulationDay"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10"
+                    tools:text="5 hari dimulai dari tanggal 1 Desember 2023" />
+
+                <TextView
+                    android:fontFamily="@font/nunito_bold"
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/ovulation_range"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/tv_totalMenstrualDay"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_totalMenstrualDay" />
+
+                <TextView
+                    android:fontFamily="@font/nunito"
+                    android:id="@+id/tv_ovulationDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/totalMenstrualOrOvulationDay"
+                    app:layout_constraintStart_toStartOf="@+id/textView11"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11"
+                    tools:text="5 hari dimulai dari tanggal 1 Desember 2023" />
+
+                <TextView
+                    android:fontFamily="@font/nunito_bold"
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ovulation_suggest"
+                    android:textColor="@color/custom_pink"
+                    app:layout_constraintStart_toStartOf="@+id/tv_ovulationDate"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_ovulationDate" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/calendar_legend"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                    app:layout_constraintStart_toStartOf="@+id/textView12"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/shapeableImageView2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/dateperiod"
+                    app:layout_constraintStart_toStartOf="@+id/textView13"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13"
+                    app:shapeAppearance="@style/ShapeAppearanceOverlay.MyApp.Fab" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/prediksi_hari_menstruasi"
+                    app:layout_constraintBottom_toBottomOf="@+id/shapeableImageView2"
+                    app:layout_constraintStart_toEndOf="@+id/shapeableImageView2"
+                    app:layout_constraintTop_toTopOf="@+id/shapeableImageView2" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/shapeableImageView3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/md_theme_light_primary"
+                    app:layout_constraintStart_toStartOf="@+id/shapeableImageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/shapeableImageView2"
+                    app:shapeAppearance="@style/ShapeAppearanceOverlay.MyApp.Fab" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perdiksi Hari Ovulasi"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/shapeableImageView3"
+                    app:layout_constraintStart_toEndOf="@+id/shapeableImageView3"
+                    app:layout_constraintTop_toTopOf="@+id/shapeableImageView3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
 
     </LinearLayout>
-
-</RelativeLayout>
+</ScrollView>

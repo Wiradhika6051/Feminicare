@@ -1,6 +1,5 @@
 package com.capstone.feminacare.ui
 
-import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.feminacare.data.Repository
@@ -33,9 +32,6 @@ class ViewModelFactory(
             }
             modelClass.isAssignableFrom(ChatBotViewModel::class.java) -> {
                 ChatBotViewModel(repository) as T
-            }
-            modelClass.isAssignableFrom(NotificationsViewModel::class.java) -> {
-                NotificationsViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown View Model : ${modelClass.name}")

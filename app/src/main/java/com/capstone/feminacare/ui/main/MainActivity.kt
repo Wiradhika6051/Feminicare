@@ -9,6 +9,9 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.capstone.feminacare.R
@@ -49,25 +52,22 @@ class MainActivity : AppCompatActivity() {
             startCamera()
         }
 
-        binding.fab.setOnClickListener {
-            viewModel.logout()
-            finish()
-        }
-
         binding.fabChatbot.setOnClickListener {
             startActivity(Intent(this@MainActivity, ChatBotActivity::class.java))
         }
+    }
 
-        viewModel.getSession().observe(this) { user ->
-            if (!user.isLogin) {
-                startActivity(Intent(this, LoginActivity::class.java))
-                finish()
-            }
-        }
+    private fun configureScreen() {
 
+        val windowInsetsController =
+            WindowCompat.getInsetsController(window, window.decorView)
+        // Configure the behavior of the hidden system bars.
+        windowInsetsController.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
 
-        binding.fabChatbot.setOnClickListener {
-            startActivity(Intent(this@MainActivity, ChatBotActivity::class.java))
+        window.decorView.setOnApplyWindowInsetsListener { view, windowInsets ->
+            windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
+            view.onApplyWindowInsets(windowInsets)
         }
     }
 

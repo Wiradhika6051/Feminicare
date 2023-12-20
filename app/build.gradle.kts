@@ -90,4 +90,7 @@ dependencies {
 //    Paging 3
     implementation("androidx.paging:paging-runtime-ktx:3.2.1")
 
+//    Kizitonwose/Calendar lib
+    implementation("com.kizitonwose.calendar:view:2.4.1")
+
 }

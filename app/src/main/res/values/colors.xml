@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="seed">#C54C82</color>
-    <color name="md_theme_light_primary">#A53268</color>
+    <color name="md_theme_light_primary">#8B7FF5</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
     <color name="md_theme_light_primaryContainer">#FFD9E4</color>
     <color name="md_theme_light_onPrimaryContainer">#3E0021</color>
@@ -63,8 +63,14 @@
     <color name="md_theme_dark_surfaceTint">#FFB0CC</color>
     <color name="md_theme_dark_outlineVariant">#514347</color>
     <color name="md_theme_dark_scrim">#000000</color>
-    <color name="custom_pink">#EC729C</color>
-    <color name="custom_pink_60">#F4AEBA</color>
+    <color name="custom_pink">#FC91B6</color>
+    <color name="custom_pink_60">#F5D2DF</color>
+    <color name="custom_green">#AFE9E5</color>
+    <color name="custom_orange">#FFE2C7</color>
+    <color name="custom_yellow">#FFE299</color>
+    <color name="orange">#FF5722</color>
+    <color name="text_grey">#6E6E6E</color>
+    <color name="custom_light_purple">#F5F1FF</color>
     <color name="premier_color">#8B7FF5</color>
     <color name="s_purple">#F4F4FF</color>
     <color name="s_yellow">#FFE3AD</color>
