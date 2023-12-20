@@ -26,7 +26,7 @@
     <string name="generating">Generating…</string>
     <string name="ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
     <string name="chatbot">ChatBot</string>
-    <string name="latest_articles">Artikel Terbaru</string>
+    <string name="latest_articles">Artikel</string>
     <string name="blood_condition">Warna Darah : </string>
     <string name="healthy_check">Healthy ✅️</string>
     <string name="not_healthy_check">Unhealthy ⚠️</string>
@@ -71,4 +71,12 @@ Gejala lain dari vaginosis bakterialis yaitu rasa gatal di dalam dan di sekitar 
     </string>
     <string name="title_profile">Profil</string>
     <string name="calendar">Kalender</string>
+    <string name="kalender_menstruasi">Kalender Menstruasi</string>
+    <string name="prediksi_jumlah_hari">Prediksi jumlah hari menstruasi</string>
+    <string name="totalMenstrualOrOvulationDay">%d hari mulai dari tanggal %s</string>
+    <string name="ovulation_range">Masa Ovulasi</string>
+    <string name="ovulation_suggest">Ini adalah hari terbaik bagi kamu yang ingin merencanakan kehamilan</string>
+    <string name="calendar_legend">Keterangan Warna Pada Tanggal</string>
+    <string name="prediksi_hari_menstruasi">Prediksi Hari Menstruasi</string>
+    <string name="prediction">Prediction</string>
 </resources>

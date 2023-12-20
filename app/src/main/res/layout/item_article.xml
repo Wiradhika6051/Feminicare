@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
     android:clickable="true"
-    android:layout_height="wrap_content"
+    android:layout_height="200dp"
     android:layout_margin="8dp">
 
     <com.google.android.material.card.MaterialCardView
         style="?attr/materialCardViewElevatedStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="?attr/colorPrimaryInverse"
+        android:backgroundTint="@color/custom_light_purple"
 
         android:elevation="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,8 +30,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:alpha="0.6"
-                android:backgroundTint="?attr/colorOnBackground"
+                android:alpha="0.4"
+                android:backgroundTint="?attr/colorPrimary"
                 android:clickable="false"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toTopOf="@+id/tv_title"
@@ -41,11 +41,12 @@
 
             <TextView
                 android:id="@+id/tv_title"
+                android:fontFamily="@font/nunito_extrabold"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:textColor="?attr/colorOnPrimaryContainer"
-                android:textSize="24sp"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="20sp"
                 android:maxLines="2"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_article"
                 app:layout_constraintEnd_toStartOf="@+id/iv_article"
@@ -55,8 +56,8 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/iv_article"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

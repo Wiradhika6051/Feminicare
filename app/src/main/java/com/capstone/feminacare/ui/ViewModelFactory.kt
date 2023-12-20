@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.capstone.feminacare.data.Repository
 import com.capstone.feminacare.di.Injection
 import com.capstone.feminacare.ui.chatbot.ChatBotViewModel
-import com.capstone.feminacare.ui.main.MainViewModel
 
 class ViewModelFactory(
     private val repository: Repository
@@ -13,9 +12,7 @@ class ViewModelFactory(
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return when {
-            modelClass.isAssignableFrom(MainViewModel::class.java) -> {
-                MainViewModel(repository) as T
-            }
+
             modelClass.isAssignableFrom(ChatBotViewModel::class.java) -> {
                 ChatBotViewModel(repository) as T
             }
