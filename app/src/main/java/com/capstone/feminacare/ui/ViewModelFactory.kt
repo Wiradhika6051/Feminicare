@@ -11,6 +11,7 @@ import com.capstone.feminacare.ui.auth.register.RegisterViewModel
 import com.capstone.feminacare.ui.bloodcheckup.BloodCheckupViewModel
 import com.capstone.feminacare.ui.chatbot.ChatBotViewModel
 import com.capstone.feminacare.ui.main.MainViewModel
+import com.capstone.feminacare.ui.main.ui.notifications.NotificationsViewModel
 
 class ViewModelFactory(
     private val repository: Repository
@@ -32,6 +33,9 @@ class ViewModelFactory(
             }
             modelClass.isAssignableFrom(ChatBotViewModel::class.java) -> {
                 ChatBotViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(NotificationsViewModel::class.java) -> {
+                NotificationsViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown View Model : ${modelClass.name}")

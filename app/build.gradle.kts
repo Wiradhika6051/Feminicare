@@ -86,7 +86,7 @@ dependencies {
     implementation("androidx.room:room-ktx:$room_version")
 
     //splash screen
-    implementation ("androidx.core:core-splashscreen:1.0.0")
+    implementation ("androidx.core:core-splashscreen:1.0.1")
 
     //dots indicator
     implementation("com.tbuonomo:dotsindicator:5.0")

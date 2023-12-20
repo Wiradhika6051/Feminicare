@@ -13,8 +13,6 @@ import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.Part
 import retrofit2.http.Path
-import retrofit2.http.Query
-import java.sql.Timestamp
 
 interface ApiService {
     @FormUrlEncoded
@@ -36,20 +34,14 @@ interface ApiService {
 
     @GET("profile/:id")
     suspend fun getUserProfile(
-        @Header("Authorization") token: String,
-        @Path("username") username: String,
-        @Query("first_name") first_name: String,
-        @Query("last_name") last_name: String,
-        @Query("email") email: String,
-        @Query("date_of_birth") date_of_birth: Timestamp,
-        @Query("weight") weight: Number,
-        @Query("height") height: Number,
+        @Header("Authorization") cookies: String,
+        @Path("userId") userId: String,
     ): GetUserProfileResponse
 
     @Multipart
     @POST("blood-analysis")
     suspend fun postMenstrualBlood(
-//        @Header("Authorization") token: String,
+//        @Header("Authorization") cookies: String,
         @Part file: MultipartBody.Part
     ) : BloodAnalysisResponse
 }

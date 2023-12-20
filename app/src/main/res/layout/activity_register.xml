@@ -17,7 +17,7 @@
         android:text="@string/title_register_page"
         android:textColor="@color/premier_color"
         android:textSize="24dp"
-        android:textStyle="bold"
+        android:fontFamily="@font/nunito_10_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +34,7 @@
         android:text="@string/message_register_page"
         android:textColor="@color/black"
         android:textSize="16sp"
+        android:fontFamily="@font/nunito_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +48,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="32dp"
         android:text="Username"
+        android:fontFamily="@font/nunito_regular"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/messageTextView" />
@@ -67,6 +69,7 @@
             android:id="@+id/usernameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
             android:ems="10"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -78,6 +81,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="100dp"
         android:text="@string/email"
+        android:fontFamily="@font/nunito_regular"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/messageTextView" />
@@ -98,6 +102,7 @@
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
             android:ems="10"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -108,6 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_regular"
         android:text="@string/password"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,6 +136,7 @@
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
             android:ems="10"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -141,6 +148,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="@string/first_name"
+        android:fontFamily="@font/nunito_regular"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
@@ -162,6 +170,7 @@
             android:id="@+id/firstnameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
             android:ems="10"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -173,6 +182,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="@string/last_name"
+        android:fontFamily="@font/nunito_regular"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstnameEditTextLayout" />
@@ -193,6 +203,7 @@
             android:id="@+id/lastnameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
             android:ems="10"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -205,6 +216,7 @@
         android:gravity="center"
         android:text="@string/loginroute"
         android:textColor="@color/black"
+        android:fontFamily="@font/nunito_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerButton" />
@@ -216,6 +228,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/login_here"
+        android:fontFamily="@font/nunito_10_bold"
         android:textColor="@color/premier_color"
         android:textSize="16dp"
         android:textStyle="bold"
@@ -232,7 +245,9 @@
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/premier_color"
         android:text="@string/register"
+        android:fontFamily="@font/nunito_10_bold"
         android:textSize="18dp"
+        app:cornerRadius = "20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastnameEditTextLayout" />

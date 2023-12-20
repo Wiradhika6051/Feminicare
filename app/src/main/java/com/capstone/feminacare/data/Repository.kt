@@ -22,6 +22,7 @@ import kotlinx.coroutines.flow.Flow
 import okhttp3.MultipartBody
 import retrofit2.HttpException
 import java.net.SocketTimeoutException
+import java.sql.Timestamp
 
 class Repository(private val userPreference: UserPreference, private val apiService: ApiService = ApiConfig.getApiConfig()) {
     fun login(username: String, password: String) = liveData {
@@ -54,6 +55,7 @@ class Repository(private val userPreference: UserPreference, private val apiServ
     suspend fun logout() {
         userPreference.logout()
     }
+
     fun postMenstrualBlood(
         photo: MultipartBody.Part
     ): LiveData<Result<BloodAnalysisResponse>> = liveData {
@@ -103,6 +105,20 @@ class Repository(private val userPreference: UserPreference, private val apiServ
             emit(Result.Error(errResponse.toString()))
         } catch (e: Exception) {
             emit(Result.Error(e.message.toString()))
+        }
+    }
+
+    fun getUserProfile(cookies: String, userId: String) = liveData {
+        emit(Result.Loading)
+        try {
+            val successResponse = apiService.getUserProfile("Bearer $cookies", userId)
+            emit(Result.Success(successResponse))
+        } catch (e: HttpException) {
+            val errorBody = e.response()?.errorBody()?.string()
+            val errorResponse = Gson().fromJson(errorBody, LoginResponse::class.java)
+            emit(Result.Error(errorResponse.message ?: "Unknown error"))
+        } catch (e: SocketTimeoutException) {
+            emit(Result.Error("Request timeout. Please check your internet connection."))
         }
     }
 

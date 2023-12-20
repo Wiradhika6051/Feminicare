@@ -18,10 +18,10 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
     suspend fun saveSession(user: UserModel) {
         dataStore.edit { preferences ->
             preferences[USER_KEY] = user.username
-            preferences[TOKEN_KEY] = user.token
+            preferences[COOKIES_KEY] = user.cookies
             preferences[IS_LOGIN_KEY] = true
             Log.d("String", "saveSession: ${user.username} ")
-            Log.d("String", "saveSession: ${user.token} ")
+            Log.d("String", "saveSession: ${user.cookies} ")
         }
     }
 
@@ -29,7 +29,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         return dataStore.data.map { preferences ->
             UserModel(
                 preferences[USER_KEY] ?: "",
-                preferences[TOKEN_KEY] ?: "",
+                preferences[COOKIES_KEY] ?: "",
                 preferences[IS_LOGIN_KEY] ?: false
             )
         }
@@ -46,7 +46,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         private var INSTANCE: UserPreference? = null
 
         private val USER_KEY = stringPreferencesKey("email")
-        private val TOKEN_KEY = stringPreferencesKey("token")
+        private val COOKIES_KEY = stringPreferencesKey("cookies")
         private val IS_LOGIN_KEY = booleanPreferencesKey("isLogin")
 
         fun getInstance(dataStore: DataStore<Preferences>): UserPreference {
