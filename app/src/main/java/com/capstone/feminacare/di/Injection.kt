@@ -3,10 +3,15 @@ package com.capstone.feminacare.di
 import android.content.Context
 import com.capstone.feminacare.data.CheckupRepository
 import com.capstone.feminacare.data.Repository
+import com.capstone.feminacare.data.pref.UserPreference
+import com.capstone.feminacare.data.pref.dataStore
+import com.capstone.feminacare.data.remote.retrofit.ApiConfig
 
 object Injection {
-    fun provideRepository(): Repository {
-        return Repository.getInstance()
+    fun provideRepository(context: Context): Repository {
+        val pref = UserPreference.getInstance(context.dataStore)
+        val apiService = ApiConfig.getApiConfig()
+        return Repository.getInstance(pref, apiService)
     }
 
     fun provideCheckupRepository(context: Context): CheckupRepository {

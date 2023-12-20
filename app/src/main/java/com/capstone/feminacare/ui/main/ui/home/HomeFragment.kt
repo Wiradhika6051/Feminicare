@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,10 +15,11 @@ import com.capstone.feminacare.R
 import com.capstone.feminacare.data.Result
 import com.capstone.feminacare.data.remote.response.NewsItem
 import com.capstone.feminacare.databinding.FragmentHomeBinding
+import com.capstone.feminacare.ui.main.MainViewModelFactory
 import com.capstone.feminacare.ui.article.ArticleActivity
 import com.capstone.feminacare.ui.main.MainViewModelFactory
 
-class HomeFragment : Fragment(), OnArticleClickListener {
+class HomeFragment : Fragment(), ArticleAdapter.OnArticleClickListener {
 
     private var _binding: FragmentHomeBinding? = null
 
@@ -26,7 +28,7 @@ class HomeFragment : Fragment(), OnArticleClickListener {
     private val binding get() = _binding!!
 
     private val viewModel by viewModels<HomeViewModel> {
-        MainViewModelFactory.getInstance()
+        MainViewModelFactory.getInstance(requireContext())
     }
 
     private val articleAdapter: ArticleAdapter by lazy {

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Feminacare</string>
+    <string name="splash_text">your female health assistant</string>
     <string name="title_activity_base">BaseActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -9,6 +10,43 @@
     <string name="history">History</string>
     <string name="checkup_result">Checkup Result</string>
     <string name="camera_result">Camera Result</string>
+    <string name="result_loading">Getting Your Result…</string>
+    <string name="you_menstrual_blood_is">You Menstrual Blood is</string>
+    <string name="your_menstrual_blood_is">Your menstrual blood is </string>
+    <string name="healthy">Healthy</string>
+    <string name="next_period_estimated_on">Next Period\nestimated on</string>
+    <string name="december">December</string>
+    <string name="tap_me">Tap Me!</string>
+    <string name="period_starts">Period Starts?</string>
+    <string name="greetings">Good %s </string>
+    <string name="my_period_calendar">My Period Calendar</string>
+    <string name="menstrual_blood_health_nchekup_history">Menstrual Blood Health\nChekup History</string>
+    <string name="ask_anything">Ask anything…</string>
+    <string name="bot_name">Femi</string>
+    <string name="chat_with_femi">Chat With Femi</string>
+    <string name="generating">Generating…</string>
+    <string name="ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
+    <string name="chatbot">ChatBot</string>
+    <string name="latest_articles">Latest Articles</string>
+    <string name="register">Daftar</string>
+    <string name="login">Masuk</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="first_name">Nama Depan</string>
+    <string name="last_name">Nama Belakang</string>
+    <string name="title_login_page">Masuk Akun</string>
+    <string name="message_login_page">Isi data di bawah ini untuk masuk ke akun anda</string>
+    <string name="registerroute">Belum punya akun?</string>
+    <string name="register_here">Daftar Disini</string>
+    <string name="title_register_page">Daftar Akun</string>
+    <string name="message_register_page">Isi data di bawah ini untuk daftar akun</string>
+    <string name="loginroute">Sudah punya akun?</string>
+    <string name="login_here">Masuk Disini</string>
+    <string name="splash">feminacare</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="result_loading">Getting Your Result…</string>
     <string name="you_menstrual_blood_is">You Menstrual Blood is</string>
     <string name="your_menstrual_blood_is">Your menstrual blood is </string>
@@ -50,7 +88,7 @@ Gejala lain dari vaginosis bakterialis yaitu rasa gatal di dalam dan di sekitar 
                 Darah coklat atau merah tua adalah tanda darah tua dan dapat muncul pada awal atau akhir periode. Darah berwarna coklat atau merah tua tidak memiliki waktu yang lama untuk teroksidasi seperti darah hitam dan dapat muncul dalam berbagai warna.\n
 
                 Jika anda sedang hamil Darah atau bercak coklat terkadang juga dapat menjadi tanda awal perdarahan implantasi. Keluarnya cairan berwarna coklat atau bercak selama kehamilan dapat mengindikasikan keguguran atau kehamilan ektopik, yaitu sel telur yang telah dibuahi berimplantasi di tuba falopi, bukan di rahim. Penting bagi wanita yang mengalami flek atau perdarahan vagina selama kehamilan untuk berbicara dengan dokter atau dokter kandungan mereka.\n
-                
+
                 Jika anda sedang berada dalam fase baru melahirkan, anda tidak perlu khawatir. Kondisi ini disebut Lokia. Lokia merupakan cara tubuh untuk mengeluarkan kelebihan darah dan jaringan dari rahim. Durasi lokia bervariasi pada setiap orang, tetapi biasanya akan hilang dalam beberapa bulan pertama setelah melahirkan. Wanita yang mengalami perdarahan yang sangat banyak setelah melahirkan harus memeriksakan diri ke dokter.\n
     </string>
     <string name="redBlood">

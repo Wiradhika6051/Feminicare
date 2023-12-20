@@ -8,11 +8,14 @@ import android.view.animation.Interpolator
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.capstone.feminacare.R
 import com.capstone.feminacare.databinding.ActivityMainBinding
 import com.capstone.feminacare.ui.ViewModelFactory
+import com.capstone.feminacare.ui.auth.login.LoginActivity
+import com.capstone.feminacare.ui.auth.register.RegisterActivity
 import com.capstone.feminacare.ui.bloodcheckup.BloodCheckupResultActivity
 import com.capstone.feminacare.ui.chatbot.ChatBotActivity
 import com.capstone.feminacare.utils.CAPTURED_IMAGE_URI
@@ -23,13 +26,13 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val viewModel by viewModels<MainViewModel>{
-        ViewModelFactory.getInstance()
+        ViewModelFactory.getInstance(this)
     }
     private var captureImage: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        installSplashScreen()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -45,6 +48,23 @@ class MainActivity : AppCompatActivity() {
         binding.floatingActionButton.setOnClickListener {
             startCamera()
         }
+
+        binding.fab.setOnClickListener {
+            viewModel.logout()
+            finish()
+        }
+
+        binding.fabChatbot.setOnClickListener {
+            startActivity(Intent(this@MainActivity, ChatBotActivity::class.java))
+        }
+
+        viewModel.getSession().observe(this) { user ->
+            if (!user.isLogin) {
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
+            }
+        }
+
 
         binding.fabChatbot.setOnClickListener {
             startActivity(Intent(this@MainActivity, ChatBotActivity::class.java))

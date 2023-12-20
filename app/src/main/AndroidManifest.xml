@@ -25,11 +25,30 @@
             android:name=".ui.chatbot.ChatBotActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.main.ui.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.splashscreen.SplashScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.article.ArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chatbot.ChatBotActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.bloodcheckup.BloodCheckupResultActivity"
             android:exported="false" />
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="true"
+
             android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
