@@ -8,7 +8,9 @@ import androidx.room.PrimaryKey
 data class BloodCheckup(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo("id")
-    val id: Int,
+    val id: Int = 0,
+    @ColumnInfo("user_id")
+    val userId: Long? = 0L,
     @ColumnInfo("timestamp")
     val timeStamp: Long,
     @ColumnInfo("healthInfo")

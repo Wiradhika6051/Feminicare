@@ -71,7 +71,8 @@ dependencies {
 //  Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
-//    Lottie
+
+    //    Lottie
     implementation("com.airbnb.android:lottie:3.4.0")
 
     //    Room
@@ -85,10 +86,8 @@ dependencies {
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$room_version")
 
-    //splash screen
-    implementation ("androidx.core:core-splashscreen:1.0.1")
 
-    //dots indicator
-    implementation("com.tbuonomo:dotsindicator:5.0")
+//    Paging 3
+    implementation("androidx.paging:paging-runtime-ktx:3.2.1")
 
 }

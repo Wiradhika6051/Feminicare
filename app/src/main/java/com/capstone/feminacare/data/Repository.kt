@@ -2,23 +2,12 @@ package com.capstone.feminacare.data
 
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
-import com.capstone.feminacare.data.pref.UserModel
-import com.capstone.feminacare.data.pref.UserPreference
-import com.capstone.feminacare.data.remote.response.ArticleResponse
-import com.capstone.feminacare.data.remote.response.BloodAnalysisResponse
-import com.capstone.feminacare.data.remote.response.BotMessage
 import com.capstone.feminacare.data.remote.response.LoginResponse
-import com.capstone.feminacare.data.remote.response.Message
-import com.capstone.feminacare.data.remote.response.RegisterResponse
-import com.capstone.feminacare.data.remote.response.UserMessage
-import com.capstone.feminacare.data.remote.retrofit.ApiConfig
-import com.capstone.feminacare.data.remote.retrofit.ApiService
+import com.capstone.feminacare.data.response.BloodAnalysisResponse
+import com.capstone.feminacare.data.retrofit.ApiConfig
+import com.capstone.feminacare.data.retrofit.ApiService
 import com.google.gson.Gson
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.Flow
 import okhttp3.MultipartBody
 import retrofit2.HttpException
 import java.net.SocketTimeoutException
@@ -59,17 +48,8 @@ class Repository(private val userPreference: UserPreference, private val apiServ
     fun postMenstrualBlood(
         photo: MultipartBody.Part
     ): LiveData<Result<BloodAnalysisResponse>> = liveData {
-        emit(Result.Loading)
-        try {
-            val success = apiService.postMenstrualBlood(photo)
-            emit(Result.Success(success))
-        } catch (e: HttpException) {
-            val errResponse = e.response()?.errorBody()?.string()
-            emit(Result.Error(errResponse.toString()))
-        } catch (e: Exception) {
-            emit(Result.Error(e.message.toString()))
-        }
-    }
+class Repository(private val apiService: ApiService = ApiConfig.getApiConfig()) {
+
 
     private val _messages = MutableLiveData<Result<List<Message>>>()
     val messages: LiveData<Result<List<Message>>> get() = _messages
@@ -97,8 +77,7 @@ class Repository(private val userPreference: UserPreference, private val apiServ
     fun getArticles(query: String): LiveData<Result<ArticleResponse>> = liveData {
         emit(Result.Loading)
         try {
-            val apiService = ApiConfig.getRapidApiConfig()
-            val success = apiService.getArticles(query = query)
+            val success = apiService.postMenstrualBlood(photo)
             emit(Result.Success(success))
         } catch (e: HttpException) {
             val errResponse = e.response()?.errorBody()?.string()
@@ -122,17 +101,16 @@ class Repository(private val userPreference: UserPreference, private val apiServ
         }
     }
 
-
     companion object {
         @Volatile
         private var instance: Repository? = null
 
-        fun getInstance(
-            userPreference: UserPreference,
-            apiService: ApiService
-        ): Repository =
-            instance ?: synchronized(this) {
-                instance ?: Repository(userPreference, apiService)
-            }.also { instance = it }
+        fun getInstance(): Repository {
+            return instance ?: synchronized(this) {
+                instance ?: Repository().also {
+                    instance = it
+                }
+            }
+        }
     }
 }

@@ -8,7 +8,6 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.capstone.feminacare.adapter.ChatBotMessageAdapter
 import com.capstone.feminacare.data.Result
 import com.capstone.feminacare.databinding.ActivityChatBotBinding
 import com.capstone.feminacare.ui.ViewModelFactory
@@ -19,7 +18,7 @@ class ChatBotActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChatBotBinding
     private lateinit var adapter: ChatBotMessageAdapter
     private val viewModel by viewModels<ChatBotViewModel> {
-        ViewModelFactory.getInstance(this)
+        ViewModelFactory.getInstance()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

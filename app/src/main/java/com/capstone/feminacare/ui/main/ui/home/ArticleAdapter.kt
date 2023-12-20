@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.capstone.feminacare.data.remote.response.NewsItem
 import com.capstone.feminacare.databinding.ItemArticleBinding
-import com.capstone.feminacare.utils.StringUtils.limit
 import com.capstone.feminacare.utils.TimeUtils
 
 class ArticleAdapter (
@@ -30,13 +29,13 @@ class ArticleAdapter (
 
     inner class ArticleViewHolder(val binding : ItemArticleBinding) : RecyclerView.ViewHolder(binding.root) {
         @SuppressLint("PrivateResource")
-        fun bind(article : NewsItem) {
+        fun bind(article: NewsItem){
             Glide.with(binding.root)
                 .load(article.image)
                 .error(com.google.android.material.R.drawable.mtrl_ic_error)
                 .into(binding.ivArticle)
 
-            binding.tvTitle.text = article.title.limit(25)
+            binding.tvTitle.text = article.title
             binding.tvTag.text = "Health"
             binding.tvTime.text = TimeUtils.getTimeAgo(article.publishedOn)
         }

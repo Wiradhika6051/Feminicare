@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,10 +15,11 @@ import com.capstone.feminacare.R
 import com.capstone.feminacare.data.Result
 import com.capstone.feminacare.data.remote.response.NewsItem
 import com.capstone.feminacare.databinding.FragmentHomeBinding
+import com.capstone.feminacare.ui.main.MainViewModelFactory
 import com.capstone.feminacare.ui.article.ArticleActivity
 import com.capstone.feminacare.ui.main.MainViewModelFactory
 
-class HomeFragment : Fragment(), OnArticleClickListener {
+class HomeFragment : Fragment(), ArticleAdapter.OnArticleClickListener {
 
     private var _binding: FragmentHomeBinding? = null
 
@@ -58,13 +60,14 @@ class HomeFragment : Fragment(), OnArticleClickListener {
 
     private fun getArticles() {
         viewModel.getArticles().observe(viewLifecycleOwner) { result ->
-            when(result) {
+            when (result) {
                 is Result.Loading -> {}
                 is Result.Error -> {
                     println(result.error)
                 }
+
                 is Result.Success -> {
-                    Log.d("Articles" , result.data.news.toString())
+                    Log.d("Articles", result.data.news.toString())
                     articleAdapter.submitList(result.data.news.subList(0, 3))
                 }
             }
@@ -72,6 +75,7 @@ class HomeFragment : Fragment(), OnArticleClickListener {
     }
 
     override fun onItemClick(article: NewsItem) {
+
         val intent = Intent(context, ArticleActivity::class.java)
         intent.putExtra(ARTICLE_DATA, article)
         println(article)
@@ -86,8 +90,6 @@ class HomeFragment : Fragment(), OnArticleClickListener {
     companion object {
         const val ARTICLE_DATA = "article_data"
     }
-
-
 
 
 }
