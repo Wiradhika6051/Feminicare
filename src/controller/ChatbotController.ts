@@ -16,7 +16,7 @@ class ChatbotController extends BaseController {
   responses: { [key: string]: string[] } = {};
   inputs: string[] = [];
   tags: string[] = [];
-  tokenizer: any;
+  tokenizer: { [key: string]: number } = {};
 
   constructor() {
     super();
@@ -58,9 +58,7 @@ class ChatbotController extends BaseController {
       this.responses[intent["tag"]] = intent["responses"];
 
       intent["patterns"].forEach((line: string) => {
-        this.preprocessInput(line);
-
-        this.inputs.push(line);
+        this.inputs.push(this.preprocessInput(line));
         this.tags.push(intent["tag"]);
       });
     });
@@ -69,8 +67,6 @@ class ChatbotController extends BaseController {
   }
 
   createTokenizer() {
-    this.tokenizer = {};
-
     // fit tokenizer
     this.inputs.forEach((input) => {
       const words = this.tokenize(input);
