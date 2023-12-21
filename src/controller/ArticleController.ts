@@ -6,24 +6,19 @@ import firestoreClient from "../utils/firestoreClient";
 class ArticleController extends BaseController {
   getAllArticles = async (req:Request,res:Response,next:NextFunction) =>{
     try{
-      const usersSnapshot = await firestoreClient.collection('articles').get()
-      //   .collection('users')
-      //   .doc(id)
-      //   .get()
-      // const user: User = {
-      //   id: usersSnapshot.id,
-      //   data: usersSnapshot.data() as any
-      // }
-      // const data = {
-      //   username: user.data.username,
-      //   first_name: user.data.first_name,
-      //   last_name: user.data.last_name,
-      //   email: user.data.email,
-      //   date_of_birth: user.data.date_of_birth,
-      //   weight: user.data.weight
-      // }
+      const articlesSnapshot = await firestoreClient.collection('articles').get()
+      const data = articlesSnapshot.docs.map((article)=>{
+        const articleData = article.data()
+        return {
+          id: article.id,
+          title: articleData.title,
+          imageUrl: articleData.imageUrl,
+          topic: articleData.topic,
+          published_timestamp:articleData.published_timestamp.toDate().toISOString()
+        }
+      })
       res.json({
-        usersSnapshot,
+        data,
         message: 'Health articles retrieved'
       })
     }catch(err:unknown){
