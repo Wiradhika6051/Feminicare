@@ -2,6 +2,9 @@ import logger from "./logger";
 import fs from "fs";
 import storageClient from "./cloudStorageClient";
 import path from "path";
+import { CONST } from "./constant";
+
+const BASE_PATH = CONST.ENVIRONMENT=='dev' ? '' : '/temp/'
 
 async function cpyBucketFiles(
   bucketName: string,
@@ -13,7 +16,7 @@ async function cpyBucketFiles(
       .bucket(bucketName)
       .getFiles({ prefix: prefix });
 
-    const dir = dest;
+    const dir = BASE_PATH + dest;
 
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
