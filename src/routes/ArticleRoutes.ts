@@ -4,7 +4,7 @@ import BaseRoutes from "./BaseRoutes";
 class ArticleRoutes extends BaseRoutes{
   public setRoutes(): void {
       this.routes.get('/',[JwtMiddleware],ArticleController.getAllArticles)
-      this.routes.get("/:id",[JwtMiddleware],()=>{})
+      this.routes.get("/:id",[JwtMiddleware],ArticleController.getArticleById)
   }
 }
 
