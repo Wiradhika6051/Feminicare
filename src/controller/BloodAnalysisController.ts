@@ -4,7 +4,9 @@ import logger from "../utils/logger";
 import * as tf from "@tensorflow/tfjs-node";
 import * as path from "path";
 import cpyBucketFiles from "../utils/bucketObjectHandler";
+import { CONST } from "../utils/constant";
 
+const BASE_PATH = CONST.ENVIRONMENT==="dev" ? path.join(__dirname,"../../") : "/tmp/"
 class BloodAnalysisController extends BaseController {
   model: tf.LayersModel | undefined;
 
@@ -22,8 +24,8 @@ class BloodAnalysisController extends BaseController {
   async loadModel() {
     try {
       const modelPath = path.join(
-        __dirname,
-        "../../models/klasifikasiWarna/model.json"
+        BASE_PATH,
+        "models/klasifikasiWarna/model.json"
       );
       this.model = await tf.loadLayersModel(`file://${modelPath}`);
       logger.info("Blood analysis model loaded");

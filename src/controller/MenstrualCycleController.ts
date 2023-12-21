@@ -6,7 +6,9 @@ import { Timestamp } from "@google-cloud/firestore";
 import * as tf from "@tensorflow/tfjs-node";
 import * as path from "path";
 import cpyBucketFiles from "../utils/bucketObjectHandler";
+import { CONST } from "../utils/constant";
 
+const BASE_PATH = CONST.ENVIRONMENT==="dev" ? path.join(__dirname,"../../") : "/tmp/"
 class MenstrualCycleController extends BaseController {
   modelMenstruasi: tf.LayersModel | undefined;
   modelOvulasi: tf.LayersModel | undefined;
@@ -31,12 +33,12 @@ class MenstrualCycleController extends BaseController {
   async loadModel() {
     try {
       const modelMenstruasiPath = path.join(
-        __dirname,
-        "../../models/prediksiMenstruasi/model.json"
+        BASE_PATH,
+        "models/prediksiMenstruasi/model.json"
       );
       const modelOvulasiPath = path.join(
-        __dirname,
-        "../../models/prediksiOvulasi/model.json"
+        BASE_PATH,
+        "models/prediksiOvulasi/model.json"
       );
       this.modelMenstruasi = await tf.loadLayersModel(
         `file://${modelMenstruasiPath}`
