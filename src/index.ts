@@ -7,6 +7,7 @@ import ProfileRoutes from "./routes/ProfileRoutes";
 import { CONST } from "./utils/constant";
 import AuthenticationRoutes from "./routes/AuthenticationRoutes";
 import MenstrualCycleRoutes from "./routes/MenstrualCycleRoutes";
+import ArticleRoutes from "./routes/ArticleRoutes";
 
 //buat ngurus dotenv
 dotenv.config();
@@ -22,6 +23,7 @@ app.use("/api/v1/profile", ProfileRoutes);
 app.use("/api/v1/blood-analysis", BloodAnalyzerRoutes);
 app.use("/api/v1/auth", AuthenticationRoutes);
 app.use("/api/v1/menstrual-cycle", MenstrualCycleRoutes);
+app.use("/api/v1/articles",ArticleRoutes)
 
 //default
 app.get("/", (req: Request, res: Response) => {
