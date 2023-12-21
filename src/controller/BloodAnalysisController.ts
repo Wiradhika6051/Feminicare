@@ -68,7 +68,7 @@ class BloodAnalysisController extends BaseController {
 
     // predict
     const prediction = this.model?.predict(imageTensor) as tf.Tensor;
-    const classIndex = tf.argMax(prediction, 1).dataSync()[0];
+    const classIndex = prediction ? tf.argMax(prediction, 1).dataSync()[0] : -1;
     const className = this.getClassLabel(classIndex);
     return className;
   }
