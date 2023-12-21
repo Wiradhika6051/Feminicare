@@ -4,7 +4,7 @@ import storageClient from "./cloudStorageClient";
 import path from "path";
 import { CONST } from "./constant";
 
-const BASE_PATH = CONST.ENVIRONMENT=='dev' ? '' : '/temp/'
+const BASE_PATH = CONST.ENVIRONMENT=='dev' ? '' : '/tmp/'
 
 async function cpyBucketFiles(
   bucketName: string,
