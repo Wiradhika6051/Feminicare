@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken"
 import { CONST } from "../utils/constant";
 import JwtPayload from "../interfaces/JwtPayload";
 
-const JwtPathMiddleware = (req:Request,res:Response,next:NextFunction) => {
+const JwtUserMiddleware = (req:Request,res:Response,next:NextFunction) => {
   try{
     const accessToken = req.headers.authorization?.split(' ')[1]
     if(!accessToken){
@@ -32,4 +32,4 @@ const JwtPathMiddleware = (req:Request,res:Response,next:NextFunction) => {
   }
 }
 
-export default JwtPathMiddleware;
+export default JwtUserMiddleware;

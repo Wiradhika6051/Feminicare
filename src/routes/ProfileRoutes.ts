@@ -1,11 +1,11 @@
 import ProfileController from "../controller/ProfileController";
-import JwtPathMiddleware from "../middlewares/JwtPathMIddleware";
+import JwtUserMiddleware from "../middlewares/JwtUserMIddleware";
 import BaseRoutes from "./BaseRoutes";
 
 class ProfileRoutes extends BaseRoutes{
   public setRoutes(): void {
-      this.routes.get('/:id',[JwtPathMiddleware],ProfileController.getProfile)
-      this.routes.post('/:id',[JwtPathMiddleware],ProfileController.updateProfile)
+      this.routes.get('/:id',[JwtUserMiddleware],ProfileController.getProfile)
+      this.routes.post('/:id',[JwtUserMiddleware],ProfileController.updateProfile)
   }
 }
 export default new ProfileRoutes().routes
