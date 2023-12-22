@@ -143,37 +143,18 @@ class ChatbotController extends BaseController {
 
       const preprocessedInput = this.preprocessInput(prompt);
       const inputSeq = this.textToSequences([preprocessedInput]);
-      // console.log(
-      //   "🚀 ~ file: ChatbotController.ts ~ line 179 ~ ChatbotController ~ getResponse= ~ inputSeq",
-      //   inputSeq
-      // );
       const paddedInputSeq = this.padSequences(inputSeq, 14);
-      // console.log(
-      //   "🚀 ~ file: ChatbotController.ts ~ line 181 ~ ChatbotController ~ getResponse= ~ paddedInputSeq",
-      //   paddedInputSeq
-      // );
 
       if (this.model) {
         const prediction = this.model.predict(
           tf.tensor2d(paddedInputSeq)
         ) as tf.Tensor;
         const predictedLabelIndex = tf.argMax(prediction, -1).dataSync()[0];
-        // console.log(
-        //   "🚀 ~ file: ChatbotController.ts ~ line 188 ~ ChatbotController ~ getResponse= ~ predictedLabelIndex",
-        //   predictedLabelIndex
-        // );
         const predictedLabel = this.tags[predictedLabelIndex];
-        // console.log(
-        //   "🚀 ~ file: ChatbotController.ts ~ line 190 ~ ChatbotController ~ getResponse= ~ predictedLabel",
-        //   predictedLabel
-        // );
 
         // get response at index
         const possibleResponses = this.responses[predictedLabel];
-        // console.log(
-        //   "🚀 ~ file: ChatbotController.ts ~ line 192 ~ ChatbotController ~ getResponse= ~ response",
-        //   possibleResponses
-        // );
+
         // random the response
         res.json({
           data: {
