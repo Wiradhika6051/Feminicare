@@ -55,6 +55,27 @@ class BloodAnalysisController extends BaseController {
     }
   }
 
+  async analyze(image: Buffer) {
+    const uint8array = new Uint8Array(image);
+    let imageTensor = tf.node.decodeImage(uint8array, 3); // 3 for RGB images
+
+    // Resize the image to the target size
+    imageTensor = tf.image.resizeBilinear(imageTensor, [300, 300]);
+
+    // Normalize the pixel values
+    imageTensor = imageTensor.div(tf.scalar(255));
+
+    // Add a dimension
+    imageTensor = imageTensor.expandDims(0);
+
+    // predict
+    const prediction = this.model?.predict(imageTensor) as tf.Tensor;
+    const classIndex = tf.argMax(prediction, 1).dataSync()[0];
+    logger.info(`Retrieved class index: ${classIndex}`)
+    const className = this.getClassLabel(classIndex);
+    return className;
+  }
+
   getResult = async (req: Request, res: Response, next: NextFunction) => {
     try {
       if (!req.file) {
