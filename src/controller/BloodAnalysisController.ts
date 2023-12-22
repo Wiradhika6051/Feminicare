@@ -6,7 +6,9 @@ import * as path from "path";
 import cpyBucketFiles from "../utils/bucketObjectHandler";
 import { CONST } from "../utils/constant";
 
-const BASE_PATH = CONST.ENVIRONMENT==="dev" ? path.join(__dirname,"../../") : "/tmp/"
+const BASE_PATH =
+  CONST.ENVIRONMENT === "dev" ? path.join(__dirname, "../../") : "/tmp/";
+
 class BloodAnalysisController extends BaseController {
   model: tf.LayersModel | undefined;
 
@@ -82,7 +84,25 @@ class BloodAnalysisController extends BaseController {
         });
       }
       const image = req.file?.buffer;
-      const bloodColor = await this.analyze(image as Buffer);
+      const uint8array = new Uint8Array(image as Buffer);
+      let imageTensor = tf.node.decodeImage(uint8array, 3); // 3 for RGB images
+
+      // Resize the image to the target size
+      imageTensor = tf.image.resizeBilinear(imageTensor, [300, 300]);
+
+      // Normalize the pixel values
+      imageTensor = imageTensor.div(tf.scalar(255));
+
+      // Add a dimension
+      imageTensor = imageTensor.expandDims(0);
+
+      // predict
+      const prediction = this.model?.predict(imageTensor) as tf.Tensor;
+      const classIndex = prediction
+        ? tf.argMax(prediction, 1).dataSync()[0]
+        : -1;
+      const bloodColor = this.getClassLabel(classIndex);
+
       res.json({
         data: {
           colorIndex: bloodColor,
