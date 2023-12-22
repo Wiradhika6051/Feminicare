@@ -3,6 +3,11 @@
     <style name="ShapeAppearanceOverlay.MyApp.Fab" parent="">
         <item name="cornerSize">50%</item>
     </style>
+    
+    <style name="CustomChatBox" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="android:background">@color/s_gray</item>
+        <item name="cornerSize">16dp</item>
+    </style>
 
     <style name="RoundedTopBorder" parent="">
         <item name="cornerFamilyTopLeft">rounded</item>> <!-- Adjust this based on your design -->

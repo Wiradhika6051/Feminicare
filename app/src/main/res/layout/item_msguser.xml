@@ -26,13 +26,19 @@
             android:layout_height="wrap_content"
             android:maxWidth="250dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            tools:text="Message" />
+            tools:text="Message"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunito"
+            android:textSize="14sp"
+            />
         <TextView
             android:id="@+id/tv_timestamp"
             android:layout_gravity="end"
             android:textAppearance="@style/TextAppearance.Material3.BodySmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@tools:sample/date/ddmmyy"/>
+            tools:text="@tools:sample/date/ddmmyy"
+            android:textColor="@color/white"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

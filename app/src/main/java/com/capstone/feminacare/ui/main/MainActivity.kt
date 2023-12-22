@@ -8,7 +8,6 @@ import android.view.animation.Interpolator
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
@@ -18,10 +17,10 @@ import com.capstone.feminacare.R
 import com.capstone.feminacare.databinding.ActivityMainBinding
 import com.capstone.feminacare.ui.ViewModelFactory
 import com.capstone.feminacare.ui.auth.login.LoginActivity
-import com.capstone.feminacare.ui.auth.register.RegisterActivity
 import com.capstone.feminacare.ui.bloodcheckup.BloodCheckupResultActivity
 import com.capstone.feminacare.ui.chatbot.ChatBotActivity
 import com.capstone.feminacare.utils.CAPTURED_IMAGE_URI
+import com.capstone.feminacare.utils.COOKIES
 import com.capstone.feminacare.utils.ImageUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -32,12 +31,25 @@ class MainActivity : AppCompatActivity() {
         ViewModelFactory.getInstance(this)
     }
     private var captureImage: Uri? = null
+    private lateinit var cookies: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        installSplashScreen()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        viewModel.getSession().observe(this) { user ->
+            println("user cookies = ${user.cookies}")
+
+            if (!user.isLogin) {
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                finish()
+            } else {
+                cookies = user.cookies
+            }
+        }
 
         val navView: BottomNavigationView = binding.navView
         navView.background = null
@@ -53,7 +65,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.fabChatbot.setOnClickListener {
-            startActivity(Intent(this@MainActivity, ChatBotActivity::class.java))
+            val intent = Intent(this@MainActivity, ChatBotActivity::class.java)
+            intent.putExtra(COOKIES, cookies)
+            startActivity(intent)
         }
     }
 
@@ -94,6 +108,7 @@ class MainActivity : AppCompatActivity() {
         if (isSuccess) {
             val intent = Intent(this, BloodCheckupResultActivity::class.java)
             intent.putExtra(CAPTURED_IMAGE_URI, captureImage.toString())
+            intent.putExtra(COOKIES, cookies)
             startActivity(intent)
         }
     }

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.capstone.feminacare.data.Result
 import com.capstone.feminacare.databinding.ActivityChatBotBinding
 import com.capstone.feminacare.ui.ViewModelFactory
+import com.capstone.feminacare.utils.COOKIES
 
 class ChatBotActivity : AppCompatActivity() {
 
@@ -18,7 +19,7 @@ class ChatBotActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChatBotBinding
     private lateinit var adapter: ChatBotMessageAdapter
     private val viewModel by viewModels<ChatBotViewModel> {
-        ViewModelFactory.getInstance()
+        ViewModelFactory.getInstance(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +52,8 @@ class ChatBotActivity : AppCompatActivity() {
 
         binding.ibSendMsg.setOnClickListener {
             val message = binding.edtChatInput.text.toString()
-            if (message.isNotEmpty()) viewModel.sendChatbotMessage(message)
+            val cookies = intent.getStringExtra(COOKIES)!!
+            if (message.isNotEmpty()) viewModel.sendChatbotMessage(message, cookies)
 
         }
 

@@ -44,9 +44,13 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             tools:text="Message goesasdasddasdasasd h!"
             android:maxWidth="250dp"
+            android:fontFamily="@font/nunito"
+            android:textSize="14sp"
             />
         <TextView
             android:id="@+id/tv_timestamp"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/premier_color"
             android:textAppearance="@style/TextAppearance.Material3.BodySmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

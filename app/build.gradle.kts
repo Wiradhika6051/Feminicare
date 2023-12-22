@@ -93,4 +93,9 @@ dependencies {
 //    Kizitonwose/Calendar lib
     implementation("com.kizitonwose.calendar:view:2.4.1")
 
+//    Splash Screen
+    implementation ("androidx.core:core-splashscreen:1.0.1")
+
+    //dots indicator
+    implementation("com.tbuonomo:dotsindicator:5.0")
 }

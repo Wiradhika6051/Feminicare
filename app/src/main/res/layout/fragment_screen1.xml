@@ -52,11 +52,12 @@
             android:layout_marginStart="65dp"
             android:layout_marginTop="25dp"
             />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/worm_dots_indicator"
             android:fontFamily="@font/nunito_bold"
             android:layout_marginTop="10dp"
@@ -79,7 +80,7 @@
 
         <!-- Dua tombol di bawah layout -->
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/button_next"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_below="@id/textView2"
@@ -96,7 +97,7 @@
             android:id="@+id/button2"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/button1"
+            android:layout_below="@id/button_next"
             android:layout_marginStart="90dp"
             android:layout_marginTop="6dp"
             android:fontFamily="@font/nunito_semibold"
@@ -104,20 +105,10 @@
             android:textSize="12dp"
             android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button1" />
+            app:layout_constraintTop_toBottomOf="@id/button_next" />
 
     </RelativeLayout>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
 
 
 

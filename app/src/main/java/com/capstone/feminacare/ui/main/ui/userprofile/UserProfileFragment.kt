@@ -11,7 +11,7 @@ import com.capstone.feminacare.databinding.FragmentUserProfileBinding
 class UserProfileFragment : Fragment() {
 
 
-    private lateinit var viewModel: UserProfileViewModel
+//    private lateinit var viewModel: UserProfileViewModel
     private var binding : FragmentUserProfileBinding? = null
     private val _binding get() = binding!!
 

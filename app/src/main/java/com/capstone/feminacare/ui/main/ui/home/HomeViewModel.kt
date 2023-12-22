@@ -20,5 +20,7 @@ class HomeViewModel(private val repository: Repository) : ViewModel() {
     val timeOfDay: LiveData<String> = _timeOfDay
 
     fun getArticles() = repository.getArticles("Woman Period Health")
+
+//    fun getPrediction(): List<MenstrualCycleResponse> = repository.getPredictions()
     
 }

@@ -1,19 +1,29 @@
 package com.capstone.feminacare.data
 
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
+import com.capstone.feminacare.data.pref.UserModel
+import com.capstone.feminacare.data.pref.UserPreference
 import com.capstone.feminacare.data.remote.response.ArticleResponse
 import com.capstone.feminacare.data.remote.response.BotMessage
+import com.capstone.feminacare.data.remote.response.LoginResponse
 import com.capstone.feminacare.data.remote.response.Message
+import com.capstone.feminacare.data.remote.response.RegisterResponse
 import com.capstone.feminacare.data.remote.response.UserMessage
 import com.capstone.feminacare.data.remote.retrofit.ApiConfig
 import com.capstone.feminacare.data.remote.retrofit.ApiService
-import kotlinx.coroutines.delay
-import com.capstone.feminacare.data.remote.response.LoginResponse
 import com.google.gson.Gson
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.launch
+import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.HttpException
+import retrofit2.Response
 import java.net.SocketTimeoutException
 
 class Repository(
@@ -24,14 +34,75 @@ class Repository(
     fun login(username: String, password: String) = liveData {
         emit(Result.Loading)
         try {
-            val successResponse = apiService.login(username, password)
-            emit(Result.Success(successResponse))
+//            val successResponse = apiService.login(username, password)
+            val loginCall: Call<LoginResponse> = apiService.login(username, password)
+            var data: LoginResponse? = null
+
+            // Enqueue the call to run it asynchronously
+            loginCall.enqueue(object : Callback<LoginResponse> {
+                override fun onResponse(
+                    call: Call<LoginResponse>,
+                    response: Response<LoginResponse>
+                ) {
+                    if (response.isSuccessful) {
+                        // Access headers, including Set-Cookie
+                        val setCookieHeader = response.headers()["Set-Cookie"]
+                        val semicolonIndex = setCookieHeader?.indexOf(';')
+
+
+// Extract the substring before the semicolon
+                        val extractedCookie = if (semicolonIndex != -1 && semicolonIndex != null) {
+                            setCookieHeader.substring(0, semicolonIndex)
+                        } else {
+                            setCookieHeader
+                        }
+
+                        val equalsIndex = extractedCookie?.indexOf('=')
+
+// Extract the substring after '='
+                        val result = if (equalsIndex != -1) {
+                            extractedCookie?.substring(equalsIndex?.plus(1) ?: 0)
+                        } else {
+                            extractedCookie
+                        }
+
+                        Log.d("Set-Cookie header: BEFORE", extractedCookie.toString())
+                        Log.d("Set-Cookie header:", result ?: "none")
+                        val userId = response.body()?.loginData?.userId
+                        // Use withContext to switch to the coroutine context
+                        CoroutineScope(Dispatchers.Default).launch {
+                            val login = UserModel(username, result ?: "", true, userId ?: "")
+                            Log.d("LOGIN DATA", login.userId)
+                            saveSession(login)
+                            // Emit the success result within the coroutine context
+                            data = response.body()!!
+                        }
+                    } else {
+                        // Handle unsuccessful response
+                        // Use withContext to switch to the coroutine context
+                        CoroutineScope(Dispatchers.Default).launch {
+                            throw Exception(response.message().toString())
+                        }
+                    }
+                }
+
+                override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                    // Handle failure
+                    // Use withContext to switch to the coroutine context
+                    CoroutineScope(Dispatchers.Default).launch {
+                        emit(Result.Error(t.message ?: "Unknown Error"))
+                    }
+                }
+            })
+            emit(Result.Success(data))
         } catch (e: HttpException) {
-            val errorBody = e.response()?.errorBody()?.string()
-            val errorResponse = Gson().fromJson(errorBody, LoginResponse::class.java)
-            emit(Result.Error(errorResponse.message ?: "Unknown error"))
+//            val errorBody = e.response()?.errorBody()?.string()
+//            val errorResponse = Gson().fromJson(errorBody, LoginResponse::class.java)
+            emit(Result.Error(e.message ?: "Unknown error"))
         } catch (e: SocketTimeoutException) {
             emit(Result.Error("Request timeout. Please check your internet connection."))
+        } catch (e: Exception) {
+            emit(Result.Error(e.message ?: "Unknown Err"))
         }
     }
 
@@ -61,22 +132,30 @@ class Repository(
     private val _messages = MutableLiveData<Result<List<Message>>>()
     val messages: LiveData<Result<List<Message>>> get() = _messages
 
-    suspend fun sendChatbotMessage(message: String) {
+    suspend fun sendChatbotMessage(message: String, cookies: String) {
         try {
             val userMessage = UserMessage(message, System.currentTimeMillis())
             val updatedMessage =
                 (_messages.value as? Result.Success)?.data.orEmpty().plus(userMessage)
             _messages.postValue(Result.Success(updatedMessage))
 
-            delay(2000L)
+//            delay(2000L)
+            val authApi = ApiConfig.getApiConfig(cookies)
+            val response = authApi.getChatbot(message)
+            Log.d("bot response", response.data?.response.toString())
 
-            val chatBot = femiBotChatbot(message)
+//            val chatBot = femiBotChatbot(message)
+            val messageResponse = response.data?.response
 
-            val botMessage = BotMessage(chatBot, System.currentTimeMillis())
+
+            val botMessage = BotMessage(
+                messageResponse ?: "Maaf, aku tidak mengerti pertanyaan kamu.",
+                System.currentTimeMillis()
+            )
             val updatedMessageBotResponse = updatedMessage.plus(botMessage)
             _messages.postValue(Result.Success(updatedMessageBotResponse))
         } catch (e: Exception) {
-            _messages.postValue(Result.Error("An error occured"))
+            _messages.postValue(Result.Error("An error occured ${e.message}"))
         }
     }
 
@@ -114,7 +193,8 @@ class Repository(
     fun getUserProfile(cookies: String, userId: String) = liveData {
         emit(Result.Loading)
         try {
-            val successResponse = apiService.getUserProfile("Bearer $cookies", userId)
+            val authApi = ApiConfig.getApiConfig(cookies)
+            val successResponse = authApi.getUserProfile(userId)
             emit(Result.Success(successResponse))
         } catch (e: HttpException) {
             val errorBody = e.response()?.errorBody()?.string()
@@ -129,9 +209,12 @@ class Repository(
         @Volatile
         private var instance: Repository? = null
 
-        fun getInstance(): Repository {
+        fun getInstance(
+            userPreference: UserPreference,
+            apiService: ApiService
+        ): Repository {
             return instance ?: synchronized(this) {
-                instance ?: Repository().also {
+                instance ?: Repository(userPreference, apiService).also {
                     instance = it
                 }
             }

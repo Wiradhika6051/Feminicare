@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.chatbot.ChatBotActivity"
-    android:background="?attr/colorSurfaceContainer">
+    android:background="@color/white">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar2"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimaryInverse"
+        android:background="@color/white"
         android:gravity="start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+
                 android:padding="8dp">
 
                 <TextView
@@ -38,8 +39,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/nunito_bold"
                     android:text="@string/chat_with_femi"
                     android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                    android:textSize="14sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -85,25 +89,28 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorSurface"
+        android:background="@color/white"
         android:orientation="horizontal"
         android:paddingHorizontal="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <com.google.android.material.textfield.TextInputLayout
-            style="?attr/textInputFilledStyle"
+
             android:id="@+id/filledTextField"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
+            app:shapeAppearance="@style/RoundedBorder"
             android:hint="@string/ask_anything">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_chatInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/rounded_textbox"
+                android:fontFamily="@font/nunito_bold"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -127,6 +134,7 @@
             android:layout_gravity="center"
             android:background="?attr/colorSurface"
             android:scaleType="fitCenter"
-            android:src="@drawable/paperplane" />
+            android:src="@drawable/akar_icons_send_svg"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

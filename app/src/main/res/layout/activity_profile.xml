@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.capstone.feminacare.ui.main.ui.profile.ProfileActivity"
-    tools:showIn="@layout/activity_profile">
+    tools:context="com.capstone.feminacare.ui.main.ui.profile.ProfileActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -18,138 +17,138 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
             android:padding="24dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Edit Profile"
-                android:textSize="26sp"
-                android:textAlignment="center"
-                android:textStyle="bold"
                 android:fontFamily="@font/nunito_10_bold"
-                android:textColor="@color/premier_color"/>
+                android:text="Edit Profile"
+                android:textAlignment="center"
+                android:textColor="@color/premier_color"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
                 android:id="@+id/editFirstName"
-                android:background="@drawable/border"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:layout_marginTop="16dp"
-                android:padding="8dp"
+                android:background="@drawable/border"
+                android:drawableLeft="@drawable/baseline_account_box_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/nunito_regular"
                 android:hint="Nama Depan"
-                android:fontFamily="@font/nunito_regular"
-                android:drawableLeft="@drawable/baseline_account_box_24"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
                 android:id="@+id/editName"
-                android:background="@drawable/border"
-                android:layout_marginTop="10dp"
-                android:padding="8dp"
-                android:hint="Nama Belakang"
-                android:fontFamily="@font/nunito_regular"
-                android:drawableLeft="@drawable/baseline_account_box_24"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
-
-            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/editEmail"
-                android:background="@drawable/border"
                 android:layout_marginTop="10dp"
-                android:padding="8dp"
-                android:hint="Email"
+                android:background="@drawable/border"
+                android:drawableLeft="@drawable/baseline_account_box_24"
+                android:drawablePadding="8dp"
                 android:fontFamily="@font/nunito_regular"
+                android:hint="Nama Belakang"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
                 android:drawableLeft="@drawable/baseline_email_24"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Email"
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/editUsername"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/editUsername"
-                android:background="@drawable/border"
                 android:layout_marginTop="10dp"
-                android:padding="8dp"
-                android:hint="Username"
-                android:fontFamily="@font/nunito_regular"
+                android:background="@drawable/border"
                 android:drawableLeft="@drawable/baseline_account_circle_24"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Username"
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/editPassword"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/editPassword"
-                android:background="@drawable/border"
                 android:layout_marginTop="10dp"
-                android:padding="8dp"
-                android:hint="Password"
-                android:fontFamily="@font/nunito_regular"
-                android:inputType="textPassword"
+                android:background="@drawable/border"
                 android:drawableLeft="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/editDateOfBirth"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/editDateOfBirth"
-                android:background="@drawable/border"
                 android:layout_marginTop="10dp"
-                android:padding="8dp"
+                android:background="@drawable/border"
+                android:drawableLeft="@drawable/baseline_calendar_month_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/nunito_regular"
                 android:hint="Tanggal Lahir"
                 android:inputType="date"
-                android:fontFamily="@font/nunito_regular"
-                android:drawableLeft="@drawable/baseline_calendar_month_24"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
                 android:id="@+id/editWeight"
-                android:background="@drawable/border"
-                android:layout_marginTop="10dp"
-                android:padding="8dp"
-                android:hint="Berat Badan"
-                android:fontFamily="@font/nunito_regular"
-                android:drawableLeft="@drawable/baseline_calendar_month_24"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
-
-            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/editHeight"
-                android:background="@drawable/border"
                 android:layout_marginTop="10dp"
-                android:padding="8dp"
-                android:hint="Berat Badan"
-                android:fontFamily="@font/nunito_regular"
-                android:inputType="number"
+                android:background="@drawable/border"
                 android:drawableLeft="@drawable/baseline_calendar_month_24"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Berat Badan"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/editHeight"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:drawableLeft="@drawable/baseline_calendar_month_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Berat Badan"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
             <Button
+                android:id="@+id/saveButton"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Simpan"
-                android:fontFamily="@font/nunito_10_bold"
-                android:id="@+id/saveButton"
-                android:textSize="18sp"
                 android:layout_marginTop="30dp"
-                android:inputType="number"
                 android:backgroundTint="@color/premier_color"
-                app:cornerRadius = "20dp"/>
+                android:fontFamily="@font/nunito_10_bold"
+                android:inputType="number"
+                android:text="Simpan"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
 
 
         </LinearLayout>

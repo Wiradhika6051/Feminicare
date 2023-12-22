@@ -72,6 +72,8 @@ class PeriodDateFragment : Fragment() {
                     val formattedStartDate = formatLocalDate(cycle.startDate)
                     val displayText = getString(R.string.totalMenstrualOrOvulationDay, daysBetween, formattedStartDate)
                     binding.tvTotalMenstrualDay.text = displayText
+                    val displayOvulation = getString(R.string.totalMenstrualOrOvulationDay, 3, "21 December 2023")
+                    binding.tvOvulationDate.text = displayOvulation
                 }
             }
 
@@ -115,6 +117,21 @@ class PeriodDateFragment : Fragment() {
                         if (data.date.isAfter(cycle.startDate.minusDays(1)) && data.date.isBefore(cycle.endDate.plusDays(1))) {
                             container.dayBinding.ivIsPeriod.visibility = View.VISIBLE
                         }
+                    }
+
+                    if (data.date == LocalDate.of(2023, 12, 21)) {
+                        container.dayBinding.ivIsPeriod.visibility = View.VISIBLE
+                        container.dayBinding.ivIsPeriod.setImageResource(R.drawable.ovulasi)
+                    }
+
+                    if (data.date == LocalDate.of(2023, 12, 22)) {
+                        container.dayBinding.ivIsPeriod.visibility = View.VISIBLE
+                        container.dayBinding.ivIsPeriod.setImageResource(R.drawable.ovulasi)
+                    }
+
+                    if (data.date == LocalDate.of(2023, 12, 23)) {
+                        container.dayBinding.ivIsPeriod.visibility = View.VISIBLE
+                        container.dayBinding.ivIsPeriod.setImageResource(R.drawable.ovulasi)
                     }
 
                     if (data.date == LocalDate.now()) {

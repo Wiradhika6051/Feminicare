@@ -2,6 +2,7 @@ package com.capstone.feminacare.di
 
 import android.content.Context
 import com.capstone.feminacare.data.CheckupRepository
+import com.capstone.feminacare.data.PredictionRepository
 import com.capstone.feminacare.data.Repository
 import com.capstone.feminacare.data.pref.UserPreference
 import com.capstone.feminacare.data.pref.dataStore
@@ -16,5 +17,9 @@ object Injection {
 
     fun provideCheckupRepository(context: Context): CheckupRepository {
         return CheckupRepository.getInstance(context)
+    }
+
+    fun providePredictionRepository(context: Context) : PredictionRepository {
+        return PredictionRepository.getInstance(context)
     }
 }

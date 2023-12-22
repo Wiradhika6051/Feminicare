@@ -8,7 +8,7 @@ import com.capstone.feminacare.di.Injection
 import com.capstone.feminacare.ui.main.ui.home.HomeViewModel
 
 class MainViewModelFactory (
-    private val repository: Repository
+    private val repository: Repository,
 ) : ViewModelProvider.NewInstanceFactory() {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -16,6 +16,13 @@ class MainViewModelFactory (
             modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
                 HomeViewModel(repository) as T
             }
+
+//            modelClass.isAssignableFrom(MainViewModel::class.java) -> {
+//                MainViewModel(
+//                    mainRepository = repository,
+//                    repository = predictionRepository
+//                ) as T
+//            }
 
             else -> throw IllegalArgumentException("Unknown View Model : ${modelClass.name}")
         }

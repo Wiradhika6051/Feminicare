@@ -55,14 +55,12 @@ Gejala lain dari vaginosis bakterialis yaitu rasa gatal di dalam dan di sekitar 
         Darah merah terang menandakan darah segar dan aliran yang stabil. Suatu periode dapat dimulai dengan perdarahan merah terang dan menjadi gelap menjelang akhir periode. Beberapa orang mungkin mendapati bahwa darah mereka tetap berwarna merah terang selama menstruasi.\n
     </string>
     <string name="orangeBlood">
-        Oranye\n
                 Darah yang bercampur dengan cairan serviks juga dapat terlihat berwarna oranye. Darah atau cairan berwarna oranye dapat mengindikasikan adanya infeksi, seperti vaginosis bakterialis atau trikomoniasis. Jika darah menstruasi anda berwarna oranye, anda harus memeriksa gejala-gejala lain, seperti gatal-gatal pada vagina, rasa tidak nyaman, dan keputihan yang berbau busuk.\n
 
                 Meskipun darah atau cairan menstruasi berwarna oranye tidak selalu mengindikasikan adanya infeksi, ada baiknya anda memeriksakan diri ke dokter atau dokter kandungan untuk evaluasi.\n
 
     </string>
     <string name="pinkBlood">
-        Merah muda\n
                 Darah merah muda atau bercak dapat terjadi ketika darah menstruasi bercampur dengan cairan serviks. Jika ada menggunakan kontrasepsi hormonal dapat menurunkan kadar estrogen dalam tubuh, yang dapat menyebabkan aliran yang lebih ringan dengan warna merah muda selama menstruasi.\n
 
                 Penyebab lain dari darah menstruasi berwarna merah muda yaitu penurunan berat badan yang signifikan, pola makan yang tidak sehat, dan Anemia\n
@@ -81,4 +79,24 @@ Gejala lain dari vaginosis bakterialis yaitu rasa gatal di dalam dan di sekitar 
     <string name="calendar_legend">Keterangan Warna Pada Tanggal</string>
     <string name="prediksi_hari_menstruasi">Prediksi Hari Menstruasi</string>
     <string name="prediction">Prediction</string>
+
+    <string name="register">Daftar</string>
+    <string name="login">Masuk</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="first_name">Nama Depan</string>
+    <string name="last_name">Nama Belakang</string>
+    <string name="title_login_page">Masuk Akun</string>
+    <string name="message_login_page">Isi data di bawah ini untuk masuk ke akun anda</string>
+    <string name="registerroute">Belum punya akun?</string>
+    <string name="register_here">Daftar Disini</string>
+    <string name="title_register_page">Daftar Akun</string>
+    <string name="message_register_page">Isi data di bawah ini untuk daftar akun</string>
+    <string name="loginroute">Sudah punya akun?</string>
+    <string name="login_here">Masuk Disini</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    <string name="splash_text">your female health assistant</string>-->
+
 </resources>

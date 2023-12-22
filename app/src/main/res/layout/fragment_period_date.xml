@@ -9,6 +9,7 @@
     android:focusable="true"
     tools:context=".ui.main.ui.perioddate.PeriodDateFragment"
     android:paddingBottom="?attr/actionBarSize"
+    android:background="@color/white"
     >
 
     <LinearLayout

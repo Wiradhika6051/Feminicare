@@ -3,15 +3,15 @@ package com.capstone.feminacare.ui.auth.login
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.capstone.feminacare.data.pref.UserModel
 import com.capstone.feminacare.data.Result
-import android.widget.Toast
 import com.capstone.feminacare.databinding.ActivityLoginBinding
 import com.capstone.feminacare.ui.ViewModelFactory
 import com.capstone.feminacare.ui.auth.register.RegisterActivity
@@ -53,20 +53,24 @@ class LoginActivity : AppCompatActivity() {
             showLoading(true)
 
             viewModel.login(username, password)
-            .observe(this){user->
-                if (user != null){
+                .observe(this) { user ->
                     when (user) {
                         is Result.Loading -> {
                             showLoading(true)
                         }
+
                         is Result.Success -> {
-                            viewModel.saveSession(UserModel(username, user.data.loginData?.userId!!))
+//                            user.data.
+                            Log.d("FETCHED USER", user.data?.loginData.toString())
+
+//                            viewModel.saveSession(UserModel(username, user.data.loginData?.userId!!))
                             showLoading(false)
                             AlertDialog.Builder(this@LoginActivity).apply {
                                 setTitle("Yay!")
                                 setMessage("Anda berhasil login")
                                 setPositiveButton("Ok") { _, _ ->
-                                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                                    val intent =
+                                        Intent(this@LoginActivity, MainActivity::class.java)
                                     intent.flags =
                                         Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                                     startActivity(intent)
@@ -76,6 +80,7 @@ class LoginActivity : AppCompatActivity() {
                                 show()
                             }
                         }
+
                         is Result.Error -> {
                             val errorMessage = user.error
                             showToast(errorMessage)
@@ -83,7 +88,6 @@ class LoginActivity : AppCompatActivity() {
                         }
                     }
                 }
-            }
         }
         binding.registerRoute.setOnClickListener {
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)

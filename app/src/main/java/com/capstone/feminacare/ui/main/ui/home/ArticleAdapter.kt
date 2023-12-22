@@ -55,8 +55,9 @@ class ArticleAdapter (
         }
         holder.bind(article)
     }
+
+    interface OnArticleClickListener {
+        fun onItemClick(article: ArticleDummy)
+    }
 }
 
-interface OnArticleClickListener {
-    fun onItemClick(article: ArticleDummy)
-}

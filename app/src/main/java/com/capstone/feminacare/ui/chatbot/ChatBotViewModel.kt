@@ -15,11 +15,11 @@ class ChatBotViewModel(private val repository: Repository) : ViewModel() {
     private val _loading = MutableLiveData<Boolean>()
     val loading: LiveData<Boolean> get() = _loading
 
-    fun sendChatbotMessage(message: String) {
+    fun sendChatbotMessage(message: String, cookies: String) {
         viewModelScope.launch {
             try {
                 _loading.postValue(true)
-                repository.sendChatbotMessage(message)
+                repository.sendChatbotMessage(message, cookies)
             } finally {
                 _loading.postValue(false)
             }

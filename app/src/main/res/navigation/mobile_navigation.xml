@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_user_profile"
-        android:name="com.capstone.feminacare.ui.main.ui.userprofile.UserProfileFragment"
-        android:label="User Profile"
-        tools:layout="@layout/fragment_user_profile" />
+        android:name="com.capstone.feminacare.ui.main.ui.notifications.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
 </navigation>

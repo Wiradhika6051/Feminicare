@@ -1,22 +1,18 @@
 package com.capstone.feminacare.ui.splashscreen
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.content.Intent
-import android.os.Handler
-import com.capstone.feminacare.R
-import com.capstone.feminacare.ui.main.MainActivity
+import androidx.appcompat.app.AppCompatActivity
+import com.capstone.feminacare.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {
-    private val SPLASH_TIME_OUT:Long = 3000
+    private lateinit var binding : ActivitySplashScreenBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
+        binding = ActivitySplashScreenBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        Handler().postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        }, SPLASH_TIME_OUT)
     }
+
+
 }

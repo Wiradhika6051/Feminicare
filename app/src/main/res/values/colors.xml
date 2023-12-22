@@ -76,4 +76,5 @@
     <color name="s_yellow">#FFE3AD</color>
     <color name="s_green">#AFE9E5</color>
     <color name="s_pink">#F5D2DF</color>
+    <color name="s_gray">#EEF1F0</color>
 </resources>

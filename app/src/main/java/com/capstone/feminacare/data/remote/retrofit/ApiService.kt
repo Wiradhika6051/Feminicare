@@ -1,14 +1,15 @@
 package com.capstone.feminacare.data.remote.retrofit
 
 import com.capstone.feminacare.data.remote.response.BloodAnalysisResponse
+import com.capstone.feminacare.data.remote.response.ChatBotV2Response
 import com.capstone.feminacare.data.remote.response.GetUserProfileResponse
 import com.capstone.feminacare.data.remote.response.LoginResponse
 import com.capstone.feminacare.data.remote.response.RegisterResponse
 import okhttp3.MultipartBody
+import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
-import retrofit2.http.Header
 import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.Part
@@ -27,15 +28,14 @@ interface ApiService {
 
     @FormUrlEncoded
     @POST("auth/login")
-    suspend fun login(
+    fun login(
         @Field("username") username: String,
         @Field("password") password: String
-    ): LoginResponse
+    ): Call<LoginResponse>
 
-    @GET("profile/:id")
+    @GET("profile/{id}")
     suspend fun getUserProfile(
-        @Header("Authorization") cookies: String,
-        @Path("userId") userId: String,
+        @Path("id") userId: String,
     ): GetUserProfileResponse
 
     @Multipart
@@ -44,4 +44,10 @@ interface ApiService {
 //        @Header("Authorization") cookies: String,
         @Part file: MultipartBody.Part
     ) : BloodAnalysisResponse
+
+    @FormUrlEncoded
+    @POST("chatbot")
+    suspend fun getChatbot(
+        @Field("prompt") prompt: String
+    ) : ChatBotV2Response
 }

@@ -2,28 +2,19 @@ package com.capstone.feminacare.ui.main.ui.home
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.feminacare.R
-import com.capstone.feminacare.data.PredictionRepository
 import com.capstone.feminacare.data.remote.response.ArticleDummy
-import com.capstone.feminacare.data.remote.response.MenstrualCycleResponse
 import com.capstone.feminacare.databinding.FragmentHomeBinding
-import com.capstone.feminacare.ui.main.MainViewModelFactory
 import com.capstone.feminacare.ui.article.ArticleActivity
-import com.capstone.feminacare.ui.main.MainViewModel
 import com.capstone.feminacare.ui.main.MainViewModelFactory
 import com.capstone.feminacare.utils.DummyData
-import java.time.LocalDate
-import java.time.temporal.ChronoUnit
-import kotlin.math.absoluteValue
 
 class HomeFragment : Fragment(), ArticleAdapter.OnArticleClickListener {
 
@@ -37,10 +28,10 @@ class HomeFragment : Fragment(), ArticleAdapter.OnArticleClickListener {
         MainViewModelFactory.getInstance(requireContext())
     }
 
-    private val mainViewModel : MainViewModel by viewModels()
-    private val predictionRepository : PredictionRepository by lazy {
-        PredictionRepository(requireContext())
-    }
+//    private val mainViewModel : MainViewModel by viewModels()
+//    private val predictionRepository : PredictionRepository by lazy {
+//        PredictionRepository(requireContext())
+//    }
 
     private val articleAdapter: ArticleAdapter by lazy {
         ArticleAdapter(this)
@@ -64,7 +55,7 @@ class HomeFragment : Fragment(), ArticleAdapter.OnArticleClickListener {
             binding.tvGreetingTime.text = greet
         }
 
-        Log.d("Nearest Prediction", getNearestPrediction().toString())
+//        Log.d("Nearest Prediction", getNearestPrediction().toString())
 
 
 //        binding.cvCheckupHistory.setOnClickListener {
@@ -77,21 +68,21 @@ class HomeFragment : Fragment(), ArticleAdapter.OnArticleClickListener {
         return root
     }
 
-    private fun getNearestPrediction() : MenstrualCycleResponse? {
-        val periodCycle = mainViewModel.getPrediction()
-        val currentDate = LocalDate.now()
-        val smallestDiff = Long.MAX_VALUE
-        var nearestCycle : MenstrualCycleResponse? = null
-
-        for (cycle in periodCycle) {
-            val diff = ChronoUnit.DAYS.between(currentDate, cycle.startDate).absoluteValue
-
-            if (diff < smallestDiff) {
-                nearestCycle = cycle
-            }
-        }
-        return nearestCycle
-    }
+//    private fun getNearestPrediction() : MenstrualCycleResponse? {
+//        val periodCycle = mainViewModel.getPrediction()
+//        val currentDate = LocalDate.now()
+//        val smallestDiff = Long.MAX_VALUE
+//        var nearestCycle : MenstrualCycleResponse? = null
+//
+//        for (cycle in periodCycle) {
+//            val diff = ChronoUnit.DAYS.between(currentDate, cycle.startDate).absoluteValue
+//
+//            if (diff < smallestDiff) {
+//                nearestCycle = cycle
+//            }
+//        }
+//        return nearestCycle
+//    }
 
     private fun getArticles() {
         articleAdapter.submitList(DummyData.articles)

@@ -10,8 +10,9 @@ import okhttp3.MultipartBody
 class BloodCheckupViewModel(private val repository: CheckupRepository) : ViewModel() {
 
     fun postPhoto(
-        file: MultipartBody.Part
-    ) = repository.postMenstrualBlood(file)
+        file: MultipartBody.Part,
+        userCookies: String
+    ) = repository.postMenstrualBlood(file, userCookies)
 
     fun insertBloodCheckup(checkup: BloodCheckup) {
         viewModelScope.launch {
