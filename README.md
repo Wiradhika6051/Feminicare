@@ -10,7 +10,9 @@ Aplikasi prediksi haid dengan algoritma machine learning
 - BloodCheckup
 - Period Calendar
 - Articles
-- TBD
+
+## App Flow
+[Miro](https://miro.com/app/board/uXjVNLmSh7k=/)
 
 
 ## Resource
@@ -29,8 +31,7 @@ Aplikasi prediksi haid dengan algoritma machine learning
 
 ## Screenshots
 
-![App Screenshot](https://i.imgur.com/iWNAb8U.png)
+![App Screenshot](https://i.imgur.com/6BMzFoI.png)
 
-![App Screenshot](https://i.imgur.com/a1Z67Xf.png)
+![App Screenshot](https://i.imgur.com/HLnsAR4.png)
 
-![App Screenshot](https://i.imgur.com/VNgqrvW.png)
