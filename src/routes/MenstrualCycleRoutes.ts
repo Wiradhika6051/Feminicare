@@ -1,24 +1,22 @@
 import MenstrualCycleController from "../controller/MenstrualCycleController";
-import JwtUserMiddleware from "../middlewares/JwtUserMIddleware";
 import BaseRoutes from "./BaseRoutes";
-
-// TODO: User jwt middleware
+import JwtUserMiddleware from "../middlewares/JwtUserMIddleware";
 
 class MenstrualCycleRoutes extends BaseRoutes {
   public setRoutes(): void {
     this.routes.post(
       "/daily-entry/:id",
-      // [JwtUserMiddleware],
+      [JwtUserMiddleware],
       MenstrualCycleController.addDailyEntry
     );
     this.routes.get(
       "/cycle-history/:id",
-      // [JwtUserMiddleware],
+      [JwtUserMiddleware],
       MenstrualCycleController.getAllDailyEntries
     );
     this.routes.get(
       "/cycle-prediction/:id",
-      // [JwtUserMiddleware],
+      [JwtUserMiddleware],
       MenstrualCycleController.getNextCyclePrediction
     );
   }
