@@ -8,7 +8,8 @@ import * as path from "path";
 import cpyBucketFiles from "../utils/bucketObjectHandler";
 import { CONST } from "../utils/constant";
 
-const BASE_PATH = CONST.ENVIRONMENT==="dev" ? path.join(__dirname,"../../") : "/tmp/"
+const BASE_PATH =
+  CONST.ENVIRONMENT === "dev" ? path.join(__dirname, "../../") : "/tmp/";
 class MenstrualCycleController extends BaseController {
   modelMenstruasi: tf.LayersModel | undefined;
   modelOvulasi: tf.LayersModel | undefined;
@@ -298,7 +299,7 @@ class MenstrualCycleController extends BaseController {
       }
 
       // get all daily entries
-      let allDailyEntries = [];
+      let allDailyEntries: { cycleId: string; id: string; date: Date }[] = [];
       for (const cycle of allMenstrualCycleSnapshot.docs) {
         const dailyEntriesRef = cycle.ref.collection("daily_entries");
         const dailyEntriesSnapshot = await dailyEntriesRef.get();
@@ -365,8 +366,8 @@ class MenstrualCycleController extends BaseController {
       return null;
     }
     const menstrualCycle = menstrualCycleSnapshot.docs;
-    let cycleLengths = [];
-    let mensLengths = [];
+    let cycleLengths: number[] = [];
+    let mensLengths: number[] = [];
 
     // get cycle_length from last three cycles
     for (let i = 0; i < 3; i++) {
