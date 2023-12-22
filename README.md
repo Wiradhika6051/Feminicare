@@ -1,4 +1,4 @@
-# Feminicare
+# Feminacare
 Aplikasi prediksi haid dengan algoritma machine learning
 
 # Cara Menjalankan
